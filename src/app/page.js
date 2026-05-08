@@ -1264,22 +1264,34 @@ function Home() {
                   Founder's message
                 </h1>
                 <div className="self-stretch Y-axis-text sm:my-12 space-y-5 lg:text-base 2xl:text-xl  2xl:leading-8 text-stone-900 max-md:my-12 max-md:max-w-full">
-                  <p>
-                    Every single day, we endeavour to make more customers across
-                    continents benefit from our work as a step to enhance
-                    reliability & safety in the electrical network.
-                  </p>
-                  <p>
-                    Over the last 30 years of our existence, we have served more
-                    than 4000 customers in 24 countries. Consistently meeting &
-                    exceeding their expectations at every given opportunity, we
-                    at Team JEF have created a formidable track record for
-                    ourselves.
-                  </p>
-                  <p>
-                    No wonder customers think JEF! when they think electrical
-                    engineering.
-                  </p>
+                <p>
+    Every single day, we endeavour to make more customers across continents
+    <br />
+    benefit from our work as a step to enhance reliability & safety in the electrical
+    <br />
+    network.
+  </p>
+
+  <br />
+
+  <p>
+    Over the last 30 years of our existence, we have served more than 10K+
+    <br />
+    customers in 30+ countries. Consistently meeting & exceeding their
+    <br />
+    expectations at every given opportunity, we at Team JEF have created a
+    <br />
+    formidable track record for ourselves.
+  </p>
+
+  <br />
+
+  <p>
+    No wonder customers <strong>THINK "JEF"</strong> when they{" "}
+    <strong>THINK ELECTRICAL</strong>
+    <br />
+    engineering.
+  </p>
                 </div>
                 <div className="Y-axis-text-founder">
                   <h2 className="text-xl lg:text-2xl font-semibold max-md:text-4xl">
@@ -1332,7 +1344,7 @@ function Home() {
               text-[#C02429]
             "
                 >
-                  Latest News
+                  Latest Blogs
                 </h1>
 
                 <p
