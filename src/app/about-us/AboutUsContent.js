@@ -369,7 +369,7 @@ const AboutUsContent = () => {
           className="flex flex-col items-start group cursor-pointer w-[259px]" 
         >
           {/* Progress Line */}
-          <div className="w-full h-[2px] bg-gray-300 mb-4 relative overflow-hidden">
+          <div className="w-full h-[2px] bg-gray-300 mb-4 relative overflow-hidden text-white">
             <div
               className="absolute top-0 left-0 h-full bg-[#C02429]"
               style={{
@@ -383,7 +383,7 @@ const AboutUsContent = () => {
           <span
             className={`text-[12px] tracking-[1.5px] uppercase font-[Montserrat] transition-colors duration-300 ${
               activeTab === index
-                ? "text-gray-900 font-semibold"
+                ? "text-white font-semibold"
                 : "text-gray-500 hover:text-gray-700"
             }`}
           >
