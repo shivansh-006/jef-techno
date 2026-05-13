@@ -67,24 +67,29 @@ function MainFooter() {
   
 
     return (
-        <main className="flex overflow-hidden flex-col items-center  lg:pt-24 bg-stone-800">
-            <div className="hidden lg:flex flex-col md:flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between ">
-                <Section title="About" items={itemsAbout} />
-                <Section title="Locations" items={itemsLocation} />
-                <Section title="Our Businesses" items={itemsBusiness} />
-                <Section title="News" items={itemNews} />
-               
-            </div>
-            <div className='flex justify-start gap-20 w-full md:pl-20'>
-                <Section title="Internal USe" items={itemInternalUse} />
-                <Section title="Jef Shield" items={itemJefShield}/>
-            </div>
-            <div className='lg:hidden'>
-                < FAQComponent />
+       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
 
-            </div>
-            <Footer />
-        </main>
+    {/* FIRST ROW */}
+    <div className="hidden lg:flex flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between">
+        <Section title="About" items={itemsAbout} />
+        <Section title="Locations" items={itemsLocation} />
+        <Section title="Our Businesses" items={itemsBusiness} />
+        <Section title="News" items={itemNews} />
+    </div>
+
+    {/* SECOND ROW */}
+    <div className="hidden md:flex w-[88vw] max-w-[95vw] mt-10 gap-20">
+        <Section title="Internal Use" items={itemInternalUse} />
+        <Section title="Jef Shield" items={itemJefShield} />
+    </div>
+
+    {/* MOBILE FAQ */}
+    <div className="lg:hidden w-full">
+        <FAQComponent />
+    </div>
+
+    <Footer />
+</main>
     );
 }
 
@@ -105,41 +110,60 @@ function Footer() {
                     <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
                 </div>
             </div>
-            <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
-                <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
-                    <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
-                        <Link href="/privacypolicy" >Privacy Policy</Link>
-                        <Link href="/termsandconditions" >· Terms of Use</Link>
-                        <Link href="/cookiepolicy" >· Cookie Policy</Link>
-                        <span>2026 © Jef</span>
-                    </div>
-                    <div className='flex gap-2 items-center'>
-                        <p className='text-white text-sm'>
-                            Production company · Obrive
-                        </p>
-                         <a className=' ml-[5px]' href="https://obnov.in" target="_blank" rel="noopener noreferrer"><img src="../FooterLogo/obriveLogo.png" alt="ObnovLogo" className='h-4' /></a>
+            <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900">
+  <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5 w-full lg:w-[88vw] max-w-[95vw]">
 
-                    </div>
-                    <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
-                       <p className="text-xs text-gray-400">
-  This site is protected by reCaptcha and the google{" "}
-  <span>
-    <Link href="/privacypolicy" className="text-white transition text-sm">
-      Privacy Policy
-    </Link>
-  </span>{" "}
-  and{" "}
-  <span>
-    <Link href="/termsandconditions" className="text-white transition text-sm">
-      Terms of Use
-    </Link>
-  </span>
-   {" "}apply
-</p>
-                       
-                    </div>
-                </div>
-            </div>
+    {/* LEFT */}
+    <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-[10px] sm:text-xs font-light tracking-widest text-center">
+      <Link href="/privacypolicy">Privacy Policy</Link>
+      <Link href="/termsandconditions">· Terms of Use</Link>
+      <Link href="/cookiepolicy">· Cookie Policy</Link>
+      <span>2026 © Jef</span>
+    </div>
+
+    {/* CENTER */}
+    <div className="flex flex-wrap justify-center items-center gap-2 text-center">
+      <p className="text-white text-xs sm:text-sm">
+        Production company · Obrive
+      </p>
+
+      <a
+        className="ml-[2px]"
+        href="https://obnov.in"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="../FooterLogo/obriveLogo.png"
+          alt="ObnovLogo"
+          className="h-4 object-contain"
+        />
+      </a>
+    </div>
+
+    {/* RIGHT */}
+    <div className="w-full lg:w-auto text-center lg:text-right">
+      <p className="text-[10px] sm:text-xs text-gray-400 leading-relaxed">
+        This site is protected by reCaptcha and the Google{" "}
+        <Link
+          href="/privacypolicy"
+          className="text-white transition text-[10px] sm:text-xs"
+        >
+          Privacy Policy
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/termsandconditions"
+          className="text-white transition text-[10px] sm:text-xs"
+        >
+          Terms of Use
+        </Link>{" "}
+        apply
+      </p>
+    </div>
+
+  </div>
+</div>
         </footer>
     );
 }
@@ -148,7 +172,7 @@ function Footer() {
 
 function Section({ title, items }) {
     return (
-        <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px]">
+        <section className="flex card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-full sm:w-[219px]">
             <header className="w-full text-xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
                 {title}
             </header>
@@ -156,7 +180,11 @@ function Section({ title, items }) {
                 {items.map((item, index) => (
                     <li key={index} className="flex flex-col justify-center items-start py-2.5 w-full">
                         <div className="flex items-center">
-                            <Link href={item.path}><div className="self-stretch my-auto">{item.name}</div></Link>
+                           <Link href={item.path}>
+  <div className="self-stretch my-auto transition-colors duration-300 hover:text-[#C02429]">
+    {item.name}
+  </div>
+</Link>
                         </div>
                     </li>
                 ))}
@@ -223,6 +251,20 @@ const FAQComponent = () => {
             ],
             isOpen: false
         },
+         {
+            question: "Jef Shield",
+            content: [
+                { label: 'Risk Assesment Tool', path: '/coming-soon' },
+            ],
+            isOpen: false
+        },
+         {
+            question: "Internal Use",
+            content: [
+                { label:"Employee login", path:"/coming-soon" },
+            ],
+            isOpen: false
+        },
     ]);
 
     const toggleFAQ = (index) => {
@@ -238,18 +280,15 @@ const FAQComponent = () => {
         const contentRef = useRef(null);
         const [height, setHeight] = useState(0);
 
-        useEffect(() => {
-            if (isOpen && contentRef.current) {
-                setHeight(contentRef.current.scrollHeight);
-            } else {
-                const timeout = setTimeout(() => {
-                    setHeight(0);
-                }, 1000); // Match this duration with the transition duration
-
-                return () => clearTimeout(timeout);
-            }
-        }, [isOpen]);
-
+       useEffect(() => {
+    if (contentRef.current) {
+        if (isOpen) {
+            setHeight(contentRef.current.scrollHeight);
+        } else {
+            setHeight(0);
+        }
+    }
+}, [isOpen]);
 
         useEffect(() => {
             // Select all elements with the 'X-axis-anm' class and apply staggered animation
@@ -298,7 +337,7 @@ const FAQComponent = () => {
                 </div>
                 <div
                     ref={contentRef}
-                    className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
+                   className="overflow-hidden transition-[max-height] duration-500 ease-in-out w-full"
                     style={{ maxHeight: `${height}px` }}
                 >
                     <div className="px-5 py-5">
@@ -308,7 +347,7 @@ const FAQComponent = () => {
                                 {content.map((item, idx) => (
                                     <li key={idx} className="mb-2">
                                         <Link href={item.path}>
-                                            <div className="text-stone-300 hover:underline">
+                                            <div className="text-stone-300 hover:text-[#C02429] transition-colors duration-300">
                                                 {item.label}
                                             </div>
                                         </Link>
@@ -333,7 +372,7 @@ const FAQComponent = () => {
                 </h1>
                 <div className="flex max-md:flex-col justify-between items-start w-full max-md:max-w-full">
                     <div className="flex flex-col pt-5 min-w-[240px] w-full lg:w-[48%] max-md:max-w-full">
-                        {faqData.slice(0, 5).map((item, index) => (
+                        {faqData.slice(0, 7).map((item, index) => (
                             <FAQItem
                                 key={index}
                                 question={item.question}

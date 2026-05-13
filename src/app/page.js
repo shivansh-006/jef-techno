@@ -1332,7 +1332,7 @@ function Home() {
 
       {/* bg-[url('/home-main.png')] */}
 
-      <main className="flex overflow-hidden flex-col">
+      <main className="flex overflow-hidden flex-col ">
         <section
           style={{
             backgroundImage: "url('/HomePageImg/BGP.png')",
@@ -1340,9 +1340,9 @@ function Home() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
-          className="overflow-hidden relative w-full h-auto"
+          className="overflow-hidden relative w-full h-auto "
         >
-          <div className="flex lg:items-end xl:items-start gap-0 md:gap-6 2xl:mt-0 lg:gap-16 justify-between 2xl:justify-center 2xl:gap-40 px-4 lg:px-0 max-lg:flex-col 2xl:ml-[100x] md:mr-[100px] md:ml-[85px]">
+          <div className="flex lg:items-end xl:items-start gap-0 md:gap-6 2xl:mt-0 lg:gap-16 justify-between 2xl:justify-center 2xl:gap-40 px-4 lg:px-0 max-lg:flex-col 2xl:ml-[100x] md:mr-[100px] md:ml-[85px] ">
             <div className=" flex flex-col w-full lg:w-1/2 xl:w-3/5 2xl:w-1/2 py-16">
               <div className="flex  z-10 lg:mt-12 2xl:mt-0 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
@@ -2033,6 +2033,20 @@ function WhatWeDoSection() {
     return () => observer.disconnect();
   }, [videoStarted]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  checkMobile();
+
+  window.addEventListener("resize", checkMobile);
+
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
+
   const services = [
     {
       id: 0,
@@ -2044,6 +2058,19 @@ function WhatWeDoSection() {
       left: "140px",
       width: "280px",
       background: "./HomePageImg/WhatWeDoSection/Solution-1.png",
+       x: 260,
+  y: 140,
+  xmob: 265,
+ymob: 395,
+
+  labelLeft: "-160px",
+  labelTop: "-35px",
+  labelWidth: "170px",
+
+  mobileLabelLeft: "-50px",
+  mobileLabelTop: "-22px",
+  mobileLabelWidth: "100px",
+
     },
 
     {
@@ -2055,7 +2082,18 @@ function WhatWeDoSection() {
       top: "290px",
       left: "420px",
       width: "280px",
-      background: "./HomePageImg/WhatWeDoSection/Solution-2.png",
+      background: "./HomePageImg/WhatWeDoSection/Solution-4.png",
+       x: 260,
+  y: 300,
+  xmob: 265,
+ymob: 600,
+ labelLeft: "10px",
+  labelTop: "-35px",
+  labelWidth: "170px",
+
+  mobileLabelLeft: "15px",
+  mobileLabelTop: "-22px",
+  mobileLabelWidth: "100px",
     },
 
     {
@@ -2068,6 +2106,17 @@ function WhatWeDoSection() {
       left: "190px",
       width: "300px",
       background: "./HomePageImg/WhatWeDoSection/Solution-3.png",
+       x: 260,
+  y:480,
+  xmob: 265,
+ymob: 800,
+ labelLeft: "20px",
+  labelTop: "-35px",
+  labelWidth: "170px",
+
+  mobileLabelLeft: "15px",
+  mobileLabelTop: "-22px",
+  mobileLabelWidth: "100px",
     },
 
     {
@@ -2079,7 +2128,19 @@ function WhatWeDoSection() {
       top: "490px",
       left: "550px",
       width: "300px",
-      background: "./HomePageImg/WhatWeDoSection/Solution-4.png",
+      background: "./HomePageImg/WhatWeDoSection/Solution-2.png",
+        x:80,
+  y: 450,
+  xmob: 45,
+ymob: 770,
+ labelLeft: "-230px",
+  labelTop: "-35px",
+  labelWidth: "170px",
+
+  mobileLabelLeft: "-150px",
+  mobileLabelTop: "-22px",
+  mobileLabelWidth: "100px",
+
     },
 
     {
@@ -2092,6 +2153,18 @@ function WhatWeDoSection() {
       left: "310px",
       width: "300px",
       background: "./HomePageImg/WhatWeDoSection/Solution-5.png",
+       x: 135,
+  y: 350,
+    xmob: 115,
+ymob: 650,
+   labelLeft: "-200px",
+  labelTop: "-35px",
+  labelWidth: "170px",
+
+  mobileLabelLeft: "-150px",
+  mobileLabelTop: "-22px",
+  mobileLabelWidth: "100px",
+
     },
   ];
 
@@ -2124,218 +2197,240 @@ function WhatWeDoSection() {
   }, [panelOpen]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full min-h-[850px] overflow-hidden bg-black"
+<section
+  ref={sectionRef}
+  className="relative w-full min-h-[1150px] md:min-h-[700px] lg:min-h-[850px] overflow-hidden bg-black"
+>
+  {/* Background Image */}
+  <img
+    src={background}
+    alt="What We Do Background"
+    className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1800ms] ease-in-out ${
+      showContent ? "opacity-100 scale-100" : "opacity-0 scale-105"
+    } z-0`}
+  />
+
+  {/* VIDEO */}
+  <video
+    ref={videoRef}
+    muted
+    playsInline
+    onEnded={() => setShowContent(true)}
+    className={`absolute inset-0 w-full h-full object-cover z-0 transition-all duration-1000 ${
+      showContent ? "opacity-0" : "opacity-100"
+    }`}
+  >
+    <source src="/HomePageImg/Earthzoom.mp4" type="video/mp4" />
+  </video>
+
+  {/* MAIN CONTENT WRAPPER */}
+  <div
+    className={`
+      absolute inset-0
+      z-10
+      transition-opacity duration-1000
+      ${showContent ? "opacity-100" : "opacity-0"}
+    `}
+  >
+
+    {/* DARK OVERLAY */}
+    <div
+      className={`
+        absolute inset-0
+        z-[20]
+        transition-all duration-700
+        ${
+          panelOpen
+            ? "bg-black/60"
+            : "bg-black/40"
+        }
+      `}
+    />
+
+    {/* J WRAPPER */}
+    <div
+      className="
+        absolute
+        inset-0
+        z-[50]
+
+        left-1/2
+        -translate-x-1/2
+
+        scale-[0.62]
+        sm:scale-[0.72]
+        md:scale-100
+
+        origin-top-left
+        md:origin-center
+      "
     >
-      {/* Background Image */}
+
+      {/* J PNG */}
       <img
-        src={background}
-        alt="What We Do Background"
-        className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
-          showContent ? "opacity-100" : "opacity-0"
-        } z-0`}
+        src="/HomePageImg/J.png"
+        alt="J Path"
+        className="
+    absolute
+          top-[400px]
+          left-[30px]
+          md:top-[145px]
+          md:left-[70px]
+
+          w-100px]
+          md:w-[100px]
+          lg:w-[200px]
+
+          opacity-90
+          pointer-events-none
+          z-[45]
+        "
       />
-      <video
-        ref={videoRef}
-        muted
-        playsInline
-        onEnded={() => setShowContent(true)}
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-all duration-1000 ${
-          showContent ? "opacity-0" : "opacity-100"
-        }`}
-      >
-        <source src="/HomePageImg/Earthzoom.mp4" type="video/mp4" />
-      </video>
 
-      <div
-        className={`transition-all duration-1000 ${
-          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        {/* Overlay — darkens more when panel is open */}
-        <div
-          className={`absolute inset-0 z-10 transition-all duration-700 ${
-            panelOpen ? "bg-black/60" : "bg-black/35"
-          }`}
-        />
+      {/* INTERACTIVE DOTS */}
+      {services.map((service) => {
+        const isActive = activeCard === service.id;
 
-        {/* Heading */}
-        <div className="absolute top-[70px] left-[70px] z-20">
-          <h2 className="font-montserrat font-bold text-[36px] leading-none tracking-[4px] uppercase text-white">
-            WHAT WE DO
-          </h2>
-        </div>
-
-        {/* FLOATING PNG BUTTONS */}
-        {services.map((service) => (
+        return (
           <div
             key={service.id}
-            onClick={() => handleCardClick(service)}
-            className="absolute z-20 flex justify-center items-center"
+            className="absolute z-[60] group"
             style={{
-              top: service.top,
-              left: service.left,
-              width: service.width,
-            }}
+  top: isMobile ? `${service.ymob}px` : `${service.y}px`,
+  left: isMobile ? `${service.xmob}px` : `${service.x}px`,
+}}
+            onMouseEnter={() => handleCardClick(service)}
+            onClick={() => handleCardClick(service)}
           >
-            <button
-              onClick={(e) => {
-                const button = e.currentTarget;
-                const ripple = document.createElement("span");
-                const rect = button.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height) * 2;
 
-                Object.assign(ripple.style, {
-                  position: "absolute",
-                  borderRadius: "50%",
-                  background: "rgba(0,0,0,0.15)",
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  left: `${e.clientX - rect.left - size / 2}px`,
-                  top: `${e.clientY - rect.top - size / 2}px`,
-                  transform: "scale(0)",
-                  pointerEvents: "none",
-                  transition: "transform 0.6s ease-out, opacity 0.6s ease-out",
-                  opacity: "1",
-                });
-
-                button.appendChild(ripple);
-
-                requestAnimationFrame(() => {
-                  requestAnimationFrame(() => {
-                    ripple.style.transform = "scale(1)";
-                    ripple.style.opacity = "0";
-                  });
-                });
-
-                setTimeout(() => ripple.remove(), 650);
-              }}
+            {/* LABEL */}
+            <div
               className={`
-    relative overflow-hidden
-    w-[270px] h-[58px]
-    rounded-full
-    flex items-center justify-center
-    transition-colors duration-300
-    ${
-      service.id === 0
-        ? "bg-[#C61F26] text-[#F4F0EA] hover:bg-[#F4F0EA] hover:text-[#C61F26]"
-        : "bg-[#F4F0EA] text-[#C61F26] hover:bg-[#C61F26] hover:text-[#F4F0EA]"
-    }
-  `}
+                absolute whitespace-nowrap
+                text-[8px] md:text-[11px]
+                tracking-[1px] md:tracking-[2px]
+                uppercase
+                font-medium
+                transition-all
+                duration-500
+                ${
+                  isActive
+                    ? "text-white"
+                    : "text-white/70 group-hover:text-white"
+                }
+              `}
+              style={{
+  left: isMobile
+    ? service.mobileLabelLeft
+    : service.labelLeft,
+
+  top: isMobile
+    ? service.mobileLabelTop
+    : service.labelTop,
+
+  width: isMobile
+    ? service.mobileLabelWidth
+    : service.labelWidth,
+}}
             >
-              <span className="relative z-10 font-[Montserrat] text-[16px] uppercase tracking-[0.14em] font-semibold">
-                {service.title}
-              </span>
+              {service.title}
+            </div>
+
+            {/* DOT BUTTON */}
+            <button className="relative flex items-center justify-center">
+
+              {/* OUTER RING */}
+              <span
+                className={`
+                  absolute
+                  w-[24px]
+                  h-[24px]
+                  md:w-[34px]
+                  md:h-[34px]
+                  rounded-full
+                  border
+                  transition-all
+                  duration-500
+                  ${
+                    isActive
+                      ? "border-white scale-110 opacity-100"
+                      : "border-white/40 opacity-70 group-hover:border-white group-hover:scale-110"
+                  }
+                `}
+              />
+
+              {/* INNER DOT */}
+              <span
+                className={`
+                  w-[12px]
+                  h-[12px]
+                  md:w-[18px]
+                  md:h-[18px]
+                  rounded-full
+                  transition-all
+                  duration-500
+                  ${
+                    isActive
+                      ? "bg-white scale-110"
+                      : "bg-[#C61F26] group-hover:bg-white"
+                  }
+                `}
+              />
             </button>
           </div>
-        ))}
+        );
+      })}
+    </div>
 
-        {/* Slide Panel */}
-        <div
-          className={`
-    fixed top-0 right-0 z-[99999] h-screen bg-white
-    transition-transform duration-[900ms]
-    ease-[cubic-bezier(0.22,1,0.36,1)]
-    w-[35%] min-w-[480px] max-w-[600px]
-    shadow-2xl
-    ${panelOpen ? "translate-x-0" : "translate-x-full"}
-  `}
-        >
-          {/* Close Button */}
-          <button
-            onClick={() => setPanelOpen(false)}
-            className="absolute top-[42.5px] right-[42px] z-10 w-[48px] h-[48px] bg-[#C02429] rounded-full flex items-center justify-center text-white text-xl hover:scale-110 hover:bg-red-700 transition"
-          >
-            ✕
-          </button>
+    {/* HEADING */}
+    <div className="absolute top-[35px] left-[20px] sm:left-[40px] lg:top-[70px] lg:left-[70px] z-[60]">
+      <h2 className="font-montserrat font-bold text-[24px] sm:text-[30px] lg:text-[36px] leading-none tracking-[3px] lg:tracking-[4px] uppercase text-white">
+        WHAT WE DO
+      </h2>
+    </div>
 
-          {/* Panel Content */}
-          <div className="absolute top-[20%] left-[60px] w-[75%]">
-            <h3 className="font-montserrat font-medium text-[28px] leading-[140%] tracking-[2px] uppercase text-[#2E2E2E]">
-              {services[activeCard].heading}
-            </h3>
+    {/* RIGHT CONTENT PANEL */}
+    <div
+      className="
+        absolute
+        z-[60]
 
-            <p className="mt-8 font-montserrat font-normal text-[17px] leading-[170%] text-[#3D3D3D]">
-              {services[activeCard].description}
-            </p>
+        left-0
+        right-0
 
-            {/* Read More Button */}
-            <button className="mt-10 w-[180px] h-[48px] rounded-full border border-[#D9D9D9] text-[#C02429] uppercase tracking-[2px] text-[14px] transition-all duration-300 hover:bg-[#C02429] hover:text-white">
-              Read More
-            </button>
-          </div>
+        px-5
 
-          {/* Bottom Navigation */}
-          <div
-            className="absolute flex gap-[20px]"
-            style={{ bottom: "60px", right: "64px" }}
-          >
-            {/* PREV BUTTON */}
-            {activeCard !== 0 && (
-              <button
-                onClick={handlePrev}
-                style={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "60px",
-                  border: "1px solid #C02429",
-                  padding: "18px",
-                  background: "transparent",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition: "0.3s",
-                  boxSizing: "border-box",
-                }}
-                className="hover:scale-105"
-              >
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-                  <path
-                    d="M17 7H1M1 7L7 1M1 7L7 13"
-                    stroke="#C02429"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            )}
+        top-[760px]
 
-            {/* NEXT BUTTON */}
-            {activeCard !== services.length - 1 && (
-              <button
-                onClick={handleNext}
-                style={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "60px",
-                  border: "1px solid #C02429",
-                  padding: "18px",
-                  background: "#C02429",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  transition: "0.3s",
-                  boxSizing: "border-box",
-                }}
-                className="hover:scale-105"
-              >
-                <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-                  <path
-                    d="M1 7H17M17 7L11 1M17 7L11 13"
-                    stroke="white"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            )}
-          </div>
-        </div>
+        md:left-auto
+        md:right-[90px]
+        md:top-[190px]
+
+        md:max-w-[500px]
+        max-w-full
+      "
+    >
+
+      {/* RED LINE */}
+      <div className="w-full h-[2px] bg-[#C61F26] mb-6 md:mb-8 opacity-90" />
+
+      {/* ANIMATED CONTENT */}
+      <div
+        key={activeCard}
+        className="animate-[fadeUp_0.7s_ease]"
+      >
+        <h3 className="text-white uppercase tracking-[2px] md:tracking-[4px] text-[20px] sm:text-[24px] lg:text-[28px] font-light leading-[1.3] mb-5 md:mb-8">
+          {services[activeCard].heading}
+        </h3>
+
+        <p className="text-white/90 text-[15px] sm:text-[17px] lg:text-[20px] leading-[1.8] font-light">
+          {services[activeCard].description}
+        </p>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
   );
 }
 
@@ -2664,6 +2759,8 @@ const industries = [
 ];
 
 function IndustriesSection() {
+
+ const [activeIndex, setActiveIndex] = useState(0);
   const [activeIndustry, setActiveIndustry] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -2692,264 +2789,241 @@ function IndustriesSection() {
     };
   }, [isOpen]);
 
+  const industriesData = [
+  {
+    id: 0,
+    title: "Renewable Energy",
+    image: "/HomePageImg/IndustriesWeServe/weServe6.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector1.png",
+    description:
+      "We offer comprehensive solutions for the solar and wind power segments.",
+    points: [
+      "Lightning Protection & Grounding: Comprehensive lightning protection and grounding solutions, including Supply and Installation, Testing and Commissioning.",
+      "Design Services: Design and detailed engineering for specialized renewable energy infrastructure.",
+      "Safety & Analysis: LPS adequacy studies and root cause analysis to ensure plant reliability.",
+    ],
+  },
+
+  {
+    id: 1,
+    title: "Power Utilities",
+    image: "/HomePageImg/IndustriesWeServe/weServe1.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector2.png",
+    description:
+      "We deliver specialized technical and engineering services to enhance the reliability of power utility systems.",
+    points: [
+      "System Studies: Comprehensive power quality and power system studies.",
+      "Health Assessments: Grounding system health assessments and risk analysis.",
+      "Protection Solutions: Design, engineering and installation of lightning protection and grounding systems.",
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Data Centers",
+    image: "/HomePageImg/IndustriesWeServe/weServe2.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector3.png",
+    description:
+      "We provide end-to-end electrical safety and reliability solutions tailored for mission-critical data centre environments.",
+    points: [
+      "Uptime Assurance: Power quality studies and monitoring to prevent unexplained equipment failures or process interruptions.",
+      "Advanced Protection: Automated lightning protection risk assessment and design using proprietary JEF Shield technology.",
+      "Safety Compliance: Comprehensive electrical and fire safety audits to ensure 24/7 operational continuity.",
+    ],
+  },
+
+  {
+    id: 3,
+    title: "Manufacturing Plant",
+    image: "/HomePageImg/IndustriesWeServe/weServe3.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector4.png",
+    description:
+      "We assist manufacturing facilities in solving complex electrical issues and reducing downtime through innovative technical services.",
+    points: [
+      "Operational Reliability: Root cause analysis for sensor/DCS malfunctions and unexplained tripping.",
+      "Safety Audits: Electrical & Fire Safety Audits using automated safety audit tool for accurate, real-time safety monitoring.",
+      "Earthing & LPS Design: Technically superior grounding and lightning protection designs that meet international standards.",
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Process Plant",
+    image: "/HomePageImg/IndustriesWeServe/weServe4.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector5.png",
+    description:
+      "Our expertise in high-risk environments ensures that process plants maintain the highest levels of safety and efficiency.",
+    points: [
+      "Specialized Studies: EMI/EMC studies to ensure electromagnetic compatibility and prevent interference in sensitive systems.",
+      "Risk Mitigation: Root cause analysis and adequacy studies to avoid costly process interruptions.",
+      "Engineered Protection: Custom-designed external lightning protection and grounding solutions implemented by domain experts.",
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Oil & Gas",
+    image: "/HomePageImg/IndustriesWeServe/weServe5.png",
+    icon: "/HomePageImg/IndustriesWeServe/Vector6.png",
+    description:
+      "We offer comprehensive solutions for the oil and gas segment, addressing both safety and corrosion challenges.",
+    points: [
+      "Interference Modelling: AC interference studies using computer modelling and simulation for buried pipelines.",
+      "Asset Protection: Comprehensive lightning protection and grounding solutions including design, supply, and installation.",
+      "Performance Analysis: Detailed adequacy studies and root cause analysis for onshore and offshore facilities.",
+    ],
+  },
+];
   return (
-    <section className="relative w-full h-[526px] bg-[#1B1818] overflow-hidden">
-      {/* DIM OVERLAY */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-[9998] transition-opacity duration-500"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
+   <section className="w-full h-auto lg:h-screen bg-black overflow-hidden flex flex-col lg:flex-row">
+  {industriesData.map((industry, index) => {
+    const isActive = activeIndex === index;
 
-      {/* MAIN CONTENT */}
-      <div className="pt-[62px] pl-[100px] relative z-10">
-        {/* HEADING */}
-        <h2 className="text-[32px] font-bold tracking-[2px] uppercase text-[#C02429] leading-[150%]">
-           Industries We Serve
-        </h2>
-
-        {/* BUTTONS */}
-        <div className="mt-[72px] flex flex-col gap-[72px]">
-          {/* TOP ROW */}
-          <div className="flex gap-4">
-            {industries.slice(0, 3).map((industry, index) => (
-              <button
-                key={industry.id}
-                onClick={() => {
-                  setActiveIndustry(index);
-                  setIsOpen(true);
-                }}
-                className="
-                  group
-                  w-[218px]
-                  h-[44px]
-                  rounded-[30px]
-                  border
-                  border-[#DBDBDB]
-                  bg-white
-                  px-[18px]
-                  flex
-                  items-center
-                  gap-[10px]
-                  transition-all
-                  duration-300
-                  hover:bg-[#C02429]
-                "
-              >
-                <img
-                  src={industry.icon}
-                  alt={industry.title}
-                  className="w-5 h-5 object-contain"
-                />
-
-                <span className="text-[16px] text-[#3E3E3E] transition-colors duration-300 group-hover:text-white">
-                  {industry.title}
-                </span>
-              </button>
-            ))}
-          </div>
-
-          {/* BOTTOM ROW */}
-          <div className="ml-[238px] flex gap-4">
-            {industries.slice(3, 6).map((industry, index) => (
-              <button
-                key={industry.id}
-                onClick={() => {
-                  setActiveIndustry(index + 3);
-                  setIsOpen(true);
-                }}
-                className="
-                  group
-                  w-[218px]
-                  h-[44px]
-                  rounded-[30px]
-                  border
-                  border-[#DBDBDB]
-                  bg-white
-                  px-[18px]
-                  flex
-                  items-center
-                  gap-[10px]
-                  transition-all
-                  duration-300
-                  hover:bg-[#C02429]
-                "
-              >
-                <img
-                  src={industry.icon}
-                  alt={industry.title}
-                  className="w-5 h-5 object-contain"
-                />
-
-                <span className="text-[16px] text-[#3E3E3E] transition-colors duration-300 group-hover:text-white">
-                  {industry.title}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* SLIDE PANEL */}
+    return (
       <div
+        key={industry.id}
+        onMouseEnter={() => setActiveIndex(index)}
         className={`
-    fixed
-    top-0
-    right-0
-    h-screen
-    w-[572px]
-    bg-[#FFFFFF]
-    transition-transform
-    duration-700
-    ease-[cubic-bezier(0.22,1,0.36,1)]
-    z-[9999]
-    ${isOpen ? "translate-x-0" : "translate-x-full"}
-  `}
+          relative
+          overflow-hidden
+          transition-all
+          duration-700
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          cursor-pointer
+
+          w-full
+          min-h-[420px]
+
+          lg:min-h-0
+          ${
+            isActive
+              ? "lg:flex-[3]"
+              : "lg:flex-1"
+          }
+        `}
       >
-        {/* CONTENT */}
-        {/* TITLE */}
-        <h3
-          className="
-    absolute
-    top-[48px]
-    left-[58px]
-    w-[360px]
-    text-[24px]
-    font-semibold
-    leading-[145%]
-    uppercase
-    tracking-[1.5px]
-    text-black
-  "
-        >
-          {currentIndustry.title}
-        </h3>
+        {/* BG IMAGE */}
+        <img
+          src={industry.image}
+          alt={industry.title}
+          className={`
+            absolute inset-0
+            w-full h-full
+            object-cover
+            transition-all
+            duration-700
+            ${
+              isActive
+                ? "scale-105"
+                : "scale-100"
+            }
+          `}
+        />
+
+        {/* OVERLAY */}
+        <div
+          className={`
+            absolute inset-0
+            transition-all
+            duration-700
+            ${
+              isActive
+                ? "bg-black/45"
+                : "bg-black/60"
+            }
+          `}
+        />
 
         {/* CONTENT */}
-        <div
-          className="
-    absolute
-    top-[140px]
-    left-[58px]
-    w-[450px]
-  "
-        >
-          {/* TEXT */}
-          <div
-            className="
-      text-[17px]
-      leading-[175%]
-      text-[#3E3E3E]
-    "
-          >
-            {currentIndustry.description.map((item, idx) =>
-              idx === 0 ? (
-                <p key={idx} className="mb-5">
-                  {item}
-                </p>
-              ) : (
-                <ul key={idx} className="list-disc pl-[24px] mb-4">
-                  <li>{item}</li>
-                </ul>
-              ),
-            )}
+        <div className="relative z-20 h-full px-5 sm:px-8 py-8 sm:py-10 flex flex-col">
+
+          {/* TITLE */}
+          <div className="flex items-start gap-4 sm:gap-5">
+
+            <div className="w-[2px] h-[50px] sm:h-[60px] bg-[#C02429] mt-1 shrink-0" />
+
+            <div className="flex items-center gap-3 sm:gap-4">
+
+              {/* ICON */}
+              <img
+                src={industry.icon}
+                alt={industry.title}
+                className={`
+                  w-[22px] h-[22px]
+                  sm:w-[28px] sm:h-[28px]
+                  object-contain
+                  transition-all
+                  duration-700
+                  ${
+                    isActive
+                      ? "opacity-100 scale-100"
+                      : "opacity-80 scale-95"
+                  }
+                `}
+              />
+
+              {/* TITLE TEXT */}
+              <h2
+                className={`
+                  text-white
+                  whitespace-nowrap
+                  text-[16px] sm:text-[25px]
+                  tracking-[0.5px]
+                  font-light
+                  transition-opacity transition-transform
+                  duration-1000
+                  ease-out
+                  ${
+                    isActive
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-90 translate-y-[2px]"
+                  }
+                `}
+              >
+                {industry.title}
+              </h2>
+
+            </div>
           </div>
-        </div>
 
-        {/* CLOSE BUTTON */}
-        <button
-          onClick={() => setIsOpen(false)}
-          className="
-    absolute
-    top-[42px]
-    right-[42px]
-    w-[48px]
-    h-[48px]
-    bg-[#C02429]
-    rounded-full
-    flex
-    items-center
-    justify-center
-    text-white
-    text-xl
-    hover:scale-110
-    hover:bg-red-700
-    transition
-  "
-        >
-          ✕
-        </button>
-
-        {/* NAVIGATION BUTTONS */}
-        <div
-          className="absolute flex gap-[20px]"
-          style={{
-            bottom: "60px",
-            left: "58px",
-          }}
-        >
-          {/* PREV */}
-          <button
-            onClick={handlePrev}
-            style={{
-              width: "60px",
-              height: "60px",
-              borderRadius: "60px",
-              border: "1px solid #C02429",
-              padding: "18px",
-              background: "transparent",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "0.3s",
-              boxSizing: "border-box",
-            }}
-            className="hover:scale-105"
+          {/* EXPANDABLE CONTENT */}
+          <div
+            className={`
+              mt-10 sm:mt-16 lg:mt-24
+              transition-all
+              duration-700
+              ease-out
+              overflow-hidden
+              ${
+                isActive
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8 lg:block hidden"
+              }
+            `}
           >
-            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-              <path
-                d="M17 7H1M1 7L7 1M1 7L7 13"
-                stroke="#C02429"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+            <p className="text-white text-[14px] sm:text-[16px] leading-[1.8] mb-8 sm:mb-10 max-w-[500px]">
+              {industry.description}
+            </p>
 
-          {/* NEXT */}
-          <button
-            onClick={handleNext}
-            style={{
-              width: "60px",
-              height: "60px",
-              borderRadius: "60px",
-              border: "1px solid #C02429",
-              padding: "18px",
-              background: "#C02429",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              transition: "0.3s",
-              boxSizing: "border-box",
-            }}
-            className="hover:scale-105"
-          >
-            <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
-              <path
-                d="M1 7H17M17 7L11 1M17 7L11 13"
-                stroke="white"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
+            <ul className="space-y-5 sm:space-y-8 max-w-[520px]">
+              {industry.points.map((point, idx) => (
+                <li
+                  key={idx}
+                  className="text-white/95 text-[14px] sm:text-[16px] leading-[1.8] flex gap-3 sm:gap-4"
+                >
+                  <span>•</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
         </div>
       </div>
-    </section>
-  );
+    );
+  })}
+</section>
+  )
 }
 
 export default Home;

@@ -1114,7 +1114,7 @@ tagDescriptions: [
         <header className="flex flex-col items-center justify-center text-center gap-[32px] w-full px-5 mx-auto mt-[80px] bg-[#1B1818]">
           {/* Logo */}
           <img
-            src="./SerivePage/CLPS img.png"
+            src="./clps/clpf-logo.png"
             alt="Lightning Logo"
             className="w-[80px]"
           />
