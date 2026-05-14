@@ -35,8 +35,9 @@ function MainFooter() {
 
     const itemsAbout = [
         { name: 'Who we are', path: '/about-us' },
-        { name: 'JEF Leadership Team', path: '/leadership-team' },
-        {name:'Careers',path:'/careers'}
+
+        {name:'Careers',path:'/careers'},
+                { name: 'Contact us', path: '/contact-us' },
     ];
 
     const itemsLocation = [
