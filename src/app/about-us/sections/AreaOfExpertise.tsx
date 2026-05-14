@@ -1,10 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ExcellenceinElectricalEngineering() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  checkMobile();
+
+  window.addEventListener("resize", checkMobile);
+
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
 
   const sectors = [
     {
@@ -246,10 +259,9 @@ export default function ExcellenceinElectricalEngineering() {
               z-10
             "
             style={{
-              transform: `translateX(-${
-                activeIndex *
-                (window.innerWidth < 768 ? 290 : 366)
-              }px)`,
+             transform: `translateX(-${
+  activeIndex * (isMobile ? 290 : 366)
+}px)`,
             }}
           >
             {sectors.map((item, index) => {
