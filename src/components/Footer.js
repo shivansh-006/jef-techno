@@ -68,7 +68,7 @@ function MainFooter() {
   
 
     return (
-       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
+       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#232427]">
 
     {/* FIRST ROW */}
     <div className="hidden lg:flex flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between">
@@ -98,7 +98,7 @@ function MainFooter() {
 function Footer() {
 
     return (
-        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
+        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#232427]">
             <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
             <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
