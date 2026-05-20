@@ -4,49 +4,49 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function BlogsSection() {
-    const blogData = [
-  {
-    id: 2,
-    title: "EMI BETWEEN OVERHEAD POWER LINES & BURIED PIPELINES",
-    imageSrc: "/BlogImg/HomePageBlog4.png",
-    description:
-      "The Analysis of electromagnetic interference between high-voltage overhead power transmission lines and nearby gas or oil pipeline has been a topic of growing interest for many years.",
-    path: "/blog/blog2",
-  },
-  {
-    id: 1,
-    title:
-      "PQ SERVICES – ECONOMIC BENEFITS OF POWER FACTOR AND HARMONIC STUDIES",
-    imageSrc: "/BlogImg/HomePageBlog1.png",
-    path: "/blog/blog1",
-  },
-  {
-    id: 3,
-    title: "Ensuring Electrical Safety in Greenfield Projects",
-    imageSrc: "/BlogImg/HomePageBlog2.png",
-    path: "/blog/blog3",
-  },
-  {
-    id: 4,
-    title:
-      "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-    imageSrc: "/BlogImg/HomePageBlog3.png",
-    path: "/blog/blog4",
-  },
-  {
-    id: 5,
-    title:
-      "Importance of Electrical Safety in Chemical and Pharma Industries: Best Practices for Preventing Workplace Accidents",
-    imageSrc: "/BlogImg/Blog 5.png",
-    path: "/blog/blog5",
-  },
-  {
-    id: 6,
-    title: "Types of Earthing -  Type A and Type B",
-    imageSrc: "/BlogImg/Blog 6.png",
-    path: "/blog/blog6",
-  },
-];
+  const blogData = [
+    {
+      id: 2,
+      title: "EMI BETWEEN OVERHEAD POWER LINES & BURIED PIPELINES",
+      imageSrc: "/BlogImg/HomePageBlog4.png",
+      description:
+        "The Analysis of electromagnetic interference between high-voltage overhead power transmission lines and nearby gas or oil pipeline has been a topic of growing interest for many years.",
+      path: "/blog/blog2",
+    },
+    {
+      id: 1,
+      title:
+        "PQ SERVICES – ECONOMIC BENEFITS OF POWER FACTOR AND HARMONIC STUDIES",
+      imageSrc: "/BlogImg/HomePageBlog1.png",
+      path: "/blog/blog1",
+    },
+    {
+      id: 3,
+      title: "Ensuring Electrical Safety in Greenfield Projects",
+      imageSrc: "/BlogImg/HomePageBlog2.png",
+      path: "/blog/blog3",
+    },
+    {
+      id: 4,
+      title:
+        "Measurement, simulation, validation - The 3 key steps of Power System Studies",
+      imageSrc: "/BlogImg/HomePageBlog3.png",
+      path: "/blog/blog4",
+    },
+    {
+      id: 5,
+      title:
+        "Importance of Electrical Safety in Chemical and Pharma Industries: Best Practices for Preventing Workplace Accidents",
+      imageSrc: "/BlogImg/Blog 5.png",
+      path: "/blog/blog5",
+    },
+    {
+      id: 6,
+      title: "Types of Earthing -  Type A and Type B",
+      imageSrc: "/BlogImg/Blog 6.png",
+      path: "/blog/blog6",
+    },
+  ];
 
   return (
     <section className="py-[60px] md:py-[80px] overflow-hidden bg-[#232427]">
@@ -60,13 +60,14 @@ export default function BlogsSection() {
             
             {/* LEFT CONTENT */}
             <motion.div
-              initial={{ opacity: 0, x: -100 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 1,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.55,
+                ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
+              style={{ willChange: "transform, opacity" }}
             >
               <h1
                 className="
@@ -99,46 +100,15 @@ export default function BlogsSection() {
 
             {/* EXPLORE MORE BUTTON */}
             <motion.button
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 1,
-                delay: 0.15,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.55,
+                delay: 0.05,
+                ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
-              onClick={(e) => {
-                const button = e.currentTarget;
-                const ripple = document.createElement("span");
-                const rect = button.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height) * 2;
-
-                Object.assign(ripple.style, {
-                  position: "absolute",
-                  borderRadius: "50%",
-                  background: "rgba(0,0,0,0.15)",
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  left: `${e.clientX - rect.left - size / 2}px`,
-                  top: `${e.clientY - rect.top - size / 2}px`,
-                  transform: "scale(0)",
-                  pointerEvents: "none",
-                  transition:
-                    "transform 0.6s ease-out, opacity 0.6s ease-out",
-                  opacity: "1",
-                });
-
-                button.appendChild(ripple);
-
-                requestAnimationFrame(() => {
-                  requestAnimationFrame(() => {
-                    ripple.style.transform = "scale(1)";
-                    ripple.style.opacity = "0";
-                  });
-                });
-
-                setTimeout(() => ripple.remove(), 650);
-              }}
+              viewport={{ once: true }}
+              style={{ willChange: "transform, opacity" }}
               className="
                 relative
                 overflow-hidden
@@ -153,7 +123,7 @@ export default function BlogsSection() {
                 flex
                 items-center
                 justify-between
-                transition-all
+                transition-colors
                 duration-300
                 hover:bg-[#C02429]
                 hover:border-[#C02429]
@@ -169,8 +139,6 @@ export default function BlogsSection() {
                   tracking-[1px]
                   text-white
                   font-montserrat
-                  transition
-                  duration-300
                 "
               >
                 Explore More
@@ -185,10 +153,9 @@ export default function BlogsSection() {
                   w-[18px]
                   rotate-180
                   brightness-100
-                  transition
+                  transition-transform
                   duration-300
-                  group-hover:brightness-0
-                  group-hover:invert
+                  group-hover:translate-x-1
                 "
               />
             </motion.button>
@@ -199,13 +166,14 @@ export default function BlogsSection() {
             
             {/* LEFT IMAGE */}
             <motion.div
-              initial={{ opacity: 0, x: -120 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 1.2,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.6,
+                ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
+              style={{ willChange: "transform, opacity" }}
               className="w-full lg:w-[800px] h-[170px] sm:h-[400px] lg:h-[500px] overflow-hidden "
             >
               <img
@@ -215,9 +183,9 @@ export default function BlogsSection() {
                   w-full
                   h-full
                   object-cover
-                  
+                  transform-gpu
                   transition-transform
-                  duration-700
+                  duration-500
                   hover:scale-105
                 "
               />
@@ -225,14 +193,15 @@ export default function BlogsSection() {
 
             {/* RIGHT CONTENT */}
             <motion.div
-              initial={{ opacity: 0, x: 120 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
-                duration: 1.2,
-                delay: 0.15,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.6,
+                delay: 0.05,
+                ease: "easeOut",
               }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true }}
+              style={{ willChange: "transform, opacity" }}
               className="w-full lg:w-[616px] lg:pt-[50px] flex flex-col"
             >
               <span
@@ -297,13 +266,14 @@ export default function BlogsSection() {
       <section className="px-5 sm:px-8 lg:px-[100px] mt-[50px] md:mt-[52px]">
         
         <motion.div
-          initial={{ opacity: 0, y: 80 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 1,
-            ease: [0.22, 1, 0.36, 1],
+            duration: 0.55,
+            ease: "easeOut",
           }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true }}
+          style={{ willChange: "transform, opacity" }}
           className="
             grid
             grid-cols-1
@@ -316,14 +286,15 @@ export default function BlogsSection() {
           {blogData.slice(1, 4).map((blog, index) => (
             <motion.div
               key={blog.id}
-              initial={{ opacity: 0, y: 80 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 1,
-                delay: index * 0.15,
-                ease: [0.22, 1, 0.36, 1],
+                duration: 0.45,
+                delay: index * 0.08,
+                ease: "easeOut",
               }}
               viewport={{ once: true }}
+              style={{ willChange: "transform, opacity" }}
             >
               <BlogCard
                 imageSrc={blog.imageSrc}
@@ -340,7 +311,7 @@ export default function BlogsSection() {
 
 function BlogCard({ imageSrc, title, path }) {
   return (
-    <article className="w-full max-w-[400px] mx-auto mr-20">
+    <article className="w-full max-w-[400px] mx-auto mr-20 ">
       {/* IMAGE */}
       <div className="w-full h-[290px] overflow-hidden">
         <img
@@ -351,10 +322,10 @@ function BlogCard({ imageSrc, title, path }) {
             w-full
             h-full
             object-cover
+            transform-gpu
             transition-transform
             duration-500
             hover:scale-105
-         
           "
         />
       </div>
@@ -415,14 +386,15 @@ function BlogCard({ imageSrc, title, path }) {
               src="/BlogImg/HomePageBlogLeftArrow.png"
               alt="Arrow"
               className="
-              
                 w-[25px]
-               
                 brightness-100
                 invert-[18%]
                 sepia-[90%]
                 saturate-[3000%]
                 hue-rotate-[340deg]
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
               "
             />
           </div>
