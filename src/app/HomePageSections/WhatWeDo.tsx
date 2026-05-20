@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function WhatWeDoSection() {
   const [activeCard, setActiveCard] = useState(0);
@@ -229,20 +230,26 @@ ymob: 560,
   <h2 className="font-montserrat font-bold text-[24px] sm:text-[30px] lg:text-[36px] leading-none tracking-[3px] lg:tracking-[4px] uppercase text-white">
     WHAT WE DO
   </h2>
-  <div className="w-full max-w-sm  text-white p-3">
-  {["ABOUT US", "OUR REGION", "OUR NATURE"].map((item, index) => (
-    <div key={index} className="group py-4 cursor-pointer">
-      
-      {/* Line */}
-      <div className="relative h-[1px] bg-gray-500 overflow-hidden">
-        <span className="absolute left-0 top-0 h-full w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
-      </div>
+  <div className="w-full max-w-sm text-white p-3">
+  {[
+    { name: "OUR PRODUCTS", path: "/about-us" },
+    { name: "AUDIT SERVICES", path: "/audit-services" },
+    { name: "CONSULTING SERVICES", path: "/consulting-services" },
+  ].map((item, index) => (
+    <Link key={index} href={item.path}>
+      <div className="group py-4 cursor-pointer">
+        
+        {/* Line */}
+        <div className="relative h-[1px] bg-gray-500 overflow-hidden">
+          <span className="absolute left-0 top-0 h-full w-0 bg-[#C02427] transition-all duration-500 ease-out group-hover:w-full"></span>
+        </div>
 
-      {/* Text */}
-      <h2 className="mt-6 text-lg md:text-lg font-semibold tracking-[3px] transition-colors duration-300 group-hover:text-[#C02427]">
-        {item}
-      </h2>
-    </div>
+        {/* Text */}
+        <h2 className="mt-6 text-lg md:text-lg font-semibold tracking-[3px] transition-colors duration-300 ease-out group-hover:text-[#C02427]">
+          {item.name}
+        </h2>
+      </div>
+    </Link>
   ))}
 </div>
 </div>
@@ -289,7 +296,7 @@ ymob: 560,
 
         origin-top-left
         md:origin-center
-        lg:mt-10
+        lg:mt-30
       "
     >
 
@@ -425,7 +432,7 @@ ymob: 560,
     <div
       className="
         absolute
-        z-[60] lg:mt-10
+        z-[60] lg:mt-20
 
         left-0
         right-0
