@@ -146,7 +146,7 @@ import Image from "next/image";
             className="group flex flex-col"
           >
             {/* IMAGE */}
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden ">
               
               <div
                 className="

@@ -10,6 +10,7 @@ import TechnologyPatents from "./sections/TechnologyPatents";
 import Overview from "./sections/Overview";
 import OurPresence from "./sections/OurPresence";
 import Navigation from "@/components/Navigation";
+import DownloadSection from "./sections/DownloadSection";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,6 +87,9 @@ export default function AboutUsContent  ()  {
       {/*Our Presence */}
       <section>
         <OurPresence />
+      </section>
+      <section>
+        <DownloadSection/>
       </section>
 
     </>

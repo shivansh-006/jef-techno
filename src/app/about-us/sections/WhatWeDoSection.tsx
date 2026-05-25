@@ -1,18 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export default function AboutUsServicesSection() {
   const [activeCard, setActiveCard] = useState(0);
-  const [panelOpen, setPanelOpen] = useState(false);
 
   const [background, setBackground] = useState(
     "/HomePageImg/WhatWeDoSection/Solution-1.png"
   );
-
-  const sectionRef = useRef(null);
-
-  const [showContent, setShowContent] = useState(true);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -35,18 +30,14 @@ export default function AboutUsServicesSection() {
       heading: "CONSULTING SERVICES",
       description:
         "Power System Studies using ETAP, PSCAD/EMTDC, PSS/E, DIgSILENT, SKM, and DSA Tools; and EMI/EMC Studies including AC interference analysis for pipelines.",
-
-      background: "./HomePageImg/WhatWeDoSection/Solution-1.png",
-
-       x: 140,
-  y:500,
-  xmob: 110,
-ymob: 845,
-
+      background: "/HomePageImg/WhatWeDoSection/Solution-1.png",
+      x: 200,
+      y: 470,
+      xmob: 110,
+      ymob: 200,
       labelLeft: "-100px",
       labelTop: "-35px",
       labelWidth: "120px",
-
       mobileLabelLeft: "-55px",
       mobileLabelTop: "-22px",
       mobileLabelWidth: "90px",
@@ -57,20 +48,15 @@ ymob: 845,
       title: "AUDIT SERVICES",
       heading: "AUDIT SERVICES",
       description:
-        "Electrical and Fire Safety Audit powered by JEF Safety Audit Tool (the world's first automated safety audit tool developed and patented by JEF), Earthing Health Assessment of live installations and Instrumentation Earthing Audit for I&C systems in process plants and generating stations.",
-
-      background: "./HomePageImg/WhatWeDoSection/Solution-2.png",
-
-      x: 250,
-      y: 390,
-
+        "Electrical and Fire Safety Audit powered by JEF Safety Audit Tool, Earthing Health Assessment of live installations and Instrumentation Earthing Audit for I&C systems.",
+      background: "/HomePageImg/WhatWeDoSection/Solution-2.png",
+      x: 320,
+      y: 360,
       xmob: 250,
-      ymob: 715,
-
+      ymob: 250,
       labelLeft: "0px",
       labelTop: "60px",
       labelWidth: "150px",
-
       mobileLabelLeft: "20px",
       mobileLabelTop: "20px",
       mobileLabelWidth: "130px",
@@ -81,20 +67,15 @@ ymob: 845,
       title: "PRODUCTS",
       heading: "PRODUCTS",
       description:
-        "Type-tested lightning protection components and systems (to IEC 62305:2024), with CLPS components tested to 200 kA on the 10/350 µs waveform — double the IEC standard requirement, earthing and grounding system solutions, surge protective devices, and lightning risk assessment tools including the automated JEF Shield platform.",
-
-      background: "./HomePageImg/WhatWeDoSection/Solution-5.png",
-
-      x: 375,
-      y: 275,
-
+        "Type-tested lightning protection components and systems, earthing and grounding system solutions, surge protective devices, and lightning risk assessment tools.",
+      background: "/HomePageImg/WhatWeDoSection/Solution-5.png",
+      x: 450,
+      y: 240,
       xmob: 410,
-      ymob: 560,
-
+      ymob: 300,
       labelLeft: "-20px",
       labelTop: "30px",
       labelWidth: "120px",
-
       mobileLabelLeft: "0px",
       mobileLabelTop: "25px",
       mobileLabelWidth: "90px",
@@ -103,154 +84,109 @@ ymob: 845,
 
   const handleCardClick = (service) => {
     setActiveCard(service.id);
-    setPanelOpen(true);
     setBackground(service.background);
   };
 
-  useEffect(() => {
-    if (panelOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [panelOpen]);
-
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full min-h-[1150px] md:min-h-[700px] lg:min-h-[850px] overflow-hidden bg-black"
-    >
-      {/* Background Image */}
+    <section className="relative w-full min-h-[1200px] lg:min-h-[850px] overflow-hidden bg-black">
+      {/* Background */}
       <img
         src={background}
-        alt="About Us Services Background"
-        className={`absolute inset-0 w-full h-full object-cover transition-all duration-[1800ms] ease-in-out ${
-          showContent ? "opacity-100 scale-100" : "opacity-0 scale-105"
-        } z-0`}
+        alt="background"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-1000"
       />
 
-      {/* HEADING */}
-      <div className="absolute top-[35px] left-[20px] sm:left-[40px] lg:top-[70px] lg:left-[70px] z-[30]">
-        <h2 className="font-montserrat font-bold text-[24px] sm:text-[30px] lg:text-[36px] leading-none tracking-[3px] lg:tracking-[4px] uppercase text-white">
-          WHAT WE DO
-        </h2>
-      </div>
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-      {/* MAIN CONTENT WRAPPER */}
+      {/* Main layout */}
       <div
-        className={`
-          absolute inset-0
-          z-10
-          transition-opacity duration-1000
-          ${showContent ? "opacity-100" : "opacity-0"}
-        `}
+        className="
+          relative z-30
+          flex flex-col
+          lg:flex-row
+          items-center
+          lg:items-start
+          justify-between
+          w-full
+          h-full
+          px-6 sm:px-10 lg:px-20
+          pt-12 lg:pt-20
+          gap-14 lg:gap-8
+        "
       >
-        {/* DARK OVERLAY */}
-        <div
-          className={`
-            absolute inset-0
-            z-[20]
-            transition-all duration-700
-            bg-black/40
-          `}
-        />
+        {/* LEFT HEADING */}
+        <div className="w-full lg:w-[20%]">
+          <h2
+            className="
+            lg:mt-40
+              text-white
+              font-bold
+              uppercase
+              tracking-[4px]
+              text-[24px]
+              md:text-[32px]
+              lg:text-[36px]
+              whitespace-nowrap
+              
+            "
+          >
+            WHAT WE DO
+          </h2>
+        </div>
 
-        {/* J WRAPPER */}
+        {/* CENTER J + dots */}
         <div
           className="
-            absolute
-            inset-0
-            z-[50]
-
-            left-1/2
-            lg:-translate-x-[70%]
-            -translate-x-[50%]
-
-            scale-[0.62]
-            sm:scale-[0.72]
-            md:scale-100
-
-            origin-top-left
-            md:origin-center
-            lg:mt-10
+            relative
+            w-full
+            lg:w-[40%]
+            h-[520px]
+            md:h-[580px]
+            lg:h-[650px]
+            flex
+            items-center
+            justify-center
           "
         >
-          {/* J PNG */}
           <img
             src="/HomePageImg/J.png"
-            alt="J Path"
+            alt="J"
             className="
               absolute
-              rotate-[46deg]
-              top-[400px]
-              left-[30px]
-              md:top-[145px]
-              md:left-[70px]
-
-              md:w-[100px]
-              lg:w-[200px]
-
+              hidden
+              lg:block
+              w-[220px]
+              md:w-[280px]
+              lg:w-[380px]
               opacity-90
-              pointer-events-none
-              z-[45]
             "
           />
 
-          {/* INTERACTIVE DOTS */}
           {services.map((service) => {
             const isActive = activeCard === service.id;
 
             return (
               <div
                 key={service.id}
-                className="absolute z-[60] group"
+                className="absolute z-20 group cursor-pointer "
                 style={{
-                  top: isMobile
-                    ? `${service.ymob}px`
-                    : `${service.y}px`,
-
-                  left: isMobile
-                    ? `${service.xmob}px`
-                    : `${service.x}px`,
+                  top: isMobile ? `${service.ymob}px` : `${service.y}px`,
+                  left: isMobile ? `${service.xmob}px` : `${service.x}px`,
                 }}
                 onMouseEnter={() => handleCardClick(service)}
                 onClick={() => handleCardClick(service)}
               >
-                {/* LABEL */}
                 <div
-                  className={`
-                    absolute
-                    text-[8px] md:text-[11px]
-                    tracking-[1px] md:tracking-[2px]
-                    uppercase
-                    font-medium
-                    leading-[1.35]
-                    break-words
-                    whitespace-normal
-                    transition-all
-                    duration-500
-                    flex
-                    items-end
-                    text-center
-                    ${
-                      isActive
-                        ? "text-white"
-                        : "text-white/70 group-hover:text-white"
-                    }
-                  `}
+                  className={`absolute text-[10px] md:text-[11px] uppercase tracking-[2px] transition-all duration-300 ${
+                    isActive ? "text-white" : "text-white/70"
+                  }`}
                   style={{
                     left: isMobile
                       ? service.mobileLabelLeft
                       : service.labelLeft,
-
                     top: isMobile
                       ? service.mobileLabelTop
                       : service.labelTop,
-
                     width: isMobile
                       ? service.mobileLabelWidth
                       : service.labelWidth,
@@ -259,44 +195,21 @@ ymob: 845,
                   {service.title}
                 </div>
 
-                {/* DOT BUTTON */}
                 <button className="relative flex items-center justify-center">
-                  {/* OUTER RING */}
                   <span
-                    className={`
-                      absolute
-                      w-[24px]
-                      h-[24px]
-                      md:w-[34px]
-                      md:h-[34px]
-                      rounded-full
-                      border
-                      transition-all
-                      duration-500
-                      ${
-                        isActive
-                          ? "border-white scale-110 opacity-100"
-                          : "border-white/40 opacity-70 group-hover:border-white group-hover:scale-110"
-                      }
-                    `}
+                    className={`absolute rounded-full border w-8 h-8 md:w-10 md:h-10 transition-all ${
+                      isActive
+                        ? "border-white scale-110"
+                        : "border-white/40"
+                    }`}
                   />
 
-                  {/* INNER DOT */}
                   <span
-                    className={`
-                      w-[12px]
-                      h-[12px]
-                      md:w-[18px]
-                      md:h-[18px]
-                      rounded-full
-                      transition-all
-                      duration-500
-                      ${
-                        isActive
-                          ? "bg-white scale-110"
-                          : "bg-[#C61F26] group-hover:bg-white"
-                      }
-                    `}
+                    className={`rounded-full w-4 h-4 md:w-5 md:h-5 transition-all ${
+                      isActive
+                        ? "bg-white"
+                        : "bg-[#C61F26]"
+                    }`}
                   />
                 </button>
               </div>
@@ -304,44 +217,42 @@ ymob: 845,
           })}
         </div>
 
-        {/* RIGHT CONTENT PANEL */}
+        {/* RIGHT CONTENT */}
         <div
           className="
-            absolute
-            z-[60]
-            lg:mt-10
-
-            left-0
-            right-0
-
-            px-5
-
-            top-[760px]
-
-            md:left-auto
-            md:right-[90px]
-            md:top-[190px]
-
-            md:max-w-[500px]
-            max-w-full
+            w-full
+            lg:w-[35%]
+            max-w-[520px]
+            lg:mt-40
           "
         >
-          {/* RED LINE */}
-          <div className="w-full h-[2px] bg-[#C61F26] mb-6 md:mb-8 opacity-90" />
+          <div className="w-full h-[2px] bg-[#C61F26] mb-8" />
 
-          {/* ANIMATED CONTENT */}
-          <div
-            key={activeCard}
-            className="animate-[fadeUp_0.7s_ease]"
+          <h3
+            className="
+              text-white
+              uppercase
+              tracking-[4px]
+              text-[22px]
+              md:text-[26px]
+              lg:text-[30px]
+              mb-6
+            "
           >
-            <h3 className="text-white uppercase tracking-[2px] md:tracking-[4px] text-[20px] sm:text-[24px] lg:text-[28px] font-light leading-[1.3] mb-5 md:mb-8">
-              {services[activeCard].heading}
-            </h3>
+            {services[activeCard].heading}
+          </h3>
 
-            <p className="text-white/90 text-[15px] sm:text-[17px] lg:text-[20px] leading-[1.8] font-light">
-              {services[activeCard].description}
-            </p>
-          </div>
+          <p
+            className="
+              text-white/90
+              leading-[1.8]
+              text-[15px]
+              md:text-[18px]
+              lg:text-[20px]
+            "
+          >
+            {services[activeCard].description}
+          </p>
         </div>
       </div>
     </section>
