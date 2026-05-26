@@ -319,7 +319,7 @@ const DetailedContent = () => {
   const page = pages[activePage];
 
   return (
-    <section className="bg-[#232427] min-h-[700px] md:min-h-[980px] font-montserrat py-10 md:py-16 overflow-hidden">
+    <section className="bg-[#161414] min-h-[700px] md:min-h-[980px] font-montserrat py-10 md:py-16 overflow-hidden">
       <div className="max-w-[1389px] mx-auto px-6 md:px-10 flex flex-col gap-10">
         {/* Heading */}
         <motion.h2
@@ -507,10 +507,22 @@ const DetailedContent = () => {
 
                 {/* Label */}
                 <span
-                  className={`text-[11px] md:text-[12px] tracking-[1px] md:tracking-[1.49px] uppercase leading-[1.3] text-left transition-colors duration-300 h-[2.6em] line-clamp-2 overflow-hidden ${
-                    activePage === index ? "text-white font-bold" : "text-[#888] font-normal group-hover:text-white/60"
-                  }`}
-                  style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}
+                  className={`
+                    text-[12px] md:text-[18px] 
+                    tracking-[1px] md:tracking-[2.5px] 
+                    font-medium 
+                    uppercase 
+                    mt-1 
+                    transition-all 
+                    duration-300
+                    whitespace-pre-line
+                    text-left
+                    ${
+                      activePage === index
+                        ? "text-[#C02429]"
+                        : "text-[#d4d0c8] group-hover:text-white"
+                    }
+                  `}
                 >
                   {tab.nav}
                 </span>

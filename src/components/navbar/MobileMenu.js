@@ -18,7 +18,6 @@ const MobileMenu = () => {
     ],
     about: [
       { label: "About Us", path: "/about-us" },
-      { label: "JEF Leadership Team", path: "/leadership-team" },
       { label: "Our Clients", path: "/coming-soon" },
       { label: "Employee Login", path: "/coming-soon" },
     ],

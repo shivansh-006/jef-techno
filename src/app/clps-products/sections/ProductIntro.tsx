@@ -62,7 +62,7 @@ export default function ProductIntro() {
 
         {/* Original text */}
         <div className="flex flex-col gap-6 max-w-[1200px]">
-          <div className="w-full bg-[#232427] py-14 md:py-20 px-6 md:px-16">
+          <div className="w-full bg-[#232427] py-5 px-6 md:px-16">
   <div className="max-w-[1280px] mx-auto flex flex-col gap-12 text-center">
     
     <p
@@ -115,7 +115,7 @@ export default function ProductIntro() {
                 transition={{ duration: 0.55 }}
                 className="overflow-hidden flex flex-col gap-6"
               >
-               <div className="w-full bg-[#232427] px-6 md:px-16 py-14 md:py-20">
+               <div className="w-full bg-[#232427] px-6  ">
   <div className="max-w-[1280px] mx-auto">
     <p
       className="

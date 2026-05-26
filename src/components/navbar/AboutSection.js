@@ -6,14 +6,12 @@ import Link from "next/link";
 const navigationItems = [
   { number: "01", title: "About JEF", path: "/about-us" },
   
-  { number: "03", title: "Jef Shield", path: "/coming-soon" },
-  { number: "04", title: "employee login", path: "/coming-shoon" },
+  { number: "02", title: "employee login", path: "/coming-shoon" },
 ];
 
 const contentMap = {
-  "02": "",
-  "03": "Deliver Value added, technically superior and cost-optimum solutions to enhance the safety & reliability of Electrical systems by combining knowledge, experience and technology.",
-  "04": "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate.",
+  "01": "JEF is a specialist electrical engineering company with an uncompromising focus on the safety and reliability of electrical systems.",
+  "02": "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate.",
 };
 
 const AboutSection = () => {

@@ -5,14 +5,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { TranslationContext } from "../../context/TranslationContext";
+import Image from "next/image";
 
 const menuItems = [
   { label: "About", hasDropdown: true },
   { label: "Our Business", hasDropdown: true },
+  { label: "Our Blogs", hasDropdown: false, path: "/blog" },
   //{ label: "Our Industries", hasDropdown: true },
   { label: "JEF UAE", hasDropdown: false },
   { label: "JEF SHIELD", hasDropdown: false },
-  { label: "Our Blogs", hasDropdown: false, path: "/blog" },
+ 
 ];
 
 const NavHeader = ({
@@ -94,93 +96,23 @@ const NavHeader = ({
             ))}
           </nav>
 
-          <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
-            <button
-              onClick={toggleDropdown}
-              className="lg:flex z-20 hidden group gap-2.5 items-center self-stretch my-auto translation"
-            >
-              <div
-                translate="no"
-                className="self-stretch uppercase my-auto text-xs xl:text-sm font-light tracking-[2px] text-white"
-              >
-                {isArabic ? "Arabic (عربي)" : "Safe Tool"}
-              </div>
-              <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
-                <img
-                  loading="lazy"
-                  src="../HomePageImg/NavbarImg/Dropdown.png"
-                  alt="Dropdown"
-                  className={`object-contain w-5 hidden lg:block ${
-                    isDropdownVisible
-                      ? "transition-transform duration-300 transform rotate-180 group-hover:rotate-180"
-                      : "transition-transform duration-300 transform rotate-360"
-                  }`}
-                />
-              </div>
-            </button>
-            <AnimatePresence>
-              {isDropdownVisible && (
-                <motion.div
-                  animate="visible"
-                  id="navigation-menu"
-                  initial="hidden"
-                  exit="exit"
-                  variants={menuVariants}
-                  className="fixed inset-0 bg-black bg-opacity-55 flex z-10 justify-center items-start"
-                >
-                  <div className=" text-white shadow-md mt-40 flex flex-col items-end text-right w-[90%] 2xl:max-w-[92%]">
-                    <motion.div
-                      variants={buttonVariants}
-                      translate="no"
-                      className="cursor-pointer flex items-center gap-2 mb-8 w-fit"
-                      onClick={() => {
-                        toggleTranslation("en");
-                        setIsDropdownVisible(false);
-                      }}
-                    >
-                      <div>Safe Tool</div>
-                      <img
-                        className={`w-4 h-4 ${isArabic ? "hidden" : "block"}`}
-                        src="/red-check-mark-icon.png"
-                      />
-                    </motion.div>
-                    <motion.div
-                      variants={buttonVariants}
-                      translate="no"
-                      className="cursor-pointer w-fit flex items-center gap-2"
-                      onClick={() => {
-                        toggleTranslation("ar");
-                        setIsDropdownVisible(false);
-                      }}
-                    >
-                      <div>Arabic (عربي)</div>
-                      <img
-                        className={`w-4 h-4 ${isArabic ? "block" : "hidden"}`}
-                        src="/red-check-mark-icon.png"
-                      />
-                    </motion.div>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <Link href="/get-in-touch" className="z-20">
-              <button className="gap-3 uppercase self-stretch py-3 px-4 md:py-2 lg:py-3 md:px-4 lg:px-7 my-auto text-xs md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px] whitespace-nowrap">
-                Contact Us
-              </button>
-            </Link>
-            <button
-              className="lg:hidden mr-2 justify-items-center w-[2.3rem]"
-              onClick={toggleSlideMenu}
-            >
-              <img
-                src="/HomePageImg/NavbarImg/MenuLogo.png"
-                alt="Mobile View Menu Button"
-              />
-            </button>
+          <div className="flex gap-6 items-center self-stretch my-auto max-md:max-w-full text-center">
+            <h1 className="font-medium text-white text-[16px] tracking-[2px]">
+              JEF SAFE
+            </h1>
+             <Image
+        src="/nav-jef-safe.png"
+        alt="Menu"
+        width={20}
+        height={20}
+        className="object-contain w-11 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
+      />
+           
           </div>
         </div>
       </header>
       <div className="relative shrink-0 mt-7 h-0 border-b border-solid border-neutral-600 max-md:max-w-full" />
+     
     </div>
   );
 };

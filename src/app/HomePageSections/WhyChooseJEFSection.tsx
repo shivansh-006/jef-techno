@@ -34,7 +34,7 @@ const fadeRight: Variants = {
 
 export default function WhyChooseJEFSection() {
   return (
-    <section className="w-full bg-[#232427] flex justify-center py-[80px] md:py-[120px] px-5 sm:px-8 lg:px-[100px] overflow-hidden">
+    <section className="w-full bg-[#232427] max-w-[2400px] flex justify-center py-[80px] md:py-[120px] px-5 sm:px-8 lg:px-[100px] overflow-hidden">
       <div className="w-full flex flex-col gap-[90px] md:gap-[120px]">
         
         {/* TOP CONTENT */}

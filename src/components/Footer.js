@@ -98,9 +98,9 @@ function MainFooter() {
 function Footer() {
 
     return (
-        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#232427] w-full">
+        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#2D2E30] w-full">
             <hr className="hidden lg:block shrink-0 mt-2 w-full px-5 sm:px-8 lg:px-[100px] border border-solid border-neutral-400 max-md:mt-8" />
-            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 w-full px-5 sm:px-8 lg:px-[100px]">
+            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 w-full px-5 sm:px-8 lg:px-[100px] py-6 bg-[#2D2E30]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
                     FOLLOW jef ON SOCIAL MEDIA
                 </div>
