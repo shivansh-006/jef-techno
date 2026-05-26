@@ -16,7 +16,7 @@ export default function Navigation({
         relative
         w-full
 
-        bg-[#2B2B2D]
+        bg-[#2D2E30]
 
         border-t
         border-[#2D2E30]

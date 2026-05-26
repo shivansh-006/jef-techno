@@ -16,14 +16,14 @@ const cards = [
     image: "/clps/2.png",
     title: "IEC 62305:2024 ALIGNED",
     description:
-      "Product range, design tools, and technical documentation are aligned with the current edition of the standard. The 2024 revision introduces changes to risk assessment methodology, air termination design requirements, and SPD specifications reflected in the CLPS range.",
+      "Product range, design tools, and technical documentation are aligned with the current edition of the standard. The 2024 revision.",
   },
   {
     id: 3,
     image: "/clps/3.png",
     title: "COMPREHENSIVE SYSTEM FROM ONE SOURCE",
     description:
-      "Every component required for a comprehensive lightning protection system — from air termination rod to point-of-use SPD — is available from JEF as a coordinated, type-tested range.",
+      "Every component required for a comprehensive lightning protection system — from air termination rod to point-of-use SPD.",
   },
   {
     id: 4,

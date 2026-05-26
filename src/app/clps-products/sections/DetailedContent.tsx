@@ -5,48 +5,33 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
   {
-    label: "LIGHTNING THREAT AND WHY PROTECTION",
-    nav: "LIGHTNING THREAT \nAND WHY\n PROTECTION",
+    label: "CONVENTIONAL EARTHING ASSESSMENT",
+    nav: "CONVENTIONAL\n EARTHING\n ASSESSMENT",
     title: "THE LIGHTNING THREAT AND WHY PROTECTION IS REQUIRED",
     content: (
       <>
+        <p>Lightning causes two distinct categories of damage.</p>
         <p>
-          Lightning is a high-energy electrical discharge between the
-          atmosphere and the ground. The damage it causes to structures,
-          equipment, and people falls into two broad categories. The first is
-          direct physical damage. A lightning strike that terminates on a
-          structure releases a large current — which may range from a few
-          kiloamperes to several hundred kiloamperes depending on the severity
-          of the event — into whatever path it finds to ground. If that path
-          runs through the structural fabric of the building, through fuel or
-          gas services, or through people in the vicinity, the consequences
-          include fire, structural damage, explosion, and loss of life.
+          The first is Direct physical damage. It occurs when strike current —
+          ranging from a few kiloamperes to several hundred kiloamperes —
+          travels through the building fabric, fuel or gas services, or nearby
+          people, resulting in fire, structural damage, explosion, or loss of life.
         </p>
         <p>
-          The second is damage to electrical and electronic systems. Even when
-          a strike does not contact a structure directly, the electromagnetic
-          field associated with the lightning channel induces transient
-          overvoltages onto cables and conductors within and around the
-          building. These voltage spikes can destroy microelectronic
-          components, corrupt data, cause equipment to fail in ways that are
-          not immediately visible, and progressively shorten the service life
-          of insulation systems and electronic assemblies.
+          The second is Indirect damage. It affects electrical and electronic systems.
+          Even without direct contact, electromagnetic fields associated with the
+          lightning channel induce transient overvoltages onto cables and conductors,
+          destroying components, corrupting data, and causing hidden failures.
         </p>
         <p>
-          Modern industrial and commercial facilities are heavily dependent on
-          electronic control systems, communications infrastructure, and data
-          networks. The consequences of lightning damage to these systems
-          extend well beyond the cost of the damaged equipment — they include
-          production downtime, data loss, safety system unavailability, and
-          regulatory non-compliance.
+          Modern facilities depend on electronic controls, communications, and data
+          networks. Lightning damage extends beyond repair costs to production downtime,
+          data loss, safety system unavailability, and regulatory exposure.
         </p>
         <p>
-          A comprehensive lightning protection system addresses both
-          categories of threat. The external system intercepts direct strikes
-          and conducts their energy safely to ground. The internal system —
-          equipotential bonding and surge protective devices — manages the
-          overvoltages that would otherwise reach the electrical and
-          electronic systems inside the building.
+          A comprehensive lightning protection system addresses both: the external
+          system intercepts direct strikes; the internal system manages overvoltages
+          before they reach sensitive equipment.
         </p>
       </>
     ),
@@ -66,74 +51,26 @@ const pages = [
           the physical design of the external system, to the protection of
           internal electrical and electronic installations.
         </p>
-        <p>
-          The 2024 edition is a full technical revision of the previous 2010
-          edition, developed over an extended period by international
-          technical committees. It introduces updated risk assessment methods,
-          revised design requirements for the external system, clearer
-          guidance on separation distances, and strengthened requirements for
-          the protection of electronic systems and photovoltaic installations.
-        </p>
       </>
     ),
     subsections: [
       {
-        heading: "THE FOUR PARTS",
+        heading: "",
         tags: [
           "IEC 62305-1:2024 — General Principles",
           "IEC 62305-2:2024 — Risk Management",
           "IEC 62305-3:2024 — Physical Damage",
           "IEC 62305-4:2024 — Electrical & Electronic",
         ],
-        tagDescriptions: [
-          {
-            title: "IEC 62305-1:2024 — General Principles",
-            description:
-              "Sets out the overall principles and structure of the standard series, including the nature of the lightning threat, the characteristics of lightning current, and the basis on which protection measures are selected. The 2024 edition introduces formal references to the IEC 62561 product testing series, creating an explicit link between system design requirements and the component performance standards that govern the products used to build those systems. Surge current parameters used for SPD selections are also more precisely defined.",
-          },
-          {
-            title: "IEC 62305-2:2024 — Risk Management",
-            description:
-              "Provides the methodology for determining whether a structure requires lightning protection and to what level of protection. The 2024 revision consolidates separate risk categories — previously assessed independently — into a single total risk value, simplifying the assessment process. It replaces the previous lightning flash density parameter (Ng) with a ground strike-point density parameter (NSG), giving a more precise basis for estimating the number of hazardous events at a given location. The revised standard formally recognizes Thunderstorm Warning Systems as a tool that can reduce calculated risk in certain applications, and introduces frequency of damage to the assessment of impacts on the availability of critical internal systems.",
-          },
-          {
-            title: "IEC 62305-3:2024 — Physical Damage to Structures and Life Hazard",
-            description:
-              "Defines the design, installation, inspection, and maintenance requirements for the external lightning protection system — the air termination, down conductors, and earthing. The 2024 revision introduces specified minimum thicknesses for metal sheet components used in air termination, addressing the risk that thin materials may be perforated or develop hot spots under lightning current. It provides more detailed treatment of air termination positioning methods for structures with complex geometries, including green roofs and projecting façade elements. It clarifies the two available approaches for separation distance calculation — a general method and a simplified method — LPS Products strengthens cross-referencing to the IEC 62561 component testing standards.",
-          },
-          {
-            title: "IEC 62305-4:2024 — Electrical and Electronic Systems within Structures",
-            description:
-              "Covers the protection of internal electrical and electronic installations against the effects of lightning electromagnetic pulse (LEMP). The 2024 update aligns SPD selection requirements with the IEC 60364 series of electrical installation standards and introduces explicit references to IEC 61643-32 for the protection of photovoltaic systems. Requirements relating to SPD backup fuse dimensioning and status monitoring are also addressed.",
-          },
-        ],
+        isListOnly: true,
+        layout: "row",
       },
       {
         heading: "LIGHTNING PROTECTION LEVELS",
         body: "IEC 62305 defines four Lightning Protection Levels — LPL I through LPL IV. Each level corresponds to a defined set of design parameters, including the lightning current values used for component selection and the geometric parameters used for air termination design. The appropriate LPL for a given structure is determined through the risk assessment process under IEC 62305-2.",
         tags: ["LPL I", "LPL II", "LPL III", "LPL IV"],
-        tagDescriptions: [
-          {
-            title: "LPL I",
-            description:
-              "Highest interception probability: 200 kA peak. Required for computer data centers, military applications, high rise hotels/hospitals, nuclear power stations, and airport essential services such as telecom.",
-          },
-          {
-            title: "LPL II",
-            description:
-              "High interception probability: 150 kA peak. Required for low rise hotels/hospitals, ex zones in the industry and chemical sector, fuel retail outlets/gas stations/compressor stations and similar installations.",
-          },
-          {
-            title: "LPL III",
-            description:
-              "Medium interception probability: 100 kA peak. Required for schools, banks, residential buildings, temples, churches, mosques, community halls etc.",
-          },
-          {
-            title: "LPL IV",
-            description:
-              "Standard interception probability: 100 kA peak. Required for schools, banks, residential buildings, temples, churches, mosques, community halls etc.",
-          },
-        ],
+        isListOnly: true,
+        layout: "row",
       },
     ],
   },
@@ -144,36 +81,29 @@ const pages = [
     content: (
       <>
         <p>
-          IEC 62305:2024 treats lightning protection as a system with two
-          interdependent parts. Each addresses a distinct category of threat,
-          and neither is adequate on its own.
+          IEC 62305:2024 defines lightning protection as two interdependent
+          systems — neither is sufficient alone.
         </p>
         <p>
-          The external lightning protection system manages the direct
-          lightning strike event. It intercepts the strike at the air
-          termination, provides a defined current path down the structure
-          through the down conductor system, and disperses the energy safely
-          into the ground through the earth termination. Its primary function
-          is to protect the structure from physical damage and fire, and to
-          prevent dangerous touch and step voltages in the vicinity of the
-          building.
+          The external system manages the direct strike. It intercepts lightning
+          at the air termination, routes current through the down conductors and
+          disperses energy to ground via the earth termination — protecting the
+          structure from physical damage, fire, and dangerous touch and step
+          voltages.
         </p>
         <p>
-          The internal lightning protection system manages the electrical
-          consequences of a strike within the building. It uses equipotential
-          bonding to eliminate dangerous potential differences between the LPS
-          conductors and the metallic services, structural elements, and
-          electrical systems inside the structure. Surge Protective Devices
-          installed on all electrical and electronic lines limit the transient
-          overvoltages that enter the building — whether from the strike event
-          or from internal switching activity — to levels that connected
+          The internal system manages the electrical consequences within the
+          building. It uses Equipotential bonding to eliminate dangerous
+          potential differences between LPS conductors and metallic services and
+          structural elements inside the building. Surge Protective Devices
+          installed on all electrical and electronic lines limit transient
+          overvoltages — from strikes or internal switching — to levels
           equipment can safely withstand.
         </p>
         <p>
-          IEC 62305-3 requires that both parts of the comprehensive lightning
-          protection system be maintained and periodically inspected after
-          installation, with inspection intervals determined by the LPL and
-          the environmental conditions at the site.
+          IEC 62305-3 requires periodic inspection and maintenance of both
+          systems, in intervals set by the Lightning Protection Level and site
+          conditions.
         </p>
       </>
     ),
@@ -182,42 +112,28 @@ const pages = [
         heading: "EXTERNAL LIGHTNING PROTECTION",
         tags: [
           "Air Termination System",
-          "Air Termination Positioning Methods",
-          "Permitted Air Termination Types",
           "Down Conductor System",
           "Earth Termination System",
           "Equipotential Bonding",
+          "Air Termination Positioning Methods",
+          "Permitted Air Termination Types",
         ],
+        isListOnly: false,
+        layout: "row",
         tagDescriptions: [
-          {
-            title: "Air Termination System",
-            description:
-              "The air termination system is positioned at the highest and most exposed points of the structure — the locations where a lightning leader is most likely to terminate. By placing conductors and rods at these positions and connecting them to the down conductor system, the air termination gives the strike a defined entry point into the protected system, rather than allowing it to contact uncontrolled elements of the structure such as cladding, roofing materials, or building services.",
-          },
+          null,
+          null,
+          null,
+          null,
           {
             title: "Air Termination Positioning Methods (IEC 62305-3:2024)",
             description:
-              "Three positioning methods are recognised under IEC 62305-3. The 2024 revision provides more detailed guidance on their application to complex and modern structures: Rolling Sphere Method, Mesh Method, and Protective Angle Method.",
+              "Three positioning methods are recognised under IEC 62305-3. The 2024 revision provides more detailed guidance on their application to complex and modern structures:\n\nMethod\n• Rolling Sphere Method\n• Mesh Method\n• Protective Angle Method",
           },
           {
             title: "Permitted Air Termination Types",
             description:
-              "An air termination system may use vertical rods and masts, horizontal conductors, mesh conductors, catenary wires, or natural components (metallic elements permanently part of the structure). All elements must be interconnected to form a continuous network with down conductor connections made at regular intervals. Expansion connectors must be used where conductors cross structural expansion joints.",
-          },
-          {
-            title: "Down Conductor System",
-            description:
-              "Down conductors carry the lightning current from the air termination network at roof level down to the earthing system. They are the vertical current-carrying spine of the external lightning protection system and must be designed to handle up to 200 kA (for LPL I) without creating arc-over hazards to adjacent metalwork or building services.",
-          },
-          {
-            title: "Earth Termination System",
-            description:
-              "The earth termination system transfers electrical energy into the surrounding soil. Since lightning contains high-frequency content, performance is defined in terms of impulse impedance, not just DC resistance. An earthing system must be designed to disperse energy effectively without raising the structure's potential to dangerous levels.",
-          },
-          {
-            title: "Equipotential Bonding",
-            description:
-              "Equipotential bonding prevents dangerous side flashes by connecting all conducting elements within the structure to the LPS. This ensures every conducting part rises to approximately the same potential simultaneously during a strike. Where a permanent metal connection cannot be made, a surge protective device (SPD) is used instead.",
+              "An air termination system may use any combination of the following:\n\n• Vertical rods and masts - rod terminations at high points, including free-standing masts where elevated protection is needed\n• Horizontal conductors - tape or round conductors routed along roof edges, ridges, and exposed perimeter positions\n• Mesh conductors - conductor grids laid across flat or low-pitch roof surfaces\n• Catenary wires - conductors suspended between elevated points to protect the spaces beneath\n• Natural components - metallic elements permanently part of the structure, such as metal roof decking, reinforced concrete reinforcement, and metallic facades, where they meet the dimensional and electrical continuity requirements of IEC 62305-3:2024",
           },
         ],
       },
@@ -244,21 +160,23 @@ const pages = [
         heading: "TYPE TESTING — JEF'S 200 KA CREDENTIAL",
         body: "The IEC 62561 series specifies that external LPS components be type-tested to a 10/350 μs lightning impulse current. JEF type-tests its CLPS components at 200 kA on the 10/350 μs waveform — double the limit specified in the IEC standard series. This means that every JEF CLPS component has been verified to withstand twice the current magnitude that the standard requires, providing a margin of confidence that standard-minimum testing does not.\n\nType testing covers three sequential stages:",
         tags: ["Ageing Test", "Lightning Impulse Test", "Mechanical Test"],
+        isListOnly: false,
+        layout: "row",
         tagDescriptions: [
           {
             title: "Ageing Test",
             description:
-              "The component is subjected to environmental exposure — humidity, salt mist, sulphur, and electrical impulse testing — to simulate long-term service conditions and verify that performance remains within acceptable limits after environmental ageing.",
+              "The component is subjected to a defined sequence of environmental exposure — humidity, salt mist, Sulphur, Electrical impulse test and Mechanical test — to simulate long-term installation conditions. Electrical and Mechanical properties are assessed after ageing to verify that performance is not degraded over service life.",
           },
           {
-            title: "Lightning Impulse Test — 10/350 µs Waveform",
+            title: "Lightning Impulse Test — 10/350 µs waveform at 200 kA",
             description:
-              "The component is subjected to the specified lightning impulse current on the 10/350 µs waveform. JEF tests its CLPS components at up to 200 kA — double the IEC standard limit — verifying structural integrity without failure or unacceptable deformation.",
+              "The component is subjected to a current waveform with parameters representing a direct lightning current. JEF tests at 200 kA — double the IEC standard limit — verifying that the component survives the thermal, mechanical, and electrical stress of the test without failure, permanent deformation, or physical damage.",
           },
           {
             title: "Mechanical Test",
             description:
-              "The component is tested for mechanical strength and structural integrity under loading conditions expected during installation and service, including pull-out, bending, clamping, tightening torque, and dimensional verification.",
+              "The component is subjected to the mechanical forces it will experience during installation and in service — including pull-out test. Component integrity is verified under these conditions.",
           },
         ],
         footer:
@@ -334,149 +252,124 @@ const DetailedContent = () => {
 
         {/* Content Area */}
         <div className="w-full relative z-20">
-          {/* TOP SECTION: Page Intro OR Sub 0 Tag Description */}
+          {/* TOP SECTION: Page Intro */}
           <div className="min-h-[100px]">
-            <AnimatePresence mode="wait">
-              {activeTags[0] !== undefined && page.subsections?.[0]?.tagDescriptions?.[activeTags[0]] ? (
-                <motion.div
-                  key={`tag-desc-0-${activeTags[0]}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4 }}
-                  className="flex flex-col gap-4"
-                >
-                  <h3 className="text-[#C02429] text-[18px] md:text-[20px] font-bold tracking-[1px] leading-[1.4] uppercase">
-                    {page.subsections[0].tagDescriptions[activeTags[0]].title}
-                  </h3>
-                  <p className="text-[16px] md:text-[20px] font-normal leading-[1.5] text-white">
-                    {page.subsections[0].tagDescriptions[activeTags[0]].description}
-                  </p>
-                  <button
-                    onClick={() => setActiveTags(prev => ({ ...prev, 0: undefined }))}
-                    className="text-[#C02429] text-[14px] uppercase font-bold hover:underline w-fit"
-                  >
-                    ← Back to overview
-                  </button>
-                </motion.div>
-              ) : (
-                <motion.div
-                  key={`page-intro-${activePage}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4 }}
-                  className="flex flex-col gap-6"
-                >
-                  {React.Children.map(page.content.props.children, (child, i) => {
-                    if (child.type === "p") {
-                      return (
-                        <p key={i} className="text-[16px] md:text-[20px] font-normal leading-[1.5] text-white">
-                          {child.props.children}
-                        </p>
-                      );
-                    }
-                    return child;
-                  })}
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <motion.div
+              key={`page-intro-${activePage}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col gap-6"
+            >
+              {React.Children.map(page.content.props.children, (child, i) => {
+                if (child.type === "p") {
+                  return (
+                    <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white">
+                      {child.props.children}
+                    </p>
+                  );
+                }
+                return child;
+              })}
+            </motion.div>
           </div>
 
           {/* SUBSECTIONS LOOP */}
           {page.subsections && page.subsections.map((sub, si) => (
             <div key={si} className="mt-10">
-              {/* If si === 0, tags are ABOVE the heading */}
-              {si === 0 && sub.tags && (
-                <div className="flex flex-wrap gap-3 mb-6">
-                  {sub.tags.map((tag, ti) => {
-                    const isActive = activeTags[si] === ti;
-                    return (
-                      <button
-                        key={ti}
-                        onClick={() => setActiveTags(prev => ({ ...prev, [si]: isActive ? undefined : ti }))}
-                        className={`border-[1.5px] border-[#c8c4bc] rounded-full px-5 py-2 text-[12px] md:text-[14px] font-normal transition-all duration-300 ${
-                          isActive ? "bg-[#C02429] text-white border-[#C02429]" : "bg-transparent text-white hover:border-white"
-                        }`}
-                      >
-                        {tag}
-                      </button>
-                    );
-                  })}
-                </div>
+              {sub.heading && (
+                <h3 className="text-[#C02429] text-[18px] md:text-[20px] font-bold tracking-[1px] leading-[1.4] uppercase mb-4">
+                  {sub.heading}
+                </h3>
               )}
 
-              <h3 className="text-[#C02429] text-[18px] md:text-[20px] font-bold tracking-[1px] leading-[1.4] uppercase mb-4">
-                {sub.heading}
-              </h3>
-
-              {/* If si > 0, we have a swappable body area */}
-              {si > 0 && (
-                <div className="min-h-[50px]">
-                  <AnimatePresence mode="wait">
-                    {activeTags[si] !== undefined && sub.tagDescriptions?.[activeTags[si]] ? (
-                      <motion.div
-                        key={`tag-desc-${si}-${activeTags[si]}`}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.4 }}
-                        className="flex flex-col gap-4 mb-4"
+              {/* Swappable Area: Body OR Tag Description */}
+              <div className="min-h-[50px]">
+                <AnimatePresence mode="wait">
+                  {activeTags[si] !== undefined && sub.tagDescriptions?.[activeTags[si]] ? (
+                    <motion.div
+                      key={`tag-desc-${si}-${activeTags[si]}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.4 }}
+                      className="flex flex-col gap-4 mb-4"
+                    >
+                      <h4 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-bold uppercase">
+                        {sub.tagDescriptions[activeTags[si]].title}
+                      </h4>
+                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white whitespace-pre-line">
+                        {sub.tagDescriptions[activeTags[si]].description}
+                      </p>
+                      <button
+                        onClick={() => setActiveTags({})}
+                        className="text-[#C02429] text-[14px] uppercase font-bold hover:underline w-fit"
                       >
-                        <h4 className="text-white text-[16px] md:text-[18px] font-bold uppercase">
-                          {sub.tagDescriptions[activeTags[si]].title}
-                        </h4>
-                        <p className="text-[16px] md:text-[20px] font-normal leading-[1.5] text-white">
-                          {sub.tagDescriptions[activeTags[si]].description}
-                        </p>
-                        <button
-                          onClick={() => setActiveTags(prev => ({ ...prev, [si]: undefined }))}
-                          className="text-[#C02429] text-[14px] uppercase font-bold hover:underline w-fit"
-                        >
-                          ← Back to overview
-                        </button>
-                      </motion.div>
-                    ) : (
+                        ← Back to overview
+                      </button>
+                    </motion.div>
+                  ) : (
+                    sub.body && (
                       <motion.div
                         key={`sub-body-${si}`}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.4 }}
+                        className="mb-4"
                       >
-                        {sub.body && sub.body.split("\n\n").map((para, pi) => (
-                          <p key={pi} className="text-[16px] md:text-[20px] font-normal leading-[1.5] text-white/80 mb-4">
+                        {sub.body.split("\n\n").map((para, pi) => (
+                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 mb-4">
                             {para}
                           </p>
                         ))}
                       </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              )}
+                    )
+                  )}
+                </AnimatePresence>
+              </div>
 
-              {/* If si > 0, tags are BELOW the body area */}
-              {si > 0 && sub.tags && (
-                <div className="flex flex-wrap gap-3 mt-6">
+              {/* Tags Area */}
+              {sub.tags && (
+                <div className={`flex flex-wrap gap-x-8 gap-y-4 mb-6 ${sub.layout === "col" ? "flex-col" : "flex-row items-center"}`}>
                   {sub.tags.map((tag, ti) => {
                     const isActive = activeTags[si] === ti;
+                    const isInteractive = sub.tagDescriptions && sub.tagDescriptions[ti] !== null && sub.tagDescriptions[ti] !== undefined;
+
+                    if (!isInteractive) {
+                      return (
+                        <div key={ti} className="flex items-center gap-3 text-white/90">
+                          <span className="text-white mt-1 shrink-0">•</span>
+                          <span className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
+                            {tag}
+                          </span>
+                        </div>
+                      );
+                    }
                     return (
-                      <button
-                        key={ti}
-                        onClick={() => setActiveTags(prev => ({ ...prev, [si]: isActive ? undefined : ti }))}
-                        className={`border-[1.5px] border-[#c8c4bc] rounded-full px-5 py-2 text-[12px] md:text-[14px] font-normal transition-all duration-300 ${
-                          isActive ? "bg-[#C02429] text-white border-[#C02429]" : "bg-transparent text-white hover:border-white"
-                        }`}
-                      >
-                        {tag}
-                      </button>
+                      <div key={ti} className="flex items-center gap-4">
+                        <div className="flex items-center gap-3">
+                          <span className="text-white mt-1 shrink-0">•</span>
+                          <button
+                            onClick={() => setActiveTags({ [si]: ti })}
+                            className={`text-[16px] md:text-[18px] lg:text-[20px] font-semibold transition-all duration-300 border-b-2 text-left ${
+                              isActive 
+                                ? "text-[#C02429] border-[#C02429]" 
+                                : "text-white border-white/40 hover:text-[#C02429] hover:border-[#C02429]"
+                            }`}
+                          >
+                            {tag}
+                          </button>
+                        </div>
+                      </div>
                     );
                   })}
                 </div>
               )}
 
               {sub.footer && !activeTags[si] && (
-                <p className="text-[16px] md:text-[20px] font-normal leading-[1.5] mt-6 text-white italic opacity-80">
+                <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] mt-6 text-white italic opacity-80">
                   {sub.footer}
                 </p>
               )}

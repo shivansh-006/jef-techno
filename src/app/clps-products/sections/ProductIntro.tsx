@@ -16,7 +16,7 @@ export default function ProductIntro() {
   return (
     <section className="flex flex-col bg-[#232427] overflow-hidden -mb-11 md:mb-0">
       {/* Breadcrumb */}
-      <nav className="hidden md:flex py-6 px-24 w-full">
+      <nav className="bg-[#2D2E30] hidden md:flex py-6 px-24 w-full">
         <div className="flex items-center gap-2">
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
@@ -29,7 +29,7 @@ export default function ProductIntro() {
               </span>
 
               {index !== navItems.length - 1 && (
-                <span className="text-neutral-500">/</span>
+                <span className="text-neutral-500">›</span>
               )}
             </React.Fragment>
           ))}
@@ -71,7 +71,7 @@ export default function ProductIntro() {
         font-montserrat
         font-light
         text-[18px]
-        md:text-[22px]
+        md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
         max-w-[1220px]
@@ -89,7 +89,7 @@ export default function ProductIntro() {
         font-montserrat
         font-light
         text-[18px]
-        md:text-[22px]
+        md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
         max-w-[1220px]
@@ -124,7 +124,7 @@ export default function ProductIntro() {
         font-montserrat
         font-light
         text-[18px]
-        md:text-[22px]
+        md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
         max-w-[1240px]
