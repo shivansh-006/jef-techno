@@ -24,7 +24,7 @@ const Hero = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="absolute top-[60%] md:top-[70%] left-5 md:left-[100px] right-5 md:w-[1330px] z-10">
+        <div className="absolute top-[60%] md:top-[75%] left-5 md:left-[60px] right-5 md:w-[1330px] z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,12 +33,12 @@ const Hero = () => {
             className="flex flex-col gap-[16px] text-white"
           >
             {/* Heading */}
-            <h1 className="font-montserrat font-bold text-[24px] md:text-[36px] leading-[1.2] md:leading-[100%] tracking-[0.5px] uppercase">
+            <h1 className="font-montserrat font-lg text-[24px] md:text-[40px] leading-[1.2] md:leading-[100%] tracking-[0.5px] uppercase mb-4">
               COMPREHENSIVE LIGHTNING PROTECTION SOLUTIONS
             </h1>
 
             {/* Body */}
-            <p className="font-montserrat font-normal text-[16px] md:text-[22px] leading-[1.5]">
+            <p className="font-montserrat font-normal text-[16px] md:text-[19px] leading-[1.5]">
               From risk assessment and system design to type-tested components
               and surge protection — JEF delivers comprehensive lightning
               protection for industrial, commercial, and infrastructure

@@ -39,7 +39,7 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [openId, setOpenId] = useState(1);
+  const [openId, setOpenId] = useState(null);
 
   const toggleFAQ = (id) => {
     setOpenId(openId === id ? null : id);
@@ -59,7 +59,7 @@ const FAQ = () => {
         </motion.h2>
 
         <div className="w-full flex flex-col gap-6 md:gap-[32px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-x-[48px] md:gap-y-[32px] w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-x-[48px] md:gap-y-[32px] w-full items-start">
             {faqData.map((item, index) => {
               const isOpen = openId === item.id;
 
@@ -74,6 +74,7 @@ const FAQ = () => {
                     w-full
                     bg-[#1B1818]
                     border-[0.5px]
+                    rounded-lg
                     border-[#C02429]
                     overflow-hidden
                     transition-all
@@ -93,7 +94,7 @@ const FAQ = () => {
                       justify-between
                     "
                   >
-                    <div className="w-full flex items-center justify-between gap-4 md:gap-[64px]">
+                    <div className="w-full flex items-center justify-between gap-4">
                       <span
                         className={`
                           font-montserrat
@@ -102,7 +103,8 @@ const FAQ = () => {
                           text-left
                           transition-all
                           duration-300
-                          ${isOpen ? "font-bold text-[#C02429]" : "font-normal text-white"}
+                          
+                          ${isOpen ? "font-bold text-[#C02429]" : "font-medium text-white"}
                         `}
                       >
                         {item.question}
@@ -110,7 +112,7 @@ const FAQ = () => {
 
                       <div
                         className={`
-                          w-8 h-8 md:w-[49px] md:h-[49px]
+                          w-6 h-6 md:w-10 md:h-10
                           flex
                           items-center
                           justify-center
@@ -123,7 +125,10 @@ const FAQ = () => {
                         <img
                           src="/clps/Vector.png"
                           alt="Arrow"
-                          className="w-5 md:w-[29px] object-contain"
+                          className="w-3 md:w-4 object-contain transition-all duration-300"
+                          style={{ 
+                            filter: "invert(18%) sepia(87%) saturate(6392%) hue-rotate(352deg) brightness(89%) contrast(92%)" 
+                          }}
                         />
                       </div>
                     </div>
@@ -139,7 +144,7 @@ const FAQ = () => {
                       >
                         <div className="overflow-hidden">
                           <div className="px-5 md:px-[24px] pb-6 md:pb-[28px]">
-                            <p className="font-montserrat font-normal text-[14px] md:text-[16px] leading-[1.6] md:leading-[150%] text-white">
+                            <p className="font-montserrat font-normal text-[14px] md:text-[16px] leading-[1.6] md:leading-[150%] text-white/80">
                               {item.answer}
                             </p>
                           </div>

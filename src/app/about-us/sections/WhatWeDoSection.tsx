@@ -88,7 +88,7 @@ export default function AboutUsServicesSection() {
   };
 
   return (
-    <section className="relative w-full min-h-[1200px] lg:min-h-[850px] overflow-hidden bg-black">
+    <section className="relative w-full min-h-[1200px] lg:min-h-[1000px] overflow-hidden bg-black">
       {/* Background */}
       <img
         src={background}
@@ -120,12 +120,12 @@ export default function AboutUsServicesSection() {
             className="
             lg:mt-40
               text-white
-              font-bold
+              font-lg
               uppercase
               tracking-[4px]
               text-[24px]
               md:text-[32px]
-              lg:text-[36px]
+              lg:text-[30px]
               whitespace-nowrap
               
             "

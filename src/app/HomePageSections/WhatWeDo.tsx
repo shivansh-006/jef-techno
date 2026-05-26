@@ -50,74 +50,75 @@ export default function WhatWeDoSection() {
     return () => observer.disconnect();
   }, [videoStarted]);
 
-  const sections = {
-    products: {
-      png: "/HomePageImg/WhatWeDoSection/E.png",
+ const sections = {
+  products: {
+    png: "/HomePageImg/J.png",
 
-      dots: [
-        {
-          heading: "CLPS",
-          description: `
+    // using old audit coordinates
+    dots: [
+      {
+        heading: "CLPS",
+        description: `
 • Full coverage — from rooftop to foundation
 
 • Designed to IEC and IS standards
 
 • Protects people, equipment, and structures
-          `,
-          x: 200,
-          y: 0,
-          xmob: 290,
-          ymob: 450,
-        },
+        `,
+        x: 310,
+        y: 80,
+        xmob: 315,
+        ymob: 449,
+      },
 
-        {
-          heading: "EARTHING & GROUNDING SOLUTIONS",
-          description: `
+      {
+        heading: "EARTHING & GROUNDING SOLUTIONS",
+        description: `
 • Reduces shock risk and equipment damage
 
 • Works for industrial, commercial, and utility sites
 
 • Low-resistance, long-lasting installations
-          `,
-          x: 20,
-          y: 230,
-          xmob: 440,
-          ymob: 590,
-        },
+        `,
+        x: -10,
+        y: 290,
+        xmob: 500,
+        ymob: 660,
+      },
 
-        {
-          heading: "EARLY STREAMER EMISSION",
-          description: `
+      {
+        heading: "EARLY STREAMER EMISSION",
+        description: `
 • Up to 107m protection radius per unit
 
 • Fewer rods, lower installation cost
 
 • Certified to NFC 17-102 standard
-          `,
-          x: 475,
-          y: 150,
-          xmob: 420,
-          ymob: 720,
-        },
+        `,
+        x: 170,
+        y: 380,
+        xmob: 130,
+        ymob: 845,
+      },
 
-        {
-          heading: "SURGE PROTECTION DEVICES",
-          description: `
+      {
+        heading: "SURGE PROTECTION DEVICES",
+        description: `
 • Protects panels, motors, and sensitive electronics
 
 • Available for Type 1, 2, and 3 applications
 
 • Compliant with IEC 61643 standard
-          `,
-          x: 320,
-          y: 235,
-          xmob: 300,
-          ymob: 880,
-        },
+        `,
+        x: 270,
+        y: 285,
+        xmob: 265,
+        ymob: 715,
+      },
 
-        {
-          heading: "JEF SHIELD & E-BUILD",
-          description: `
+      {
+        heading: "JEF SHIELD & E-BUILD",
+        description: `
 • Full risk assessment to IS/IEC 62305 — instantly
 
 • Outputs design drawings and bill of materials
@@ -125,132 +126,133 @@ export default function WhatWeDoSection() {
 • Finds the most cost-effective protection option
 
 • Step-by-step guided installation workflow
-          `,
-          x: 280,
-          y: 410,
-          xmob: 130,
-          ymob: 700,
-        },
-      ],
-    },
+        `,
+        x: 390,
+        y: 165,
+        xmob: 425,
+        ymob: 560,
+      },
+    ],
+  },
 
-    audit: {
-      png: "/HomePageImg/J.png",
+  audit: {
+    png: "/HomePageImg/WhatWeDoSection/E.png",
 
-      dots: [
-        {
-          heading: "EARTHING HEALTH ASSESSMENT",
-          description: `
+    // using old products coordinates
+    dots: [
+      {
+        heading: "EARTHING HEALTH ASSESSMENT",
+        description: `
 • Detects hidden faults in your earthing network
 
 • Prevents equipment damage and shock risk
 
 • Meets safety compliance standards
-          `,
-          x: 350,
-          y: 20,
-          xmob: 315,
-          ymob: 449,
-        },
+        `,
+        x: 150,
+        y: 40,
+        xmob: 290,
+        ymob: 450,
+      },
 
-        {
-          heading: "LIGHTNING PROTECTION ADEQUACY",
-          description: `
+      {
+        heading: "LIGHTNING PROTECTION ADEQUACY",
+        description: `
 • Reviews rods, conductors, and bonding
 
 • Checks surge protection on critical systems
 
 • Validates against current IEC/IS standards
-          `,
-          x: 20,
-          y: 350,
-          xmob: 500,
-          ymob: 660,
-        },
+        `,
+        x: 5,
+        y: 320,
+        xmob: 440,
+        ymob: 590,
+      },
 
-        {
-          heading: "POWER QUALITY STUDY",
-          description: `
+      {
+        heading: "POWER QUALITY STUDY",
+        description: `
 • Identifies harmonics, dips, and surges
 
 • Reduces unplanned downtime and failures
 
 • Cuts energy waste and utility penalties
-          `,
-          x: 230,
-          y: 440,
-          xmob: 130,
-          ymob: 845,
-        },
+        `,
+        x: 370,
+        y: 130,
+        xmob: 420,
+        ymob: 720,
+      },
 
-        {
-          heading: "ELECTRICAL & FIRE SAFETY AUDIT",
-          description: `
+      {
+        heading: "ELECTRICAL & FIRE SAFETY AUDIT",
+        description: `
 • Spots overloaded circuits and wiring faults
 
 • Checks fire suppression and alarm systems
 
 • Keeps you legally compliant and insurable
-          `,
-          x: 350,
-          y: 280,
-          xmob: 265,
-          ymob: 715,
-        },
+        `,
+        x: 255,
+        y: 230,
+        xmob: 300,
+        ymob: 880,
+      },
 
-        {
-          heading: "INSTRUMENTATION EARTHING",
-          description: `
+      {
+        heading: "INSTRUMENTATION EARTHING",
+        description: `
 • Eliminates noise and signal interference
 
 • Protects sensitive control systems
 
 • Ensures accurate, reliable readings
-          `,
-          x: 460,
-          y: 90,
-          xmob: 425,
-          ymob: 560,
-        },
-      ],
-    },
+        `,
+        x: 250,
+        y: 370,
+        xmob: 130,
+        ymob: 700,
+      },
+    ],
+  },
 
-    consulting: {
-      png: "/HomePageImg/WhatWeDoSection/F.png",
+  consulting: {
+    png: "/HomePageImg/WhatWeDoSection/F.png",
 
-      dots: [
-        {
-          heading: "POWER SYSTEM STUDIES - RENEWABLE",
-          description: `
+    dots: [
+      {
+        heading: "POWER SYSTEM STUDIES - RENEWABLE",
+        description: `
 • Grid integration, load flow, and fault analysis
 
 • Ensures stable, compliant grid connections
 
 • Supports solar, wind, and hybrid projects
-          `,
-          x: 490,
-          y: 220,
-          xmob: 370,
-          ymob: 560,
-        },
+        `,
+        x: 390,
+        y: 230,
+        xmob: 370,
+        ymob: 560,
+      },
 
-        {
-          heading: "POWER SYSTEM STUDIES - INDUSTRIAL",
-          description: `
+      {
+        heading: "POWER SYSTEM STUDIES - INDUSTRIAL",
+        description: `
 • Short circuit, arc flash, and protection studies
 
 • Identifies weak points before they cause failures
 
 • Supports plant upgrades, expansions, and audits
-          `,
-          x: 330,
-          y: 290,
-          xmob: 270,
-          ymob: 720,
-        },
-      ],
-    },
-  };
+        `,
+        x: 260,
+        y: 290,
+        xmob: 270,
+        ymob: 720,
+      },
+    ],
+  },
+};
 
   const currentSection = sections[activeSection];
   const currentData = currentSection.dots[activeCard];
@@ -275,7 +277,7 @@ export default function WhatWeDoSection() {
 
         h-[1200px]
         md:h-[1350px]
-        lg:h-[650px]
+        lg:h-[1050px]
 
         overflow-hidden
         bg-black
@@ -369,11 +371,11 @@ export default function WhatWeDoSection() {
               <h2
                 className="
                   font-montserrat
-                  font-bold
+                  font-lg
 
                   text-[24px]
                   sm:text-[28px]
-                  xl:text-[34px]
+                  xl:text-[30px]
 
                   tracking-[4px]
                   uppercase
@@ -461,9 +463,11 @@ export default function WhatWeDoSection() {
               origin-top-left
               lg:origin-center
 
-              w-[500px]
+              w-[400px]
               h-[500px]
-   md:mt-30 lg:mt-0
+   md:mt-30 
+   lg:mt-0
+   md:ml-20
               shrink-0
 
               transition-opacity
@@ -587,7 +591,7 @@ left-1/2
 -translate-x-1/2
 
 w-full
-md:w-[600px]
+md:w-[500px]
 
 px-5
 

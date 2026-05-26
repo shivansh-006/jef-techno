@@ -88,20 +88,24 @@ const industriesData = [
     ],
   },
 ];
-
 export default function OurIndustriesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{
-        duration: 1.2,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      viewport={{ once: true }}
-      className="w-full h-auto lg:h-screen bg-black overflow-hidden flex flex-col lg:flex-row"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.15 }}
+      className="
+        w-full
+        h-auto
+        lg:h-screen
+        bg-black
+        overflow-hidden
+        flex
+        flex-col
+        lg:flex-row
+      "
     >
       {industriesData.map((industry, index) => {
         const isActive = activeIndex === index;
@@ -110,26 +114,32 @@ export default function OurIndustriesSection() {
           <motion.div
             key={industry.id}
             onMouseEnter={() => setActiveIndex(index)}
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-              delay: index * 0.08,
-              ease: [0.22, 1, 0.36, 1],
+            initial={{
+              opacity: 0,
+              y: 140,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
             }}
             viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 1,
+              delay: index * 0.22,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className={`
               relative
               overflow-hidden
+              cursor-pointer
               transition-all
               duration-700
               ease-[cubic-bezier(0.22,1,0.36,1)]
-              cursor-pointer
 
               w-full
               min-h-[420px]
-
               lg:min-h-0
+
               ${
                 isActive
                   ? "lg:flex-[3]"
@@ -137,20 +147,15 @@ export default function OurIndustriesSection() {
               }
             `}
           >
-            {/* BG IMAGE */}
+            {/* BG */}
             <motion.img
               src={industry.image}
               alt={industry.title}
-              initial={{ scale: 1.1, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{
-                duration: 1.4,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              viewport={{ once: true }}
               className={`
-                absolute inset-0
-                w-full h-full
+                absolute
+                inset-0
+                w-full
+                h-full
                 object-cover
                 transition-all
                 duration-700
@@ -165,7 +170,8 @@ export default function OurIndustriesSection() {
             {/* OVERLAY */}
             <div
               className={`
-                absolute inset-0
+                absolute
+                inset-0
                 transition-all
                 duration-700
                 ${
@@ -176,40 +182,21 @@ export default function OurIndustriesSection() {
               `}
             />
 
-            {/* CONTENT */}
+            {/* CONTENT WRAPPER */}
             <div className="relative z-20 h-full px-5 sm:px-8 py-8 sm:py-10 flex flex-col">
-              
               {/* TITLE */}
-              <motion.div
-                initial={{ opacity: 0, x: -60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  duration: 1,
-                  delay: 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                viewport={{ once: true }}
-                className="flex items-start gap-4 sm:gap-5"
-              >
+              <div className="flex items-start gap-4 sm:gap-5">
                 <div className="w-[2px] h-[50px] sm:h-[60px] bg-[#C02429] mt-1 shrink-0" />
 
                 <div className="flex items-center gap-3 sm:gap-4">
-                  
-                  {/* ICON */}
-                  <motion.img
+                  <img
                     src={industry.icon}
                     alt={industry.title}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: 0.2,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    viewport={{ once: true }}
                     className={`
-                      w-[22px] h-[22px]
-                      sm:w-[28px] sm:h-[28px]
+                      w-[22px]
+                      h-[22px]
+                      sm:w-[28px]
+                      sm:h-[28px]
                       object-contain
                       transition-all
                       duration-700
@@ -221,93 +208,122 @@ export default function OurIndustriesSection() {
                     `}
                   />
 
-                  {/* TITLE TEXT */}
-                  <motion.h2
-                    initial={{ opacity: 0, x: 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 1,
-                      delay: 0.25,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    viewport={{ once: true }}
+                  <h2
                     className={`
                       text-white
                       whitespace-nowrap
-                      text-[16px] sm:text-[25px]
-                      tracking-[0.5px]
+                      text-[16px]
+                      sm:text-[25px]
                       font-light
-                      transition-opacity transition-transform
-                      duration-1000
-                      ease-out
+                      text-left
+                      transition-all
+                      duration-700
+
                       ${
                         isActive
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-90 translate-y-[2px]"
+                          ? "opacity-100"
+                          : "opacity-90"
                       }
                     `}
                   >
                     {industry.title}
-                  </motion.h2>
+                  </h2>
                 </div>
-              </motion.div>
+              </div>
 
-             {/* EXPANDABLE CONTENT */}
-<div
-  className={`
-    mt-10 sm:mt-16 lg:mt-24
-    overflow-hidden
-    transition-all
-    duration-700
-    ease-[cubic-bezier(0.22,1,0.36,1)]
-    text-center
+              {/* EXPANDABLE */}
+              <div
+                className={`
+                  mt-10
+                  sm:mt-16
+                  lg:mt-24
+                  overflow-hidden
+                  transition-all
+                  duration-700
+                  ease-[cubic-bezier(0.22,1,0.36,1)]
 
-    ${
-      isActive
-        ? "opacity-100 translate-y-0 max-h-[1000px]"
-        : "opacity-0 translate-y-10 max-h-0 pointer-events-none"
-    }
-  `}
->
-  <motion.p
-    initial={{ opacity: 0, y: 40 }}
-    animate={
-      isActive
-        ? { opacity: 1, y: 0 }
-        : { opacity: 0, y: 40 }
-    }
-    transition={{
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1],
-    }}
-    className="text-white text-[14px] sm:text-[16px] leading-[1.8] mb-8 sm:mb-10 max-w-[500px]"
-  >
-    {industry.description}
-  </motion.p>
+                  ${
+                    isActive
+                      ? "max-h-[1000px]"
+                      : "max-h-0"
+                  }
+                `}
+              >
+                {/* delayed fade after expand */}
+                <motion.div
+                  initial={false}
+                  animate={
+                    isActive
+                      ? {
+                          opacity: 1,
+                          y: 0,
+                        }
+                      : {
+                          opacity: 0,
+                          y: 40,
+                        }
+                  }
+                  transition={{
+                    duration: 0.7,
+                    delay: isActive ? 0.5 : 0,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                >
+                  <p
+                    className="
+                      text-white
+                      text-[14px]
+                      sm:text-[16px]
+                      leading-[1.8]
+                      mb-8
+                      sm:mb-10
+                      max-w-[500px]
+                      text-left
+                    "
+                  >
+                    {industry.description}
+                  </p>
 
-  <ul className="space-y-5 sm:space-y-8 max-w-[520px]">
-    {industry.points.map((point, idx) => (
-      <motion.li
-        key={idx}
-        initial={{ opacity: 0, x: 30 }}
-        animate={
-          isActive
-            ? { opacity: 1, x: 0 }
-            : { opacity: 0, x: 30 }
-        }
-        transition={{
-          duration: 0.6,
-          delay: idx * 0.08,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="text-white/95 text-[14px] sm:text-[16px] leading-[1.8] flex gap-3 sm:gap-4"
-      >
-        <span>•</span>
-        <span>{point}</span>
-      </motion.li>
-    ))}
-  </ul>
-</div>
+                  <ul className="space-y-5 sm:space-y-8 max-w-[520px]">
+                    {industry.points.map((point, idx) => (
+                      <motion.li
+                        key={idx}
+                        initial={false}
+                        animate={
+                          isActive
+                            ? {
+                                opacity: 1,
+                                x: 0,
+                              }
+                            : {
+                                opacity: 0,
+                                x: 30,
+                              }
+                        }
+                        transition={{
+                          duration: 0.55,
+                          delay: isActive
+                            ? 1 + idx * 0.12
+                            : 0,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className="
+                          text-white/95
+                          text-[14px]
+                          sm:text-[16px]
+                          leading-[1.8]
+                          flex
+                          gap-3
+                          sm:gap-4
+                        "
+                      >
+                        <span>•</span>
+                        <span>{point}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         );
