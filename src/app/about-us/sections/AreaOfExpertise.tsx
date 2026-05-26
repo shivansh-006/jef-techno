@@ -338,7 +338,7 @@ export default function ExcellenceinElectricalEngineering() {
                     className="
                       mt-[28px]
                       md:mt-[32px]
-                      rounded-lg
+                      
 
                       p-6
                       md:p-8

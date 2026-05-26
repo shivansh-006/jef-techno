@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const navigationItems = [
   { number: "01", title: "About JEF", path: "/about-us" },
-  { number: "02", title: "jef leadership Team ", path: "/leadership-team" },
+  
   { number: "03", title: "Jef Shield", path: "/coming-soon" },
   { number: "04", title: "employee login", path: "/coming-shoon" },
 ];

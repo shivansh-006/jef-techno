@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 export default function FounderMessageSection() {
   return (
-    <main className="flex overflow-hidden flex-col ">
+    <main className="flex overflow-hidden flex-col">
       <section className="overflow-hidden relative w-full h-auto bg-[#232427]">
-        <div className="flex lg:items-end xl:items-start gap-0 md:gap-6 2xl:mt-0 lg:gap-16 justify-between 2xl:justify-center 2xl:gap-40 px-4 lg:px-0 max-lg:flex-col 2xl:ml-[100x] md:mr-[100px] md:ml-[85px] ">
+        <div className="flex lg:items-end xl:items-start gap-0 md:gap-6 justify-between px-5 sm:px-8 lg:px-[100px] max-lg:flex-col">
           
           {/* LEFT CONTENT */}
           <motion.div

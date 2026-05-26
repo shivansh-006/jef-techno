@@ -388,7 +388,8 @@ function BlogCard({ imageSrc, title, path }) {
               className="
                 w-[25px]
                 brightness-100
-                invert-[18%]
+                animate-pulse
+                invert-[18%]  
                 sepia-[90%]
                 saturate-[3000%]
                 hue-rotate-[340deg]

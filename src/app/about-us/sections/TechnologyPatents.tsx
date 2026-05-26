@@ -191,7 +191,7 @@ export default function TechnologyPatents() {
               </motion.div>
 
               {/* EXPANDABLE CONTENT */}
-             <div className="w-full h-full flex flex-col mb-20 items-center justify-center">
+             <div className="w-full h-full flex flex-col mb-20 ">
                  <div
                 className={`
                   mt-10 sm:mt-16 lg:mt-24

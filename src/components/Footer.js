@@ -68,10 +68,10 @@ function MainFooter() {
   
 
     return (
-       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#232427]">
+       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#2D2E30]">
 
     {/* FIRST ROW */}
-    <div className="hidden lg:flex flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between">
+    <div className="hidden lg:flex flex-row w-full px-5 sm:px-8 lg:px-[100px] tracking-wider justify-between">
         <Section title="About" items={itemsAbout} />
         <Section title="Locations" items={itemsLocation} />
         <Section title="Our Businesses" items={itemsBusiness} />
@@ -79,7 +79,7 @@ function MainFooter() {
     </div>
 
     {/* SECOND ROW */}
-    <div className="hidden md:flex w-[88vw] max-w-[95vw] mt-10 gap-20">
+    <div className="hidden md:flex w-full px-5 sm:px-8 lg:px-[100px] mt-10 gap-20">
         <Section title="Internal Use" items={itemInternalUse} />
         <Section title="Jef Shield" items={itemJefShield} />
     </div>
@@ -98,9 +98,9 @@ function MainFooter() {
 function Footer() {
 
     return (
-        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#232427]">
-            <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
-            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
+        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#232427] w-full">
+            <hr className="hidden lg:block shrink-0 mt-2 w-full px-5 sm:px-8 lg:px-[100px] border border-solid border-neutral-400 max-md:mt-8" />
+            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 w-full px-5 sm:px-8 lg:px-[100px]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
                     FOLLOW jef ON SOCIAL MEDIA
                 </div>
@@ -112,7 +112,7 @@ function Footer() {
                 </div>
             </div>
             <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900">
-  <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5 w-full lg:w-[88vw] max-w-[95vw]">
+  <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5 w-full px-5 sm:px-8 lg:px-[100px]">
 
     {/* LEFT */}
     <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-[10px] sm:text-xs font-light tracking-widest text-center">
@@ -312,7 +312,7 @@ const FAQComponent = () => {
         }, []);
 
         return (
-            <div className=" flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
+            <div className="flex flex-col justify-center p-px self-center border-b w-full px-5 border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
                 <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
                     <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold text-lg md:text-xl tracking-wider uppercase text-red-600">
                         {question}

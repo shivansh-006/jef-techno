@@ -31,8 +31,8 @@ export default function AboutUsServicesSection() {
       description:
         "Power System Studies using ETAP, PSCAD/EMTDC, PSS/E, DIgSILENT, SKM, and DSA Tools; and EMI/EMC Studies including AC interference analysis for pipelines.",
       background: "/HomePageImg/WhatWeDoSection/Solution-1.png",
-      x: 200,
-      y: 470,
+      x: 240,
+      y: 450,
       xmob: 110,
       ymob: 200,
       labelLeft: "-100px",
@@ -50,8 +50,8 @@ export default function AboutUsServicesSection() {
       description:
         "Electrical and Fire Safety Audit powered by JEF Safety Audit Tool, Earthing Health Assessment of live installations and Instrumentation Earthing Audit for I&C systems.",
       background: "/HomePageImg/WhatWeDoSection/Solution-2.png",
-      x: 320,
-      y: 360,
+      x: 350,
+      y: 350,
       xmob: 250,
       ymob: 250,
       labelLeft: "0px",
@@ -69,8 +69,8 @@ export default function AboutUsServicesSection() {
       description:
         "Type-tested lightning protection components and systems, earthing and grounding system solutions, surge protective devices, and lightning risk assessment tools.",
       background: "/HomePageImg/WhatWeDoSection/Solution-5.png",
-      x: 450,
-      y: 240,
+      x: 470,
+      y: 230,
       xmob: 410,
       ymob: 300,
       labelLeft: "-20px",
@@ -118,7 +118,7 @@ export default function AboutUsServicesSection() {
         <div className="w-full lg:w-[20%]">
           <h2
             className="
-            lg:mt-40
+            lg:mt-10
               text-white
               font-lg
               uppercase
@@ -157,7 +157,7 @@ export default function AboutUsServicesSection() {
               lg:block
               w-[220px]
               md:w-[280px]
-              lg:w-[380px]
+              lg:w-[420px]
               opacity-90
             "
           />
@@ -195,23 +195,61 @@ export default function AboutUsServicesSection() {
                   {service.title}
                 </div>
 
-                <button className="relative flex items-center justify-center">
-                  <span
-                    className={`absolute rounded-full border w-8 h-8 md:w-10 md:h-10 transition-all ${
-                      isActive
-                        ? "border-white scale-110"
-                        : "border-white/40"
-                    }`}
-                  />
+              <button className="relative flex items-center justify-center">
+  {/* ping ring for inactive */}
+  {!isActive && (
+    <span
+      className="
+        absolute
+        w-8
+        h-8
+        md:w-10
+        md:h-10
+        rounded-full
+        bg-[#C61F26]/30
+        animate-ping
+      "
+    />
+  )}
 
-                  <span
-                    className={`rounded-full w-4 h-4 md:w-5 md:h-5 transition-all ${
-                      isActive
-                        ? "bg-white"
-                        : "bg-[#C61F26]"
-                    }`}
-                  />
-                </button>
+  {/* outer ring */}
+  <span
+    className={`
+      absolute
+      rounded-full
+      border
+      w-8
+      h-8
+      md:w-10
+      md:h-10
+      transition-all
+      duration-500
+      ${
+        isActive
+          ? "border-white scale-110"
+          : "border-white/40"
+      }
+    `}
+  />
+
+  {/* center dot */}
+  <span
+    className={`
+      rounded-full
+      w-4
+      h-4
+      md:w-5
+      md:h-5
+      transition-all
+      duration-500
+      ${
+        isActive
+          ? "bg-white scale-110"
+          : "bg-[#C61F26] animate-pulse"
+      }
+    `}
+  />
+</button>
               </div>
             );
           })}

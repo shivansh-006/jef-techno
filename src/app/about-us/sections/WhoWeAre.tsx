@@ -10,7 +10,7 @@ export default function WhoWeAreSection() {
     <section className="flex flex-col items-center w-full bg-[#232427] overflow-hidden relative">
       
       {/* WHO WE ARE */}
-      <div className="flex flex-col items-center justify-center w-full pt-[80px] md:pt-[100px] pb-[80px] md:pb-[120px] px-5">
+      <div className="flex flex-col items-center justify-center w-full pt-[80px] md:pt-[100px] pb-[80px] md:pb-[120px] px-5 sm:px-8 md:px-14 ">
         
         <motion.header
           initial={{ opacity: 0, y: 80 }}
@@ -20,8 +20,7 @@ export default function WhoWeAreSection() {
             ease: [0.22, 1, 0.36, 1],
           }}
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col items-center justify-center text-center gap-[28px] md:gap-[32px] w-full mx-auto"
-          style={{ maxWidth: "1279px" }}
+          className="flex flex-col items-center justify-center text-center gap-[28px] md:gap-[32px] w-full"
         >
           
           {/* LOGO */}
@@ -64,7 +63,7 @@ export default function WhoWeAreSection() {
           </motion.h1>
 
           {/* TEXT SWITCH */}
-          <div className="relative w-full max-w-[1255px] min-h-[420px] md:min-h-[320px]">
+          <div className="relative w-full ">
             
             <AnimatePresence mode="wait">
 
@@ -80,9 +79,6 @@ export default function WhoWeAreSection() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   className="
-                    absolute
-                    inset-0
-
                     text-[15px]
                     sm:text-[17px]
                     md:text-[20px]

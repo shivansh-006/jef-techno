@@ -54,10 +54,9 @@ export default function WhatWeDoSection() {
   products: {
     png: "/HomePageImg/J.png",
 
-    // using old audit coordinates
     dots: [
       {
-        heading: "CLPS",
+        heading: "CLPS\n ",
         description: `
 • Full coverage — from rooftop to foundation
 
@@ -65,59 +64,15 @@ export default function WhatWeDoSection() {
 
 • Protects people, equipment, and structures
         `,
-        x: 310,
+        x: 350,
         y: 80,
         xmob: 315,
         ymob: 449,
+        labelPos: "top",
       },
 
       {
-        heading: "EARTHING & GROUNDING SOLUTIONS",
-        description: `
-• Reduces shock risk and equipment damage
-
-• Works for industrial, commercial, and utility sites
-
-• Low-resistance, long-lasting installations
-        `,
-        x: -10,
-        y: 290,
-        xmob: 500,
-        ymob: 660,
-      },
-
-      {
-        heading: "EARLY STREAMER EMISSION",
-        description: `
-• Up to 107m protection radius per unit
-
-• Fewer rods, lower installation cost
-
-• Certified to NFC 17-102 standard
-        `,
-        x: 170,
-        y: 380,
-        xmob: 130,
-        ymob: 845,
-      },
-
-      {
-        heading: "SURGE PROTECTION DEVICES",
-        description: `
-• Protects panels, motors, and sensitive electronics
-
-• Available for Type 1, 2, and 3 applications
-
-• Compliant with IEC 61643 standard
-        `,
-        x: 270,
-        y: 285,
-        xmob: 265,
-        ymob: 715,
-      },
-
-      {
-        heading: "JEF SHIELD & E-BUILD",
+        heading: "JEF SHIELD &\nE-BUILD",
         description: `
 • Full risk assessment to IS/IEC 62305 — instantly
 
@@ -127,10 +82,59 @@ export default function WhatWeDoSection() {
 
 • Step-by-step guided installation workflow
         `,
-        x: 390,
-        y: 165,
+        x: -10,
+        y: 320,
+        xmob: 500,
+        ymob: 660,
+        labelPos: "top",
+      },
+
+      {
+        heading: "SURGE PROTECTION\nDEVICES",
+        description: `
+• Protects panels, motors, and sensitive electronics
+
+• Available for Type 1, 2, and 3 applications
+
+• Compliant with IEC 61643 standard
+        `,
+        x: 200,
+        y: 410,
+        xmob: 130,
+        ymob: 845,
+        labelPos: "bottom",
+      },
+
+      {
+        heading: "EARLY STREAMER\nEMISSION",
+        description: `
+• Up to 107m protection radius per unit
+
+• Fewer rods, lower installation cost
+
+• Certified to NFC 17-102 standard
+        `,
+        x: 305,
+        y: 305,
+        xmob: 265,
+        ymob: 715,
+        labelPos: "bottom",
+      },
+
+      {
+        heading: "EARTHING &\nGROUNDING SOLUTIONS",
+        description: `
+• Reduces shock risk and equipment damage
+
+• Works for industrial, commercial, and utility sites
+
+• Low-resistance, long-lasting installations
+        `,
+        x: 430,
+        y: 180,
         xmob: 425,
         ymob: 560,
+        labelPos: "bottom",
       },
     ],
   },
@@ -138,10 +142,9 @@ export default function WhatWeDoSection() {
   audit: {
     png: "/HomePageImg/WhatWeDoSection/E.png",
 
-    // using old products coordinates
     dots: [
       {
-        heading: "EARTHING HEALTH ASSESSMENT",
+        heading: "EARTHING\nSTUDIES",
         description: `
 • Detects hidden faults in your earthing network
 
@@ -153,10 +156,11 @@ export default function WhatWeDoSection() {
         y: 40,
         xmob: 290,
         ymob: 450,
+        labelPos: "top",
       },
 
       {
-        heading: "LIGHTNING PROTECTION ADEQUACY",
+        heading: "LIGHTNING PROTECTION\nSYSTEM STUDIES",
         description: `
 • Reviews rods, conductors, and bonding
 
@@ -164,44 +168,15 @@ export default function WhatWeDoSection() {
 
 • Validates against current IEC/IS standards
         `,
-        x: 5,
+        x: 0,
         y: 320,
         xmob: 440,
         ymob: 590,
+        labelPos: "top",
       },
 
       {
-        heading: "POWER QUALITY STUDY",
-        description: `
-• Identifies harmonics, dips, and surges
-
-• Reduces unplanned downtime and failures
-
-• Cuts energy waste and utility penalties
-        `,
-        x: 370,
-        y: 130,
-        xmob: 420,
-        ymob: 720,
-      },
-
-      {
-        heading: "ELECTRICAL & FIRE SAFETY AUDIT",
-        description: `
-• Spots overloaded circuits and wiring faults
-
-• Checks fire suppression and alarm systems
-
-• Keeps you legally compliant and insurable
-        `,
-        x: 255,
-        y: 230,
-        xmob: 300,
-        ymob: 880,
-      },
-
-      {
-        heading: "INSTRUMENTATION EARTHING",
+        heading: "INSTRUMENTATION\nEARTHING",
         description: `
 • Eliminates noise and signal interference
 
@@ -209,10 +184,43 @@ export default function WhatWeDoSection() {
 
 • Ensures accurate, reliable readings
         `,
-        x: 250,
-        y: 370,
+        x: 420,
+        y: 140,
+        xmob: 420,
+        ymob: 720,
+        labelPos: "top",
+      },
+
+      {
+        heading: "POWER QUALITY & ROOT\nCAUSE ANALYSIS",
+        description: `
+• Identifies harmonics, dips, and surges
+
+• Reduces unplanned downtime and failures
+
+• Cuts energy waste and utility penalties
+        `,
+        x: 290,
+        y: 245,
+        xmob: 300,
+        ymob: 880,
+        labelPos: "bottom",
+      },
+
+      {
+        heading: "POWER SYSTEM\nSTUDIES",
+        description: `
+• Spots overloaded circuits and wiring faults
+
+• Checks fire suppression and alarm systems
+
+• Keeps you legally compliant and insurable
+        `,
+        x: 290,
+        y: 410,
         xmob: 130,
         ymob: 700,
+        labelPos: "bottom",
       },
     ],
   },
@@ -222,7 +230,7 @@ export default function WhatWeDoSection() {
 
     dots: [
       {
-        heading: "POWER SYSTEM STUDIES - RENEWABLE",
+        heading: "POWER SYSTEM STUDIES\n- RENEWABLE",
         description: `
 • Grid integration, load flow, and fault analysis
 
@@ -230,14 +238,15 @@ export default function WhatWeDoSection() {
 
 • Supports solar, wind, and hybrid projects
         `,
-        x: 390,
-        y: 230,
+        x: 440,
+        y: 245,
         xmob: 370,
         ymob: 560,
+        labelPos: "top",
       },
 
       {
-        heading: "POWER SYSTEM STUDIES - INDUSTRIAL",
+        heading: "POWER SYSTEM STUDIES\n- INDUSTRIAL",
         description: `
 • Short circuit, arc flash, and protection studies
 
@@ -245,10 +254,11 @@ export default function WhatWeDoSection() {
 
 • Supports plant upgrades, expansions, and audits
         `,
-        x: 260,
-        y: 290,
+        x: 290,
+        y: 310,
         xmob: 270,
         ymob: 720,
+        labelPos: "bottom",
       },
     ],
   },
@@ -311,7 +321,7 @@ export default function WhatWeDoSection() {
       </video>
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/55 z-10" />
+      <div className="absolute inset-0 bg-black/35 z-10" />
 
       {/* MAIN */}
       <div className="absolute inset-0 z-20">
@@ -328,7 +338,7 @@ export default function WhatWeDoSection() {
             lg:flex-row
 
             items-center
-            lg:items-center
+            lg:items-start
 
             justify-start
             lg:justify-center
@@ -343,7 +353,7 @@ export default function WhatWeDoSection() {
 
             pt-[40px]
             md:pt-[70px]
-            lg:pt-0
+            lg:pt-[200px]
           "
         >
 
@@ -352,6 +362,7 @@ export default function WhatWeDoSection() {
             className="
               w-full
               max-w-[320px]
+              md:ml-6
 
               lg:w-[180px]
 
@@ -365,9 +376,11 @@ export default function WhatWeDoSection() {
               text-left
 
               z-[60]
+              
+              lg:-mt-32
             "
           >
-            <div className="mb-8 lg:mb-20">
+            <div className="mb-8 lg:mb-12 ">
               <h2
                 className="
                   font-montserrat
@@ -463,8 +476,8 @@ export default function WhatWeDoSection() {
               origin-top-left
               lg:origin-center
 
-              w-[400px]
-              h-[500px]
+              w-[450px]
+              h-[550px]
    md:mt-30 
    lg:mt-0
    md:ml-20
@@ -533,50 +546,99 @@ export default function WhatWeDoSection() {
                   onMouseEnter={() => setActiveCard(index)}
                   onClick={() => setActiveCard(index)}
                 >
-                  <button className="relative flex items-center justify-center">
-                    <span
+                  <div className="relative flex items-center justify-center">
+                    {/* LABEL */}
+                    <div
                       className={`
                         absolute
-
-                        w-[24px]
-                        h-[24px]
-
-                        sm:w-[30px]
-                        sm:h-[30px]
-
-                        rounded-full
-                        border
+                        whitespace-pre
+                        text-center
+                        text-[10px]
+                        sm:text-[11px]
+                        md:text-[12px]
+                        lg:text-[13px]
+                        font-medium
+                        tracking-wider
+                        uppercase
+                        text-white
                         transition-all
                         duration-500
-
+                        pointer-events-none
+                        ${
+                          dot.labelPos === "top"
+                            ? "bottom-full mb-4 left-1/2 -translate-x-1/2"
+                            : dot.labelPos === "bottom"
+                            ? "top-full mt-4 left-1/2 -translate-x-1/2"
+                            : dot.labelPos === "left"
+                            ? "right-full mr-4 top-1/2 -translate-y-1/2"
+                            : "left-full ml-4 top-1/2 -translate-y-1/2"
+                        }
                         ${
                           isActive
-                            ? "border-white scale-110 opacity-100"
-                            : "border-white/40 opacity-70"
+                            ? "opacity-100 scale-100"
+                            : "opacity-60 scale-95 group-hover:opacity-100 group-hover:scale-100"
                         }
                       `}
-                    />
+                    >
+                      {dot.heading}
+                    </div>
 
-                    <span
-                      className={`
-                        w-[12px]
-                        h-[12px]
+                    <button className="relative flex items-center justify-center">
+                      {/* ping ring for inactive */}
+                      {!isActive && (
+                        <span
+                          className="
+                            absolute
+                            w-8
+                            h-8
+                            md:w-10
+                            md:h-10
+                            rounded-full
+                            bg-[#C61F26]/30
+                            animate-ping
+                          "
+                        />
+                      )}
 
-                        sm:w-[16px]
-                        sm:h-[16px]
+                      {/* outer ring */}
+                      <span
+                        className={`
+                          absolute
+                          rounded-full
+                          border
+                          w-8
+                          h-8
+                          md:w-10
+                          md:h-10
+                          transition-all
+                          duration-500
+                          ${
+                            isActive
+                              ? "border-white scale-110"
+                              : "border-white/40"
+                          }
+                        `}
+                      />
 
-                        rounded-full
-                        transition-all
-                        duration-500
-
-                        ${
-                          isActive
-                            ? "bg-white scale-110"
-                            : "bg-[#C61F26]"
-                        }
-                      `}
-                    />
-                  </button>
+                      {/* center dot */}
+                      <span
+                        className={`
+                          rounded-full
+                          w-4
+                          h-4
+                          md:w-5
+                          md:h-5
+                          transition-all
+                          duration-500
+                          ${
+                            isActive
+                              ? "bg-white scale-110"
+                              : "bg-[#C61F26] animate-pulse"
+                          }
+                        `}
+                      />
+                    </button>
+                  </div>
                 </div>
               );
             })}
@@ -594,6 +656,7 @@ w-full
 md:w-[500px]
 
 px-5
+lg:mt-30
 
 top-[920px]
 

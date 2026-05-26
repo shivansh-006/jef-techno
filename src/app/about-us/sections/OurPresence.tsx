@@ -34,7 +34,7 @@ import Image from "next/image";
     <section className="bg-[#232427] overflow-hidden py-20 md:py-28 px-5 sm:px-8 md:px-14 xl:px-20">
       
       {/* HEADER */}
-      <div className="max-w-7xl mx-auto mb-16 md:mb-20">
+      <div className=" mx-auto mb-16 md:mb-20">
         
         <motion.p
           initial={{ opacity: 0, y: 40 }}
@@ -128,7 +128,7 @@ import Image from "next/image";
           md:gap-12
           xl:gap-16
 
-          max-w-7xl
+          
           mx-auto
         "
       >

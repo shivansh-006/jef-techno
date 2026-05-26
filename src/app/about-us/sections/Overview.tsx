@@ -5,6 +5,10 @@ import Image from "next/image";
 
 const Overview = () => {
   const stats = [
+     {
+      img: "/AboutUs/30plusyears.png",
+      label: "30+ YEARS",
+    },
     {
       img: "/AboutUs/countries.png",
       label: "30+ COUNTRIES",
@@ -21,10 +25,7 @@ const Overview = () => {
       img: "/AboutUs/retention_rate.png",
       label: "90% RETENTION RATE",
     },
-    {
-      img: "/AboutUs/regions.png",
-      label: "INDIA, US & EU",
-    },
+   
   ];
 
   return (

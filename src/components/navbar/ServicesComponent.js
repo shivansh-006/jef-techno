@@ -11,7 +11,7 @@ const ServiceItem = ({ icon, text, path, isVisible }) => (
         : "opacity-0 translate-y-4 invisible"
     }`}
   >
-    <div className="w-20 h-20 flex items-center justify-center shrink-0">
+    <div className="w-13 h-13 flex items-center justify-center shrink-0">
       <img
         loading="lazy"
         src={icon}
@@ -36,7 +36,7 @@ const ServiceItem2 = ({ icon, text, path, isVisible }) => (
         : "opacity-0 translate-y-4 invisible"
     }`}
   >
-    <div className="w-20 h-20 flex items-center justify-center shrink-0">
+    <div className="w-13 h-13 flex items-center justify-center shrink-0">
       <img
         loading="lazy"
         src={icon}
@@ -59,26 +59,26 @@ const ServicesComponent = () => {
   const [isHovered3, setIsHovered3] = useState(false);
 
   const services = [
-    { icon: "/nav-esa-icon3.png", text: "CLPS", path: "/clps-products" },
-    { icon: "/nav-earthing-icon3.png", text: "EARTHING GROUNDING", path: "/earthing-studies" },
-    { icon: "/nav-ese-icon2.png", text: "ESE", path: "/ese-lightning-protection" },
-    { icon: "/nav-esa-icon3.png", text: "ESA LIGHTNING PROTECTION", path: "/lightning-protection-studies" },
-    { icon: "/nav-lps-icon2.png", text: "JEF-SHIELD & E-BUILD", path: "/coming-soon" },
-    { icon: "/nav-industrial-icon2.png", text: "SPD", path: "/coming-soon" },
+    { icon: "/nav-clps.png", text: "CLPS", path: "/clps-products" },
+    { icon: "/nav-earthing-grounding.png", text: "EARTHING GROUNDING", path: "/earthing-studies" },
+    { icon: "/nav-ese.png", text: "ESE", path: "/ese-lightning-protection" },
+    { icon: "/nav-ese-lightning-protection.png", text: "ESA LIGHTNING PROTECTION", path: "/lightning-protection-studies" },
+    { icon: "/nav-jef-shield.png", text: "JEF-SHIELD & E-BUILD", path: "/coming-soon" },
+    { icon: "/nav-spd.png", text: "SPD", path: "/coming-soon" },
   ];
 
   const services2 = [
-    { icon: "/nav-esa-icon3.png", text: "EARTHING HEALTH ASSESSMENT", path: "/audit-services/earthing-health-assessment" },
-    { icon: "/nav-audit-icon2.png", text: "ELECTRICAL & FIRE SAFETY", path: "/audit-services/electical-and-fire-safety-audit" },
-    { icon: "/nav-istrumentation-icon2.png", text: "INSTRUMENTATION SYSTEM", path: "/audit-services/instrumentation-system" },
-    { icon: "/nav-power-studies-icon2.png", text: "POWER QUALITY SYSTEM", path: "/audit-services/power-quality-studies-and-analysis-services" },
-    { icon: "/nav-lps-icon2.png", text: "LPS ADEQUACY", path: "/audit-services/lightning-protection-sytem-adequacy-audit" },
+    { icon: "/nav-ehs.png", text: "EARTHING HEALTH ASSESSMENT", path: "/audit-services/earthing-health-assessment" },
+    { icon: "/nav-efs.png", text: "ELECTRICAL & FIRE SAFETY", path: "/audit-services/electical-and-fire-safety-audit" },
+    { icon: "/nav-ie.png", text: "INSTRUMENTATION SYSTEM", path: "/audit-services/instrumentation-system" },
+    { icon: "/nav-pqs.png", text: "POWER QUALITY SYSTEM", path: "/audit-services/power-quality-studies-and-analysis-services" },
+    { icon: "/nav-lps.png", text: "LPS ADEQUACY", path: "/audit-services/lightning-protection-sytem-adequacy-audit" },
   ];
 
   const services3 = [
-    { icon: "/nav-industrial-icon2.png", text: "INDUSTRIAL", path: "/industrial" },
+    { icon: "/nav-industrial.png", text: "INDUSTRIAL", path: "/industrial" },
     {
-      icon: "/nav-renewable-icon2.png",
+      icon: "/nav-renewable.png",
       text: "RENEWABLE",
       path: "/renewable",
       subItems: [
@@ -151,12 +151,33 @@ const ServicesComponent = () => {
 
                 <div className={`absolute inset-0 grid grid-cols-2 gap-x-20 gap-y-10 content-start transition-all duration-300 ${isHovered3 ? "opacity-100 z-10" : "opacity-0 pointer-events-none z-0"}`}>
                   {services3.map((service, index) => (
-                    <div key={index} className="group">
-                      <ServiceItem {...service} isVisible={isHovered3} />
+                    <div key={index} className="flex flex-col">
+                      <div className={`flex gap-5 items-center mt-8 first:mt-10 min-h-[50px] transition-all duration-500 ease-in-out ${isHovered3 ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
+                        <div className="w-13 h-13 flex items-center justify-center shrink-0">
+                          <img loading="lazy" src={service.icon} alt="" className="w-full h-full object-contain" />
+                        </div>
+                        <div className="flex items-center gap-4">
+                          <Link href={service.path}>
+                            <div className="text-sm uppercase tracking-[3.36px] font-medium hover:text-gray-400">
+                              {service.text}
+                            </div>
+                          </Link>
+                          {service.subItems && (
+                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                          )}
+                        </div>
+                      </div>
+                      
                       {service.subItems && (
-                        <div className="ml-10 mt-3 text-sm text-gray-300 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                        <div className={`ml-[72px] mt-4 flex flex-col gap-6 transition-all duration-700 delay-150 ${isHovered3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
                           {service.subItems.map((sub, i) => (
-                            <div key={i}>{sub.text}</div>
+                            <Link key={i} href={sub.path}>
+                              <div className="text-xl font-medium tracking-[3px] text-white hover:text-red-700 transition-colors duration-300">
+                                {sub.text}
+                              </div>
+                            </Link>
                           ))}
                         </div>
                       )}

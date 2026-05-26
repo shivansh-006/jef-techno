@@ -6,7 +6,7 @@ import { Download } from "lucide-react";
 export default function DownloadSection() {
   return (
     <section className="w-full bg-[#232427] px-6 md:px-12 lg:px-20 py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className=" mx-auto">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +35,7 @@ export default function DownloadSection() {
           viewport={{ once: true }}
           className="
             w-full
-            max-w-[340px]
+            max-w-[370px]
           "
         >
           {/* Image */}
@@ -50,7 +50,8 @@ export default function DownloadSection() {
               className="
                 w-full
                 h-[220px]
-                md:h-[250px]
+                md:h-[280px]
+               
                 object-cover
               "
             />

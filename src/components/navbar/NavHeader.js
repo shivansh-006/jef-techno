@@ -9,7 +9,9 @@ import { TranslationContext } from "../../context/TranslationContext";
 const menuItems = [
   { label: "About", hasDropdown: true },
   { label: "Our Business", hasDropdown: true },
-  { label: "Our Industries", hasDropdown: true },
+  //{ label: "Our Industries", hasDropdown: true },
+  { label: "JEF UAE", hasDropdown: false },
+  { label: "JEF SHIELD", hasDropdown: false },
   { label: "Our Blogs", hasDropdown: false, path: "/blog" },
 ];
 
