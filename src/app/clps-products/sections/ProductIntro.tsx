@@ -16,8 +16,8 @@ export default function ProductIntro() {
   return (
     <section className="flex flex-col bg-[#232427] overflow-hidden -mb-11 md:mb-0">
       {/* Breadcrumb */}
-      <nav className="bg-[#2D2E30] hidden md:flex py-6 px-18 w-full">
-        <div className="flex items-center gap-2">
+      <nav className="bg-[#2D2E30] hidden md:flex py-6 w-full">
+        <div className="section-container flex items-center gap-2">
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
               <span
@@ -37,7 +37,7 @@ export default function ProductIntro() {
       </nav>
 
       {/* Content */}
-      <header className="flex flex-col items-center text-center gap-8 w-full px-5 md:px-8 max-w-[1400px] mx-auto mt-12 md:mt-20 pb-20">
+      <header className="section-container flex flex-col items-center text-center gap-8 mt-12 md:mt-20 pb-20">
         {/* Logo */}
         <motion.img
           src="./clps/clpf-logo.png"
@@ -61,9 +61,9 @@ export default function ProductIntro() {
         </motion.h1>
 
         {/* Original text */}
-        <div className="flex flex-col gap-6 max-w-[1200px]">
-          <div className="w-full bg-[#232427] py-5 px-6 md:px-16">
-  <div className="max-w-[1280px] mx-auto flex flex-col gap-12 text-center">
+        <div className="flex flex-col gap-6 max-w-[1700px]">
+          <div className="w-full bg-[#232427] py-5 px-6 md:px-12">
+  <div className="max-w-[1500px] mx-auto flex flex-col gap-12 text-center">
     
     <p
       className="
@@ -74,7 +74,7 @@ export default function ProductIntro() {
         md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
-        max-w-[1220px]
+        max-w-[1500px]
         mx-auto
       "
     >
@@ -92,7 +92,7 @@ export default function ProductIntro() {
         md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
-        max-w-[1220px]
+        max-w-[1500px]
         mx-auto
       "
     >
@@ -116,7 +116,7 @@ export default function ProductIntro() {
                 className="overflow-hidden flex flex-col gap-6"
               >
                <div className="w-full bg-[#232427] px-6  ">
-  <div className="max-w-[1280px] mx-auto">
+  <div className="max-w-[1500px] mx-auto">
     <p
       className="
         text-center
@@ -127,7 +127,7 @@ export default function ProductIntro() {
         md:text-[20px]
         leading-[1.7]
         tracking-[0.2px]
-        max-w-[1240px]
+        max-w-[1500px]
         mx-auto
       "
     >

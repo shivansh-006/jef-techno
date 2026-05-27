@@ -246,7 +246,7 @@ function HomeClient() {
             >
               <source src="./HomePageImg/Banner-1.mp4" type="video/mp4" />
             </video>
-            <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
+            <div className="inset-y-2/3 xl:mt-[2%] section-container flex relative flex-col self-center max-md:mt-10 max-md:max-w-full ">
               <h1 className="2xl:text-6xl lg:text-4xl md:text-3xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white">
                 THINK ELECTRICAL, <br />
                 THINK JEF
@@ -264,7 +264,7 @@ function HomeClient() {
             >
               <source src="./HomePageImg/Banner-2.mp4" type="video/mp4" />
             </video>
-            <div className="inset-y-[26rem] xl:mt-[2%] lg:inset-x-20 md:inset-y-2/3 0 p-4 flex relative flex-col self-center w-full">
+            <div className="inset-y-[26rem] xl:mt-[2%] section-container md:inset-y-2/3 0 flex relative flex-col self-center">
               <h1 className="2xl:text-6xl lg:text-4xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white uppercase">
                 Expertise from Low Voltage
                 <br />
@@ -283,7 +283,7 @@ function HomeClient() {
             >
               <source src="./HomePageImg/Banner-3.mp4" type="video/mp4" />
             </video>
-            <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-w-[70%]">
+            <div className="inset-y-2/3 xl:mt-[2%] section-container flex relative flex-col self-center">
               <h1 className="2xl:text-6xl lg:text-4xl md:text-3xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white">
                 EXCELLENCE THROUGH DIGITIZATION
               </h1>
@@ -306,11 +306,11 @@ function HomeClient() {
         </div>
       </div>
 
-      <section><WhatWeDoSection /></section>
-      <section><WhyChooseJEFSection /></section>
-      <section><FounderMessageSection /></section>
-      <section><OurIndustriesSection /></section>
-      <section><BlogsSection /></section>
+      <WhatWeDoSection />
+      <WhyChooseJEFSection />
+      <FounderMessageSection />
+      <OurIndustriesSection />
+      <BlogsSection />
     </>
   );
 }

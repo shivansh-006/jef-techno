@@ -31,7 +31,7 @@ export default function AboutUsServicesSection() {
       description:
         "Power System Studies using ETAP, PSCAD/EMTDC, PSS/E, DIgSILENT, SKM, and DSA Tools; and EMI/EMC Studies including AC interference analysis for pipelines.",
       background: "/HomePageImg/WhatWeDoSection/Solution-1.png",
-      x: 240,
+      x: 270,
       y: 450,
       xmob: 110,
       ymob: 200,
@@ -50,7 +50,7 @@ export default function AboutUsServicesSection() {
       description:
         "Electrical and Fire Safety Audit powered by JEF Safety Audit Tool, Earthing Health Assessment of live installations and Instrumentation Earthing Audit for I&C systems.",
       background: "/HomePageImg/WhatWeDoSection/Solution-2.png",
-      x: 350,
+      x: 380,
       y: 350,
       xmob: 250,
       ymob: 250,
@@ -69,7 +69,7 @@ export default function AboutUsServicesSection() {
       description:
         "Type-tested lightning protection components and systems, earthing and grounding system solutions, surge protective devices, and lightning risk assessment tools.",
       background: "/HomePageImg/WhatWeDoSection/Solution-5.png",
-      x: 470,
+      x: 500,
       y: 230,
       xmob: 410,
       ymob: 300,
@@ -97,19 +97,17 @@ export default function AboutUsServicesSection() {
       />
 
       <div className="absolute inset-0 bg-black/40 z-10" />
-
       {/* Main layout */}
       <div
         className="
+          section-container
           relative z-30
           flex flex-col
           lg:flex-row
           items-center
           lg:items-start
           justify-between
-          w-full
           h-full
-          px-6 sm:px-10 lg:px-20
           pt-12 lg:pt-20
           gap-14 lg:gap-8
         "
@@ -195,7 +193,7 @@ export default function AboutUsServicesSection() {
                   {service.title}
                 </div>
 
-              <button className="relative flex items-center justify-center">
+                <button className="relative flex items-center justify-center">
   {/* ping ring for inactive */}
   {!isActive && (
     <span

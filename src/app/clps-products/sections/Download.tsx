@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Download = () => {
   return (
     <section className="w-full bg-[#232427] py-16 md:pt-[80px] md:pb-[120px] overflow-hidden">
-      <div className="max-w-[1508px] mx-auto px-6 md:px-[75px] flex flex-col gap-10 md:gap-[61px]">
+      <div className="section-container flex flex-col gap-10 md:gap-[61px]">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -22,13 +22,13 @@ const Download = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full max-w-[554px] flex flex-col gap-6"
+          className="w-full flex flex-col gap-6"
         >
-          <div className="w-full aspect-[554/369] overflow-hidden  shadow-md">
+          <div className="w-full overflow-hidden  ">
             <img
               src="/clps/Lighting Protection Guide.png"
               alt="Lightning Protection Solution Guide"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="max-w-[554px] max-h-[369px] object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
 

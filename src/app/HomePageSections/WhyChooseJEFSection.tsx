@@ -34,11 +34,11 @@ const fadeRight: Variants = {
 
 export default function WhyChooseJEFSection() {
   return (
-    <section className="w-full bg-[#232427] max-w-[2400px] flex justify-center py-[80px] md:py-[120px] px-5 sm:px-8 lg:px-[100px] overflow-hidden">
-      <div className="w-full flex flex-col gap-[90px] md:gap-[120px]">
+    <section className="w-full bg-[#232427] flex justify-center py-[80px] md:py-[120px] overflow-hidden">
+      <div className="section-container flex flex-col gap-[90px] md:gap-[120px]">
         
         {/* TOP CONTENT */}
-        <div className="flex flex-col lg:flex-row items-center gap-[50px] md:gap-[80px] lg:gap-[120px]">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[80px]">
           
           {/* IMAGE */}
           <motion.div
@@ -47,7 +47,7 @@ export default function WhyChooseJEFSection() {
             whileInView="show"
             viewport={{ once: true }}
             style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[667px] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
+            className="w-full lg:w-[45%] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
           >
             <img
               src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef1.png"
@@ -73,7 +73,7 @@ export default function WhyChooseJEFSection() {
             whileInView="show"
             viewport={{ once: true }}
             style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[499px] flex flex-col gap-5 md:gap-8"
+            className="w-full lg:w-[45%] flex flex-col gap-5 md:gap-8"
           >
             {/* SMALL TITLE */}
             <p className="text-[11px] sm:text-[12px] font-semibold tracking-[1.47px] uppercase text-[#C02429] font-montserrat">
@@ -147,7 +147,7 @@ export default function WhyChooseJEFSection() {
         </div>
 
         {/* BOTTOM CONTENT */}
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-[50px] md:gap-[80px] lg:gap-[120px]">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-[50px] md:gap-[80px]">
           
           {/* CONTENT */}
           <motion.div
@@ -156,7 +156,7 @@ export default function WhyChooseJEFSection() {
             whileInView="show"
             viewport={{ once: true }}
             style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[499px] flex flex-col gap-5 md:gap-8"
+            className="w-full lg:w-[45%] flex flex-col gap-5 md:gap-8"
           >
             {/* SMALL TITLE */}
             <p className="text-[11px] sm:text-[12px] font-semibold tracking-[1.47px] uppercase text-[#C02429] font-montserrat">
@@ -234,7 +234,7 @@ export default function WhyChooseJEFSection() {
             whileInView="show"
             viewport={{ once: true }}
             style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[667px] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
+            className="w-full lg:w-[45%] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
           >
             <img
               src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef2.png"

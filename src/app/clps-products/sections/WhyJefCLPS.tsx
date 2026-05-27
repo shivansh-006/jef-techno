@@ -53,14 +53,14 @@ const duplicatedCards = [...cards, ...cards];
 export default function WhyJefCLPS() {
   return (
     <section className="w-full bg-[#232427] py-16 md:py-[72px] overflow-hidden">
-      <div className="px-6 md:pl-[75px]">
+      <div className="section-container">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="max-w-[1385px] flex flex-col gap-6"
+          className="flex flex-col gap-6"
         >
           <h2
             className="
@@ -77,20 +77,21 @@ export default function WhyJefCLPS() {
             WHY JEF CLPS?
           </h2>
 
-          <p
-            className="
-              max-w-[1131px]
+         
+           
+           <p className="
               text-white
               text-[14px]
               md:text-[16px]
               leading-[1.7]
-            "
-          >
-            As a pioneer in Earthing integrity testing services, we at JEF have
-            over two decades of experience covering 300,000 riser connections
-            spread across 18 countries, 400 substations ranging from 33kV to
-            765kV process plants and other critical installations.
-          </p>
+            ">
+  As a pioneer in Earthing integrity testing services, we at JEF have over two decades of experience covering 300,000 riser connections
+  <br />
+  spread across 18 countries, 400 substations ranging from 33kV to 765kV process plants and other critical installations. With several patents
+  <br />
+  in this field, our level of expertise is unmatched even as we keep innovating further.
+</p>
+         
         </motion.div>
 
         {/* Infinite Slider */}

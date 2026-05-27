@@ -49,7 +49,7 @@ export default function AboutUsContent  ()  {
     </video>
 
     {/* Content */}
-    <section className="flex relative px-4 inset-y-[78%] lg:inset-x-20 flex-col mt-6 w-full max-w-[1200px] max-md:mb-2.5 max-md:max-w-full">
+    <section className="section-container flex relative inset-y-[78%] flex-col mt-6 max-md:mb-2.5">
       <h1 className="md:text-4xl text-3xl font-bold tracking-wide text-white max-md:text-3xl">
         JEF GROUP OF COMPANIES
       </h1>

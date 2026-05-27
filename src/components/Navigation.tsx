@@ -30,18 +30,13 @@ export default function Navigation({
       {/* CONTENT */}
       <div
         className="
+          section-container
           relative
           z-10
-
           h-[48px]
           md:h-[56px]
-
           flex
           items-center
-
-          px-5
-          md:px-10
-          xl:px-16
         "
       >
         <motion.div

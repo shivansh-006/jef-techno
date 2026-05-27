@@ -55,7 +55,7 @@ const FAQ = () => {
       {/* Dark Overlay to ensure readability */}
       <div className="absolute inset-0 z-1 bg-black/60" />
 
-      <div className="max-w-[1630px] mx-auto flex flex-col gap-[32px] md:gap-[48px] px-6 md:px-[75px] relative z-10">
+      <div className="section-container flex flex-col gap-[32px] md:gap-[48px] relative z-10">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}

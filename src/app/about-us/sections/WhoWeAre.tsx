@@ -10,7 +10,7 @@ export default function WhoWeAreSection() {
     <section className="flex flex-col items-center w-full bg-[#232427] overflow-hidden relative">
       
       {/* WHO WE ARE */}
-      <div className="flex flex-col items-center justify-center w-full pt-[80px] md:pt-[100px] pb-[80px] md:pb-[120px] px-5 sm:px-8 md:px-14 ">
+      <div className="section-container flex flex-col items-center justify-center pt-[80px] md:pt-[100px] pb-[80px] md:pb-[120px]">
         
         <motion.header
           initial={{ opacity: 0, y: 80 }}
@@ -63,7 +63,7 @@ export default function WhoWeAreSection() {
           </motion.h1>
 
           {/* TEXT SWITCH */}
-          <div className="relative w-full ">
+          <div className="relative w-full text-center">
             
             <AnimatePresence mode="wait">
 
@@ -87,7 +87,9 @@ export default function WhoWeAreSection() {
                     leading-[180%]
                     text-white
                     font-montserrat
-                    text-center
+                    text-center 
+                    lg:ml-10
+                    lg:mr-10  
                   "
                 >
                   JEF is a specialist electrical engineering company with an

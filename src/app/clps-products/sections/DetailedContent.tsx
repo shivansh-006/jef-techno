@@ -243,8 +243,8 @@ const DetailedContent = () => {
   const page = pages[activePage];
 
   return (
-    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden">
-      <div className="max-w-[1450px] mx-auto px-6 md:px-10 flex flex-col gap-6 md:gap-8">
+    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[1000px] flex flex-col">
+      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8">
         {/* Heading */}
         <motion.h2
           key={`title-${activePage}`}
@@ -257,7 +257,7 @@ const DetailedContent = () => {
         </motion.h2>
 
         {/* Content Area */}
-        <div className="w-full relative z-20">
+        <div className="w-full relative z-20 flex-1">
           {/* TOP SECTION: Page Intro */}
           <div className="min-h-0">
             <motion.div
@@ -271,7 +271,7 @@ const DetailedContent = () => {
               {React.Children.map(page.content.props.children, (child, i) => {
                 if (child.type === "p") {
                   return (
-                    <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white">
+                    <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                       {child.props.children}
                     </p>
                   );
@@ -326,7 +326,7 @@ const DetailedContent = () => {
                         className="mb-4"
                       >
                         {sub.body.split("\n\n").map((para, pi) => (
-                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 ">
+                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify">
                             {para}
                           </p>
                         ))}
@@ -431,7 +431,7 @@ const DetailedContent = () => {
         </div>
 
         {/* Bottom Navigation */}
-        <div className="mt-10 md:mt-16">
+        <div className="mt-12 md:mt-20 pb-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
             {pages.map((tab, index) => (
               <button

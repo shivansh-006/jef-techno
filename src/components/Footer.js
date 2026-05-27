@@ -71,7 +71,7 @@ function MainFooter() {
        <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#2D2E30]">
 
     {/* FIRST ROW */}
-    <div className="hidden lg:flex flex-row w-full px-5 sm:px-8 lg:px-[100px] tracking-wider justify-between">
+    <div className="section-container hidden lg:flex flex-row tracking-wider justify-between">
         <Section title="About" items={itemsAbout} />
         <Section title="Locations" items={itemsLocation} />
         <Section title="Our Businesses" items={itemsBusiness} />
@@ -79,7 +79,7 @@ function MainFooter() {
     </div>
 
     {/* SECOND ROW */}
-    <div className="hidden md:flex w-full px-5 sm:px-8 lg:px-[100px] mt-10 gap-20">
+    <div className="section-container hidden md:flex mt-10 gap-20">
         <Section title="Internal Use" items={itemInternalUse} />
         <Section title="Jef Shield" items={itemJefShield} />
     </div>
@@ -99,8 +99,8 @@ function Footer() {
 
     return (
         <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#2D2E30] w-full">
-            <hr className="hidden lg:block shrink-0 mt-2 w-full px-5 sm:px-8 lg:px-[100px] border border-solid border-neutral-400 max-md:mt-8" />
-            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 w-full px-5 sm:px-8 lg:px-[100px] py-6 bg-[#2D2E30]">
+            <hr className="section-container hidden lg:block shrink-0 mt-2 border border-solid border-neutral-400 max-md:mt-8" />
+            <div className="section-container flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 py-6 bg-[#2D2E30]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
                     FOLLOW jef ON SOCIAL MEDIA
                 </div>
@@ -113,7 +113,7 @@ function Footer() {
                 </div>
             </div>
             <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900">
-  <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5 w-full px-5 sm:px-8 lg:px-[100px]">
+  <div className="section-container flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5">
 
     {/* LEFT */}
     <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-[10px] sm:text-xs font-light tracking-widest text-center">

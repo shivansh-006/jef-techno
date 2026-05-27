@@ -324,60 +324,21 @@ export default function WhatWeDoSection() {
       <div className="absolute inset-0 bg-black/35 z-10" />
 
       {/* MAIN */}
-      <div className="absolute inset-0 z-20">
-
-        {/* CENTER ROW */}
-        <div
-          className="
-            absolute
-            inset-0
-
-            flex
-            flex-col
-            
-            lg:flex-row
-
-            items-center
-            lg:items-start
-
-            justify-start
-            lg:justify-center
-
-            gap-[20px]
-            lg:gap-[60px]
-            xl:gap-[140px]
-
-            px-[20px]
-            sm:px-[30px]
-            lg:px-[40px]
-
-            pt-[40px]
-            md:pt-[70px]
-            lg:pt-[200px]
-          "
-        >
+      <div className="absolute inset-0 z-20 flex items-center justify-center">
+        <div className="section-container flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10 lg:gap-30 xl:gap-50 h-full pt-20 lg:pt-0">
 
           {/* LEFT */}
-          <div
+         <div className="w-full h-full flex flex-col justify-start lg:mt-40">
+           <div
             className="
               w-full
-              max-w-[320px]
-              md:ml-6
-
-              lg:w-[180px]
-
+              lg:w-[250px]
               shrink-0
-
               flex
               flex-col
-
               items-start
-
               text-left
-
               z-[60]
-              
-              lg:-mt-32
             "
           >
             <div className="mb-8 lg:mb-12 ">
@@ -385,11 +346,9 @@ export default function WhatWeDoSection() {
                 className="
                   font-montserrat
                   font-lg
-
                   text-[24px]
                   sm:text-[28px]
                   xl:text-[30px]
-
                   tracking-[4px]
                   uppercase
                   text-white
@@ -452,40 +411,21 @@ export default function WhatWeDoSection() {
               ))}
             </div>
           </div>
+         </div>
 
           {/* CENTER GRAPH */}
           <div
             className={`
-              absolute
-              left-1/2
-              -translate-x-1/2
-
-              top-[180px]
-              md:top-[320px]
-
-              lg:relative
-              lg:top-auto
-              lg:left-auto
-              lg:translate-x-0
-
-              scale-[0.62]
-              sm:scale-[0.72]
-              md:scale-[0.9]
-              lg:scale-100
-
-              origin-top-left
-              lg:origin-center
-
+              relative
+              shrink-0
               w-[450px]
               h-[550px]
-   md:mt-30 
-   lg:mt-0
-   md:ml-20
-              shrink-0
-
+              scale-[0.55]
+              sm:scale-[0.7]
+              md:scale-[0.85]
+              lg:scale-100
               transition-opacity
               duration-1000
-
               ${showContent ? "opacity-100" : "opacity-0"}
             `}
           >
@@ -647,40 +587,13 @@ export default function WhatWeDoSection() {
           {/* RIGHT */}
           <div
             className={`
-          absolute
-
-left-1/2
--translate-x-1/2
-
-w-full
-md:w-[500px]
-
-px-5
-lg:mt-30
-
-top-[920px]
-
-md:top-[1080px]
-
-lg:relative
-lg:top-auto
-lg:left-auto
-lg:right-auto
-lg:translate-x-0
-
-lg:px-0
-
               w-full
-              max-w-[500px]
-
-              lg:block
-
+              lg:w-[450px]
               shrink-0
-
               transition-opacity
               duration-1000
-
               ${showContent ? "opacity-100" : "opacity-0"}
+              z-[60]
             `}
           >
             <div className="w-full h-[2px] bg-[#C61F26] mb-6" />

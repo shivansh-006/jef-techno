@@ -52,7 +52,7 @@ export default function BlogsSection() {
     <section className="py-[60px] md:py-[80px] overflow-hidden bg-[#232427]">
       
       {/* TOP SECTION */}
-      <main className="px-5 sm:px-8 lg:px-[100px] w-full">
+      <main className="section-container w-full">
         <div className="flex flex-col w-full">
           
           {/* HEADER */}
@@ -263,7 +263,7 @@ export default function BlogsSection() {
       </main>
 
       {/* LOWER BLOG CARDS */}
-      <section className="px-5 sm:px-8 lg:px-[100px] mt-[50px] md:mt-[52px]">
+      <section className="px-5 sm:px-8 lg:px-[55px]  mt-[50px] md:mt-[52px] w-screen overflow-hidden">
         
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -276,11 +276,12 @@ export default function BlogsSection() {
           style={{ willChange: "transform, opacity" }}
           className="
             grid
+            max-w-full
             grid-cols-1
             md:grid-cols-2
             xl:grid-cols-3
             gap-[28px]
-            md:gap-[35px]
+            md:gap-[60px]
           "
         >
           {blogData.slice(1, 4).map((blog, index) => (
@@ -311,7 +312,7 @@ export default function BlogsSection() {
 
 function BlogCard({ imageSrc, title, path }) {
   return (
-    <article className="w-full max-w-[400px] mx-auto mr-20 ">
+    <article className="w-full lg:w-[clamp(300px,25vw,500px)] mx-auto mr-20 ">
       {/* IMAGE */}
       <div className="w-full h-[290px] overflow-hidden">
         <img
@@ -326,6 +327,7 @@ function BlogCard({ imageSrc, title, path }) {
             transition-transform
             duration-500
             hover:scale-105
+            
           "
         />
       </div>

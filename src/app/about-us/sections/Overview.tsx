@@ -34,16 +34,11 @@ const Overview = () => {
         relative
         w-full
         overflow-hidden
-
         flex
         justify-center
-        items-start
-
+        items-center
         py-[80px]
         md:py-[100px]
-
-        px-5
-        md:px-10
       "
     >
       {/* BACKGROUND IMAGE */}
@@ -61,16 +56,12 @@ const Overview = () => {
       {/* CONTENT */}
       <div
         className="
+          section-container
           relative
           z-10
-
-          w-full
-          max-w-[1200px]
-
           flex
           flex-col
           items-center
-
           gap-[50px]
           md:gap-[70px]
         "
@@ -107,14 +98,15 @@ const Overview = () => {
         <div
           className="
             w-full
-
-            grid
-            grid-cols-2
-            md:grid-cols-3
-            xl:grid-cols-5
-
-            gap-y-[40px]
-            gap-x-[20px]
+    max-w-[1200px]
+    mx-auto
+    grid
+    grid-cols-2
+    md:grid-cols-3
+    xl:grid-cols-5
+    gap-y-[40px]
+    gap-x-[12px]
+    place-items-center
 
             place-items-center
           "
@@ -169,27 +161,7 @@ const Overview = () => {
                 />
               </div>
 
-              {/* LABEL */}
-              <p
-                className="
-                  mt-4
-
-                  text-white
-
-                  text-[13px]
-                  sm:text-[14px]
-
-                  tracking-[1.5px]
-
-                  uppercase
-
-                  font-medium
-
-                  leading-[160%]
-                "
-              >
-                {item.label}
-              </p>
+             
             </motion.div>
           ))}
         </div>

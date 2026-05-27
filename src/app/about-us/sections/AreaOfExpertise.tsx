@@ -71,11 +71,6 @@ export default function ExcellenceinElectricalEngineering() {
         flex
         flex-col
         justify-center
-
-        px-5
-        md:px-10
-        xl:px-[94px]
-
         py-16
         md:py-20
       "
@@ -90,7 +85,7 @@ export default function ExcellenceinElectricalEngineering() {
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-[#1a1a1a]/75" />
 
-      <div className="relative z-10 w-full max-w-[1540px] mx-auto">
+      <div className="section-container relative z-10">
         
         {/* TOP SECTION */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">

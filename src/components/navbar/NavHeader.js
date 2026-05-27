@@ -43,13 +43,13 @@ const NavHeader = ({
 
   return (
     <div className="flex flex-col pt-6 w-full h-full max-md:max-w-full">
-      <header className="flex relative lg:gap-20 justify-between items-center self-center w-[95%] 2xl:max-w-[92%] max-md:max-w-full">
-        <Link href={"/"} className="z-20">
+      <header className="flex relative lg:gap-20 justify-between items-center self-center section-container max-md:max-w-full ">
+        <Link href={"/"} className="z-20 lg:-ml-4">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
             alt="JEF Company logo"
-            className="object-contain w-[7rem] lg:w-[7rem] 2xl:w-[8rem]"
+            className="object-contain w-[7rem] lg:w-[7rem] 2xl:w-[8rem] "
           />
         </Link>
 
@@ -96,7 +96,7 @@ const NavHeader = ({
             ))}
           </nav>
 
-          <div className="flex gap-6 items-center self-stretch my-auto max-md:max-w-full text-center">
+          <div className="flex gap-6 items-center lg:-mr-6 self-stretch my-auto max-md:max-w-full text-center">
             <h1 className="font-medium text-white text-[16px] tracking-[2px]">
               JEF SAFE
             </h1>
