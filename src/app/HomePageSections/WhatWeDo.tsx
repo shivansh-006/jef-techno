@@ -537,11 +537,11 @@ export default function WhatWeDoSection() {
                   "
                   style={{
                     top: isMobile
-                      ? `${dot.ymob}px`
-                      : `${dot.y}px`,
+                      ? `${(dot.ymob / 550) * 100}%`
+                      : `${(dot.y / 550) * 100}%`,
                     left: isMobile
-                      ? `${dot.xmob}px`
-                      : `${dot.x}px`,
+                      ? `${(dot.xmob / 450) * 100}%`
+                      : `${(dot.x / 450) * 100}%`,
                   }}
                   onMouseEnter={() => setActiveCard(index)}
                   onClick={() => setActiveCard(index)}

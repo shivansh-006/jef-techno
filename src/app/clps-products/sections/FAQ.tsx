@@ -55,7 +55,7 @@ const FAQ = () => {
       {/* Dark Overlay to ensure readability */}
       <div className="absolute inset-0 z-1 bg-black/60" />
 
-      <div className="max-w-[1508px] mx-auto flex flex-col gap-[32px] md:gap-[48px] px-6 md:px-[100px] relative z-10">
+      <div className="max-w-[1630px] mx-auto flex flex-col gap-[32px] md:gap-[48px] px-6 md:px-[75px] relative z-10">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -133,9 +133,9 @@ const FAQ = () => {
                         <img
                           src="/clps/Vector.png"
                           alt="Arrow"
-                          className="w-3 md:w-4 object-contain transition-all duration-300"
+                          className="w-3 md:w-4 object-contain transition-all duration-300 "
                           style={{ 
-                            filter: "brightness(0) invert(1)" 
+                            filter: "brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(7470%) hue-rotate(356deg) brightness(98%) contrast(118%)" 
                           }}
                         />
                       </div>

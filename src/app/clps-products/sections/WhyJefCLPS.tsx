@@ -98,7 +98,7 @@ export default function WhyJefCLPS() {
           <motion.div
             className="flex gap-6 md:gap-12 w-max"
             animate={{
-              x: ["-50%", "0%"],
+              x: ["0%", "-50%"],
             }}
             transition={{
               duration: 45,

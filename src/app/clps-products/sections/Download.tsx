@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Download = () => {
   return (
     <section className="w-full bg-[#232427] py-16 md:pt-[80px] md:pb-[120px] overflow-hidden">
-      <div className="max-w-[1508px] mx-auto px-6 md:px-[100px] flex flex-col gap-10 md:gap-[61px]">
+      <div className="max-w-[1508px] mx-auto px-6 md:px-[75px] flex flex-col gap-10 md:gap-[61px]">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}

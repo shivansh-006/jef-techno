@@ -11,23 +11,29 @@ const pages = [
     content: (
       <>
         <p>Lightning causes two distinct categories of damage.</p>
+        <br />
         <p>
           The first is Direct physical damage. It occurs when strike current —
           ranging from a few kiloamperes to several hundred kiloamperes —
           travels through the building fabric, fuel or gas services, or nearby
           people, resulting in fire, structural damage, explosion, or loss of life.
         </p>
+        <br />
         <p>
           The second is Indirect damage. It affects electrical and electronic systems.
           Even without direct contact, electromagnetic fields associated with the
           lightning channel induce transient overvoltages onto cables and conductors,
           destroying components, corrupting data, and causing hidden failures.
         </p>
+        br
+
         <p>
           Modern facilities depend on electronic controls, communications, and data
           networks. Lightning damage extends beyond repair costs to production downtime,
           data loss, safety system unavailability, and regulatory exposure.
         </p>
+        br
+        
         <p>
           A comprehensive lightning protection system addresses both: the external
           system intercepts direct strikes; the internal system manages overvoltages
@@ -237,8 +243,8 @@ const DetailedContent = () => {
   const page = pages[activePage];
 
   return (
-    <section className="bg-[#161414] min-h-[700px] md:min-h-[980px] font-montserrat py-10 md:py-16 overflow-hidden">
-      <div className="max-w-[1389px] mx-auto px-6 md:px-10 flex flex-col gap-10">
+    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden">
+      <div className="max-w-[1450px] mx-auto px-6 md:px-10 flex flex-col gap-6 md:gap-8">
         {/* Heading */}
         <motion.h2
           key={`title-${activePage}`}
@@ -253,14 +259,14 @@ const DetailedContent = () => {
         {/* Content Area */}
         <div className="w-full relative z-20">
           {/* TOP SECTION: Page Intro */}
-          <div className="min-h-[100px]">
+          <div className="min-h-0">
             <motion.div
               key={`page-intro-${activePage}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4 }}
-              className="flex flex-col gap-6"
+              className="flex flex-col"
             >
               {React.Children.map(page.content.props.children, (child, i) => {
                 if (child.type === "p") {
@@ -277,7 +283,7 @@ const DetailedContent = () => {
 
           {/* SUBSECTIONS LOOP */}
           {page.subsections && page.subsections.map((sub, si) => (
-            <div key={si} className="mt-10">
+            <div key={si} className="mt-4 md:mt-5">
               {sub.heading && (
                 <h3 className="text-[#C02429] text-[18px] md:text-[20px] font-bold tracking-[1px] leading-[1.4] uppercase mb-4">
                   {sub.heading}
@@ -285,7 +291,7 @@ const DetailedContent = () => {
               )}
 
               {/* Swappable Area: Body OR Tag Description */}
-              <div className="min-h-[50px]">
+              <div className="min-h-[5[px]50px]">
                 <AnimatePresence mode="wait">
                   {activeTags[si] !== undefined && sub.tagDescriptions?.[activeTags[si]] ? (
                     <motion.div
@@ -320,7 +326,7 @@ const DetailedContent = () => {
                         className="mb-4"
                       >
                         {sub.body.split("\n\n").map((para, pi) => (
-                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 mb-4">
+                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 ">
                             {para}
                           </p>
                         ))}

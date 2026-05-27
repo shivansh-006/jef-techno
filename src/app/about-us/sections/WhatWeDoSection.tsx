@@ -138,14 +138,18 @@ export default function AboutUsServicesSection() {
         <div
           className="
             relative
-            w-full
-            lg:w-[40%]
-            h-[520px]
-            md:h-[580px]
-            lg:h-[650px]
+            w-[600px]
+            h-[650px]
+            shrink-0
             flex
             items-center
             justify-center
+            scale-[0.55]
+            sm:scale-[0.75]
+            md:scale-[0.85]
+            lg:scale-100
+            transition-all
+            duration-500
           "
         >
           <img
@@ -153,11 +157,7 @@ export default function AboutUsServicesSection() {
             alt="J"
             className="
               absolute
-              hidden
-              lg:block
-              w-[220px]
-              md:w-[280px]
-              lg:w-[420px]
+              w-[420px]
               opacity-90
             "
           />
