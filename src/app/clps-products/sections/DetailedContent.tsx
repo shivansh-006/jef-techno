@@ -125,7 +125,7 @@ const pages = [
           "Permitted Air Termination Types",
         ],
         isListOnly: false,
-        layout: "row",
+        layout: "col",
         tagDescriptions: [
           null,
           null,
@@ -167,7 +167,7 @@ const pages = [
         body: "The IEC 62561 series specifies that external LPS components be type-tested to a 10/350 μs lightning impulse current. JEF type-tests its CLPS components at 200 kA on the 10/350 μs waveform — double the limit specified in the IEC standard series. This means that every JEF CLPS component has been verified to withstand twice the current magnitude that the standard requires, providing a margin of confidence that standard-minimum testing does not.\n\nType testing covers three sequential stages:",
         tags: ["Ageing Test", "Lightning Impulse Test", "Mechanical Test"],
         isListOnly: false,
-        layout: "row",
+        layout: "col",
         tagDescriptions: [
           {
             title: "Ageing Test",
@@ -338,40 +338,56 @@ const DetailedContent = () => {
 
               {/* Tags Area */}
               {sub.tags && (
-                <div className={`flex flex-wrap gap-x-8 gap-y-4 mb-6 ${sub.layout === "col" ? "flex-col" : "flex-row items-center"}`}>
-                  {sub.tags.map((tag, ti) => {
-                    const isActive = activeTags[si] === ti;
-                    const isInteractive = sub.tagDescriptions && sub.tagDescriptions[ti] !== null && sub.tagDescriptions[ti] !== undefined;
+                <>
+                  {/* First 4 tags in a row */}
+                  <div className="flex flex-wrap gap-x-8 gap-y-4 mb-4 flex-row items-center">
+                    {sub.tags.slice(0, 4).map((tag, ti) => (
+                      <div key={ti} className="flex items-center gap-3 text-white/90">
+                        <span className="text-white mt-1 shrink-0">•</span>
+                        <span className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
+                          {tag}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-                    if (!isInteractive) {
+                  {/* Last 2 tags in a column (interactive) */}
+                  <div className="flex flex-col gap-y-4 mb-6">
+                    {sub.tags.slice(4, 6).map((tag, ti) => {
+                      const actualIndex = ti + 4; // Adjust index for activeTags
+                      const isActive = activeTags[si] === actualIndex;
+                      const isInteractive = sub.tagDescriptions && sub.tagDescriptions[actualIndex] !== null && sub.tagDescriptions[actualIndex] !== undefined;
+
+                      if (!isInteractive) {
+                        return (
+                          <div key={ti} className="flex items-center gap-3 text-white/90">
+                            <span className="text-white mt-1 shrink-0">•</span>
+                            <span className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
+                              {tag}
+                            </span>
+                          </div>
+                        );
+                      }
                       return (
-                        <div key={ti} className="flex items-center gap-3 text-white/90">
-                          <span className="text-white mt-1 shrink-0">•</span>
-                          <span className="text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed">
-                            {tag}
-                          </span>
+                        <div key={ti} className="flex items-center gap-4">
+                          <div className="flex items-center gap-3">
+                            <span className="text-white mt-1 shrink-0">•</span>
+                            <button
+                              onClick={() => setActiveTags({ [si]: actualIndex })}
+                              className={`text-[16px] md:text-[18px] lg:text-[20px] font-semibold transition-all duration-300 border-b-2 text-left ${
+                                isActive 
+                                  ? "text-white border-white" 
+                                  : "text-[#C02429] border-[#C02429] hover:text-white hover:border-white"
+                              }`}
+                            >
+                              {tag}
+                            </button>
+                          </div>
                         </div>
                       );
-                    }
-                    return (
-                      <div key={ti} className="flex items-center gap-4">
-                        <div className="flex items-center gap-3">
-                          <span className="text-white mt-1 shrink-0">•</span>
-                          <button
-                            onClick={() => setActiveTags({ [si]: ti })}
-                            className={`text-[16px] md:text-[18px] lg:text-[20px] font-semibold transition-all duration-300 border-b-2 text-left ${
-                              isActive 
-                                ? "text-[#C02429] border-[#C02429]" 
-                                : "text-white border-white/40 hover:text-[#C02429] hover:border-[#C02429]"
-                            }`}
-                          >
-                            {tag}
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                    })}
+                  </div>
+                </>
               )}
 
               {sub.footer && !activeTags[si] && (

@@ -13,12 +13,16 @@ const MobileMenu = () => {
       { label: "Home", path: "/" },
       { label: "About", key: "about" },
       { label: "Our Business", key: "business" },
-      { label: "Industries", key: "industries" },
+      
       { label: "Blogs", path: "/blog" },
+      { label: "JEF UAE", path: "/jef-uae" },
+      { label: "JEF SHIELD", path: "/jef-shield" },
     ],
     about: [
       { label: "About Us", path: "/about-us" },
+    
       { label: "Our Clients", path: "/coming-soon" },
+      ,
       { label: "Employee Login", path: "/coming-soon" },
     ],
     business: [

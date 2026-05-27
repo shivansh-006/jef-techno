@@ -107,7 +107,27 @@ const NavHeader = ({
         height={20}
         className="object-contain w-11 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
       />
-           
+            {/* Hamburger Icon for Mobile */}
+            <button
+              className="lg:hidden p-2 text-white hover:text-red-500 transition-colors duration-200"
+              onClick={toggleSlideMenu}
+              aria-label="Open menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </header>

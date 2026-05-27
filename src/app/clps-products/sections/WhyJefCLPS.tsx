@@ -53,7 +53,7 @@ const duplicatedCards = [...cards, ...cards];
 export default function WhyJefCLPS() {
   return (
     <section className="w-full bg-[#232427] py-16 md:py-[72px] overflow-hidden">
-      <div className="px-6 md:pl-[100px]">
+      <div className="px-6 md:pl-[75px]">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
