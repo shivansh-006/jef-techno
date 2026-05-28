@@ -383,6 +383,9 @@ function BlogCard({ imageSrc, title, path }) {
             mt-[14px]
             text-[18px]
             leading-[150%]
+            h-15
+            text-ellipsis
+            overflow-hidden
             uppercase
             text-white
             font-normal

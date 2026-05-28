@@ -344,7 +344,7 @@ export default function WhatWeDoSection() {
       lg:items-center
       justify-start
       lg:justify-between
-      gap-8
+      gap-25
       lg:gap-12
       xl:gap-40
       pt-14

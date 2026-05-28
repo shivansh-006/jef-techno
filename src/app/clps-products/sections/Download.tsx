@@ -26,7 +26,7 @@ const Download = () => {
         >
           <div className="w-full overflow-hidden  ">
             <img
-              src="/clps/Lighting Protection Guide.png"
+              src="/clps/clps-download.png"
               alt="Lightning Protection Solution Guide"
               className="max-w-[554px] max-h-[369px] object-cover transition-transform duration-500 hover:scale-105"
             />

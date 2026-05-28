@@ -53,7 +53,7 @@ const MobileMenu = () => {
       { label: "LPS Adequacy", path: "/audit-services/lightning-protection-sytem-adequacy-audit" },
     ],
     consulting: [
-      { label: "Industrial", path: "/industrial" },
+      { label: "INDUSTRIAL", path: "/industrial" },
       { 
         label: "Renewable", 
         subItems: [
