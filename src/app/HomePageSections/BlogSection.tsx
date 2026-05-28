@@ -122,7 +122,11 @@ export default function BlogsSection() {
                 px-[18px]
                 flex
                 items-center
-                justify-between
+                justify-center
+                gap-[10px]
+                uppercase
+                text-white
+                tracking-[2px]
                 transition-colors
                 duration-300
                 hover:bg-[#C02429]
@@ -257,6 +261,32 @@ export default function BlogsSection() {
               >
                 April 2026
               </span>
+               <Link href={"/"}>
+          <div
+            className="
+              mt-[35px]
+              flex
+              items-center
+              gap-[10px]
+              cursor-pointer
+              group
+            "
+          >
+            <img
+              src="/BlogImg/HomePageBlogLeftArrow.png"
+              alt="Arrow"
+              className="
+             
+                transition-transform
+                duration-300
+                group-hover:translate-x-1
+                w-[25px]
+              
+brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(7470%) hue-rotate(356deg) brightness(98%) contrast(118%)
+              "
+            />
+          </div>
+        </Link>
             </motion.div>
           </div>
         </div>
@@ -389,16 +419,13 @@ function BlogCard({ imageSrc, title, path }) {
               src="/BlogImg/HomePageBlogLeftArrow.png"
               alt="Arrow"
               className="
-                w-[25px]
-                brightness-100
-                animate-pulse
-                invert-[18%]  
-                sepia-[90%]
-                saturate-[3000%]
-                hue-rotate-[340deg]
+             
                 transition-transform
                 duration-300
                 group-hover:translate-x-1
+                w-[25px]
+              
+brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(7470%) hue-rotate(356deg) brightness(98%) contrast(118%)
               "
             />
           </div>

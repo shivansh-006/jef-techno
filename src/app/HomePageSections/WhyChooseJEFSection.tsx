@@ -95,7 +95,7 @@ export default function WhyChooseJEFSection() {
             </p>
 
             {/* BUTTON */}
-            <button
+           { /*<button
               className="
                 relative
                 overflow-hidden
@@ -142,7 +142,7 @@ export default function WhyChooseJEFSection() {
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </button>*/}
           </motion.div>
         </div>
 
@@ -177,7 +177,7 @@ export default function WhyChooseJEFSection() {
             </p>
 
             {/* BUTTON */}
-            <button
+           {/* <button
               className="
                 relative
                 overflow-hidden
@@ -224,7 +224,7 @@ export default function WhyChooseJEFSection() {
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </button> */}
           </motion.div>
 
           {/* IMAGE */}

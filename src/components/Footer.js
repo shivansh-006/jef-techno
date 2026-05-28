@@ -99,7 +99,7 @@ function Footer() {
 
     return (
         <footer className="card-slider-footer flex flex-col items-center pt-10 bg-[#2D2E30] w-full">
-            <hr className="section-container hidden lg:block shrink-0 mt-2 border border-solid border-neutral-400 max-md:mt-8" />
+            <hr className="section-conxtainer hidden lg:block shrink-0 mt-2 border border-solid border-neutral-400 max-md:mt-8" />
             <div className="section-container flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 py-6 bg-[#2D2E30]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
                     FOLLOW jef ON SOCIAL MEDIA
@@ -131,12 +131,12 @@ function Footer() {
 
       <a
         className="ml-[2px]"
-        href="https://obnov.in"
+        href="https://obrive.com"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-          src="../FooterLogo/obriveLogo.png"
+          src="../FooterLogo/obrive-footer-logo.png"
           alt="ObnovLogo"
           className="h-4 object-contain"
         />
@@ -208,23 +208,20 @@ const FAQComponent = () => {
         {
             question: "ABOUT",
             content: [
-                { label: 'What is JEF', path: '/about-us' },
-                { label: 'JEF leadership team', path: '/leadership-team' },
-                { label: 'JEF Smart Digitization', path: '/SmartDigitalization' },
-                { label: 'JEF L&D Centre', path: '/L&D-Centre' }
+                { label: 'Who we are', path: '/about-us' },
+               
+                { label: 'Career', path: '/careers' },
+                { label: 'Contact Us', path: '/contact' }
             ],
             isOpen: false
         },
         {
             question: "Our Business",
             content: [
-                { label: 'Power System Studies', path: '/power-system-studies' },
-                { label: 'Power Quality Studies', path: '/power-quality-studies' },
-                { label: 'Earthing Studies', path: '/earthing-studies' },
-                { label: 'LPS System Studies', path: '/lightning-protection-studies' },
-                { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' },
-                { label: 'Root Cause Analysis', path: '/root-cause-analysis' },
-                { label: 'EMI EMC', path: '/emi-emc' },
+                { label: 'Our Products', path: '/power-system-studies' },
+                { label: 'Audit Services', path: '/audit-services' },
+                { label: 'Consulting Services', path: '/consulting-services' },
+               
 
             ],
             isOpen: false
@@ -232,24 +229,19 @@ const FAQComponent = () => {
         {
             question: "Locations",
             content: [
-                { label: 'Mena', path: '' },
-                { label: 'Europe', path: '' },
-                { label: 'Asia', path: '' },
+                { label: 'India', path: '' },
+                { label: 'UAE', path: '' },
+                { label: 'USA', path: '' },
             ],
             isOpen: false
         },
+        
         {
-            question: "Industries",
+            question: "News",
             content: [
-                { label: 'Sectors', path: '/industries/oilandgas' },
-                { label: 'Partners', path: '/industries/powerutilities' },
-            ],
-            isOpen: false
-        },
-        {
-            question: "Careers",
-            content: [
-                { label: 'Working at jef', path: '/careers' },
+                { label: 'All Blogs', path: '/blogs' },
+                 { label: 'Resources', path: '/resources' },
+                  { label: 'Events', path: '/events' },
             ],
             isOpen: false
         },

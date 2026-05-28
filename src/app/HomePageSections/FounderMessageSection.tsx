@@ -88,7 +88,15 @@ export default function FounderMessageSection() {
             className="hidden lg:flex flex-col w-full lg:w-[542px] mt-auto 2xl:max-h-[600px]"
           >
             <img
-              className="h-[70vh] lg:w-[542px] lg:h-[100vh] transform-gpu"
+             className="
+  h-[70vh]
+  md:max-lg:w-[420px]
+  md:max-lg:h-[60vh]
+  lg:w-[542px]
+  lg:h-[60vh]
+  xl:h-[70vh]
+  transform-gpu
+"
               src="/HomePageImg/founder.png"
               alt="Founder"
             />

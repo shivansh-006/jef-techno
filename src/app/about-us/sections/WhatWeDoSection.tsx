@@ -155,6 +155,8 @@ export default function AboutUsServicesSection() {
             alt="J"
             className="
               absolute
+              hidden
+              md:block
               w-[420px]
               opacity-90
             "

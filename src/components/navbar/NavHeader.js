@@ -96,7 +96,7 @@ const NavHeader = ({
             ))}
           </nav>
 
-          <div className="flex gap-6 items-center lg:-mr-6 self-stretch my-auto max-md:max-w-full text-center">
+          <div className="hidden lg:flex gap-6 items-center lg:-mr-6 self-stretch my-auto max-md:max-w-full text-center">
             <h1 className="font-medium text-white text-[16px] tracking-[2px]">
               JEF SAFE
             </h1>
@@ -105,11 +105,14 @@ const NavHeader = ({
         alt="Menu"
         width={20}
         height={20}
-        className="object-contain w-11 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
+        className="object-contain w-11 transition-transform duration-300 transform group-hover:rotate-180"
       />
+          </div>
+
+          <div className="flex lg:hidden gap-6 items-center self-stretch my-auto text-center">
             {/* Hamburger Icon for Mobile */}
             <button
-              className="lg:hidden p-2 text-white hover:text-red-500 transition-colors duration-200"
+              className="p-2 text-white hover:text-red-500 transition-colors duration-200"
               onClick={toggleSlideMenu}
               aria-label="Open menu"
             >

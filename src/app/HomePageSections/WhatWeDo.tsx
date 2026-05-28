@@ -67,7 +67,7 @@ export default function WhatWeDoSection() {
         x: 350,
         y: 80,
         xmob: 315,
-        ymob: 449,
+        ymob: 380,
         labelPos: "top",
       },
 
@@ -84,7 +84,7 @@ export default function WhatWeDoSection() {
         `,
         x: -10,
         y: 320,
-        xmob: 500,
+        xmob: 550,
         ymob: 660,
         labelPos: "top",
       },
@@ -171,7 +171,7 @@ export default function WhatWeDoSection() {
         x: 0,
         y: 320,
         xmob: 440,
-        ymob: 590,
+        ymob: 500,
         labelPos: "top",
       },
 
@@ -285,7 +285,8 @@ export default function WhatWeDoSection() {
         relative
         w-full
 
-        h-[1200px]
+        h-[1000px]
+        sm:h-[1100px]
         md:h-[1350px]
         lg:h-[1050px]
 
@@ -333,17 +334,21 @@ export default function WhatWeDoSection() {
       h-full
       px-6
       sm:px-8
+      md:px-10
       lg:px-12
       xl:px-16
       flex
       flex-col
       lg:flex-row
-      items-center
-      justify-between
-      gap-12
+      items-start
+      lg:items-center
+      justify-start
+      lg:justify-between
+      gap-8
       lg:gap-12
-      xl:gap-16
-      pt-20
+      xl:gap-40
+      pt-14
+      sm:pt-20
       lg:pt-0
       overflow-hidden
     "
@@ -351,37 +356,37 @@ export default function WhatWeDoSection() {
 
           {/* LEFT */}
          {/* LEFT */}
-<div className="w-full lg:flex-1 min-w-0 h-full flex flex-col justify-start lg:mt-40">
+<div className="w-full lg:h-full lg:flex-1 min-w-0 flex flex-col justify-start lg:mt-40 z-[60]">
        <div
   className="
     w-full
-    max-w-[260px]
+    lg:max-w-[260px]
     flex
     flex-col
     items-start
     text-left
-    z-[60]
   "
 >
-            <div className="mb-8 lg:mb-12 ">
+            <div className="mb-4 lg:mb-12 ">
               <h2
                 className="
                   font-montserrat
                   font-lg
-                  text-[24px]
+                  text-[22px]
                   sm:text-[28px]
                   xl:text-[30px]
                   tracking-[4px]
                   uppercase
                   text-white
-                  whitespace-nowrap
+                  md:whitespace-normal
+                  xl:whitespace-nowrap
                 "
               >
                 WHAT WE DO
               </h2>
             </div>
 
-            <div className="w-full">
+            <div className="w-full flex lg:flex-col overflow-x-auto no-scrollbar gap-4 sm:gap-6 lg:gap-0 pb-2 lg:pb-0">
               {[
                 {
                   id: "products",
@@ -402,9 +407,9 @@ export default function WhatWeDoSection() {
                     setActiveSection(item.id);
                     setActiveCard(0);
                   }}
-                  className="group py-4 sm:py-5 cursor-pointer"
+                  className="group py-2 lg:py-5 cursor-pointer flex-shrink-0 lg:max-w-[180px] xl:max-w-none"
                 >
-                  <div className="relative h-[1px] bg-white/20 overflow-hidden mb-3">
+                  <div className="relative h-[1px] bg-white/20 overflow-hidden mb-2 lg:mb-3">
                     <span
                       className={`absolute left-0 top-0 h-full bg-[#C61F26] transition-all duration-500 ${
                         activeSection === item.id
@@ -415,7 +420,7 @@ export default function WhatWeDoSection() {
                   </div>
 
                   <div
-                    className={`text-[13px] sm:text-[15px] whitespace-nowrap tracking-[1.5px] uppercase transition-all duration-300 flex items-center justify-between ${
+                    className={`text-[12px] sm:text-[14px] md:text-[15px] xl:whitespace-nowrap tracking-[1.5px] uppercase transition-all duration-300 flex items-center justify-between gap-2 ${
                       activeSection === item.id
                         ? "text-[#C61F26]"
                         : "text-white"
@@ -424,7 +429,7 @@ export default function WhatWeDoSection() {
                     {item.title}
 
                     {activeSection === item.id && (
-                      <span className="text-[#C61F26] text-[12px]">
+                      <span className="text-[#C61F26] text-[25px] hidden md:inline ml-2 lg:text-[30px]">
                         →
                       </span>
                     )}
@@ -442,15 +447,19 @@ export default function WhatWeDoSection() {
     relative
     w-full
     max-w-[450px]
-    h-[550px]
+    h-[350px]
+    sm:h-[450px]
+    lg:h-[550px]
     flex-shrink
     min-w-0
-    scale-[0.55]
-    sm:scale-[0.7]
-    md:scale-[0.85]
+    scale-[0.8]
+    sm:scale-[0.85]
+    md:scale-[0.9]
     lg:scale-100
     transition-opacity
     duration-1000
+    mx-auto
+    lg:mx-0
     ${showContent ? "opacity-100" : "opacity-0"}
   `}
 >
@@ -502,13 +511,13 @@ export default function WhatWeDoSection() {
                   "
                   style={{
                     top: isMobile
-                      ? `${(dot.ymob / 550) * 100}%`
+                      ? `${(dot.ymob / 1000) * 100}%`
                       : `${(dot.y / 550) * 100}%`,
                     left: isMobile
-                      ? `${(dot.xmob / 450) * 100}%`
+                      ? `${(dot.xmob / 600) * 100}%`
                       : `${(dot.x / 450) * 100}%`,
                   }}
-                  onMouseEnter={() => setActiveCard(index)}
+                  onMouseEnter={() => !isMobile && setActiveCard(index)}
                   onClick={() => setActiveCard(index)}
                 >
                   <div className="relative flex items-center justify-center">
@@ -620,11 +629,13 @@ export default function WhatWeDoSection() {
     lg:max-w-[480px]
     transition-opacity
     duration-1000
+    mt-[-40px]
+    lg:mt-0
     ${showContent ? "opacity-100" : "opacity-0"}
     z-[60]
   `}
 >
-            <div className="w-full h-[2px] bg-[#C61F26] mb-6" />
+            <div className="w-full h-[2px] bg-[#C61F26] mb-4 lg:mb-6" />
 
             <div
               key={activeCard + activeSection}
@@ -642,13 +653,14 @@ export default function WhatWeDoSection() {
                   tracking-[2px]
                   lg:tracking-[3px]
 
-                  text-[22px]
+                  text-[18px]
+                  sm:text-[22px]
                   lg:text-[28px]
 
                   font-light
                   leading-[1.4]
 
-                  mb-6
+                  mb-4
                   lg:mb-8
                 "
               >
@@ -659,11 +671,11 @@ export default function WhatWeDoSection() {
                 className="
                   text-white/90
 
-                  text-[15px]
+                  text-[13px]
                   sm:text-[17px]
                   lg:text-[18px]
 
-                  leading-[1.2]
+                  leading-[1.3]
                   lg:leading-[1.2]
 
                   whitespace-pre-line
