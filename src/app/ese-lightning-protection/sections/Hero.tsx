@@ -25,14 +25,14 @@ const Hero = () => {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30" />
 
-        <div className="absolute top-[80%] md:top-[75%] lg:top-[80%]  inset-x-0 z-10 flex justify-center">
-          <div className="section-container">
+        <div className="absolute top-[80%] md:top-[75%] lg:max-md:top-[80%] xl:top-[80%] inset-x-0 z-10 flex justify-start w-full">
+          <div className="w-full md:ml-10 lg:ml-20">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="flex flex-col gap-[16px] text-white"
+              className="flex flex-col gap-[16px] text-white lg:mb-20"
             >
               {/* Heading */}
               <h1 className="font-montserrat font-lg text-[40px] md:text-[40px] leading-[1.2] md:leading-[100%] tracking-[0.5px] uppercase mb-4 sm:font-bold">
