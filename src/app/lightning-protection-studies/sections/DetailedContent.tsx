@@ -132,7 +132,6 @@ const DetailedContent = () => {
       setIsManualPaused(false);
       setIsPaused(false);
       setActivePage(index);
-      setActiveTags({});
       setProgress(0);
       setRestartKey((prev) => prev + 1);
     }
@@ -162,13 +161,14 @@ const DetailedContent = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-16 items-start">
               <div className="flex flex-col">
                 {React.Children.map(page.content.props.children, (child, i) => {
-                  if (child.type === "p") {
+                  if (React.isValidElement(child) && child.type === "p") {
+                    const element = child as React.ReactElement<{ children?: React.ReactNode }>;
                     return (
                       <p
                         key={i}
                         className="text-[14px] md:text-[16px] lg:text-[18px] font-normal leading-[1.7] text-white"
                       >
-                        {child.props.children}
+                        {element.props.children}
                       </p>
                     );
                   }

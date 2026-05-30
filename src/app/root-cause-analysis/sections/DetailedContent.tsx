@@ -173,12 +173,13 @@ const DetailedContent = () => {
                  {page.content &&
         React.Children.map(page.content.props.children, (child, i) => {
           if (React.isValidElement(child) && child.type === "p") {
+            const element = child as React.ReactElement<{ children?: React.ReactNode }>;
             return (
               <p
                 key={i}
                 className="text-[13px] md:text-[15px] lg:text-[16px] font-normal leading-[1.75] text-white text-left"
               >
-                {child.props.children}
+                {element.props.children}
               </p>
             );
           }

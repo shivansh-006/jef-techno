@@ -198,7 +198,7 @@ const PROGRESS_INTERVAL = 50;
 
 const DetailedContent = () => {
   const [activePage, setActivePage] = useState(0);
-  const [activeTags, setActiveTags] = useState({}); // format: { [si]: ti }
+  const [activeTags, setActiveTags] = useState<Record<number, number | undefined>>({}); // format: { [si]: ti }
   const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isManualPaused, setIsManualPaused] = useState(false);
@@ -284,10 +284,11 @@ const DetailedContent = () => {
               className="flex flex-col"
             >
               {React.Children.map(page.content.props.children, (child, i) => {
-                if (child.type === "p") {
+                if (React.isValidElement(child) && child.type === "p") {
+                  const element = child as React.ReactElement<{ children?: React.ReactNode }>;
                   return (
                     <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
-                      {child.props.children}
+                      {element.props.children}
                     </p>
                   );
                 }

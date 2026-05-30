@@ -41,8 +41,7 @@ const pages = [
         <p>
           Over the last 30 years, JEF has been synonymous with going the
           proverbial “EXTRA MILE” to ensure meeting the objectives of the project
-          ensure meeting the objectives of the project including technical
-          aspects & timely completion.
+          including technical aspects & timely completion.
         </p>
       </>
     ),
@@ -124,6 +123,7 @@ const DetailedContent = () => {
   }, [progress, activePage]);
 
   const handleTabClick = (index: number) => {
+    setIsPaused(false);
     if (index === activePage) {
       if (isManualPaused) {
         setIsManualPaused(false);
@@ -168,13 +168,14 @@ const DetailedContent = () => {
             className="flex flex-col max-w-[1400px]"
           >
             {React.Children.map(page.content.props.children, (child, i) => {
-              if (child.type === "p") {
+              if (React.isValidElement(child) && child.type === "p") {
+                const element = child as React.ReactElement<{ children?: React.ReactNode }>;
                 return (
                   <p
                     key={i}
                     className="text-[13px] md:text-[15px] lg:text-[16px] font-normal leading-[1.75] text-white text-left"
                   >
-                    {child.props.children}
+                    {element.props.children}
                   </p>
                 );
               }

@@ -34,7 +34,7 @@ const DetailedContent = ({ pages }) => {
     }
   }, [progress, activePage, pages.length]);
 
-  const handleTabClick = (index) => {
+  const handleTabClick = (index: number) => {
     if (index === activePage) {
       if (isManualPaused) {
         setIsManualPaused(false);
