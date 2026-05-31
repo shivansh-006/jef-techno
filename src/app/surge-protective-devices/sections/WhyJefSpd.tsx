@@ -83,7 +83,7 @@ export default function LinesRequiringSpdProtection() {
           >
             {duplicatedCards.map((card, index) => (
               <div
-                key={`${card.id}-${index}`}
+                key={index}
                 className="group flex w-[240px] min-w-[240px] flex-col gap-4 md:w-[320px] md:min-w-[320px]"
               >
                 <div className="aspect-[320/170] w-full overflow-hidden">

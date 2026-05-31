@@ -87,7 +87,7 @@ export default function WhyJefCLPS() {
           >
             {duplicatedCards.map((card, index) => (
               <div
-                key={`${card.id}-${index}`}
+                key={index}
                 className="
                   w-[300px]
                   md:w-[460px]

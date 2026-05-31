@@ -584,16 +584,15 @@ const efsa = () => {
               msOverflowStyle: "none",
             }}
           >
-            {cards.map((card) => (
+            {cards.map((card, index) => (
               <div
-                key={card.id}
+                key={index}
                 className="flex-shrink-0"
                 style={{
                   width: "463px",
                 }}
               >
                 <div
-                  key={card.id}
                   className="flex-shrink-0 flex flex-col"
                   style={{
                     width: "463px",
