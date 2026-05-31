@@ -1,56 +1,46 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-export default function AreaOfExpertise() {
+export default function ExcellenceinElectricalEngineering() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+  const checkMobile = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
 
-    checkMobile();
+  checkMobile();
 
-    window.addEventListener("resize", checkMobile);
+  window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
 
-  const sectors = [
-    {
-      name: "DATA CENTERS",
-      description:
-        "Earthing health assessment, surge protection, EMC management, and power quality studies for critical IT infrastructure.",
-    },
-    {
-      name: "OIL & GAS",
-      description:
-        "Offshore platforms, artificial islands, subsea cable systems, onshore processing facilities, and EPC/EPCC project support across the full power systems study programme.",
-    },
-    {
-      name: "RENEWABLE ENERGY",
-      description:
-        "Earthing audits compliant with CEA Regulations 2023, LPS for solar and wind installations, and power system studies.",
-    },
-    {
-      name: "MANUFACTURING PLANT",
-      description:
-        "Full range of services across automobile, steel, heavy industry, metro rail, hospitals, commercial buildings.",
-    },
-    {
-      name: "POWER UTILITIES",
-      description:
-        "EHV and HV substation earthing, earth grid simulation, LPS design, and power system studies.",
-    },
-    {
-      name: "PROCESS PLANT",
-      description:
-        "Petrochemicals, chemicals, pharmaceuticals, fertilisers, food and beverages.",
-    },
-  ];
+const sectors = [
+  {
+    name: "DETAILED ENGINEERING REPORT",
+    description:
+      "Detailed engineering report with all measurement results, test locations, and test conditions",
+  },
+  {
+    name: "SITE PHOTOGRAPHIC RECORD",
+    description:
+      "Site photographs documenting the installation condition and all visible deficiencies identified",
+  },
+  {
+    name: "IDENTIFIED ANOMALIES",
+    description:
+      "List of all identified anomalies and defects, with specific locations and BOM required for correction",
+  },
+  {
+    name: "POST-AUDIT REPORT",
+    description:
+      "Detailed report and site photographs post re-audit.",
+  },
+];
 
   const maxIndex = sectors.length - 1;
 
@@ -98,85 +88,252 @@ export default function AreaOfExpertise() {
               duration: 1.1,
               ease: [0.22, 1, 0.36, 1],
             }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-6 md:gap-8"
+            viewport={{ once: true, amount: 0.2 }}
+            className="max-w-[950px]"
           >
-            <h2 className="text-[#C02429] text-[28px] md:text-[36px] font-bold tracking-[2px] leading-[1.2] uppercase">
-              Area of Expertise
-            </h2>
-            <div className="w-16 h-1 bg-[#C02429]" />
-            <p className="max-w-[600px] text-[16px] md:text-[18px] leading-[1.6] text-white/80">
-              JEF provides specialized engineering services across diverse industrial sectors, ensuring safety, reliability, and compliance with international standards.
-            </p>
+            {/* HEADING */}
+            <motion.h1
+              initial={{ opacity: 0, x: -80 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              viewport={{ once: true }}
+              className="
+                text-[#C02429]
+                uppercase
+                mb-6
+
+                text-[26px]
+                md:text-[32px]
+
+                tracking-[3px]
+                md:tracking-[4.53px]
+
+                font-bold
+              "
+            >
+               INSTRUMENTATION SYSTEM DELIVERABLES
+            </motion.h1>
+
+          
           </motion.div>
 
-          {/* RIGHT CONTENT - NAVIGATION (Desktop) */}
-          <div className="hidden lg:flex flex-col gap-4 mt-4">
-            {sectors.map((sector, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`text-left text-[14px] font-bold tracking-[1px] uppercase transition-all duration-300 ${
-                  activeIndex === index ? "text-[#C02429]" : "text-white/40 hover:text-white"
-                }`}
-              >
-                {sector.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* MAIN SLIDER SECTION */}
-        <div className="mt-16 md:mt-24 relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col gap-6"
-            >
-              <h3 className="text-[24px] md:text-[32px] font-bold text-white uppercase tracking-[1px]">
-                {sectors[activeIndex].name}
-              </h3>
-              <p className="max-w-[800px] text-[18px] md:text-[22px] leading-[1.6] text-white/90">
-                {sectors[activeIndex].description}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* CONTROLS */}
-          <div className="flex items-center gap-8 mt-12 md:mt-16">
+          {/* NAV BUTTONS */}
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            viewport={{ once: true }}
+            className="flex gap-4 lg:mt-2"
+          >
+            {/* PREV */}
             <button
               onClick={prev}
               disabled={atStart}
-              className={`p-3 border border-white/20 rounded-full transition-all duration-300 ${
-                atStart ? "opacity-20 cursor-not-allowed" : "hover:bg-[#C02429] hover:border-[#C02429]"
-              }`}
+              className="
+                w-11
+                h-11
+                md:w-12
+                md:h-12
+
+                rounded-full
+                flex
+                items-center
+                justify-center
+
+                transition-all
+                duration-300
+              "
+              style={{
+                opacity: atStart ? 0.4 : 1,
+                background: atStart ? "#ffffff" : "transparent",
+                border: "1px solid white",
+                color: atStart ? "#000000" : "#ffffff",
+              }}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+              ←
             </button>
-            <div className="flex items-center gap-4">
-              <span className="text-[24px] font-bold text-[#C02429]">
-                {(activeIndex + 1).toString().padStart(2, '0')}
-              </span>
-              <div className="w-12 h-[1px] bg-white/20" />
-              <span className="text-[18px] text-white/40">
-                {sectors.length.toString().padStart(2, '0')}
-              </span>
-            </div>
+
+            {/* NEXT */}
             <button
               onClick={next}
               disabled={atEnd}
-              className={`p-3 border border-white/20 rounded-full transition-all duration-300 ${
-                atEnd ? "opacity-20 cursor-not-allowed" : "hover:bg-[#C02429] hover:border-[#C02429]"
-              }`}
+              className="
+                w-11
+                h-11
+                md:w-12
+                md:h-12
+
+                rounded-full
+                flex
+                items-center
+                justify-center
+
+                transition-all
+                duration-300
+              "
+              style={{
+                opacity: atEnd ? 0.4 : 1,
+                background: atEnd ? "transparent" : "#ffffff",
+                border: "1px solid white",
+                color: atEnd ? "#ffffff" : "#000000",
+              }}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              →
             </button>
-          </div>
+          </motion.div>
         </div>
+
+        {/* SLIDER */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.2,
+            delay: 0.25,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative w-full mt-14 md:mt-20 overflow-hidden"
+        >
+          {/* GLOBAL LINE */}
+          <div className="absolute top-[39px] left-[-50vw] right-[-50vw] h-[1px] bg-white/30 z-0" />
+
+          {/* TRACK */}
+          <div
+            className="
+              relative
+              flex
+              gap-[20px]
+              transition-transform
+              duration-700
+              ease-in-out
+              z-10
+            "
+            style={{
+             transform: `translateX(-${
+  activeIndex * (isMobile ? 290 : 366)
+}px)`,
+            }}
+          >
+            {sectors.map((item, index) => {
+              const isActive = activeIndex === index;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.9,
+                    delay: index * 0.08,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  viewport={{ once: true }}
+                  className="
+                    flex
+                    flex-col
+                    
+
+                    w-[270px]
+                    md:w-[346px]
+
+                    shrink-0
+                    cursor-pointer
+                    group
+                  "
+                  onClick={() => setActiveIndex(index)}
+                >
+                  {/* LABEL */}
+                  <div className="h-[30px] flex items-end mb-[8px]">
+                    <span
+                      className={`
+                        uppercase
+                        tracking-[0.1em]
+
+                        text-[10px]
+                        md:text-[11px]
+
+                        transition-colors
+                        duration-300
+
+                        ${
+                          isActive
+                            ? "font-bold text-white"
+                            : "font-normal text-gray-400 group-hover:text-white"
+                        }
+                      `}
+                    >
+                      {item.name}
+                    </span>
+                  </div>
+
+                  {/* DOT */}
+                  <div className="relative w-full h-[2px] flex items-center">
+                    {isActive ? (
+                      <div className="absolute left-0 w-[14px] h-[14px] bg-[#C02429] rounded-full z-10" />
+                    ) : (
+                      <div className="absolute left-0 w-2.5 h-2.5 bg-white rounded-full z-10" />
+                    )}
+                  </div>
+
+                  {/* CARD */}
+                  <motion.div
+                    animate={{
+                      backgroundColor: isActive
+                        ? "#F9F7F2"
+                        : "rgba(27, 24, 24, 0.85)",
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className="
+                      mt-[28px]
+                      md:mt-[32px]
+                      
+
+                      p-6
+                      md:p-8
+
+                      transition-all
+                      duration-500
+                      ease-in-out
+
+                      min-h-[260px]
+                      md:h-[370px]
+                    "
+                  >
+                    <motion.p
+                      animate={{
+                        color: isActive
+                          ? "#312d2d"
+                          : "#e5e7eb",
+                      }}
+                      transition={{
+                        duration: 0.5,
+                      }}
+                      className="
+                        text-[14px]
+                        md:text-[15px]
+
+                        leading-[180%]
+                      "
+                    >
+                      {item.description}
+                    </motion.p>
+                  </motion.div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

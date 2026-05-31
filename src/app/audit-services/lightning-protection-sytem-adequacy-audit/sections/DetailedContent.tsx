@@ -5,106 +5,124 @@ import { motion } from "framer-motion";
 
 const PROGRESS_DURATION = 6000;
 const PROGRESS_INTERVAL = 50;
+const VISIBLE_TABS = 2;
 
-const DetailedContent = ({ pages }) => {
+const pages = [
+  {
+    label: "WHY DO YOU NEED\nLPS ADEQUACY\nAUDIT?",
+    title: "WHY DO YOU NEED LPS ADEQUACY AUDIT?",
+    content: (
+      <ul className="list-disc space-y-3 pl-5">
+        <li>To measure lightning risk to the structure and its contents.</li>
+        <li>Identify structures which require protection and determine the level of protection required as per latest standards.</li>
+        <li>To check the healthiness of the existing LPS system.</li>
+        <li>To know whether lightning protection system is provided in the facility to mitigate the risk from Radiated and Conducted Surges.</li>
+        <li>Identify gaps in the present System with respect to latest and relevant standards.</li>
+        <li>Compliance to latest and relevant standards.</li>
+        <li>Recommendations for Corrective Action with BOQ & Drawings to ensure adequate protection.</li>
+        <li>Design risk mitigation/management measures to enhance safety.</li>
+      </ul>
+    ),
+  },
+  {
+    label: "APPLICATION AREA",
+    title: "APPLICATION AREA",
+    content: (
+      <>
+        <p>
+          Commercial & Cultural Heritage Buildings, Public Service Structures &
+          Utilities, IT/ITES Facilities, Hospitals, Hotels, Retails outlets &
+          shopping malls, Factories, Industries, Manufacturing plants, Oil & Gas,
+          Metro rail, Process plants, Wind & Solar Plants, Tank farms, Critical
+          structures like communication towers, power plants, substations and
+          more
+        </p>
+
+        <p>Get your risk assessment report, concept design drawings & bill of materials.</p>
+
+        <button className="w-fit rounded-full bg-white px-6 py-2 text-[#C02429] text-sm">
+          JEF Shield
+        </button>
+      </>
+    ),
+  },
+];
+
+export default function DetailedContent() {
   const [activePage, setActivePage] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isManualPaused, setIsManualPaused] = useState(false);
-  const [restartKey, setRestartKey] = useState(0);
 
   useEffect(() => {
-    if (isPaused || isManualPaused) return;
-
     const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 100;
-        return prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100;
-      });
+      setProgress((prev) =>
+        prev >= 100 ? 100 : prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100
+      );
     }, PROGRESS_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [activePage, isPaused, isManualPaused, restartKey]);
+  }, [activePage]);
 
   useEffect(() => {
     if (progress >= 100) {
-      const next = (activePage + 1) % pages.length;
-      setActivePage(next);
+      setActivePage((prev) => (prev + 1) % pages.length);
       setProgress(0);
     }
-  }, [progress, activePage, pages.length]);
-
-  const handleTabClick = (index: number) => {
-    if (index === activePage) {
-      if (isManualPaused) {
-        setIsManualPaused(false);
-        setIsPaused(false);
-      } else {
-        setIsManualPaused(true);
-      }
-    } else {
-      setIsManualPaused(false);
-      setIsPaused(false);
-      setActivePage(index);
-      setProgress(0);
-      setRestartKey((prev) => prev + 1);
-    }
-  };
+  }, [progress]);
 
   const page = pages[activePage];
 
   return (
-    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[800px] flex flex-col">
-      <div 
-        onMouseEnter={() => !isManualPaused && setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex flex-col flex-1 gap-6 md:gap-8"
-      >
+    <section className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
+      <div className="section-container flex min-h-[650px] flex-col px-5 md:px-0">
         <motion.h2
           key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase"
+          transition={{ duration: 0.45 }}
+          className="mb-9 text-[#C02429] text-[18px] sm:text-[22px] md:text-[28px] font-bold uppercase tracking-[4px] leading-[1.5]"
         >
           {page.title}
         </motion.h2>
 
-        <div className="w-full relative z-20 flex-1">
-          <motion.div
-            key={`page-intro-${activePage}`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex flex-col"
-          >
-            <div className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify whitespace-pre-line">
-              {page.content}
-            </div>
-          </motion.div>
-        </div>
+        <motion.div
+          key={`content-${activePage}`}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          className="flex-1 text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.65] text-white/95"
+        >
+          <div className="flex max-w-[1500px] flex-col gap-6">{page.content}</div>
+        </motion.div>
 
-        <div className="mt-12 md:mt-20 pb-4">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 overflow-hidden">
+        <div className="mt-12 md:mt-20 overflow-hidden">
+         <div className="flex gap-4 md:gap-8">
             {pages.map((tab, index) => {
               const isCurrent = activePage === index;
+
               return (
                 <button
                   key={index}
-                  onClick={() => handleTabClick(index)}
-                  className="bg-none border-none cursor-pointer flex flex-col items-start w-full group transition-all duration-500"
+                  onClick={() => {
+                    setActivePage(index);
+                    setProgress(0);
+                  }}
+                className="group flex flex-col items-start text-left shrink-0"
                 >
-                  <div className="w-full h-[2px] bg-[#d4d0c8] mb-3 relative z-10">
+                  <div className="relative mb-3 h-[2px] w-60 bg-[#d4d0c8]/80">
                     <motion.div
-                      className="absolute top-0 left-0 h-full bg-[#C02429]"
-                      initial={{ width: 0 }}
-                      animate={{
-                        width: isCurrent ? `${progress}%` : activePage > index ? "100%" : "0%",
-                      }}
+                      className="absolute left-0 top-0 h-full bg-[#C02429]"
+                      animate={{ width: isCurrent ? `${progress}%` : "0%" }}
                       transition={{ ease: "linear" }}
                     />
                   </div>
-                  <span className={`text-[10px] md:text-[14px] lg:text-[16px] tracking-[1px] font-medium uppercase mt-1 transition-all duration-300 text-left ${isCurrent ? "text-[#C02429]" : "text-[#d4d0c8] group-hover:text-white"}`}>
+
+                  <span
+                    className={`whitespace-pre-line text-[10px] sm:text-[11px] md:text-[13px] lg:text-[16px] uppercase tracking-[1.8px] leading-[1.35] transition-all ${
+                      isCurrent
+                        ? "text-[#C02429]"
+                        : "text-[#d4d0c8] group-hover:text-white"
+                    }`}
+                  >
                     {tab.label}
                   </span>
                 </button>
@@ -115,6 +133,4 @@ const DetailedContent = ({ pages }) => {
       </div>
     </section>
   );
-};
-
-export default DetailedContent;
+}

@@ -19,39 +19,53 @@ export default function ExcellenceinElectricalEngineering() {
   return () => window.removeEventListener("resize", checkMobile);
 }, []);
 
-  const sectors = [
-    {
-      name: "DATA CENTERS",
-      description:
-        "Earthing health assessment, surge protection, EMC management, and power quality studies for critical IT infrastructure.",
-    },
-    {
-      name: "OIL & GAS",
-      description:
-        "Offshore platforms, artificial islands, subsea cable systems, onshore processing facilities, and EPC/EPCC project support across the full power systems study programme.",
-    },
-    {
-      name: "RENEWABLE ENERGY",
-      description:
-        "Earthing audits compliant with CEA Regulations 2023, LPS for solar and wind installations, and power system studies.",
-    },
-    {
-      name: "MANUFACTURING PLANT",
-      description:
-        "Full range of services across automobile, steel, heavy industry, metro rail, hospitals, commercial buildings.",
-    },
-    {
-      name: "POWER UTILITIES",
-      description:
-        "EHV and HV substation earthing, earth grid simulation, LPS design, and power system studies.",
-    },
-    {
-      name: "PROCESS PLANT",
-      description:
-        "Petrochemicals, chemicals, pharmaceuticals, fertilisers, food and beverages.",
-    },
-  ];
-
+ const sectors = [
+  {
+    name: "EMI / EMC STUDY",
+    description:
+      "EMC management plan, desktop survey, zone allocation, remedial measures. Includes subsea cable interference to pipelines and cathodic protection systems. EMC compliance certificates issued on completion.",
+  },
+  {
+    name: "EARTHING SYSTEM DESIGN",
+    description:
+      "Substation earthing grid design, step and touch potential analysis, personnel safety verification.",
+  },
+  {
+    name: "LIGHTNING PROTECTION DESIGN",
+    description:
+      "Risk assessment and protection system design for process plants, substations, and offshore platforms.",
+  },
+  {
+    name: "CABLE SIZING STUDY",
+    description:
+      "Thermal rating and sizing of HV cables including 132kV and 33kV submarine cables.",
+  },
+  {
+    name: "REACTOR SIZING STUDY",
+    description:
+      "Shunt reactor specification and sizing for reactive compensation on long cable systems.",
+  },
+  {
+    name: "SURGE ARRESTOR STUDY",
+    description:
+      "Selection and placement of surge protective devices across all voltage levels.",
+  },
+  {
+    name: "OLTC / AVR DYNAMIC STUDY",
+    description:
+      "Dynamic modelling of tap changer and AVR behaviour, including stability control interaction.",
+  },
+  {
+    name: "SUBSEA CABLE EM INTERFERENCE",
+    description:
+      "EM fields from subsea cables and interaction with adjacent pipelines, structures, and control systems.",
+  },
+  {
+    name: "PSS/E NETWORK MODELLING",
+    description:
+      "Grid-scale modelling for dynamic stability and HVDC converter studies.",
+  },
+];
   const maxIndex = sectors.length - 1;
 
   const next = () => setActiveIndex((prev) => Math.min(prev + 1, maxIndex));
