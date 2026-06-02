@@ -39,7 +39,7 @@ const MobileMenu = () => {
     ],
     products: [
       { label: "CLPS", path: "/clps-products" },
-      { label: "Earthing Grounding", path: "/earthing-studies" },
+      { label: "EARTHING GROUNDING", path: "/earthing-studies" },
       { label: "ESE", path: "/ese-lightning-protection" },
       { label: "ESA Lightning Protection", path: "/lightning-protection-studies" },
       { label: "JEF-SHIELD & E-BUILD", path: "/coming-soon" },
