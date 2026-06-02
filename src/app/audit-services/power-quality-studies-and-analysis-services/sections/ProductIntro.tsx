@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const defaultNavItems = [
-  { label: "Home" },
-  { label: "Our Business" },
-  { label: "Audit Services" },
-  { label: "Power Quality Studies and Analysis Services", isActive: true },
+  { label: "Home", isActive: true },
+  { label: "Our Business", isActive: true },
+  { label: "Audit Services", isActive: true },
+  { label: "Power Quality Studies", isActive: false },
 ];
 
 export default function ProductIntro({
