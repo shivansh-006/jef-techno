@@ -10,7 +10,7 @@ const socialLinks = [
   { icon: "/FooterLogo/Link - Facebook.png", href: "https://www.facebook.com/JEFTECHNO/", alt: "Facebook" },
   { icon: "/FooterLogo/Link - Twitter.png", href: "https://x.com/JeftechnoIndia", alt: "Twitter" },
   { icon: "/FooterLogo/Link - Linkedin.png", href: "https://www.linkedin.com/showcase/jef-engineering-services-middle-east/", alt: "LinkedIn" },
-  { icon: "/FooterLogo/Instagram.png", href: "https://www.instagram.com/", alt: "Instagram" },
+  //{ icon: "/FooterLogo/Instagram.png", href: "https://www.instagram.com/", alt: "Instagram" },
   { icon: "/FooterLogo/Link - Youtube.png", href: "https://www.youtube.com/@JEFgroup", alt: "YouTube" }
 ];
 
@@ -61,13 +61,13 @@ const BlogPostPage = () => {
       {/* Breadcrumbs */}
       <div className="w-full bg-[#2D2E30] py-4 border-b border-white/5">
         <div className="section-container px-4 sm:px-6 lg:px-0 flex flex-wrap items-center gap-2 text-[8px] sm:text-[10px] md:text-xs tracking-tight md:tracking-[1px] uppercase">
-          <Link href="/" className="text-white/40 hover:text-[#C02429]">Home</Link>
+          <Link href="/" className="text-[#C02429]">Home</Link>
           <span className="text-white/20">›</span>
-          <Link href="/blog" className="text-white/40 hover:text-[#C02429]">Our Blogs</Link>
+          <Link href="/blog" className="text-[#C02429] hover:text-[#C02429]">Our Blogs</Link>
           <span className="text-white/20">›</span>
-          <span className="text-white/40">Consulting Services</span>
+          <span className="text-[#C02429]">Consulting Services</span>
           <span className="text-white/20">›</span>
-          <span className="text-[#C02429]">Our Blogs</span>
+          <span className="text-white/40">Our Blogs</span>
         </div>
       </div>
 
@@ -113,7 +113,7 @@ const BlogPostPage = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="w-full bg-[#1A1A1A] rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6"
+            className="w-full bg-[#1B1818] rounded-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <span className="text-white text-sm font-bold uppercase tracking-[2px]">
               Share this article

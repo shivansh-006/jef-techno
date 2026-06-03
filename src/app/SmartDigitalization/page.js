@@ -7,7 +7,7 @@ function SmartDigitalization() {
         <>
             <main className="flex overflow-hidden flex-col pb-36 bg-neutral-100 max-md:pb-24">
                 <header className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
-                    <img loading="lazy" src="./HomePageImg/Smart Digitization 1.png" alt="" className="object-cover w-full h-screen" />
+                    <img loading="lazy" src="/HomePageImg/Smart Digitization 1.png" alt="" className="object-cover w-full h-screen" />
                 </header>
                 <section className="flex  overflow-hidden -mt-28 z-10 flex-col items-start self-center px-12 py-16 ml-4 max-w-full bg-white w-4/5 lg:w-3/5 max-md:px-5">
                     <h1 className="text-3xl font-bold leading-none text-red-700 uppercase">

@@ -9,7 +9,7 @@ const ProductIntro = () => {
   const navItems = [
     { label: "HOME", isActive: true },
     { label: "OUR BUSINESS", isActive: true },
-    { label: "OUR SERVICES", isActive: true },
+    { label: "CONSULTING SERVICES", isActive: true },
     { label: "POWER SYSTEM STUDIES", isActive: false },
   ];
 

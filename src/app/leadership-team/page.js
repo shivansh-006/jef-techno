@@ -29,7 +29,7 @@ export default function Team() {
       <main className="flex flex-col min-h-screen bg-neutral-100">
         <header className="relative h-screen overflow-hidden">
           <img
-            src="./LeadershipTeamImg/JEF Leadership image.png"
+            src="/LeadershipTeamImg/JEF Leadership image.png"
             alt=""
             className="absolute inset-0 w-full h-full object-cover z-10"
             aria-hidden="true"

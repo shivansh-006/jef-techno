@@ -59,12 +59,12 @@ const ServicesComponent = () => {
   const [isHovered3, setIsHovered3] = useState(false);
 
   const services = [
-    { icon: "/nav-clps.png", text: "CLPS", path: "/clps-products" },
-    { icon: "/nav-earthing-grounding.png", text: "EARTHING GROUNDING", path: "/earthing-studies" },
-    { icon: "/nav-ese.png", text: "ESE", path: "/ese-lightning-protection" },
-    { icon: "/nav-ese-lightning-protection.png", text: "ESA LIGHTNING PROTECTION", path: "/lightning-protection-studies" },
-    { icon: "/nav-jef-shield.png", text: "JEF-SHIELD & E-BUILD", path: "/JEF-shield" },
-    { icon: "/nav-spd.png", text: "SPD", path: "/surge-protective-devices" },
+    { icon: "/nav-clps.png", text: "CLPS", path: "/Products/clps-products" },
+    { icon: "/nav-earthing-grounding.png", text: "EARTHING GROUNDING", path: "/Products/earthing-studies" },
+    { icon: "/nav-ese.png", text: "ESE", path: "/Products/ese-lightning-protection" },
+    { icon: "/nav-ese-lightning-protection.png", text: "ESA LIGHTNING PROTECTION", path: "/Products/lightning-protection-studies" },
+    { icon: "/nav-jef-shield.png", text: "JEF-SHIELD & E-BUILD", path: "/Products/JEF-shield" },
+    { icon: "/nav-spd.png", text: "SPD", path: "/Products/surge-protective-devices" },
   ];
 
   const services2 = [

@@ -30,7 +30,7 @@ const MobileMenu = () => {
     about: [
       { label: "About Us", path: "/about-us" },
      
-      { label: "Employee Login", path: "/coming-soon" },
+      { label: "Employee Login", path: "https://www.jeftechno.com/Internal_Use/index.php" },
     ],
     business: [
       { label: "Products", key: "products" },
@@ -38,12 +38,12 @@ const MobileMenu = () => {
       { label: "Consulting Services", key: "consulting" },
     ],
     products: [
-      { label: "CLPS", path: "/clps-products" },
-      { label: "EARTHING GROUNDING", path: "/earthing-studies" },
-      { label: "ESE", path: "/ese-lightning-protection" },
-      { label: "ESA Lightning Protection", path: "/lightning-protection-studies" },
-      { label: "JEF-SHIELD & E-BUILD", path: "/coming-soon" },
-      { label: "SPD", path: "/surge-protective-devices" },
+      { label: "CLPS", path: "/Products/clps-products" },
+      { label: "EARTHING GROUNDING", path: "/Products/earthing-studies" },
+      { label: "ESE", path: "/Products/ese-lightning-protection" },
+      { label: "ESA PROTECTION", path: "/Products/lightning-protection-studies" },
+      { label: "JEF-SHIELD & E-BUILD", path: "/Products/JEF-shield" },
+      { label: "SPD", path: "/Products/surge-protective-devices" },
     ],
     audit: [
       { label: "Earthing Health Assessment", path: "/audit-services/earthing-health-assessment" },

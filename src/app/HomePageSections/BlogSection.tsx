@@ -149,7 +149,7 @@ export default function BlogsSection() {
               </span>
 
               <img
-                src="./HomePageImg/LeftArrow.png"
+                src="/HomePageImg/LeftArrow.png"
                 alt="Arrow"
                 className="
                   relative

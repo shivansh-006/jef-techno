@@ -27,7 +27,7 @@ export default function AboutUsContent  ()  {
     {/* Fallback Image */}
     <img
       loading="lazy"
-      src="./AboutUs/AboutUsMainBG.png"
+      src="/AboutUs/AboutUsMainBG.png"
       alt="AboutUsMainbg"
       className="object-cover absolute inset-0 w-full h-full"
     />
@@ -43,7 +43,7 @@ export default function AboutUsContent  ()  {
       className="absolute inset-0 w-full h-full object-cover"
     >
       <source
-        src="./AboutUs/JEF About us.mp4"
+        src="/AboutUs/JEF About us.mp4"
         type="video/mp4"
       />
     </video>

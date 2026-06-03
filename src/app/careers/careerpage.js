@@ -147,7 +147,7 @@ const Career = () => {
     <>
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
         <section className="lg:flex hidden h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
-        <img loading="lazy" src="./CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
+        <img loading="lazy" src="/CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
         {/* <div className="Y-axis-text-Title-Careers flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
           <div className="flex flex-col items-center w-full  max-md:max-w-full">
             <div className="flex flex-col items-center w-full text-center">
@@ -251,7 +251,7 @@ const Career = () => {
             <div key={job.id} className="Y-axis-card-anm flex flex-col p-10 mt-6 max-w-full bg-white rounded-3xl shadow-[0px_3px_8px_rgba(48,150,137,0.08)] w-[1296px] max-md:px-5">
               <div className="flex flex-col w-full max-md:max-w-full">
                 <div className="flex flex-wrap gap-10 justify-end items-start w-full text-base text-red-700 max-md:max-w-full">
-                  <img loading="lazy" src="./CareerPage/BookmarkLogo.png" alt="" className="object-contain shrink-0 w-6 aspect-square" />
+                  <img loading="lazy" src="/CareerPage/BookmarkLogo.png" alt="" className="object-contain shrink-0 w-6 aspect-square" />
                 </div>
                 <div className="flex flex-wrap gap-5 items-start self-start mt-6 text-stone-900 max-md:max-w-full">
                   <img loading="lazy" src={job.logo} alt={`${job.company} logo`} className="object-contain shrink-0 w-10 aspect-square" />
@@ -264,19 +264,19 @@ const Career = () => {
               <div className="flex flex-wrap gap-10 justify-between items-end mt-7 w-full text-base font-semibold max-md:max-w-full">
                 <div className="flex flex-wrap gap-6 items-end text-gray-500 min-w-[240px] max-md:max-w-full">
                   {/* <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="./CareerPage/Redbriefcase.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="/CareerPage/Redbriefcase.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.category}</div>
                   </div> */}
                   <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="./CareerPage/clock.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="/CareerPage/clock.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.type}</div>
                   </div>
                   {/* <div className="flex gap-3 items-center whitespace-nowrap">
-                    <img loading="lazy" src="./CareerPage/Wallet.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="/CareerPage/Wallet.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.salary}</div>
                   </div> */}
                   <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="./CareerPage/map-pin.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="/CareerPage/map-pin.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.location}</div>
                   </div>
                 </div>

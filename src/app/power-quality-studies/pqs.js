@@ -297,7 +297,7 @@ const PQS = () => {
       <section className="flex overflow-hidden h-screen flex-col bg-white">
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
           <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-            <source src="./SerivePage/Power Quality Banner Video.mp4" type="video/mp4" />
+            <source src="/SerivePage/Power Quality Banner Video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="Y-axis-text-Title-Service4 flex inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
@@ -346,7 +346,7 @@ const PQS = () => {
           </div>
         </nav>
         <div className="ContactUsAnimation flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-          <img loading="lazy" src="./SerivePage/PowerQualityBulb.png" alt="PowerQualityBulb" className="object-contain w-16 aspect-square" />
+          <img loading="lazy" src="/SerivePage/PowerQualityBulb.png" alt="PowerQualityBulb" className="object-contain w-16 aspect-square" />
         </div>
         <header className="ContactUsAnimation flex p-4 flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
           <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed  tracking-wider w-[1071px]">
@@ -916,7 +916,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
-                src="./SerivePage/Power Quality.png"
+                src="/SerivePage/Power Quality.png"
                 alt="Earthing/Grounding System Illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />

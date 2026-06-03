@@ -117,7 +117,7 @@ function JobOverviewCard({ data }) {
           </div>
         ))}
       </div>
-      {/* <img src="./CareerPage/TseCareersMap.png" alt="map" className='mt-5'/> */}
+      {/* <img src="/CareerPage/TseCareersMap.png" alt="map" className='mt-5'/> */}
     </section>
   );
 }
@@ -257,9 +257,9 @@ function JobInfoSection() {
 
             <div className='text-2xl text-red-700 font-semibold'>Share Job:</div>
             <div className='flex h-8 gap-5'>
-              <img src="./CareerPage/FbLogo.png" alt="FbLogo" />
-              <img src="./CareerPage/Xlogo.png" alt="Xlogo" />
-              <img src="./CareerPage/LinkedInLogo.png" alt="LinkedInLogo" />
+              <img src="/CareerPage/FbLogo.png" alt="FbLogo" />
+              <img src="/CareerPage/Xlogo.png" alt="Xlogo" />
+              <img src="/CareerPage/LinkedInLogo.png" alt="LinkedInLogo" />
             </div>
           </div>
 

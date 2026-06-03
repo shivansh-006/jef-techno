@@ -13,7 +13,7 @@ const RootCauseAnalysis = () => {
 
   return (
     <div className="bg-[#232427]">
-      <Hero  videoSrc="./HomePageImg/Banner-3.mp4" />
+      <Hero  videosrc="/HomePageImg/Banner-3.mp4" />
       <ProductIntro 
 
       />

@@ -289,7 +289,7 @@ const services = useMemo(() => [
       <section className="flex overflow-hidden h-screen flex-col bg-white">
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
           <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-            <source src="./SerivePage/Instrumrntation Earthing Banner videos.mp4" type="video/mp4" />
+            <source src="/SerivePage/Instrumrntation Earthing Banner videos.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
@@ -338,7 +338,7 @@ const services = useMemo(() => [
           </div>
         </nav>
         <div className="flex ContactUsAnimation justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-          <img loading="lazy" src="./SerivePage/Earthingicon.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
+          <img loading="lazy" src="/SerivePage/Earthingicon.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
         </div>
         <header className="flex p-4 ContactUsAnimation flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
          <div className="w-full text-3xl max-md:max-w-full">
@@ -888,7 +888,7 @@ function CarouselSection({ components }) {
 //             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
 //               <img
 //                 loading="lazy"
-//                 src="./SerivePage/magna-discovery.jpg.png"
+//                 src="/SerivePage/magna-discovery.jpg.png"
 //                 alt="Earthing/Grounding System Illustration"
 //                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
 //               />

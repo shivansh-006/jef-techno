@@ -312,12 +312,12 @@ const Solution1 = () => {
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
           {/* <img
           loading="lazy"
-          src="./SerivePage/Earthing Studies 1.png"
+          src="/SerivePage/Earthing Studies 1.png"
           alt=""
           className="object-cover absolute inset-0 size-full"
         /> */}
           <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-            <source src="./SerivePage/Solution-1.mp4" type="video/mp4" />
+            <source src="/SerivePage/Solution-1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
@@ -366,7 +366,7 @@ const Solution1 = () => {
           </div>
         </nav>
         <div className="ContactUsAnimation flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-          <img loading="lazy" src="./SerivePage/EMIEMCLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
+          <img loading="lazy" src="/SerivePage/EMIEMCLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
         </div>
         <header className="flex p-4 ContactUsAnimation flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
           <h1 className="flex flex-col max-w-full text-2xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
