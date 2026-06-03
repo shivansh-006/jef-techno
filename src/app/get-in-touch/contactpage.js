@@ -1305,13 +1305,13 @@ const GetInTouchForm = () => {
 
     return (
         <>
-            <section className="flex p-5 py-32 overflow-hidden flex-col bg-neutral-100">
+            <section className="flex p-5 py-32 overflow-hidden flex-col bg-[#232427]">
                 <div className="flex flex-col self-center mt-24 w-full max-w-[1300px] max-md:mt-10 max-md:max-w-full">
-                    <h1 className="pb-px w-full text-3xl leading-loose uppercase text-stone-900 tracking-[3.36px] max-md:max-w-full">
+                    <h1 className="pb-px w-full text-[28px] md:text-[36px] font-bold text-white tracking-[1px] uppercase mb-12">
                         We just need your contact details
                     </h1>
                     {showConfirmation ? (
-                        <div className='w-full flex flex-col items-start gap-12 thank-you mt-16 text-3xl leading-loose uppercase text-stone-900 tracking-[3.36px] max-md:max-w-full'>
+                        <div className='w-full flex flex-col items-start gap-12 thank-you mt-16 text-3xl leading-loose uppercase text-white tracking-[3.36px] max-md:max-w-full'>
                             <div className='leading-tight'>Thank You…!! </div>
                             <div className='leading-tight'>Our team has received your information, will get in touch with you within the next 24 hours to discuss how we can help bring your vision to life.</div>
                         </div>
@@ -1328,10 +1328,10 @@ const GetInTouchForm = () => {
                                             <div className="flex flex-col w-full max-md:max-w-full">
                                                 <div className="flex relative gap-4 lg:gap-10 w-full text-xs max-md:max-w-full">
                                                     <label htmlFor="name" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                                                        <span className="text-stone-900 font-normal">FIRST NAME </span>
+                                                        <span className="text-[#C02429] font-normal">FIRST NAME </span>
                                                         <span className="text-red-700">*</span>
                                                     </label>
-                                                    <div className="absolute right-px self-start h-3 font-light tracking-wide leading-none min-h-[12px] text-zinc-600">
+                                                    <div className="absolute right-px self-start h-3 font-light tracking-wide leading-none min-h-[12px] text-gray-400">
                                                         40 characters
                                                     </div>
                                                 </div>
@@ -1356,10 +1356,10 @@ const GetInTouchForm = () => {
                                             <div className="flex flex-col w-full max-md:max-w-full">
                                                 <div className="flex relative gap-4 lg:gap-10 w-full text-xs max-md:max-w-full">
                                                     <label htmlFor="name" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                                                        <span className="text-stone-900 font-normal">LAST NAME </span>
+                                                        <span className="text-[#C02429] font-normal">LAST NAME </span>
                                                         <span className="text-red-700">*</span>
                                                     </label>
-                                                    <div className="absolute right-px self-start h-3 font-light tracking-wide leading-none min-h-[12px] text-zinc-600">
+                                                    <div className="absolute right-px self-start h-3 font-light tracking-wide leading-none min-h-[12px] text-gray-400">
                                                         80 characters
                                                     </div>
                                                 </div>
@@ -1385,7 +1385,7 @@ const GetInTouchForm = () => {
                                             <div className="flex flex-col w-full max-md:max-w-full">
                                                 <div className="flex relative gap-10 w-full text-xs max-md:max-w-full">
                                                     <label htmlFor="email" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                                                        <span className="text-stone-900">Business Email address </span>
+                                                        <span className="text-[#C02429]">Business Email address </span>
                                                         <span className="text-red-700">*</span>
                                                     </label>
                                                     <div className="absolute -right-px self-start h-3 font-normal tracking-wide leading-none min-h-[12px] text-zinc-600">
@@ -1410,7 +1410,7 @@ const GetInTouchForm = () => {
                                     <div className="flex flex-col grow justify-center max-md:mt-10 max-md:max-w-full">
                                         <div className="flex flex-col w-full max-md:max-w-full">
                                             <div className="flex flex-wrap gap-1 items-start pb-px w-full text-xs max-md:max-w-full">
-                                                <label htmlFor="phone" className="tracking-widest leading-tight  uppercase text-stone-900">
+                                                <label htmlFor="phone" className="tracking-widest leading-tight uppercase text-[#C02429]">
                                                     Phone number <span className="text-red-700">*</span>
                                                 </label>
                                             </div>
@@ -1455,8 +1455,8 @@ const GetInTouchForm = () => {
                                     <div className="flex flex-col grow min-h-[126px] max-md:mt-10 max-md:max-w-full">
                                         <div className="flex flex-col w-full max-md:max-w-full">
                                             <div className="flex relative gap-10 w-full text-xs max-md:max-w-full">
-                                                <label htmlFor="company" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                                                    <span className="text-stone-900">Company name </span>
+                                                <label htmlFor="company" className="tracking-widest leading-tight uppercase min-w-[240px] text-[#C02429] w-[473px] max-md:max-w-full">
+                                                    <span>Company name </span>
                                                     <span className="text-red-700">*</span>
                                                 </label>
                                                 <div className="absolute -right-px self-start h-3 font-normal tracking-wide leading-none min-h-[12px] text-zinc-600">
@@ -1480,8 +1480,8 @@ const GetInTouchForm = () => {
                                     <div className="flex flex-col grow text-xs min-h-[126px]">
                                         <div className="flex flex-col w-full max-md:max-w-full">
                                             <div className="flex relative gap-10 w-full max-md:max-w-full">
-                                                <label htmlFor="query" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                                                    <span className="text-stone-900">Query </span>
+                                                <label htmlFor="query" className="tracking-widest leading-tight uppercase min-w-[240px] text-[#C02429] w-[473px] max-md:max-w-full">
+                                                    <span>Query </span>
                                                     <span className="text-red-700">*</span>
                                                 </label>
                                                 <div className="absolute -right-px self-start h-3 font-thin tracking-wide leading-none min-h-[12px] text-zinc-600">
@@ -1503,55 +1503,39 @@ const GetInTouchForm = () => {
                             <div className="flex flex-col py-0.5 mt-9 w-full max-md:max-w-full">
                                 <div className="flex flex-col justify-center pb-2.5 w-full h-6 text-xs tracking-widest leading-tight uppercase max-md:max-w-full">
                                     <div className="flex flex-wrap gap-1 items-start w-full h-[15px] max-md:max-w-full">
-                                        <div className="text-stone-900">Marketing Permissions</div>
+                                        <div className="text-[#C02429]">Marketing Permissions</div>
                                         <div className="text-red-700">*</div>
                                     </div>
                                 </div>
                                 <div className="flex flex-wrap gap-10 w-full max-md:max-w-full">
-                                    <div className="flex flex-wrap  flex-auto gap-5 justify-center min-h-[90px]">
-                                        <div className="flex flex-col grow shrink justify-center pb-8 w-0 ">
-                                            <div className="flex flex-col justify-center w-full bg-rose-100 rounded min-h-[60px]">
-                                                <div className="flex flex-1 p-5 size-full">
-                                                    <div className="flex flex-col justify-center self-start w-5 min-h-[20px]">
-                                                        <input
-                                                            required
-                                                            type="radio"
-                                                            id="marketing-yes"
-                                                            name="marketing"
-                                                            value="Yes"
-                                                            onChange={handleMarketingChange}
-                                                            className="flex flex-1 w-5 h-5 bg-white cursor-pointer rounded-xl border border-red-300 border-solid min-h-[20px]"
-                                                        />
-                                                    </div>
-                                                    <label htmlFor="marketing-yes" className="flex flex-col cursor-pointer justify-center items-start pl-2.5 text-xs tracking-widest leading-none uppercase whitespace-nowrap text-stone-600">
-                                                        <div className="flex items-center py-1 min-h-[20px]">
-                                                            <div className="self-stretch my-auto">Yes</div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                    <div className="flex flex-wrap flex-auto gap-5 justify-start min-h-[90px] w-full md:w-auto">
+                                        <div className="flex flex-col w-[200px]">
+                                            <label className={`flex items-center p-5 bg-[#FFF0F0] rounded cursor-pointer border ${marketing === 'Yes' ? 'border-[#C02429]' : 'border-transparent'}`}>
+                                                <input
+                                                    required
+                                                    type="radio"
+                                                    id="marketing-yes"
+                                                    name="marketing"
+                                                    value="Yes"
+                                                    onChange={handleMarketingChange}
+                                                    className="w-5 h-5 accent-[#C02429]"
+                                                />
+                                                <span className="ml-3 text-xs tracking-widest uppercase text-stone-600">Yes</span>
+                                            </label>
                                         </div>
-                                        <div className="flex flex-col grow shrink justify-center pb-8 w-0 ">
-                                            <div className="flex flex-col justify-center w-full bg-rose-100 rounded min-h-[60px]">
-                                                <div className="flex flex-1 p-5 size-full">
-                                                    <div className="flex flex-col justify-center self-start w-5 min-h-[20px]">
-                                                        <input
-                                                            required
-                                                            type="radio"
-                                                            id="marketing-no"
-                                                            name="marketing"
-                                                            value="No"
-                                                            onChange={handleMarketingChange}
-                                                            className="flex flex-1 w-5 h-5 bg-white cursor-pointer rounded-xl border border-red-700 border-solid min-h-[20px]"
-                                                        />
-                                                    </div>
-                                                    <label htmlFor="marketing-no" className="flex flex-col justify-center cursor-pointer items-start pl-2.5 text-xs tracking-widest leading-tight uppercase whitespace-nowrap text-stone-600">
-                                                        <div className="flex items-center py-1 min-h-[20px]">
-                                                            <div className="self-stretch my-auto">No</div>
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
+                                        <div className="flex flex-col w-[200px]">
+                                            <label className={`flex items-center p-5 bg-[#FFF0F0] rounded cursor-pointer border ${marketing === 'No' ? 'border-[#C02429]' : 'border-transparent'}`}>
+                                                <input
+                                                    required
+                                                    type="radio"
+                                                    id="marketing-no"
+                                                    name="marketing"
+                                                    value="No"
+                                                    onChange={handleMarketingChange}
+                                                    className="w-5 h-5 accent-[#C02429]"
+                                                />
+                                                <span className="ml-3 text-xs tracking-widest uppercase text-stone-600">No</span>
+                                            </label>
                                         </div>
                                     </div>
                                     <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
@@ -1593,7 +1577,7 @@ export function OfficeLocations() {
         {
             title: "Our Global Head Office",
             address: "JEF Techno Solutions Pvt Ltd, KR Square, No.1073, 15th Cross, 30th Main, Banashankari 2nd Stage, Bengaluru-560070",
-            phone: "",
+            phone: "+91 080 37569000",
             email: "marketing@jeftechno.com",
         },
         {
@@ -1613,37 +1597,41 @@ export function OfficeLocations() {
             address: "Prince Turki St, PO Box-6140, Al Khobar Corniche, PC-34423, KSA.",
             phone: "+971 552447290",
             email: "marketing@jeftechno.com",
+        },
+        {
+            title: "USA Office",
+            address: "Street Address: 4512 Legacy Dr Ste 100 Plano TX 75024",
+            phone: "+971 552447290",
+            email: "marketing@jeftechno.com",
         }
     ];
 
     return (
         <main className="flex flex-col items-center bg-neutral-100 px-5 sm:px-8 md:px-12 2xl:px-20 pt-10 xl:pt-0 pb-12 sm:pb-16 md:pb-20 ">
-            <section className="w-full max-w-[68.688rem] xl:max-w-full 2xl:max-w-[1300px] mx-auto xl:mx-0">
-                <h1 className="text-2xl sm:text-3xl text-red-700 text-center mb-8 sm:mb-12 md:mb-16">
+            <section className="w-full max-w-[1300px] mx-auto">
+                <h1 className="text-3xl font-bold text-[#C02429] text-center mb-16 uppercase tracking-[2px]">
                     JEF offices
                 </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     {offices.map((office, index) => (
                         <article
                             key={index}
-                            className="flex flex-col p-4 rounded-lg bg-neutral-100 hover:shadow-md transition-shadow duration-300"
+                            className="flex flex-col rounded-lg bg-neutral-100"
                         >
-                            <h2 className="text-base font-medium text-red-700 mb-4">
+                            <h2 className="text-sm font-bold text-[#C02429] mb-6 uppercase min-h-[40px]">
                                 {office.title}
                             </h2>
                             <p
-                                className={`text-sm sm:text-base font-light leading-6 text-black mb-6 ${index === 3 ? 'xl:h-[72px]' : 'xl:h-24'
-                                    }`}
+                                className="text-[15px] font-light leading-relaxed text-black mb-8 min-h-[140px]"
                             >
                                 {office.address}
                             </p>
-                            <p className={`text-sm sm:text-base font-light leading-6 text-[#C02429] mb-1 ${index === 0 ? 'opacity-0' : ''
-                                }`}>
+                            <p className="text-[15px] font-light text-[#C02429] mb-1">
                                 Ph. No: {office.phone}
                             </p>
-                            <p className="text-sm sm:text-base font-light leading-6 text-[#C02429]">
+                            <p className="text-[15px] font-light text-[#C02429]">
                                 Email:{' '}
-                                <a href={`mailto:${office.email}`} className="underline">
+                                <a href={`mailto:${office.email}`} className="underline hover:text-black transition-colors">
                                     {office.email}
                                 </a>
                             </p>

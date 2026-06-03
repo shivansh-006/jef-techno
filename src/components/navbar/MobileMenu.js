@@ -23,9 +23,9 @@ const MobileMenu = () => {
       { label: "Our Business", key: "business" },
       
       { label: "Blogs", path: "/blog" },
-      { label: "JEF UAE", path: "/jef-uae" },
-      { label: "JEF SHIELD", path: "/jef-shield" },
-      { label: "JEF SAFE", path: "#" },
+      { label: "JEF UAE", path: "https://www.jefuae.com/" },
+      { label: "JEF SHIELD", path: "https://www.jeftechno.com/JEF_SHIELD/login.php" },
+      { label: "JEF SAFE", path: "https://www.jeftechno.com/" },
     ],
     about: [
       { label: "About Us", path: "/about-us" },

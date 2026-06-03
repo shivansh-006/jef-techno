@@ -37,19 +37,19 @@ function MainFooter() {
         { name: 'Who we are', path: '/about-us' },
 
         {name:'Careers',path:'/careers'},
-                { name: 'Contact us', path: '/contact-us' },
+                { name: 'Contact us', path: '/get-in-touch' },
     ];
 
     const itemsLocation = [
-        { name: 'India', path: '' },
-        { name: 'UAE', path: '' },
+        { name: 'India', path: 'https://www.jeftechno.com/' },
+        { name: 'UAE', path: 'https://www.jefuae.com/' },
         { name: 'USA', path: '' },
     ];
 
     const itemsBusiness = [
-        { name: 'Products', path: '' },
-        { name: 'Audit Services', path: '' },
-        { name: 'Consulting Services', path: '' },
+        { name: 'Products', path: '/' },
+        { name: 'Audit Services', path: '/'},
+        { name: 'Consulting Services', path: '/' },
     ];
 
     const itemNews = [
@@ -62,7 +62,7 @@ function MainFooter() {
         {name:'Employee Login',path:'https://jef.greythr.com/uas/portal/auth/login?login_challenge=Eyc24yb1y9zy2yUBNmCv9Ldf3_Y0N2vN93N9IYi1pRfa0dnykYVmbb_1oc805RnfwsTk7AyGwA9kR323xDwfYI5YxfU4B5lhgti5dH9ctvCgKxSoNI3hyK0l_LQGQbPCFa6hv3M58G3UP1MVmmdwqjCwoi4_XF_2TgV615mY80SAhTgL0CRqhReLfQ1K5cWZo4EAiXCN-YCPTHzfG9b3Hb_0LvR4NCOoyQjF8x3lL66FlHMZZpSNQ_M5Q1yo-fOChxLBV9zxYPSmX95yYA38cDF_fevkLUNj9QDyu4lF_-GngV80Ddq3kW26yZ4wbeNdTSsjbluYcVCMHnsXOIhKx55w6y7pdz1LtdjLPEISRdIWUKa8fnWqo-txZBv0440xUAq6SOmTnDfhBNn6oa8Fsa5zkUkRBAz2rWF0rO0MGgJK34TkITmacevzLx1vIUYIYsJ2RoTqwY_V1a8S5iiW8tlQEPNkwPVKVn8zMCjYDllnU7fbdSFP8vKQGq8Zc4VHfvR9C-fJrs2BrULt9sD-dWKR8nkfaik8aj9AL6roofsir-3kbJgcMAUlSsV64wcuOY_-dEoRgtleOO2xv6UlOdZBBV_YcKUlwJ46OUsh3Ep-V6cR-oi4fif4dsR_Ei3-13X7MYLPVPazrKxtw-Es-OnnuYca7QObWc--6uxms6_UO7dMqvN99aDkJM7dQWNcDkEKhqg12kQDE1Gm3R2cQ2yhYHVzqRMYzW4-42FTZiNr94Zq-ECEEDwL4wuM8rASS4o4q7Zw7c0rEzUeY10Y1uoo_gTXIlSdF4dnhOI-iLgfX-ubNeI1AlHUCZnnRTwiB6l6PIy03zLa8qlvHefNnuVTq16nKiF_h2GlJf3h-2e64cM4g8J9EeVrLBqctxRTXd_MtSGf2qldHE5TZtFz7-XC4jHahW6CAedf-6Wvql5RRLTIZIpBUZhjWE0zVn41fa5qgJODMkxhasIpGv1f3WEVThfacDc77JEIxgnrpl90GYCtV95u4xKmdFeupyrJnA-9CWTUqUxzvsqmN6-Rx1CPQ6GSeL_up1Xpbrusqr_0QRXvl6Z3_Q4gx4Y3ZMbsylrDj-__nYSWnxGrtATEsZIR4uN5gLFzER76vgJWHCeYPBB_ONsI9nDRkNguwPwnjAoRwE6POmgMITKGI-p7j_ZopWkiNs64_ONS1F486LlSBf0QM-R9BZa2WiZQ1U8nCPM42FD-ozyOMpnkcYDC5dsU9c8FbgAskI3jCIkJg1JQYxlH-TZbJk9yBWQskbIh8qddfTGMl9CP2iR8gykPI77fZBi5sxcYnY4Wacj6SLMXWmHLHMDqv0jTOJk6'  }
     ];
     const itemJefShield = [
-        {name:'Risk Assesment Tool',path:'https://www.jeftechno.com/JEF_SHIELD/login.php'  }
+        {name:'FAQs',path:'https://www.jeftechno.com/JEF_SHIELD/login.php'  }
     ];
 
   
@@ -79,9 +79,9 @@ function MainFooter() {
     </div>
 
     {/* SECOND ROW */}
-    <div className="section-container hidden lg:flex mt-10 gap-20">
+    <div className="section-container hidden lg:flex mt-10 gap-30">
         <Section title="Internal Use" items={itemInternalUse} />
-        <Section title="Jef Shield" items={itemJefShield} />
+        <Section title="Internal Links" items={itemJefShield} />
     </div>
 
     {/* MOBILE FAQ */}
@@ -109,7 +109,7 @@ function Footer() {
                     <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
                     <a href="https://www.linkedin.com/showcase/jef-engineering-services-middle-east/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
                     <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
-                    <a href="https" target="_blank" className="object-contain h-8 text-gray-400 w-8 card-slider-footer"><img src="../FooterLogo/Instagram.png" alt="InstagramImg" /></a>
+                    
                 </div>
             </div>
             <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900">

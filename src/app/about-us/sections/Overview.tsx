@@ -6,23 +6,23 @@ import Image from "next/image";
 const Overview = () => {
   const stats = [
      {
-      img: "/AboutUs/30_plus_years.png",
+      img: "/AboutUs/2.png",
       label: "30+ YEARS",
     },
     {
-      img: "/AboutUs/30_plus_countries.png",
+      img: "/AboutUs/3.png",
       label: "30+ COUNTRIES",
     },
     {
-      img: "/AboutUs/10k_customers.png",
+      img: "/AboutUs/4.png",
       label: "10K CUSTOMERS",
     },
     {
-      img: "/AboutUs/9_patents.png",
+      img: "/AboutUs/5.png",
       label: "9 PATENTS",
     },
     {
-      img: "/AboutUs/90_percent_retention_rate.png",
+      img: "/AboutUs/1.png",
       label: "90% RETENTION RATE",
     },
    
@@ -99,14 +99,16 @@ const Overview = () => {
           className="
             w-full
             max-w-[1000px]
-            mx-auto
-            flex
-            flex-wrap
-            justify-center
-            gap-y-[30px]
-            gap-x-[30px]
-            md:gap-x-[50px]
-            xl:gap-x-[70px]
+             grid
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-4
+    xl:grid-cols-5
+    gap-6
+    md:gap-8
+    lg:gap-15
+    place-items-center
           "
         >
           {stats.map((item, index) => (
@@ -136,14 +138,14 @@ const Overview = () => {
                 className="
                   relative
 
-                  w-[120px]
-                  h-[120px]
+                  w-[150px]
+                  h-[150px]
 
-                  sm:w-[135px]
-                  sm:h-[135px]
+                  sm:w-[170px]
+                  sm:h-[170px]
 
-                  md:w-[150px]
-                  md:h-[150px]
+                  md:w-[230px]
+                  md:h-[190px]
 
                   transition-transform
                   duration-500
@@ -155,9 +157,15 @@ const Overview = () => {
                   src={item.img}
                   alt={item.label}
                   fill
-                  className="object-contain"
+                  className="object-contain "
+                 
+                  
                 />
               </div>
+               {/* LABEL */}
+               <h2 className="font-medium text-white text-[16px] tracking-[2px] whitespace-nowrap">{item.label}</h2>
+
+
 
              
             </motion.div>

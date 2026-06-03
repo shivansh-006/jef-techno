@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useContext } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { TranslationContext } from "../../context/TranslationContext";
+
 import Image from "next/image";
 
 const menuItems = [
@@ -12,20 +10,18 @@ const menuItems = [
   { label: "Our Business", hasDropdown: true },
   { label: "Our Blogs", hasDropdown: false, path: "/blog" },
   //{ label: "Our Industries", hasDropdown: true },
-  { label: "JEF UAE", hasDropdown: false },
+  { label: "JEF UAE", hasDropdown: false , path:"https://www.jefuae.com/"},
   { label: "JEF SHIELD", hasDropdown: false,path:"https://www.jeftechno.com/JEF_SHIELD/login.php" },
+  { label: "JEF SAFE", hasDropdown: false, path: "" },
  
 ];
 
 const NavHeader = ({
   handleMenuHover,
   handleMouseLeave,
-  toggleDropdown,
-  isDropdownVisible,
-  setIsDropdownVisible,
+ 
   toggleSlideMenu,
-  isArabic,
-  toggleTranslation,
+
 }) => {
   const pathname = usePathname();
 
@@ -97,9 +93,11 @@ const NavHeader = ({
           </nav>
 
           <div className="hidden lg:flex gap-6 items-center lg:-mr-6 self-stretch my-auto max-md:max-w-full text-center">
-            <h1 className="font-medium text-white text-[16px] tracking-[2px]">
-              JEF SAFE
-            </h1>
+           
+              
+              
+           
+             <Link href="/get-in-touch" >
              <Image
         src="/nav-jef-safe.png"
         alt="Menu"
@@ -107,6 +105,7 @@ const NavHeader = ({
         height={20}
         className="object-contain w-11 transition-transform duration-300 transform group-hover:rotate-180"
       />
+        </Link>
           </div>
 
           <div className="flex lg:hidden gap-6 items-center self-stretch my-auto text-center">

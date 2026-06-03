@@ -1013,10 +1013,10 @@ const MainBlogPage = () => {
       >
         <div className="section-container px-4 sm:px-6 lg:px-0  lg:pt-5 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="text-white/60 text-xs md:text-sm tracking-[2px] uppercase font-medium">
-            News & Media
+            Blogs
           </span>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
-            {['OVERVIEW', 'ALL NEWS', 'RESOURCES', 'EVENTS', 'PRESS ENQUIRES'].map((item) => (
+            {['OVERVIEW', 'ALL BLOGS', 'RESOURCES', 'EVENTS'].map((item) => (
               <Link 
                 key={item} 
                 href="#" 
@@ -1066,7 +1066,7 @@ const MainBlogPage = () => {
           transition={{ duration: 0.5 }}
           className="text-[#C02429] text-2xl md:text-3xl font-bold tracking-[2px] uppercase mb-10 sm:mb-12"
         >
-          All News
+          All BLOGS
         </motion.h2>
         </div>
 

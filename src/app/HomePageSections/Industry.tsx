@@ -272,8 +272,8 @@ export default function OurIndustriesSection() {
                   <p
                     className="
                       text-white
-                      text-[14px]
-                      sm:text-[16px]
+                      text-[15px]
+                      sm:text-[18px]
                       leading-[1.8]
                       mb-8
                       sm:mb-10
