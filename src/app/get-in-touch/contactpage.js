@@ -1607,7 +1607,7 @@ export function OfficeLocations() {
     ];
 
     return (
-        <main className="flex flex-col items-center bg-neutral-100 px-5 sm:px-8 md:px-12 2xl:px-20 pt-10 xl:pt-0 pb-12 sm:pb-16 md:pb-20 ">
+        <main className="flex flex-col items-center bg-[#232427] px-5 sm:px-8 md:px-12 2xl:px-20 pt-10 xl:pt-0 pb-12 sm:pb-16 md:pb-20 ">
             <section className="w-full max-w-[1300px] mx-auto">
                 <h1 className="text-3xl font-bold text-[#C02429] text-center mb-16 uppercase tracking-[2px]">
                     JEF offices
@@ -1616,13 +1616,13 @@ export function OfficeLocations() {
                     {offices.map((office, index) => (
                         <article
                             key={index}
-                            className="flex flex-col rounded-lg bg-neutral-100"
+                            className="flex flex-col rounded-lg bg-[#232427]"
                         >
                             <h2 className="text-sm font-bold text-[#C02429] mb-6 uppercase min-h-[40px]">
                                 {office.title}
                             </h2>
                             <p
-                                className="text-[15px] font-light leading-relaxed text-black mb-8 min-h-[140px]"
+                                className="text-[15px] font-light leading-relaxed text-white mb-8 min-h-[140px]"
                             >
                                 {office.address}
                             </p>

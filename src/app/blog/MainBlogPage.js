@@ -1016,7 +1016,7 @@ const MainBlogPage = () => {
             Blogs
           </span>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
-            {['OVERVIEW', 'ALL BLOGS', 'RESOURCES', 'EVENTS'].map((item) => (
+            {[ 'ALL BLOGS', 'DOWNLOADS', 'EVENTS'].map((item) => (
               <Link 
                 key={item} 
                 href="#" 
@@ -1040,7 +1040,7 @@ const MainBlogPage = () => {
             transition={{ duration: 0.55 }}
             className="text-white text-4xl md:text-4xl tracking-[3px] uppercase"
           >
-            Newsroom
+            All Resources
           </motion.h1>
         </div>
       </div>

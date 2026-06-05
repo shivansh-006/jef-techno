@@ -11,7 +11,7 @@ const navigationItems = [
 
 const contentMap = {
   "01": "JEF is a specialist electrical engineering company with an uncompromising focus on the safety and reliability of electrical systems.",
-  "02": "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate.",
+  "02": "Please keep your login credentials secure and never share them with unauthorized individuals.",
 };
 
 const AboutSection = () => {
