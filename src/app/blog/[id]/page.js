@@ -94,7 +94,7 @@ const BlogPostPage = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12 rounded-2xl overflow-hidden shadow-2xl"
+            className="mb-12 overflow-hidden shadow-2xl"
           >
             <img 
               src={post.imageUrl} 
