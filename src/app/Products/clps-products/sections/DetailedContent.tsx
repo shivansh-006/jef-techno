@@ -150,8 +150,14 @@ const pages = [
   nav: "JEF CLPS\nPRODUCTS",
   title: (
   <>
-    JEF CLPS PRODUCTS — TYPE-TESTED TO 200 KA / 10/350{" "}
-    <span className="font-normal text-[0.9em]">μ</span>s
+   <span className="whitespace-nowrap inline-flex text-center items-center gap-1">
+      JEF CLPS PRODUCTS — TYPE-TESTED TO 200 KA / 10/350
+      <img
+        src="/clps/µs.png"
+        alt="µs"
+        className=" md:mt-2 inline-block sm:w-[18px] md:w-[30px] h-auto align-middle"
+      />
+    </span>
   </>
 ),
   content: (
