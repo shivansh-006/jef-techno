@@ -107,7 +107,7 @@ const Overview = () => {
     xl:grid-cols-5
     gap-6
     md:gap-8
-    lg:gap-15
+    lg:gap-40
     place-items-center
           "
         >
@@ -146,6 +146,10 @@ const Overview = () => {
 
                   md:w-[230px]
                   md:h-[190px]
+                  lg:w-[250px]
+                  lg:h-[190px]
+                  xl:w-[340px]
+                  xl:h-[300px]
 
                   transition-transform
                   duration-500

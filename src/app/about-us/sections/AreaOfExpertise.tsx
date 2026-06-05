@@ -338,7 +338,7 @@ export default function ExcellenceinElectricalEngineering() {
                   <motion.div
                     animate={{
                       backgroundColor: isActive
-                        ? "#F9F7F2"
+                        ? "rgba(27, 24, 24, 0.85)"
                         : "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{
@@ -363,7 +363,7 @@ export default function ExcellenceinElectricalEngineering() {
                     <motion.p
                       animate={{
                         color: isActive
-                          ? "#312d2d"
+                          ? "#e5e7eb"
                           : "#e5e7eb",
                       }}
                       transition={{

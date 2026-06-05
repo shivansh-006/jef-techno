@@ -1538,7 +1538,7 @@ const GetInTouchForm = () => {
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
+                                    <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-white w-fit max-md:max-w-full">
                                         <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
                                             By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
                                             <a href="/termsandconditions" className="font-medium text-red-700">terms and Conditions</a>{" "}
@@ -1547,8 +1547,8 @@ const GetInTouchForm = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
-                                    <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
+                                <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] w-fit max-md:max-w-full">
+                                    <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full text-white" >
                                         By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
                                         <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
                                         and <a href="#" className="font-medium text-red-700">privacy policy</a>{" "}
