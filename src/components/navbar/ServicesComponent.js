@@ -83,7 +83,7 @@ const ServicesComponent = () => {
       path: "/renewable",
       subItems: [
         
-        { text: "1. PSA", path: "/power-system-studies" },
+        { text: "1. PSS", path: "/power-system-studies" },
         { text: "2. RCA", path: "/root-cause-analysis" },
       ],
     },

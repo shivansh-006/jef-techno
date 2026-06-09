@@ -40,15 +40,15 @@ const BlogPostPage = () => {
       >
         <div className="section-container px-4 sm:px-6 lg:px-0 flex flex-col md:flex-row justify-between items-center  lg:py-5 gap-4">
           <span className="text-white/60 text-xs md:text-sm tracking-[2px] uppercase font-medium">
-            News & Media
+            Blog
           </span>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
-            {['OVERVIEW', 'ALL NEWS', 'RESOURCES', 'EVENTS', 'PRESS ENQUIRES'].map((item) => (
+            {[ 'ALL BLOGS', 'RESOURCES', 'EVENTS'].map((item) => (
               <Link 
                 key={item} 
                 href="/blog" 
                 className={`text-[10px] md:text-xs tracking-[1.5px] uppercase  transition-colors ${
-                  item === 'ALL NEWS' ? 'text-white' : 'text-white hover:text-white'
+                  item === 'ALL BLOGS' ? 'text-white' : 'text-white hover:text-white'
                 }`}
               >
                 {item}

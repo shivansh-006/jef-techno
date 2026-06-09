@@ -936,6 +936,778 @@ export const blogData = {
       </div>
     )
   },
+  'blog14': {
+    category: "BLOG",
+    title: "HOW TO ASSESS LIGHTNING RISK QUICKLY?",
+    date: "",
+    imageUrl: "/BlogImg/blog-7.png",
+    metaTags: {
+      title: "How to Assess Lightning Risk Quickly | JEF Techno",
+      description: "Learn how to quickly assess lightning risk for any building or structure using JEF SHIELD, an automated risk assessment software built on IS/IEC 62305-2.",
+      keywords: "lightning risk assessment, JEF SHIELD, IS/IEC 62305-2, lightning protection level, risk assessment software, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/How-to-assess-lightning-risk-quickly",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Lightning is the most natural phenomenon occurring in nature. All of us encounter lightning very often. Especially if the location is more prone to thunderstorm, lightning is quite obvious! And we all know that lightning can cause severe damages to human lives, historical monuments, industrial buildings/structures and what not!! There is a high possibility that the electrical/electronic equipment inside these buildings/structures might also be at risk. The only way to find that out is, to do a RISK ASSESSMENT for your building/structure!
+        </p>
+
+        <p>
+          If you want to manually calculate your risk for any particular building/structure, then you have to follow all the steps and formulae given in IS/IEC 62305-2. This particular part exclusively talks about performing lightning risk assessment for any application of your choice. Be it your house, office, mall, industry etc.
+        </p>
+
+        <p>
+          To perform all the calculations manually and to arrive at the risk level might be a tedious task. You will need an expert to perform the task. You will have to invest both your time and money for the same. To make this task incredibly easy for you, we, at JEF, has come up with a software to perform your RISK ASSESSMENT! This is an automated software which is built based on the formulae given in IS/IEC 62305-2. The MOST EXCITING thing about our software is you can perform the entire risk assessment and even generate the "Bill of Materials" & "Report" within 5 minutes!!
+        </p>
+
+        <p>
+          The essential benefit of our software is that it performs both internal and external lightning risk assessments parallelly and continuously executes risk assessments from level 4 to level 1, providing the best techno-commercial solution. The software even avoids the human error that may occur when you are calculating the risk manually. Level 4 is the minimum level of protection and level 1 being the highest level of safety. The cost increases almost four times from level 4 to level 1.
+        </p>
+
+        <p>
+          We call this software <a href="https://www.jeftechno.com/JEF_SHIELD/login.php" className="underline">JEF SHIELD</a>. The working premise of JEF SHIELD is that it identifies the risk, analyses it, and then determines your RISK LEVEL. And it can be found on <strong>www.jeftechno.com!</strong>
+        </p>
+
+        <p>
+          All you have to do is give ACCURATE input data as and when it asks. Your risk assessment results are solely dependent on your INPUT DATA. More the accuracy of your input data, more the accuracy of your risk level!
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Input Data includes around 20-25 crucial parameters which mainly includes:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Location in which the building/structure is present</li>
+            <li>Length, Width & Height of the building/structure</li>
+            <li>Details of power & telecom lines</li>
+            <li>Type of floor, number of floors in the building/structure</li>
+            <li>Risk of fire</li>
+            <li>Total number of people in the building/structure & functional hours etc.</li>
+          </ul>
+        </div>
+
+        <p>
+          Once the input data is given, our JEF SHIELD performs the risk assessment in the back-end. You can generate the risk assessment report and bill of materials within 2 minutes and download the same for your reference.
+        </p>
+
+        <p>
+          <strong>ISN'T THAT SO COOL? BOTH YOUR TIME AND MONEY IS SAVED BIG TIME!</strong>
+        </p>
+
+        <p>
+          Sitting in any corner of the world, you can perform risk assessment for any structure/building and have the results within minutes!! So, next time you have any requirement to perform lightning risk assessment for any kind of buildings/structures, <strong>REMEMBER OUR JEF SHIELD!</strong>
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog15': {
+    category: "BLOG",
+    title: "7 THINGS TO CONSIDER WHILE DESIGNING A LIGHTNING PROTECTION SYSTEM",
+    date: "",
+    imageUrl: "/BlogImg/blog-13.png",
+    metaTags: {
+      title: "7 Things to Consider While Designing a Lightning Protection System | JEF Techno",
+      description: "Key steps for designing a lightning protection system: accurate data collection, risk assessment using JEF SHIELD, determining protection level, LPS design, choosing methods, and bill of materials.",
+      keywords: "lightning protection system design, LPS design, risk assessment, IS/IEC 62305, rolling sphere method, mesh method, protection angle method, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/7-things-to-consider-designing-lightning-protection-system",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Let us quickly give you a basic idea about designing a Lightning Protection System, here are 7 important points.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">1. Accurate Data Collection</h3>
+          <p>
+            Accurate data plays a crucial role in designing a lightning protection system and is the essential deciding factor in the later stage of the design. Therefore, the invaluable data to be collected involves dimensions, location, and environmental components of the building/structure. If the data is approximate or wrong, the recommendation will reflect the same.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">2. What do you do with the "Accurate Data" that you have collected?</h3>
+          <p>
+            The next crucial step is to do a <a href="https://www.jeftechno.com/jef-shield-tool" className="underline">RISK ASSESSMENT!</a> It decides whether a building requires external LPS, SPDs, or both, or whether no protection is needed. If protection is necessary, calculate the level of risk using the data collected as the input in our JEF SHIELD — an automated software built as per IS/IEC 62305-2.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">3. Arriving at the Level of Protection</h3>
+          <p>If you do the risk assessment properly by giving accurate data, then be confident that your level of protection is correct! Here there are few possibilities:</p>
+          <ul className="list-disc pl-5 flex flex-col gap-2 mt-2">
+            <li>Whether the building/structure needs External Protection (LPS).</li>
+            <li>Whether the building/structure needs Internal Protection (SPDs).</li>
+            <li>Whether the building/structure needs both Internal & External Protection.</li>
+            <li>Whether the building/structure is ALREADY SAFE & its calculated values are below the tolerable levels — hence no protection is required.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">4. Design Your Lightning Protection</h3>
+          <p>
+            After you determine the level of protection, the next step is to design your LPS based on the level of safety. There are four levels of protection — Level I provides the highest level of protection, and Level IV provides the lowest level of protection.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">5. Choose the Appropriate Lightning Protection Method</h3>
+          <p>After the level of protection is determined, choose the appropriate lightning protection method. There are 3 different methods:</p>
+          <ul className="list-disc pl-5 flex flex-col gap-2 mt-2">
+            <li>Mesh Method</li>
+            <li>Protection Angle Method</li>
+            <li>Rolling Sphere Method</li>
+          </ul>
+          <p className="mt-2">For an optimum and smart solution, you can combine the above mentioned methods. Rolling sphere method is stringent & needs to be followed in Industries & all critical installations.</p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">6. Refer to the Standard IS/IEC 62305 for:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Mesh Size</li>
+            <li>Rolling sphere radius</li>
+            <li>Protection angle</li>
+          </ul>
+          <p className="mt-2">All the above parameters are based on your level of protection. If at all you choose the wrong level of protection, all your next steps would go wrong and your building/structure may not be safe during the event of lightning.</p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">7. Arrive at Bill of Materials</h3>
+          <p>
+            You arrive at the bill of materials and estimate the cost for your Lightning Protection System (LPS). FINALLY, your building/structure has an LPS complying with Indian/International standards & norms, and hereafter you can have the lightning protection system installed.
+          </p>
+        </div>
+
+        <p>
+          <strong>TRY THE FREE RISK ASSESSMENT TOOL - JEF SHIELD AND DESIGN THE LIGHTNING PROTECTION SYSTEM FOR YOUR BUILDING AND ARRIVE AT THE BOQ IN &lt;99 SECONDS.</strong>{" "}
+          <a href="https://jeftechno.com/JEF_SHIELD/login" className="underline">TRY JEF SHIELD</a>
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog16': {
+    category: "BLOG",
+    title: "PQ SERVICES - ECONOMIC BENEFITS OF POWER FACTOR AND HARMONIC STUDIES",
+    date: "",
+    imageUrl: "/BlogImg/blog-16.png",
+    metaTags: {
+      title: "Economic Benefits of Power Factor and Harmonic Studies | JEF Techno",
+      description: "Understand how power factor correction and harmonic reduction can significantly lower electricity bills and improve system efficiency in industrial and commercial facilities.",
+      keywords: "power factor, harmonic distortion, power quality services, kVAh billing, MSEDCL, hysteresis losses, eddy current losses, transformer losses, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/pq-services-economic-benefits-power-factor-harmonic-studies",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The harmonic frequency in a power system is the positive integer multiple of the fundamental frequency. Power factor (PF) refers to the ratio of working power in watts (KW) to perceived power in kilovolt amperes (KVA).
+        </p>
+
+        <p>
+          Many Power utilities in India are billing their industrial and commercial consumers based on Active Energy Consumption (Kwh) along with fixed charges. In Maharashtra state, the consumers are charged based on kVAh consumption combining kWAh & kVArh. The prime objective of kVAh based billing is to encourage the consumers to maintain near unity power factor to achieve energy loss reduction, improve system stability, <a href="https://www.jeftechno.com/pq-services.php" className="underline">PQ services</a>, and voltage profile.
+        </p>
+
+        <p>
+          The average wattage losses in a typical industrial facility can be 15-20% of total demanded power. These wattage losses can be reduced by improving the power factor closer to unity and reducing the voltage and current harmonic distortion below 5%.
+        </p>
+
+        <p>
+          True/Total PF = Displacement PF × Distortion Factor. The distortion power factor is contributed by harmonics in the network and reduction in harmonic levels can improve the total power factor to reduce the overall Energy cost.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Hysteresis Losses</h3>
+          <p>
+            Hysteresis loss is caused by magnetization and demagnetization of the core as current flows in forward and reverse directions. The energy to accomplish the realignment of the magnetic domains comes from the input power and is not transferred to the secondary winding — it is therefore a loss and results in heat.
+          </p>
+          <p className="mt-2">Typical hysteresis losses as a percentage of Power Demand: <strong>1% – 2%</strong></p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Eddy-Current Losses</h3>
+          <p>
+            Eddy current losses are the result of Faraday's law. The induced EMF causes a circulating current called an Eddy current, proportional to the square of frequency. Eddy current losses occur in circuit breakers, lighting ballasts, transformers, motor starters, motor windings, and building wiring near steel/iron structures.
+          </p>
+          <p className="mt-2">Typical eddy current losses as a percentage of Power demand: <strong>2% to 3%</strong></p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Skin Effect Losses</h3>
+          <p>
+            When AC current is applied to a conductor, the current concentrates near the surface of the conductor. Harmonic loading increases skin effect losses by the square of the increase in frequency above nominal line frequency.
+          </p>
+          <p className="mt-2">Typical skin effect losses as a percentage of Power demand: <strong>2% to 4%</strong></p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Proximity Effect Losses</h3>
+          <p>
+            Proximity effect is caused by the mutual influence of multiple current carrying conductors. Their interaction causes uneven current distribution in the conductors, increasing the losses.
+          </p>
+          <p className="mt-2">Typical proximity effect losses as a percentage of Power demand: <strong>2% to 3%</strong></p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Transformer Losses</h3>
+          <p>
+            A non-linear load on a transformer leads to harmonic power losses causing increased operational costs and additional heating. It leads to higher losses, early fatigue of insulation, premature failure and reduction of the useful life of the transformer.
+          </p>
+          <p className="mt-2">Typical transformer losses as a percentage of Power Demand: <strong>2% to 5%</strong></p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Line Losses</h3>
+          <p>
+            In addition to I²R losses and dielectric losses, cables have other losses such as skin-effect and proximity-effect developed by magnetic induction. The harmonic currents can further increase the apparent AC resistance significantly above nominal DC resistance values.
+          </p>
+          <p className="mt-2">Typical line losses as a percentage of Power Demand: <strong>1% to 3%</strong></p>
+        </div>
+
+        <p>
+          The <a href="https://www.jeftechno.com/product_quality.php" className="underline">Power Quality</a> experts at JEF Techno Solutions have extensive experience and knowledge of all the factors impacting the operating efficiencies of each of these components. Our Power Quality service team are equipped with state-of-the-art test and analysis equipment to conduct site evaluation of electrical system losses.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog17': {
+    category: "BLOG",
+    title: 'Type "A" vs Type "B" Earthing – Which is better?',
+    date: "",
+    imageUrl: "/BlogImg/blog-15.png",
+    metaTags: {
+      title: 'Type A vs Type B Earthing – Which is Better? | JEF Techno',
+      description: "Compare Type A (TT) and Type B (TN-C-S) earthing systems. Understand the advantages of concrete-embedded foundation earth electrodes and how to choose the right earthing system for your installation.",
+      keywords: "Type A earthing, Type B earthing, TT earthing, TN-C-S earthing, foundation earth electrode, earthing system, grounding, IS 3043, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/type-a-vs-type-b-earthing",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          There are various types of Earthing, but two most popular types of Earthing/Grounding systems are <strong>"TYPE A"</strong> also known as TT Earthing and <strong>"TYPE B"</strong> also known as TN-C-S Earthing.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Type A Earthing (TT Earthing):</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Type A earthing is a conventional grounding approach.</li>
+            <li>In this system, each electrical equipment is directly connected to an earth electrode, often using ground rods or plates buried in the ground.</li>
+            <li>It is suitable for locations with low fault currents and provides safety and functional grounding, commonly used in residential and commercial settings.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Type B Earthing (TN-C-S Earthing):</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Type B earthing is a more advanced grounding method.</li>
+            <li>It combines Type A principles with additional measures to protect against voltage surges and transient overvoltages.</li>
+            <li>In this system, the earth terminal is connected to both the supply neutral and the ground electrode.</li>
+            <li>It is used in areas with high fault currents, such as critical infrastructure and industrial facilities, to provide enhanced protection against surges and transients.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Concrete Embedded Foundation Earth Electrode (Type "B") vs. Soil Embedded Earth Electrode (Type "A"):</h3>
+          <p>
+            In addition to their reliable conductivity, concrete foundations are ideal for grounding because of their substantial contact area with the soil. For long-term performance, bare metal electrodes buried at least 5 cm into the concrete are recommended since they are corrosion resistant.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Advantages of Concrete-Embedded Foundation Earth Electrodes:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li><strong>Minimal Excavation:</strong> They eliminate the need for additional excavation, making them cost-effective.</li>
+            <li><strong>Weather Resilience:</strong> Constructed at a suitable depth, they remain unaffected by seasonal weather conditions.</li>
+            <li><strong>Effective Soil Contact:</strong> They provide efficient grounding by maintaining excellent contact with the soil.</li>
+            <li><strong>Extensive Coverage:</strong> Covering most of the foundation's surface, they minimize earth electrode impedance for optimal performance.</li>
+            <li><strong>Lightning Protection:</strong> They serve as a robust earthing arrangement for lightning protection.</li>
+            <li><strong>Construction Site Savings:</strong> During construction, they can also serve as an earth electrode for the site's electrical installation.</li>
+            <li><strong>Main Protective Bonding:</strong> They can serve as a foundation for the main protective bonding system, aligning with standards.</li>
+          </ul>
+        </div>
+
+        <p>
+          To adhere to the "Global Earthing Concept" described in IS 3043 - Code of Practice for Earthing, it is crucial to connect concrete-embedded foundation earth electrodes from different parts of a single foundation using suitable earthing conductors. For corrosion resistance, use only stainless-steel electrodes directly installed from the foundation concrete into the soil, avoiding hot-dip galvanized steel.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog17': {
+    category: "BLOG",
+    title: "SELECTION OF LOW VOLTAGE SPD FOR MAIN DB - Proof",
+    date: "",
+    imageUrl: "/BlogImg/blog-17.png",
+    metaTags: {
+      title: "Selection of Low Voltage SPD for Main DB – With Proof from IEC Standards | JEF Techno",
+      description: "Clear guidance on selecting the right LV SPD for the main distribution board, backed by IEC standards. Learn what actually matters – Iimp and Voltage Protection Level – not the class or component type.",
+      keywords: "LV SPD selection, main DB, surge protection device, Iimp, IS/IEC 61643-12, IEC 60364-5-53, Class I SPD, CT-2 configuration, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/selection-of-low-voltage-spd-for-main-db",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          DOES IT DEPEND ON CLASS/TYPE OR COMPONENT OR RECOMMENDATION BASED ON STANDARDS BODY?
+        </p>
+
+        <p>
+          Often customers are confused by different vendors, forcing them to believe that their product is the best in the world. When it comes to "Concept selling product" like SPDs, customer depends more on the vendors as there are many new technologies & standards. Some vendors try to influence the customer with their product without giving any proof or supporting document from Standards!!!
+        </p>
+
+        <p>
+          This article gives a clear picture about the <a href="https://www.jeftechno.com/blog/spd-selection-and-installation-myths-and-fact" className="underline">selection of SPD</a> for main DB with proof from IEC standards. After going through it, you will realise that selection of SPD for main DB is such a simple task & why confusion prevailed over the years.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Selection of LV SPD for Main DB "Depends On":</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Voltage Protection level of the SPD (when compared to voltage withstanding level of the equipment).</li>
+            <li>Impulse discharge current of SPD connected between each phase to neutral (R-N, Y-N & B-N).</li>
+            <li>Impulse discharge current of SPD connected between neutral to protective earth (N-PE).</li>
+          </ul>
+          <p className="mt-2">
+            It is enough to have an SPD with Iimp of 12.5 kA for each L-N & 50 kA for N-PE, with connection type CT-2 (i.e., 3+1 configuration). Whichever product meets this specification shall be used in the main DB <em>"irrespective of the Class of SPD and the component used in it."</em>
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Proof:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li><strong>IS/IEC 61643-12:</strong> SPDs connected to low voltage power distribution system – Selection & application principles (page 52, Class 6.2.1.3: In, Imax, Iimp)</li>
+            <li><strong>IEC 60364-5-53:</strong> Electrical installation of buildings – Selection & erection of electrical equipment (page 23, Clause 534.4.4.2 – Table 534.4: Selection of Iimp where the building is protected against direct lightning strike)</li>
+            <li><strong>IS/IEC 62305:</strong> Protection against lightning, part 1: General principles (page 64, Table E.2 – Expected surge over currents due to lightning flashes on low voltage systems)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Selection of LV SPD for Main DB "Does NOT Depend On":</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Component used — whether Spark gap or MOV</li>
+            <li>Class I or I+II (or) Class B or B+C (or) Type 1 or 1+2</li>
+          </ul>
+          <p className="mt-2">Class I, I+II are used by IEC. Class B, B+C are used by Germans. Type 1 or 1+2 is used by Europe.</p>
+        </div>
+
+        <p>
+          <strong>Do not fall prey to monopoly products & ask JEF for the right product with proof from standards.!!!</strong>
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog18': {
+    category: "BLOG",
+    title: "SPD SELECTION & INSTALLATION - MYTHS & FACTS",
+    date: "",
+    imageUrl: "/BlogImg/blog-18.png",
+    metaTags: {
+      title: "SPD Selection & Installation – Myths vs Facts | JEF Techno",
+      description: "Dispel common myths about LV SPD selection and installation. Learn the correct connection types (CT-1 vs CT-2), protection modes, installation wire lengths, and why proper SPD installation is a specialist job.",
+      keywords: "SPD selection, SPD installation, LV surge protection, CT-1 CT-2 connection, IEC 60364-5-53, Class I SPD, Class II SPD, myths facts SPD, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/spd-selection-and-installation-myths-and-fact",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Low voltage is defined as any AC RMS voltage up to 1000 V or DC peak voltage up to 1500 V. In general, <a href="https://www.jeftechno.com/surge-protection-device.php" className="underline">SPDs</a> need to be installed at main DB, sub DB and at equipment level.
+        </p>
+
+        <p>
+          SPDs provide an "effective" protection distance of a maximum of 10 meters. It means, if the distance between the SPD and the equipment to be protected is greater than 10 meters, additional SPDs will be required. The crucial point to note is that the "actual" wire length needs to be calculated rather than the physical distance between the SPD and equipment.
+        </p>
+
+        <p>The below selection principle shall be strictly followed:</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2">
+          <li>Protection between Live conductor and PE is <strong>COMPULSORY.</strong></li>
+          <li>Protection between Live conductor and neutral is <strong>RECOMMENDED</strong> to ensure equipment protection.</li>
+          <li>Protection between Live Conductors (3 phase) is <strong>OPTIONAL.</strong></li>
+        </ul>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Selection - MYTH:</h3>
+          <p>
+            Few SPD manufacturers strongly recommend costly SPDs assembled in big Stainless steel enclosures to protect critical installations without any back up from IEC standards. It is clear from the above recommendation that Protection between Live Conductors is OPTIONAL.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Selection - FACT:</h3>
+          <p>
+            In September 2015, the latest IEC standard, IEC 60364-5-53 (Edition 3.2), was published, clearly outlining the concepts of LV SPD selection and installation.
+          </p>
+          <ul className="list-disc pl-5 flex flex-col gap-2 mt-2">
+            <li><strong>CT-1 connection type</strong> protects against common-mode attacks (between Live and Neutral, and Neutral and Earth terminals).</li>
+            <li><strong>CT-2 connection type</strong> combines common-mode and differential-mode protection (between Live & Earth terminals and Live & Neutral terminals).</li>
+          </ul>
+          <p className="mt-2">Only connection type CT-2 need to be followed, due to the constraint in Voltage Protection level and the installation bottleneck.</p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Installation - MYTH:</h3>
+          <p>
+            In some installations, long length of cables is used to connect SPDs and the SPD earth terminal is connected to a separate earth which is not part of the equipment earth — resulting in equipment failure even after SPD installation.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Installation - FACT:</h3>
+          <p>
+            The total length of the cable — from live wire to OCPD, from OCPD to SPD, and from SPD to earth terminal — has to be <strong>below 0.5 meter</strong> to ensure protection of equipment.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Conclusion:</h3>
+          <p>
+            Selection & installation of SPD is a Specialist job. The installer shall have thorough knowledge on the current Indian & international standards along with hands-on experience. If the above practices are followed, customers will have years of trouble free operation of their equipment & SPDs.
+          </p>
+        </div>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog19': {
+    category: "BLOG",
+    title: "NBC & IS RECOMMEND SPD FOR PROTECTION",
+    date: "",
+    imageUrl: "/BlogImg/blog-19.png",
+    metaTags: {
+      title: "NBC & IS Recommend SPD for Protection of Sensitive Electronic Equipment | JEF Techno",
+      description: "Understand why NBC and Indian Standards recommend Surge Protection Devices (SPDs) for sensitive electronics. Learn about SPD classes, correct selection of Iimp ratings, and MOV vs Spark Gap applications.",
+      keywords: "NBC SPD recommendation, IS SPD, surge protection device, Class I II III SPD, MOV SPD, Spark gap SPD, sensitive electronics protection, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/nbc-is-recommend-spd-for-protection",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          NBC & IS recommend SPD for protection of sensitive electronic equipment from conducted surges through power & data cables. A variety of devices provides over-current protection, but <a href="https://www.jeftechno.com/surge-protection-device.php" className="underline">Surge protection devices</a> are the only ones that can safeguard sensitive electronic equipment from overvoltage caused by contaminated power sources and the increasing use of non-linear devices.
+        </p>
+
+        <p>Transient over voltages are generated predominantly due to the following reasons:</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2">
+          <li>Whenever lightning strikes the power or signal cables directly or near the cables.</li>
+          <li>As a consequence of faults in the power system.</li>
+          <li>Switching on and off of heavy inductive loads etc.</li>
+        </ul>
+
+        <p>SPD terminology used by different standards bodies:</p>
+        <ul className="list-disc pl-5 flex flex-col gap-2">
+          <li><strong>Class I, I+II, II, III</strong> — terminology used by IEC.</li>
+          <li><strong>Type I, I+II, II, III</strong> — terminology used by European Norms (EN).</li>
+          <li><strong>Class B, B+C, C, D</strong> — terminology used by Germans (VDE).</li>
+        </ul>
+
+        <p>
+          It is wise to use 12.5 kA Iimp rated, Class I+II MOV SPD as per IEC 60364-5-53 for L-N to avoid "follow current" problems associated with Spark gap devices for L-N in 3+1 configuration. It is important to use Spark gap SPD with 50 kA Iimp rating for N-PE because MOV will trip RCDs after getting aged.
+        </p>
+
+        <p>
+          SPDs are simple, passive, non-linear components which cannot differentiate between lightning and switching surges. Whether it is spark gap, GDT, MOV or SAD (Silicon Avalanche Diode), they act when the voltage across them exceeds a pre-determined level.
+        </p>
+
+        <ul className="list-disc pl-5 flex flex-col gap-2">
+          <li><strong>Class I+II SPDs</strong> are recommended at the Main DB of all industries.</li>
+          <li><strong>Class II SPDs</strong> are recommended at the Sub DB of all industries.</li>
+          <li><strong>Class III SPDs</strong> are installed near sensitive/critical equipment.</li>
+        </ul>
+
+        <p>
+          <a href="https://www.jeftechno.com/surge-protection-device" className="underline">Power line SPDs</a> (which are commonly connected parallel to the load) include a local indication (mechanical flag) as a standard feature and a remote signal (potential free contact) as an optional feature. JEF has a wide range of SPDs to suit all the above requirements.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog20': {
+    category: "BLOG",
+    title: "Sources of Switching Surges – Installation of SPDs",
+    date: "",
+    imageUrl: "/BlogImg/blog-20.png",
+    metaTags: {
+      title: "Sources of Switching Surges & SPD Installation | JEF Techno",
+      description: "Explore the 21 common sources of switching surges in industrial and commercial systems, from capacitor bank switching to ESD, and learn how proper SPD selection and installation can protect sensitive equipment.",
+      keywords: "switching surges, sources of surges, SPD installation, capacitor bank switching, welding surges, DG transfer surges, surge protection, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/sources-of-switching-surges-installation-of-spds",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Lightning and lightning-induced surges are less common in western India than in eastern India. In addition, despite the installation of many types of protection mechanisms, such devices regularly fail. The only way to protect your equipment from these switching surges is to use proper <a href="https://www.jeftechno.com/surge-protection-device.php" className="underline">SPD</a> selection and <a href="https://www.jeftechno.com/lightning-protection-products" className="underline">installation techniques.</a>
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">There are many sources of switching surges. Most common ones are listed below:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>High voltage switching from Utility side (Electricity Boards)</li>
+            <li>Capacitor bank switching</li>
+            <li>Welding</li>
+            <li>Transfer from EB to DG & vice versa (there is no BUMPLESS transfer, practically)</li>
+            <li>Transmission line switching</li>
+            <li>CCVT — Coupling Capacitor Voltage Transformer</li>
+            <li>GIS</li>
+            <li>VIS</li>
+            <li>Ground voltage differences</li>
+            <li>CT</li>
+            <li>Electro-mechanical equipment</li>
+            <li>SCR</li>
+            <li>Digital logic circuits (SMPS, Printers, unshielded cables viz flat ribbon cables)</li>
+            <li>DC control circuits</li>
+            <li>Mechanical vibration</li>
+            <li>Chemical contamination</li>
+            <li>ESD via human touch</li>
+            <li>Cable resonance</li>
+            <li>Reflections & travelling waves</li>
+            <li>Power circuit in-rush currents</li>
+            <li>Other incidental sources such as on load tap chargers, corona discharge from HV transmission lines etc.</li>
+          </ul>
+        </div>
+
+        <p>Contact us for expert solution to protect your sensitive electronic equipment close to their MTBF levels against the disturbances caused by any one or combination of the above-mentioned sources.</p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog21': {
+    category: "BLOG",
+    title: "WAYS TO PROTECT CNC MACHINE'S ELECTRONICS FROM SURGES",
+    date: "",
+    imageUrl: "/BlogImg/blog-7.png",
+    metaTags: {
+      title: "Ways to Protect CNC Machine Electronics from Surges & Avoid EPROM Corruption | JEF Techno",
+      description: "Learn how lightning and switching surges damage CNC machine electronics, cause EPROM corruption, and how proper SPD selection and installation ensures decades of trouble-free CNC operation.",
+      keywords: "CNC machine surge protection, EPROM corruption, lightning damage CNC, SPD for CNC, switching surges industrial, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/ways-to-protect-cnc-machine",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          CNC stands for computer numerical control, which is the automated control of machining instruments like drills, lathes, mills, and 3D printers using a computer. Failures in CNC machines happen due to two important disturbances in low voltage networks — steady state errors and transient errors.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">The Two Important Reasons for Failures Due to Lightning:</h3>
+          <p>
+            Direct hit (damage is visible), but direct lightning hit to a CNC machine is very rare as they are installed inside structures and fed by sub distribution boards. The other reason, often un-noticed, is distant lightning. In this case, the lightning current is carried by all types of cables except optic fiber cables.
+          </p>
+        </div>
+
+        <p>
+          The more common problem encountered in normal plant life is corruption of EPROM (Erasable Programmable Read only memory), visible from sudden junk data appearing in the MMI (Man Machine Interface) panel. During a surge, a sudden high voltage appears in the EPROM pins — the IC believes it is in programming mode and data gets corrupted.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Common Myths:</h3>
+          <p>Generally we feel that SPDs are not required as we have other existing protection arrangements viz. external lightning arrestor, MCB/MCCB, good earthing, bonding, shielding, isolation transformers, UPS, Intrinsically safe barriers, isolators etc. Unfortunately, the purposes of all these equipment are for different reasons and not for protecting equipment from transient surges:</p>
+          <ul className="list-disc pl-5 flex flex-col gap-2 mt-2">
+            <li><strong>External Lightning protection</strong> with good earthing is for protecting the building from direct lightning strike.</li>
+            <li><strong>MCB/MCCB</strong> is for protecting equipment from short circuit due to power frequency fault currents — they operate in milliseconds, by which time surges have already passed.</li>
+            <li><strong>Earthing</strong> is for both personnel safety and equipment safety.</li>
+            <li><strong>Bonding</strong> is to reduce the earth resistance and maintain equipotential.</li>
+            <li><strong>Shielding</strong> is done to protect equipment from RFI/EMI effects.</li>
+            <li><strong>Isolation Transformer</strong> protects equipment from faults at the primary side.</li>
+            <li><strong>UPS</strong> provides continuous power through battery in case of mains power failure.</li>
+            <li><strong>Intrinsically Safe barriers or Isolators</strong> are used in hazardous plant areas to restrict electrical energy to very low levels.</li>
+          </ul>
+        </div>
+
+        <p>
+          Hence <a href="https://www.jeftechno.com/surge-protection-device" className="underline">SPDs – Surge Protection Devices</a> are the only protectors for the CNC machines against transient surges. SPDs shall be installed with potential free contact, thermal disconnector, including base element & pluggable arresters to be connected between Phase to Neutral and between neutral to protective earth. Requirement class is Class I + II as per IEC 61643-11.
+        </p>
+
+        <p>
+          We, JEF Techno Solutions Pvt Ltd., are pioneers in Lightning protection, surge protection, earthing, <a href="https://www.jeftechno.com/emi-emc-study" className="underline">EMI/EMC</a> Services and providing solutions for such kind of problems.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog22': {
+    category: "BLOG",
+    title: "SOLUTIONS TO AVOID SURGES IN INDUSTRIAL AND COMMERCIAL POWER SYSTEM",
+    date: "",
+    imageUrl: "/BlogImg/blog-22.png",
+    metaTags: {
+      title: "Solutions to Avoid Surges in Industrial & Commercial Areas | JEF Techno",
+      description: "Discover why avoiding surges is critical for industrial and commercial facilities, how SPDs work to protect equipment, and the key factors to consider when selecting and installing surge protection devices.",
+      keywords: "surge solutions, avoid surges, SPD functionality, MCOV, lightning surges, switching surges, surge protection industrial, conducted surges, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/solutions-to-avoid-surges",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          We recently explored the causes of surges in Industrial & Commercial Power Systems. In this blog, we will discuss ways to protect electronic equipment from surges in industrial and commercial areas.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Why It's Imperative to Avoid Surges:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li><strong>Equipment Reliability:</strong> Unplanned downtime, costly repairs, and even equipment replacement can result from surges that compromise the reliability of equipment.</li>
+            <li><strong>Operational Continuity:</strong> Surges can disrupt operations, leading to financial losses and reduced productivity.</li>
+            <li><strong>Data Protection:</strong> Surges have the ability to corrupt or destroy sensitive/vital data stored on servers and computer systems, resulting in permanent data loss.</li>
+            <li><strong>Safety Considerations:</strong> Electrical surges can be dangerous, causing device faults, overheating, or electrical fires.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Types of Surges:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li><strong>Radiated Surges:</strong> Caused by lightning, can move across the air — Faraday Cages and shielding devices are frequently used to protect against them.</li>
+            <li><strong>Conducted Surges:</strong> These go across power, data, and communication cables — SPDs are essential for mitigating the effects of conducted surges.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">The Role of Surge Protection Devices (SPDs):</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li><strong>SPD Functionality:</strong> SPDs are normally inactive but activate during surges, similar to fuses but dependent on voltage rather than current.</li>
+            <li><strong>Surge Handling:</strong> SPDs can tolerate several surges over time, with performance dependent on the amplitude of the shocks absorbed.</li>
+            <li><strong>MCOV:</strong> SPDs become active when the voltage across them surpasses a predetermined level known as Maximum Continuous Operating Voltage.</li>
+          </ul>
+        </div>
+
+        <p>
+          Choosing the right SPD for a specific application is crucial, as is ensuring proper installation. Most Electrical Engineers are well-versed in installing current-operated devices like fuses and MCBs, but SPDs function differently as voltage-operated devices — a short, direct wire run is more critical than wire thickness.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog23': {
+    category: "BLOG",
+    title: "SOURCES OF SURGES IN INDUSTRIAL AND COMMERCIAL POWER SYSTEMS",
+    date: "",
+    imageUrl: "/BlogImg/blog-23.png",
+    metaTags: {
+      title: "Surges in Industrial and Commercial Power Systems | JEF Techno",
+      description: "Understand how surges enter industrial and commercial power systems – from overhead lines, lightning, switching operations, and manufactured causes – and why protecting electronic equipment with SPDs is essential.",
+      keywords: "surges power systems, industrial surges, commercial surges, IS/IEC 62305, lightning current, switching surges sources, surge protection, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/surges-in-industrial-and-commercial-power-systems",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The AC power supply is a common <a href="https://www.jeftechno.com/surge-protection-device" className="underline">source of surges</a>; unfortunately, the human eye cannot detect it. It is especially harmful in India, where overhead lines provide the majority of our power. As per IS/IEC 62305, Source S3 is Flash to the service line which has got all the loss, risk, and damages as in the case of flashes to the structure (Source S1). Any cable entering electronic equipment is also an easy path for the lightning current to enter and cause unexpected & untold damage.
+        </p>
+
+        <p>
+          Surge or lightning protection devices safeguard electrical equipment from damage caused by over-voltage transient occurrences by blocking or diverting surge current to the ground rather than flowing through it.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Surges Due to Mother Nature:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Predominant route is the lightning current through overhead power line, which will also induce currents into signal cables entering the building.</li>
+            <li>Opposite is also true — lightning current through signal cables can also induce current in power line.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold mb-2 uppercase">Manufactured Surges:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Heavy current load switching by the power board can create severe surges on the supply due to inductive effects or the transformer's inadequate regulation.</li>
+            <li>Lift motors and other large electrical machines can generate significant surges, especially when the motor is worn.</li>
+            <li>Capacitor bank switching.</li>
+            <li>Resonating circuits associated with switching (e.g., Thyristors).</li>
+            <li>Faults such as short circuit and arcs to the earth.</li>
+            <li>In residences, operating refrigerators on or off through thermostats can create problems in sensitive electronic equipment like music systems and computers.</li>
+          </ul>
+        </div>
+
+        <p>
+          For more information on this subject, IEC 61000 – EMC – Part 4 – Testing & measurement techniques – Electrical Fast Transient (EFT)/burst immunity test shall be referred apart from IS/IEC 62305 – Protection against Lightning, Parts 1 to 4.
+        </p>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog24': {
+    category: "BLOG",
+    title: "DISPELLING MYTHS & ENSURING A RELIABLE LV GROUNDING SYSTEM",
+    date: "",
+    imageUrl: "/BlogImg/blog-24.png",
+    metaTags: {
+      title: "Dispelling Myths & Ensuring a Reliable LV Grounding System | JEF Techno",
+      description: "Bust common myths about LV earthing systems – from copper electrode benefits to isolated electronic earthing. Learn the facts backed by IEEE 80, IS3043, and IEC 61000 standards.",
+      keywords: "LV grounding myths, earthing system facts, copper electrode myth, maintenance free earthing, IS3043, IEEE 80, IEC 61000, earth resistance, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/dispelling-myths-lv-grounding-system",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          When it comes to electrical safety, earthing is always the first line of defense. The <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">Earthing system</a> must be constructed in such a way that it is not required to be maintained.
+        </p>
+
+        <p>
+          Though the methodology of Earthing has been well defined for MV and HV systems, there are a lot of misconceptions and myths about the practices adopted in the LV grounding systems. The design resistance value of the LV earth system is important because the relay settings and coordination are finalized based on the fault currents which depend on the earth resistance value.
+        </p>
+
+        <p>
+          In India, the concept of maintenance free Earthing is gaining popularity while at the same time the Maintenance free concept is being more misunderstood.
+        </p>
+
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Below are facts Dispelling Myths & Ensuring a Reliable LV Grounding System:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-4">
+            <li>
+              <strong>MYTH:</strong> Use of Copper Electrode helps to obtain a low resistance.<br />
+              <strong>FACT:</strong> The type of Metal used has no significance on the earth electrode resistance. None of the formulae given in any of the international standards factors in the type of metal in a calculation of the earth resistance. However, in highly corrosive areas, Cu or Cu coated electrodes are recommended due to better corrosion resistance.
+            </li>
+            <li>
+              <strong>MYTH:</strong> Low resistance can be obtained by using a special electrode.<br />
+              <strong>FACT:</strong> As per IEEE80, IS3043 and BS7430, the resistance can be lowered only by altering the medium adjacent to the electrode — which is the backfill material — and not the electrode itself.
+            </li>
+            <li>
+              <strong>MYTH:</strong> Resistance to Earth Electrode with or without highly conductive backfill will remain the same.<br />
+              <strong>FACT:</strong> In fact, there is an improvement of over 31% in value of resistance by using carbon-based backfill.
+            </li>
+            <li>
+              <strong>MYTH:</strong> The instrumental/electronic earth in a facility shall be maintained separately than electrical earth.<br />
+              <strong>FACT:</strong> As per IEEE 142 & IEC 61000, if the electronic and electrical equipment earthing are maintained separately, dangerous overvoltage may be induced in the system during lightning/severe fault conditions, causing catastrophic failure of electronic equipment.
+            </li>
+            <li>
+              <strong>MYTH:</strong> Neutral of the source transformer and the Lightning Protection Earth must not be connected to the general Earth Grid.<br />
+              <strong>FACT:</strong> BS7430, IEC 61000, IEEE 80 & IEEE 1100 recommend interconnection of Lightning Protection System earthing with the general earthing grid. Also IS3043 vide clause 22.1.3 & 22.3.1 recommends the adoption of Protective Multiple Earthing System for all installations with a dedicated source transformer.
+            </li>
+          </ul>
+        </div>
+
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
 };
 
 
@@ -978,7 +1750,7 @@ const NewsCard = ({ category, title, date, imageUrl, path, index }) => (
 
 const MainBlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const blogsPerPage = 6;
+  const blogsPerPage = 9;
   const totalPages = Math.ceil(blogPosts.length / blogsPerPage);
 
   const indexOfLastBlog = currentPage * blogsPerPage;

@@ -19,51 +19,36 @@ export default function ExcellenceinElectricalEngineering() {
   return () => window.removeEventListener("resize", checkMobile);
 }, []);
 
- const sectors = [
+const sectors = [
   {
-    name: "EMI / EMC STUDY",
+    name: "RENEWABLE ENERGY",
     description:
-      "EMC management plan, desktop survey, zone allocation, remedial measures. Includes subsea cable interference to pipelines and cathodic protection systems. EMC compliance certificates issued on completion.",
+      "Earthing audits compliant with CEA Regulations 2023, LPS for solar and wind installations, and power system studies for grid integration of variable generation sources.",
   },
   {
-    name: "EARTHING SYSTEM DESIGN",
+    name: "MANUFACTURING PLANT",
     description:
-      "Substation earthing grid design, step and touch potential analysis, personnel safety verification.",
+      "The full range of JEF services across automobile, steel, heavy industry, metro rail, hospitals, commercial buildings, and warehouses.",
   },
   {
-    name: "LIGHTNING PROTECTION DESIGN",
+    name: "POWER UTILITIES",
     description:
-      "Risk assessment and protection system design for process plants, substations, and offshore platforms.",
+      "EHV and HV substation earthing, earth grid simulation using CDEGS, LPS design, and power system studies. 500+ substation assessments and 650+ earth grid simulations completed.",
   },
   {
-    name: "CABLE SIZING STUDY",
+    name: "PROCESS PLANT",
     description:
-      "Thermal rating and sizing of HV cables including 132kV and 33kV submarine cables.",
+      "Petrochemicals, chemicals, pharmaceuticals, fertilisers, food and beverages — audit services, instrumentation earthing, and EMI/EMC studies.",
   },
   {
-    name: "REACTOR SIZING STUDY",
+    name: "DATA CENTERS",
     description:
-      "Shunt reactor specification and sizing for reactive compensation on long cable systems.",
+      "Earthing health assessment, surge protection, EMC management, and power quality studies for critical IT infrastructure.",
   },
   {
-    name: "SURGE ARRESTOR STUDY",
+    name: "OIL & GAS",
     description:
-      "Selection and placement of surge protective devices across all voltage levels.",
-  },
-  {
-    name: "OLTC / AVR DYNAMIC STUDY",
-    description:
-      "Dynamic modelling of tap changer and AVR behaviour, including stability control interaction.",
-  },
-  {
-    name: "SUBSEA CABLE EM INTERFERENCE",
-    description:
-      "EM fields from subsea cables and interaction with adjacent pipelines, structures, and control systems.",
-  },
-  {
-    name: "PSS/E NETWORK MODELLING",
-    description:
-      "Grid-scale modelling for dynamic stability and HVDC converter studies.",
+      "Offshore platforms, artificial islands, subsea cable systems, onshore processing facilities, and EPC/EPCC project support across the full power systems study programme.",
   },
 ];
   const maxIndex = sectors.length - 1;
