@@ -1182,7 +1182,7 @@ export const blogData = {
     category: "BLOG",
     title: 'Type "A" vs Type "B" Earthing – Which is better?',
     date: "",
-    imageUrl: "/BlogImg/blog-15.png",
+    imageUrl: "/BlogImg/blog-10.png",
     metaTags: {
       title: 'Type A vs Type B Earthing – Which is Better? | JEF Techno',
       description: "Compare Type A (TT) and Type B (TN-C-S) earthing systems. Understand the advantages of concrete-embedded foundation earth electrodes and how to choose the right earthing system for your installation.",
@@ -1244,7 +1244,7 @@ export const blogData = {
     )
   },
 
-  'blog17': {
+  'blog18': {
     category: "BLOG",
     title: "SELECTION OF LOW VOLTAGE SPD FOR MAIN DB - Proof",
     date: "",
@@ -1309,7 +1309,7 @@ export const blogData = {
     )
   },
 
-  'blog18': {
+  'blog19': {
     category: "BLOG",
     title: "SPD SELECTION & INSTALLATION - MYTHS & FACTS",
     date: "",
@@ -1383,7 +1383,7 @@ export const blogData = {
     )
   },
 
-  'blog19': {
+  'blog20': {
     category: "BLOG",
     title: "NBC & IS RECOMMEND SPD FOR PROTECTION",
     date: "",
@@ -1438,7 +1438,7 @@ export const blogData = {
     )
   },
 
-  'blog20': {
+  'blog21': {
     category: "BLOG",
     title: "Sources of Switching Surges – Installation of SPDs",
     date: "",
@@ -1490,7 +1490,7 @@ export const blogData = {
     )
   },
 
-  'blog21': {
+  'blog22': {
     category: "BLOG",
     title: "WAYS TO PROTECT CNC MACHINE'S ELECTRONICS FROM SURGES",
     date: "",
@@ -1547,7 +1547,7 @@ export const blogData = {
     )
   },
 
-  'blog22': {
+  'blog23': {
     category: "BLOG",
     title: "SOLUTIONS TO AVOID SURGES IN INDUSTRIAL AND COMMERCIAL POWER SYSTEM",
     date: "",
@@ -1601,7 +1601,7 @@ export const blogData = {
     )
   },
 
-  'blog23': {
+  'blog24': {
     category: "BLOG",
     title: "SOURCES OF SURGES IN INDUSTRIAL AND COMMERCIAL POWER SYSTEMS",
     date: "",
@@ -1652,7 +1652,7 @@ export const blogData = {
     )
   },
 
-  'blog24': {
+  'blog25': {
     category: "BLOG",
     title: "DISPELLING MYTHS & ENSURING A RELIABLE LV GROUNDING SYSTEM",
     date: "",
@@ -1704,6 +1704,1133 @@ export const blogData = {
           </ul>
         </div>
 
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+  'blog26': {
+    category: "BLOG",
+    title: "EARTHING MISCONCEPTION – TYPES OF EARTHING | Installation | Design",
+    date: "",
+    imageUrl: "/BlogImg/blog-26.png",
+    metaTags: {
+      title: "Earthing Misconception – Types of Earthing | Installation | Design | JEF Techno",
+      description: "Clarify misconceptions about dedicated, independent, and isolated earthing systems. Learn why global earthing is essential as per IEC 61000-5-2, IS 3043, and CEA regulations.",
+      keywords: "earthing misconception, isolated earthing, independent earth electrode, global earthing, IEC 61000-5-2, IS 3043, electronic earthing, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/earthing-misconceptions",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          An isolated/Independent earth electrode is nothing but an electrically independent earth electrode; it is distinct by definition from the myth or we typically see.
+        </p>
+        <p>
+          For safety and functionality, an earthing &amp; grounding system connects certain elements of an electric power system to the ground, generally the Earth's conductive surface.
+        </p>
+        <p>
+          An electrically independent <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">earth electrode</a> is defined as one that is positioned "at such a distance from the nearest electrode that the greatest current likely to pass through one of them does not appreciably affect the potential of other electrodes." The distance mentioned is nothing but a distance more than the "sphere of influence".
+        </p>
+        <p>
+          <strong>IEC 61000 Electromagnetic compatibility (EMC) - Part 5: Installation and mitigation guidelines - Section 2: Earthing and cabling, i.e. IEC 61000-5-2.</strong>
+        </p>
+        <p>
+          Generally, Electronics and Instrumentation Engineers feel that <a href="https://www.jeftechno.com/blog/role-of-grounding-in-electrical-safety" className="underline">electrical earthing</a> is "dirty earthing" and their equipment will fail if all earthing systems are interconnected. They wish to keep a separate earthing system for their application. Though Electronic equipment can have independent earth electrodes, they should be connected to other earthing systems below the ground.
+        </p>
+        <p>
+          As per the concept of "Global earthing", electrical earthing, electronic earthing, instrumentation earthing, communication earthing, structure earthing and <a href="https://www.jeftechno.com/lightning-protection-products" className="underline">lightning protection system</a> earthing, should be interconnected below the ground.
+        </p>
+        <p>
+          The Concept of isolated earth electrode is not relevant for electronic and instrumentation systems since there are always links with other earth electrodes through (a) soil and (b) through parasitic elements such as capacitance and mutual inductance. Also during lightning or power system fault, high transient over voltage develops between this "isolated" earthing system and other parts of the installation — which is dangerous for equipment safety, personal safety and electromagnetic compatibility (EMC).
+        </p>
+        <p>
+          The same is applicable for very low level voltage signals such as thermocouples whose voltage range is in milli volts. The earthing of these equipment also needs to be connected with other earthing systems below the ground. This is a recommended practice as per IEC 62305-4 — Protection against lightning, Protection of Electrical &amp; Electronic equipment inside the structure. In case of earth loop problems, an "earth coupler" can be used to isolate the earthing under normal conditions and connect during lightning conditions.
+        </p>
+        <p>
+          Central Electricity Authority (CEA) in its 2016 draft version also confirms connecting all earthing systems under Regulation 37 and Regulation 41. All metal works — enclosures/body of all electrical, electronics, instrumentation, and communication equipment — shall be connected with an earthing system as per IS 3043, IS/IEC 62305 &amp; IS/IEC 61643-11.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog27': {
+    category: "BLOG",
+    title: "APPLICATION NOTE – WIND MILLS | LPS & SPD",
+    date: "",
+    imageUrl: "/BlogImg/blog-27.png",
+    metaTags: {
+      title: "Application Note – Wind Mills | LPS & SPD | JEF Techno",
+      description: "Understand lightning and surge protection requirements for wind turbines as per IEC 61400-24. Covers LPZ concepts, shielding, global earthing, and SPD selection for windmill electronics.",
+      keywords: "wind turbine lightning protection, IEC 61400-24, LPZ windmill, SPD windmill, surge protection wind energy, global earthing windmill, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/application-note-wind-mills-lps-spd",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          <strong>Application Note: Lightning protection &amp; Surge protection requirement for Wind Turbines as per IEC 61400-24.</strong>
+        </p>
+        <p>
+          A windmill is a device that uses sails set on a spinning shaft to harness the energy of the wind. India's economy is growing rapidly and the utilization of regenerative energy is on a steady rise. Windmills, Solar PV &amp; bio-gas plants are becoming popular day by day.
+        </p>
+        <p>
+          IEC 61400-24: Lightning Protection of Wind Turbines is the basis for the solution. There are two common challenges for windmills: they are much taller than the surrounding environment (100 m &amp; above), and the concentration of electrical &amp; electronic systems is confined in a small area.
+        </p>
+        <p>
+          The electrical &amp; electronic system includes switchgear cabinets, motors, drives, frequency converters, actuators, sensors, control electronics including communication bus systems employing Modbus or Profibus protocol via RS 485 physical layer.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Lightning Protection Zones (LPZ) in Windmill Systems</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li><strong>LPZ O A:</strong> The area above the <a href="https://www.jeftechno.com/blog/how-lps-work" className="underline">LPS installation</a> (electric &amp; magnetic field are maximum)</li>
+            <li><strong>LPZ O B:</strong> The area just below the external LPS covered by rolling sphere radius (first level of attenuation)</li>
+            <li><strong>LPZ 1:</strong> Entry point of power &amp; signal cables from the windmill tower to the building (second level of attenuation)</li>
+            <li><strong>LPZ 2:</strong> Place where sensitive electronic equipment is located (final level of attenuation where electric &amp; magnetic fields are very minimum)</li>
+          </ul>
+        </div>
+        <p>
+          <strong>Shielding:</strong> Nacelle are made of metal which is a closed structure by itself to protect from radiated effects of lightning. Shielded cables shall be used with 360-degree bonding at entry &amp; exit points connected to EBB (Equipotential Bonding Bar) on either side of the cable.
+        </p>
+        <p>
+          <strong>Earthing:</strong> "Global earthing" as explained in IS3043 latest edition (2018) shall be followed, including the structural steel reinforcement of the wind turbine with the earth grid surrounding the windmill &amp; the building.
+        </p>
+        <p>
+          <strong>SPDs:</strong> While radiated surges are limited by shielding technique, conducted surges are reduced below the withstanding level of equipment by using <a href="https://www.jeftechno.com/blog/power-line-and-data-line-spd-protection" className="underline">SPDs for power, data, and communication lines</a>. Either Class I or Class I+II 3-phase SPD with 400/690 V compatible with minimum Iimp of 12.5 kA for TN-C system shall be employed in parallel at the main DB.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog28': {
+    category: "BLOG",
+    title: "SOIL RESISTIVITY IN EARTHING DESIGN – SAFETY and RELIABILITY",
+    date: "",
+    imageUrl: "/BlogImg/blog-28.png",
+    metaTags: {
+      title: "Soil Resistivity in Earthing Design – Safety and Reliability | JEF Techno",
+      description: "Understand the importance of soil resistivity in earthing system design. Learn about Wenner's Four-Point Method, multi-layer soil models, IEEE 80, and how soil conditions affect touch and step potentials.",
+      keywords: "soil resistivity earthing design, Wenner four point method, IEEE 80, multi-layer soil model, touch potential, step potential, earth resistance, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/importance-of-soil-resistance",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Soil resistivity is a measurement of the resistance or electric current that the soil conducts. The design of a system based on passing current across the surface of the earth is a key component.
+        </p>
+        <p>
+          Soil resistivity plays a vital role in the design of an earthing system. For substations, the key design acceptance (safety) criteria of touch and step potentials are greatly influenced by soil resistivity. For other <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">grounding systems</a> such as industrial plants, commercial, and residential buildings, the acceptance criteria of overall grounding resistance and current density on the electrode surface are also dependent on soil resistivity.
+        </p>
+        <p>
+          Soil resistivity can be measured in a variety of methods. Electrical profiling is the best approach for assessing <a href="https://www.jeftechno.com/blog/soil-treatment-for-good-earthing" className="underline">soil resistivity for the design of earthing and safety requirements</a>. Wenner's Four-Point Method is the most popular and user-friendly method. In this method, four spikes with equal spacing are connected to the soil resistivity meter. The current is injected through the extreme spikes and the potential drop is measured between the inner (potential) spikes.
+        </p>
+        <p>
+          The resistivity of the soil is dependent on salt content, moisture, and temperature. The resistivity of the soil cannot stay uniform throughout the life of the system as the soil can be eroded due to wind, rain, floods, and manmade actions.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Parameters Impacting the Soil Resistivity Measurement</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Presence of loose/backfilled soil</li>
+            <li>Presence of buried metals like water, gas, other process pipelines and cables</li>
+            <li>Presence of live HT lines above the test setup which may induce current in the cables connecting the spikes</li>
+            <li>Presence of water table near the measurement area or any earth grid of a substation</li>
+            <li>The distance of any such earth grids and water table from the measurement area should be at least the spacing between the spikes</li>
+          </ul>
+        </div>
+        <p>
+          If variation in readings exceeds 30% in a given direction, the soil is deemed non-uniform and a multilayer soil model shall be used for designing. While using a simple average of measured soil resistivity values for design, the margin of error in safety parameters can easily exceed 100%.
+        </p>
+        <p>
+          The standards have provided formulas to determine approximate values of touch and step potentials for uniform layer and two-layer soils. For multi-layer soil, it is necessary to use software simulation models as prescribed in IEEE 80 Annex H. The CDEGS software by SES has multi-layer modelling capability and provides accurate and optimum design.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog29': {
+    category: "BLOG",
+    title: "LIGHTNING PHENOMENON – Reasons & Solutions",
+    date: "",
+    imageUrl: "/BlogImg/blog-29.png",
+    metaTags: {
+      title: "Lightning Phenomenon – Reasons & Solutions | JEF Techno",
+      description: "Understand how lightning is formed, why it strikes, and how it travels from cloud to ground. Learn the science behind lightning protection and why reliable LPS is the only solution.",
+      keywords: "lightning phenomenon, how lightning forms, lightning protection, cloud to ground lightning, intra cloud lightning, LPS solution, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/lightning-phenomenon-reasons-solutions",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Lightning is a natural phenomenon involving a very high quantum of destructive energy. Lightning is unavoidable. <a href="https://www.jeftechno.com/lightning-protection-products" className="underline">Lightning protection</a> and reliable protection is the only solution.
+        </p>
+        <p>
+          Lightning is an electrostatic discharge that is naturally occurring and briefly normalizes two electrically charged areas in or on the ground, generating an instantaneously large amount of energy. A flash is caused by a thunderstorm conflicting loads in the sky.
+        </p>
+        <p>
+          Lightning is generated by circulating winds and water molecules in a thunderstorm cloud. The circulating winds are essentially low intensity air currents that can dislodge the electrons from the water molecules in the cloud. As a result of the removal of electrons, two charged masses of opposite polarity are created within the cloud. These two charged masses of opposite polarity strive to attain equilibrium, resulting in a lightning discharge.
+        </p>
+        <p>
+          One form of lightning is where a discharge takes place from the negatively charged portion to the positively charged portion within the cloud. This is commonly known as intra-cloud lightning.
+        </p>
+        <p>
+          Occasionally, the charged mass from the base of a cloud moves towards earth in steps. This stream of charge is known as a natural down streamer and it induces a charge of opposite polarity at any sharp points on the earth's surface. The sharp points on the earth send out their own upward streamers. Since the two streamers are opposite in polarity, they are attracted towards each other. When they meet, the air gap between the cloud and the earth breaks down, resulting in the cloud being wired to the earth. All the energy in the cloud flows down this corridor to the earth — this is termed as lightning. This energy can be of the order of a few hundred mega joules and it hits the earth in a few microseconds.
+        </p>
+        <p>
+          It is important to note that for any given downstream from the cloud, there can be many up streamers going from the earth's surface. Whichever up streamer manages to establish contact with the downstream first will route the lightning strike to the point where the up streamer has originated. This entire phenomenon occurs in a few milliseconds and is invisible to the human eye. Given the above, it is almost impossible to predict when and where lightning will strike. Hence, we must be adequately prepared at all times to protect ourselves against these dangerous natural phenomena.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog30': {
+    category: "BLOG",
+    title: "ROLE OF GROUNDING IN ELECTRICAL SAFETY – Design, Compounds & Myths",
+    date: "",
+    imageUrl: "/BlogImg/blog-30.png",
+    metaTags: {
+      title: "Role of Grounding in Electrical Safety – Design, Compounds & Myths | JEF Techno",
+      description: "Explore the role of grounding in electrical safety. Understand earth loop impedance, global grounding myths, CDEGS software design, and the importance of carbon-based backfill compounds per IEEE 142.",
+      keywords: "grounding electrical safety, earth loop impedance, global earthing, grounding compound, CDEGS software, IEEE 142, backfill compound, maintenance free earthing, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/role-of-grounding-in-electrical-safety",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The visible components of the electrical system, such as Earth Electrodes, are successfully addressed by general maintenance practices. The Grounding System suffers from the "OUT OF SIGHT, OUT OF MIND" issue because the majority of it is buried beneath and unreachable.
+        </p>
+        <p>
+          A complete <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">grounding system</a>, including the Equipment Earth Conductor, Earth Electrode, and Earth Grid/Mat, should provide a low resistance path for fault current to flow, allowing breakers to trip in time to avoid incidents such as fire, short circuit, and electric shock.
+        </p>
+        <p>
+          One common misconception is that if the measured overall earth resistance value is 1 Ω or less, the grounding system is safe. However, resistance of 1 Ω is NOT AT ALL indicative of the grounding system's safety or health.
+        </p>
+        <p>
+          <strong>Low Earth Pit Resistance ≠ Safety. Whereas Low Earth Loop Impedance = Breaker Tripping on time = Safety.</strong>
+        </p>
+        <p>
+          The grounding system's principal purpose is to allow enough current to flow through the earth fault loop so that the protective device can detect a possible fault and isolate the damaged circuit in a reasonable amount of time. The magnitude of current that will flow through the earth loop in case of a fault depends on the impedance of the earth fault loop.
+        </p>
+        <p>
+          <a href="https://www.jeftechno.com/blog/earthing-misconceptions" className="underline">Another myth revolves around the concept of Global Grounding.</a> As per the concept of "Global earthing", electrical earthing, electronic earthing, instrumentation earthing, communication earthing, structure earthing and lightning protection system earthing should be interconnected below the ground. This is recommended in IS 3043, IS/IEC 62305, IEC 61000-5-2, and IEEE 142 Standards.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Grounding System Design</h3>
+          <p>
+            An important aspect in today's complicated electrical systems is to have a robust and optimal design solution. The best techno-economic solution in the design of grounding systems is only possible through Multi Layer Soil Modeling and computer-aided designs involving high-end technical software such as CDEGS.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Grounding Compound</h3>
+          <p>
+            According to IEEE 142, the Backfill compound affects the crucial region around the electrodes. The grounding system's long-term reliability is determined by the type and quality of the backfill compound. IEEE/BS standards recommend using ground enhancement material or conductive concrete with a resistance of less than 0.12 Ohm meter surrounding the electrodes for enhanced long-term stability. The carbon-based ground improvement compounds are long-lasting and don't leach chemicals into the soil.
+          </p>
+          <p className="mt-4">
+            Indian &amp; International standards recognize that treating an area of about 75 to 100 mm surrounding the Electrode with ground enhancement materials will significantly reduce the earth resistance, generally in the region of 25 to 40%. The IEC 62561-7 for backfill compound recommends a series of tests to ensure the compounds do not contain any harmful chemicals. It is also important to test these compounds for conformity to ANSI/NSF 60 standards since 40% of the water requirement in India is met from ground water.
+          </p>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog31': {
+    category: "BLOG",
+    title: "NECESSITY OF MAINTENANCE FREE EARTHING SOLUTION – Challenges",
+    date: "",
+    imageUrl: "/BlogImg/blog-31.png",
+    metaTags: {
+      title: "Necessity of Maintenance Free Earthing Solution – Challenges | JEF Techno",
+      description: "Understand why maintenance-free earthing solutions are necessary. Learn about the challenges of conventional earthing, the role of soil treatment, and how carbon-based backfill compounds ensure long-term reliability.",
+      keywords: "maintenance free earthing, earthing challenges, soil treatment earthing, conventional earthing problems, IS 3043, backfill compound, IEC 62561-7, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/necessity-maintenance-free-earthing",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          A good earthing system and earthing maintenance is an essential element of any electrical system, required for safety and reliability reasons. <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">Good earthing systems</a> are important for safety of human and animal life, limiting damage to electrical equipment in case of fault/lightning, and timely operation of protective devices.
+        </p>
+        <p>
+          The resistance of an earth electrode purely depends on the <a href="https://www.jeftechno.com/blog/importance-of-soil-resistance" className="underline">soil resistivity</a> and type of electrode used. Conventionally, a cast iron plate/GI pipe is used as an electrode filled with soil mixed with salt and charcoal. The conduction of current in the conventional electrode is electrolytic. Hence, regular watering and charging of the earth pit with salt is very essential to maintain low earth resistance.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Regular Maintenance is Becoming a Challenging Preposition Due To:</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>A typical installation requires 4 types of Earthing (Safety, System, Electronic &amp; Lightning)</li>
+            <li>In many commercial projects in the cities, the earthing is possible only in basements</li>
+            <li>In projects where the open area is used for earthing, landscaping is done, completely sealing/hiding the earth electrodes</li>
+            <li>Even where the electrodes are accessible, willingness to maintain is either lacking or not happening</li>
+          </ul>
+        </div>
+        <p>
+          India being a tropical country, where close to 9 months is dry season, a single <a href="https://www.jeftechno.com/blog/interconnection-of-earth-pits" className="underline">earth pit</a> needs around 4000 liters of water just to raise moisture content to 5% — which is impossible to provide with so much scarcity. The salt provided also dissolves over time due to rain (in many places, within 2-3 years), causing resistance to rise and the earthing to become useless.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Limitations in Conventional Earthing System</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>No standardization — neither in electrode nor in backfill</li>
+            <li>Commercial grade Cast Iron plate/GI pipe is used as electrode in most cases</li>
+            <li>The backfill (SALT) reacts with the electrode and causes corrosion</li>
+            <li>The salt dissolves in water and conductivity dips over time, increasing resistance</li>
+            <li>Not suitable for places with high water table, flowing water etc.</li>
+            <li>Residual current flowing through the electrode due to harmonics and imbalance in loads aids corrosion</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Why Soil Treatment?</h3>
+          <p>
+            The technology to achieve good earthing mainly depends on the Backfill compound as it influences the critical area around the electrode as mentioned in IEEE 142. The type and quality of Backfill compound determines the long-term reliability. The advanced latest Maintenance free earthing system shall comply with all leading international standards like IS 3043, BS 7430, IEC 60364/62561, IEEE 80 (clause 14.5D), ANSI/NSF 60. The system generally comprises of steel-cored copper-bonded electrodes with carbon-based conductive concrete backfill compound having Resistivity of less than 0.1 Ohm meter (when tested as per IEC 62561-7).
+          </p>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog32': {
+    category: "BLOG",
+    title: "POWER LINE AND DATA LINE SPD PROTECTION – SELECTION TIPS",
+    date: "",
+    imageUrl: "/BlogImg/blog-39.png",
+    metaTags: {
+      title: "Power Line and Data Line SPD Protection – Selection Tips | JEF Techno",
+      description: "Learn the selection criteria for power line and data line SPDs. Covers voltage protection levels, impulse current ratings, IS/IEC 61643 standards, instrumentation line SPDs, RS 232, and RF coaxial protection.",
+      keywords: "SPD selection tips, power line SPD, data line SPD, IS/IEC 61643, impulse current, voltage protection level, instrumentation SPD, RS 232 SPD, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/power-line-and-data-line-spd-protection",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The Power line SPD and Data line SPDs have distinct selection principles compared to fuse/MCBs, as well as different selection criteria. Data line SPDs include all SPDs other than power line applications — viz. Communication, Instrumentation, Voice, data, Ethernet, RS 485, RS 422, etc.
+        </p>
+        <p>
+          <strong>Power Line</strong> — Most power line protectors used in AC power low voltage applications, especially those used in Main DB &amp; Sub DB, are connected parallel to the load, so they can be used without worrying about the load current. Low voltage means any AC RMS voltage from 1V to 1000 V and DC up to 1500 V.
+        </p>
+        <p>
+          <strong>Data Line</strong> — All data line protectors are connected in series to the load, though the basic protection components (GDT, MOV, SAD) are always connected in parallel. In data line SPDs, the series component — generally resistors or inductors — determines the load current that can pass through the SPDs.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Power Line SPD Selection Criteria</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Voltage Protection level (Up) based on Voltage withstanding level of the equipment (Uw) — ensure Up is lower than Uw in all cases</li>
+            <li>Nominal Discharge current</li>
+            <li>Maximum Discharge Current</li>
+            <li>Impulse current (for Class I SPDs only)</li>
+            <li>Tested as per IS/IEC 61643 for Class 1, Class 2 &amp; Class 3 applications</li>
+            <li>Response time</li>
+          </ul>
+          <p className="mt-4">Other features to consider for ease of maintenance: Pluggable modules, Local indication of failure, Remote indication of failure, DIN-RAIL mounting.</p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Data Line SPD Selection Criteria</h3>
+          <p>
+            <a href="https://www.jeftechno.com/power-system-studies" className="underline">Data line SPDs</a> selection criteria is based on sub-category, but all are tested as per IS/IEC 61643-21 for D1 (based on 10/350 µS), C2 (based on 8/20 µS), C1 (based on 8/20 µS).
+          </p>
+          <ul className="list-disc pl-5 flex flex-col gap-3 mt-4">
+            <li><strong>Instrumentation line protection:</strong> Control room side SPDs — DIN rail mountable, spring loaded terminals; Field side SPDs for 2-wire &amp; 4-wire applications</li>
+            <li><strong>RS 232 line SPDs:</strong> Suitable for 9 PIN, 15 PIN &amp; 25 PIN SPDs (male-male, female-female &amp; male-female)</li>
+            <li><strong>RF Co-axial line protection SPDs:</strong> Consider signal amplitude, frequency band, connector type, gender type, voltage protection level, insertion loss/return loss/NEXT</li>
+          </ul>
+        </div>
+        <p>
+          Though selection of SPDs is important, installation is more crucial because <a href="https://www.jeftechno.com/blog/spd-selection-and-installation-myths-and-fact" className="underline">SPD installation</a> is different from Fuse/MCB installation.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog33': {
+    category: "BLOG",
+    title: "Lightning risk in Indian Industries – LPS & SPDs",
+    date: "",
+    imageUrl: "/BlogImg/blog-33.png",
+    metaTags: {
+      title: "Lightning Risk in Indian Industries – LPS & SPDs | JEF Techno",
+      description: "Learn about lightning risk assessment for Indian industries using IS/IEC 62305. Understand the 4 sources of damage, 3 types of losses, and how JEF Shield software helps arrive at the best techno-commercial LPS solution.",
+      keywords: "lightning risk India, IS/IEC 62305, lightning protection industries, JEF Shield, LPS SPD India, risk assessment lightning, lightning protection level, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/lightning-risk-indian-industries",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The lightning threat to humankind is well known because, in a second, there are at least eight lightning strikes globally. India adopted IS/IEC 62305 as its national standard in December 2015, replacing IS 2309.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">IS/IEC 62305 – Protection Against Lightning has 4 Parts</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>IS/IEC 62305-1: Basic Principles</li>
+            <li>IS/IEC 62305-2: Risk Assessment</li>
+            <li>IS/IEC 62305-3: Protection of structures &amp; Life Hazards</li>
+            <li>IS/IEC 62305-4: Protection of electrical &amp; electronic systems within the structure</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">4 Sources of Damage</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>S1: Lightning striking the structure</li>
+            <li>S2: Lightning striking near the structure</li>
+            <li>S3: Lightning striking a service</li>
+            <li>S4: Lightning striking near the service</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">3 Types of Damages</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>D1: Injury/death to the living beings</li>
+            <li>D2: Physical damage to the structure</li>
+            <li>D3: Failure of electrical &amp; electronic equipment</li>
+          </ul>
+        </div>
+        <p>
+          These damages must be controlled within tolerable levels to minimize 4 types of losses: Loss of Human life, Loss of essential public services, Loss of cultural damage, and Economic loss.
+        </p>
+        <p>
+          <a href="https://www.jeftechno.com/blog/automated-lightning-risk" className="underline">JEF has created Risk Assessment Software</a> based on IS/IEC 62305-2, validated using the four worked-out examples provided in the standard. The software includes thunderstorm data for around 158 places across India from NBC 2016.
+        </p>
+        <p>
+          If the calculated risk is higher than the acceptable level, a cost-effective preventive strategy can be implemented. If building steel is used as part of the <a href="https://www.jeftechno.com/blog/how-lps-work" className="underline">Lightning Protection System</a>, you not only have the most economical solution but also the most reliable system.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Recommended Protection Measures</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-2">
+            <li>Lightning protection as per LPL 1 to 4</li>
+            <li>Co-ordinated <a href="https://www.jeftechno.com/surge-protection-device" className="underline">SPD protection</a></li>
+            <li>Fire protection (manual or automatic)</li>
+            <li>Soil equi-potentialisation</li>
+            <li>Warning notices and electrical insulation</li>
+          </ul>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog34': {
+    category: "BLOG",
+    title: "ELECTRICAL SAFETY IN RETAIL INDUSTRY – Safety Guidelines",
+    date: "",
+    imageUrl: "/BlogImg/blog-34.png",
+    metaTags: {
+      title: "Electrical Safety in Retail Industry – Safety Guidelines | JEF Techno",
+      description: "Understand the electrical safety challenges in the retail industry. Learn how JEF's electrical safety audit helps identify risks, ensure NBC compliance, and protect people, assets, and equipment.",
+      keywords: "electrical safety retail industry, safety audit retail, NBC fire safety, electrical safety guidelines India, retail fire risk, JEF Techno electrical audit",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/electrical-safety-retail-industry",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Commercial buildings in the retail industry are full of combustible products such as clothing, rubber, and goods, thus an electrical safety audit is required for protection. The retail industry covers a wide range of service outlets &amp; a variety of businesses such as department &amp; apparel stores, supermarkets, warehouses, etc.
+        </p>
+        <p>
+          The National Building Code of India — 2016, Part 4 — Fire and Life Safety, clearly mentions safety from fire: demarcation of fire zones, restrictions on construction of buildings based on occupancy, types of building construction according to fire resistance of structural and non-structural components.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Various Challenges the Retail Industry Faces</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Multi-locational operations</li>
+            <li>Lack of qualified manpower to supervise/attend to complaints</li>
+            <li>Inability to shut down operations for electrical problems, resulting in potentially unsafe workarounds</li>
+            <li>A large number of people and/or high-value assets &amp; equipment under one roof</li>
+            <li>Lack of awareness among staff members on safety-related aspects (High attrition in this sector complicates training)</li>
+          </ul>
+        </div>
+        <p>
+          <a href="https://www.jeftechno.com/elecrical-and-fire-safety" className="underline">JEF's Electrical Safety Audit</a> is designed to identify potential risk and provide solutions to mitigate them. We not only assist in identifying hazards, risks, non-conformities, and deficiencies in the electrical &amp; fire safety system but also recommend ways and means to ensure electrical &amp; fire safety.
+        </p>
+        <p>
+          We provide a one-stop solution to various electrical problems encountered in the retail segment. JEF's dedicated engineers continuously work towards providing you safe, energy efficient and sustainable solutions.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog35': {
+    category: "BLOG",
+    title: "EARTH PITS INSTALLATION",
+    date: "",
+    imageUrl: "/BlogImg/blog-35.png",
+    metaTags: {
+      title: "Earth Pits Installation – Interconnection & Standards | JEF Techno",
+      description: "Understand the correct approach to earth pit installation and interconnection as per IS 3043, IEC 62305-3, IEEE 142, and IEC 61000-5-2. Learn why all earthing systems must be interconnected to achieve equipotential.",
+      keywords: "earth pits installation, interconnection of earth pits, IS 3043 earthing, IEEE 142 electronic earthing, IEC 62305-3 lightning earth, equipotential bonding, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/interconnection-of-earth-pits",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Some earth pits are installed at various locations throughout an electrical system for different applications such as transformer neutral, equipment body, lightning arrestors, and electronic equipment.
+        </p>
+        <p>
+          The practice adopted earlier was to keep all these earth pits electrically separated. We examined several reputable national and international standards, including IS3043, BS7430, IEC 61000-5-2, IEC 62305-3, and IEEE 142-2007. All the above standards have clearly advocated the need to interconnect all earth systems to achieve equipotential.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">1) Interconnection of Transformer Neutral with the General Earth Grid</h3>
+          <p>
+            Transformer neutral should be solidly interconnected to the general earth grid as per IS3043, Clause 22.1.3 and 22.3.1. The standard has permitted and advocated the interlinking of the neutral earth pit with the general body earth, and mentions that the earlier practice of separate/isolated earth for transformer neutral needs to be revised to AVOID UNNECESSARY REDUNDANCY AND EXPENDITURE.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">2) Interconnection of Lightning Arrestor Earth with General Earth Grid</h3>
+          <p>
+            IEC 62305-3 and BS7430 have clearly recommended that the <a href="https://www.jeftechno.com/blog/need-for-lps" className="underline">lightning protection system</a> earth should solidly bond to the general earth grid to avoid dangerous potential differences between two unconnected earth systems in case of a lightning current.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">3) Inter-connection of Electronic Equipment Earthing with General Earth Grid</h3>
+          <p>
+            IEEE 142-2007 (Clause 5.5.3, Page 193) specifically states that a possible lack of understanding led to erroneous installation requirements using isolated earthings for electronic equipment. Analysis of various catastrophic incidents indicated that separation of grounds was responsible for very large voltages being impressed on electronic equipment components under thunderstorm conditions.
+          </p>
+          <p className="mt-4">
+            IEC 61000-5-2 (Clause 5.3.1) does not encourage the use of independent "ISOLATED" <a href="https://www.jeftechno.com/blog/type-a-vs-type-b-earthing" className="underline">earth electrodes</a> for computer and electrical systems. IEEE 1100-2003 (Clause 4.8.5.1) clearly mentions that electronic equipment should not use isolated grounds and details the benefits of connecting dedicated electronic earthing to the general earth grid.
+          </p>
+        </div>
+        <p>
+          <strong>Conclusion:</strong> All earth systems in a given electrical installation — neutral earth, lightning protection system earth, and electronic earth — should have their own dedicated earth pit/earth terminations. However, they should never be isolated from the general earth grid. These dedicated earth pits should be connected to the general earth grid to achieve equipotential, thereby avoiding catastrophic failures.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog36': {
+    category: "BLOG",
+    title: "SOIL TREATMENT – Good Earthing",
+    date: "",
+    imageUrl: "/BlogImg/blog-36.png",
+    metaTags: {
+      title: "Soil Treatment for Good Earthing | JEF Techno",
+      description: "Learn how soil treatment around earth electrodes significantly reduces earth resistance. Understand how carbon-based backfill compounds provide maintenance-free earthing as per IEEE 142 and international standards.",
+      keywords: "soil treatment earthing, backfill compound earthing, earth electrode resistance, carbon backfill, maintenance free earthing, IEEE 142, JEF ECO-SAFE earthing, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/soil-treatment-for-good-earthing",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Soil treatment for good earthing is a positive technique of improving the resistance of earth electrodes, especially when the hard underlying rock is incapable of accommodating deeper soil rows.
+        </p>
+        <p>
+          The resistance of the electrode mainly comprises of resistance of the electrode itself and the soil resistivity. However, soil resistivity wields the major influence.
+        </p>
+        <p>
+          The technology to achieve good earthing mainly depends on the <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">Backfill Compound</a>, as it influences the critical area around the electrode as mentioned in IEEE 142. For greater degree of performance, IEEE/BS Standards recommend ground enhancement material or conductive concrete with very low resistivity to be used around the electrode.
+        </p>
+        <p>
+          Treating an area of around 75 to 100 mm surrounding the electrode with Ground Enhancement Materials with very low resistivity reduces the earth resistance significantly, usually by 25 to 50 percent, according to Indian and international standards.
+        </p>
+        <p>
+          The carbon-based special backfill compounds used in JEF's solution do not rely on moisture for conduction and are very stable over a long period. Hence JEF ECO-SAFE Grounding System is truly MAINTENANCE FREE.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog37': {
+    category: "BLOG",
+    title: "WAYS TO PROTECT CNC MACHINE – Reasons & Solution",
+    date: "",
+    imageUrl: "/BlogImg/blog-37.png",
+    metaTags: {
+      title: "Ways to Protect CNC Machine – Reasons & Solution | JEF Techno",
+      description: "Learn how to protect CNC machines from lightning and switching surges. Understand EPROM corruption causes, common myths about protection devices, and the correct SPD selection and installation for CNC electronics.",
+      keywords: "CNC machine protection, CNC surge protection, EPROM corruption surges, SPD CNC machine, lightning CNC machine, switching surges CNC, JEF Techno surge protection",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/ways-to-protect-cnc-machine",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          CNC stands for computer numerical control — the automated control of machining instruments like drills, lathes, mills, and 3D printers using a computer. The primary function of CNC machines — precise and automatic motion control — makes this sophisticated machine so popular.
+        </p>
+        <p>
+          Failures in CNC machines happen due to two important disturbances in low voltage networks: steady state errors (over voltage lasting several cycles, harmonics, RFI/EMI effects) and transient errors (transient over voltages due to lightning surges and switching surges from welding, capacitor bank switching, etc.).
+        </p>
+        <p>
+          The more common problem encountered in normal plant life is corruption of EPROM (Erasable Programmable Read Only Memory), visible from sudden junk data appearing in the MMI (Man Machine Interface) panel. During a surge, a sudden high voltage appears in the pins of the IC, causing it to believe it is in programming mode — this is the cause of EPROM corruption.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Common Myths About Existing Protection</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li><strong>External Lightning Protection</strong> — for protecting the building from direct lightning strike only, not equipment surges</li>
+            <li><strong>MCB/MCCB</strong> — for protecting against short circuit due to power frequency fault currents; they operate in milliseconds, by which time surges have already passed through</li>
+            <li><strong>Earthing</strong> — for personnel safety and equipment safety, not transient surge protection</li>
+            <li><strong>Shielding</strong> — to protect equipment from RFI/EMI effects only</li>
+            <li><strong>Isolation Transformer</strong> — mainly to protect equipment from faults on the primary side</li>
+            <li><strong>UPS</strong> — to provide continuous power through battery in case of mains power failure</li>
+            <li><strong>Intrinsically Safe Barriers</strong> — to restrict electrical energy in hazardous areas</li>
+          </ul>
+        </div>
+        <p>
+          Hence <a href="https://www.jeftechno.com/surge-protection-device" className="underline">SPDs — Surge Protection Devices</a> — are the only protectors for CNC machines against transient surges. Depending on the incoming supply (3-phase with or without neutral), SPDs with potential-free contact and thermal disconnector shall be installed between Phase to Neutral and Neutral to Protective Earth. Requirement class is Class I+II as per IEC 61643-11.
+        </p>
+        <p>
+          This is the first level of defence. For MMI having 24V DC power supply or PLC with DI/DO, suitable additional SPDs need to be selected. Please contact us for a holistic solution which will ensure decades of trouble-free operation of all your sensitive electronic equipment.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog38': {
+    category: "BLOG",
+    title: "SOIL RESISTIVITY IN EARTHING DESIGN – SAFETY and RELIABILITY",
+    date: "",
+    imageUrl: "/BlogImg/blog-38.png",
+    metaTags: {
+      title: "Soil Resistivity in Earthing Design – Safety and Reliability | JEF Techno",
+      description: "Understand the importance of soil resistivity in earthing system design. Learn about Wenner's Four-Point Method, multi-layer soil models, IEEE 80, and how soil conditions affect touch and step potentials.",
+      keywords: "soil resistivity earthing design, Wenner four point method, IEEE 80, multi-layer soil model, touch potential, step potential, earth resistance, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/soil-resistivity-earthing-design-safety-reliability",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Soil resistivity is a measurement of the resistance or electric current that the soil conducts. The design of a system based on passing current across the surface of the earth is a key component.
+        </p>
+        <p>
+          Soil resistivity plays a vital role in the design of an earthing system. For substations, the key design acceptance (safety) criteria of touch and step potentials are greatly influenced by soil resistivity. For other <a href="https://www.jeftechno.com/grounding-system-solutions" className="underline">grounding systems</a> such as industrial plants, commercial and residential buildings, the acceptance criteria of overall grounding resistance and current density on the electrode surface are also dependent on soil resistivity.
+        </p>
+        <p>
+          Soil resistivity can be measured in a variety of methods. Electrical profiling is the best approach for assessing <a href="https://www.jeftechno.com/blog/soil-treatment-for-good-earthing" className="underline">soil resistivity for the design of earthing and safety requirements</a>. Wenner's Four-Point Method is the most popular and user-friendly method. In this method, four spikes with equal spacing are connected to the soil resistivity meter. The current is injected through the extreme (current) spikes and the potential drop is measured between the inner (potential) spikes.
+        </p>
+        <p>
+          The resistivity of the soil is dependent on salt content, moisture, and temperature. The resistivity cannot stay uniform throughout the life of the system as the soil can be eroded due to wind, rain, floods, and manmade actions.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Parameters Impacting Soil Resistivity Measurement</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Presence of loose/backfilled soil</li>
+            <li>Presence of buried metals like water, gas, other process pipelines and cables</li>
+            <li>Presence of live HT lines above the test setup which may induce current in the cables connecting the spikes</li>
+            <li>Presence of water table near the measurement area or any earth grid of a substation</li>
+            <li>Distance of any such earth grids and water table from the soil resistivity measurement area should be at least the spacing between the spikes</li>
+          </ul>
+        </div>
+        <p>
+          If the largest variation in a given direction exceeds 30%, the soil is deemed non-uniform and a multilayer soil model shall be used for designing. While using a simple average (arithmetic mean) of measured soil resistivity values for design, the margin of error in safety parameters due to soil resistivity can easily exceed 100%.
+        </p>
+        <p>
+          The standards have provided formulas to determine approximate values of touch and step potentials for uniform layer and two-layer soils. For multi-layer soil, it is necessary to use software simulation models as prescribed in IEEE 80 Annex H. The CDEGS software by SES has multi-layer modelling capability and provides accurate and optimum design with least possible error.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog39': {
+    category: "BLOG",
+    title: "POWER LINE AND DATA LINE SPD PROTECTION – SELECTION TIPS",
+    date: "",
+    imageUrl: "/BlogImg/blog-39.png",
+    metaTags: {
+      title: "Power Line and Data Line SPD Protection – Selection Tips | JEF Techno",
+      description: "Learn the selection criteria for power line and data line SPDs. Covers voltage protection levels, impulse current ratings, IS/IEC 61643 standards, instrumentation line SPDs, RS 232, and RF coaxial protection.",
+      keywords: "SPD selection tips, power line SPD, data line SPD, IS/IEC 61643, impulse current, voltage protection level, instrumentation SPD, RS 232 SPD, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/power-line-data-line-spd-protection-selection-tips",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The Power line SPD and Data line SPDs have distinct selection principles compared to fuse/MCBs, as well as different selection criteria. Data line SPDs include all SPDs other than power line applications — viz. Communication, Instrumentation, Voice, data, Ethernet, RS 485, RS 422, etc.
+        </p>
+        <p>
+          <strong>Power Line</strong> — Most power line protectors used in AC power low voltage applications, especially those used in Main DB &amp; Sub DB, are connected parallel to the load, so they can be used without worrying about the load current. Low voltage means any AC RMS voltage from 1V to 1000 V and DC up to 1500 V.
+        </p>
+        <p>
+          <strong>Data Line</strong> — All data line protectors are connected in series to the load, though the basic protection components (GDT, MOV, SAD) are always connected in parallel. In data line SPDs, the series component — generally resistors or inductors — determines the load current that can pass through the SPDs.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Power Line SPD Selection Criteria</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Voltage Protection level (Up) based on Voltage withstanding level of the equipment (Uw) — ensure Up is lower than Uw in all cases</li>
+            <li>Nominal Discharge current</li>
+            <li>Maximum Discharge Current</li>
+            <li>Impulse current (for Class I SPDs only)</li>
+            <li>Tested as per IS/IEC 61643 for Class 1, Class 2 &amp; Class 3 applications</li>
+            <li>Response time</li>
+          </ul>
+          <p className="mt-4">Other features to consider for ease of maintenance: Pluggable modules, Local indication of failure, Remote indication of failure, DIN-RAIL mounting.</p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Data Line SPD Selection Criteria</h3>
+          <p>
+            <a href="https://www.jeftechno.com/power-system-studies" className="underline">Data line SPDs</a> selection criteria is based on sub-category, but all are tested as per IS/IEC 61643-21.
+          </p>
+          <ul className="list-disc pl-5 flex flex-col gap-3 mt-4">
+            <li><strong>Instrumentation line protection:</strong> Control room side SPDs — DIN rail mountable, spring loaded terminals; Field side SPDs for 2-wire &amp; 4-wire applications</li>
+            <li><strong>RS 232 line SPDs:</strong> Suitable for 9 PIN, 15 PIN &amp; 25 PIN SPDs (male-male, female-female &amp; male-female)</li>
+            <li><strong>RF Co-axial line protection SPDs:</strong> Consider signal amplitude, frequency band, connector type, gender type, voltage protection level, insertion loss/return loss/NEXT</li>
+          </ul>
+        </div>
+        <p>
+          Though selection of SPDs is important, installation is more crucial because <a href="https://www.jeftechno.com/blog/spd-selection-and-installation-myths-and-fact" className="underline">SPD installation</a> is different from Fuse/MCB installation.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog40': {
+    category: "BLOG",
+    title: "APPLICATION NOTE – WIND MILLS | LPS & SPD",
+    date: "",
+    imageUrl: "/BlogImg/blog-27.png",
+    metaTags: {
+      title: "Application Note – Wind Mills | LPS & SPD | JEF Techno",
+      description: "Understand lightning and surge protection requirements for wind turbines as per IEC 61400-24. Covers LPZ concepts, shielding, global earthing, and SPD selection for windmill electronics.",
+      keywords: "wind turbine lightning protection, IEC 61400-24, LPZ windmill, SPD windmill, surge protection wind energy, global earthing windmill, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/application-note-wind-mills-lps-spd-2",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          <strong>Application Note: Lightning protection &amp; Surge protection requirement for Wind Turbines as per IEC 61400-24.</strong>
+        </p>
+        <p>
+          A windmill is a device that uses sails set on a spinning shaft to harness the energy of the wind. India's economy is growing rapidly and the utilization of regenerative energy is on a steady rise. IEC 61400-24: Lightning Protection of Wind Turbines is the basis for the solution.
+        </p>
+        <p>
+          There are two common challenges for windmills: they are much taller than the surrounding environment (100 m &amp; above), and the concentration of electrical &amp; electronic systems is confined in a small area.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Lightning Protection Zones (LPZ) in Windmill Systems</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li><strong>LPZ O A:</strong> The area above the <a href="https://www.jeftechno.com/blog/how-lps-work" className="underline">LPS installation</a> (electric &amp; magnetic field are maximum)</li>
+            <li><strong>LPZ O B:</strong> The area just below the external LPS covered by rolling sphere radius (first level of attenuation)</li>
+            <li><strong>LPZ 1:</strong> Entry point of power &amp; signal cables from the windmill tower to the building (second level of attenuation)</li>
+            <li><strong>LPZ 2:</strong> Place where sensitive electronic equipment is located (final level of attenuation)</li>
+          </ul>
+        </div>
+        <p>
+          <strong>Shielding:</strong> Nacelle are made of metal which is a closed structure by itself to protect from radiated effects of lightning. Shielded cables shall be used with 360-degree bonding at entry &amp; exit points connected to EBB (Equipotential Bonding Bar).
+        </p>
+        <p>
+          <strong>Earthing:</strong> "Global earthing" as explained in IS3043 latest edition (2018) shall be followed, including the structural steel reinforcement of the wind turbine with the earth grid surrounding the windmill &amp; the building.
+        </p>
+        <p>
+          <strong>SPDs:</strong> Conducted surges are reduced below the withstanding level of equipment by using <a href="https://www.jeftechno.com/blog/power-line-and-data-line-spd-protection" className="underline">SPDs for power, data, and communication lines</a>. Either Class I or Class I+II 3-phase SPD with 400/690 V compatible with minimum Iimp of 12.5 kA for TN-C system shall be employed in parallel at the main DB.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog41': {
+    category: "BLOG",
+    title: "HOW DOES A LIGHTNING PROTECTION SYSTEM WORK",
+    date: "",
+    imageUrl: "/BlogImg/blog-41.png",
+    metaTags: {
+      title: "How Does a Lightning Protection System Work | JEF Techno",
+      description: "Understand how a lightning protection system works — from lightning rods and grounding conductors to surge protection devices. Learn about fire risks, LPS installation, and the role of SPDs in protecting buildings.",
+      keywords: "how lightning protection works, lightning rod, LPS installation, surge protection device SPD, grounding electricity, fire risk lightning, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/how-lps-work",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Thunder storms occur almost everywhere in the world. A lightning strike has the potential to damage just about any type of structure. Although nothing can prevent lightning from striking, a lightning protection system will intercept the strike and disperse it safely into the ground — saving households and businesses from a great deal of upset and inconvenience.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Dangers of Lightning</h3>
+          <p>
+            Lightning is a natural phenomenon that can produce voltages greater than 100 million volts, while reaching temperatures hotter than the surface of the sun. A lightning strike can create power surges, causing electricity to sweep through a property's wiring or plumbing system. With a real risk of fire, the attic will commonly catch light when a lightning bolt comes through the roof. The Empire State Building is struck by lightning approximately 100 times each year.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Lightning Rods</h3>
+          <p>
+            In a lightning protection system, strike termination rods in the shape of lightning rods are positioned in the most exposed extremities and on the highest parts of a structure at regular intervals — they become the most likely point of contact for the lightning, creating the quickest path to the ground. Although it doesn't prevent a lightning strike, a lightning protection system provides an effective grounding network that creates a low-resistance path to the ground.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Grounding Electricity</h3>
+          <p>
+            Copper and Aluminium materials create a low-resistance path to the ground for the lightning's potentially dangerous electricity. When a lightning protection system is in place it intercepts the strike, directing it safely to the ground without impacting a building's structure or contents.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Surge Protection</h3>
+          <p>
+            Post lightning strike, impulse current is dissipated through a low impedance path (down conductors to the earth termination system). Part of lightning/impulse current gets coupled into the building through utility services like power lines, data lines, and metallic pipelines. Since lightning overvoltages are typically limited to few microseconds, normal devices (fuses, MCBs) are unable to protect against these — hence new class of protective devices (SPD) which respond in a few microseconds are needed. The complete system will include conductors, strike termination rods, ground terminals and inter-connecting bonding to minimize side-flashing and surge protection devices for power, data and communication lines.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Installation</h3>
+          <p>
+            The SPDs are installed on the electrical service panels and on any other incoming lines — they serve as the first defence against harmful electrical surges. Lightning rods are installed at the highest point, such as on the roof. All buildings must have a minimum of two ground rods set as wide apart as possible, normally in diagonally opposite corners. Once a lightning protection system is installed, regular maintenance and periodic safety checks are required. JEF Techno offers a wide range of technical services for maintaining your lightning protection system &amp; SPDs.
+          </p>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog42': {
+    category: "BLOG",
+    title: "EMI BETWEEN OVERHEAD POWER LINES & BURIED PIPELINES",
+    date: "",
+    imageUrl: "/BlogImg/blog-42.png",
+    metaTags: {
+      title: "EMI Between Overhead Power Lines & Buried Pipelines | JEF Techno",
+      description: "Understand electromagnetic interference (EMI) between high voltage overhead power transmission lines and nearby buried pipelines. Learn about inductive, conductive, and capacitive coupling and mitigation solutions.",
+      keywords: "EMI overhead power lines pipelines, inductive coupling pipeline, conductive coupling HV lines, AC interference pipeline, cathodic protection EMI, pipeline corrosion AC, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/emi-overhead-power-lines-buried-pipelines",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The analysis of electromagnetic interference between high voltage overhead power transmission lines and nearby gas or oil pipelines has been a topic of growing interest for many years. When pipelines are located in a shared row with power lines, the pipeline can suffer high induced voltages and currents due to AC interference. The induced voltage can be dangerous for an operator to touch the pipeline, and pipe corrosion can result from AC discharge.
+        </p>
+        <p>
+          The AC interference is due to three main phenomena: Inductive, Conductive, and Capacitive coupling.
+        </p>
+        <div>
+          <ul className="list-disc pl-5 flex flex-col gap-4">
+            <li>
+              <strong>Inductive Coupling:</strong> Voltages are induced in nearby metallic conductors by magnetic coupling with high voltage lines, resulting in currents flowing in a conducting pipeline and existence of voltages between it and the surrounding soil.
+            </li>
+            <li>
+              <strong>Conductive Coupling:</strong> When a ground fault occurs in HV Power Lines, the current flowing through the grounding grid produces a potential rise on both the grounding grid and the neighboring soil. If the pipeline goes through the "zone of influence" of this potential rise, a high difference in electrical potential can appear across the coating of the pipeline.
+            </li>
+            <li>
+              <strong>Capacitive Coupling:</strong> Affects only aerial pipelines situated in the proximity of HV Power Lines. For underground pipelines, the effect of capacitive coupling may not be considered because of the screening effect of earth against electric fields.
+            </li>
+          </ul>
+        </div>
+        <p>
+          Pipelines can suffer the potential loss of metal and resultant risk of leakage of product due to AC corrosion. It is very important to understand the interaction between the transmission lines (power system), pipeline and the cathodic protection systems to assess the impact of AC Interference.
+        </p>
+        <p>
+          A comprehensive study of the system through field data collection and software modeling can provide solutions that can help limit AC corrosion and achieve safety. The study will take into account various factors including soil structure, transmission line parameters, pipeline data and existing cathodic protection measures to assess problem areas and design cost-effective mitigation solutions.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog43': {
+    category: "BLOG",
+    title: "THE IMPORTANCE OF FIRE SAFETY",
+    date: "",
+    imageUrl: "/BlogImg/blog-43.png",
+    metaTags: {
+      title: "The Importance of Fire Safety | JEF Techno",
+      description: "Understand the importance of fire safety in buildings and commercial spaces. Learn about NBC 2016 Chapter 4 requirements covering Life Safety, Fire Prevention, and Fire Protection, and how regular fire safety audits can prevent catastrophic accidents.",
+      keywords: "fire safety importance, NBC 2016 fire safety, life safety fire, fire prevention buildings, fire protection systems, fire safety audit India, JEF Techno fire safety",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/importance-of-fire-safety",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          With the increase in construction of high-rise buildings, new smart cities, and coming up of new industrial zones, fire safety continues to be a concern due to the rise in the number of fire accidents. Inadequate planning of buildings, lack of evacuation plans, and insufficient monitoring of fire protection systems leads to major fire accidents that could have been avoided by simply following existing rules and regulations.
+        </p>
+        <p>
+          <strong>Absolute safety from fire is not attainable in practice but most fires are preventable. The safest way to deal with fire is to prevent it.</strong>
+        </p>
+        <p>
+          Fire safety audit in a building is an effective way to assess whether fire safety systems are in place and comply with the National Building Code of India (NBC). Part 4 of NBC covers the requirement for fire prevention, life safety in relation to fire, and fire protection of buildings.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Fire in a Building Can Be Avoided By</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Designing fire safe structures in line with mandatory safety regulations and relevant standards</li>
+            <li>Maintaining fire safe practices on a regular basis and carrying out fire risk assessments</li>
+            <li>Awareness and regular firefighting and evacuation training to occupants</li>
+            <li>Keeping sources of ignition and flammable substances at safe distances</li>
+            <li>Ensuring good housekeeping at all times — avoiding build-up of rubbish that could burn</li>
+            <li>Installing smoke alarms, fire alarms, or warning bells</li>
+            <li>Installing appropriate fire-fighting equipment for putting out fires quickly</li>
+            <li>Keeping fire exits and escape routes clearly marked and unobstructed at all times</li>
+            <li>Reviewing and updating risk assessments regularly</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">NBC 2016 Chapter 4 – Three Key Aspects of Fire Safety</h3>
+          <p>
+            <strong>Life Safety</strong> covers general exit requirements, arrangement of exits, doorways, corridors, internal and external staircases, pressurization of escape routes, refuge areas, fire lifts, emergency escape lighting, and fire detection and warning systems.
+          </p>
+          <p className="mt-4">
+            <strong>Fire Prevention</strong> covers classification of buildings, fire zones, types of construction, requirements common to all occupancies, heating/smoke venting, and passive systems.
+          </p>
+          <p className="mt-4">
+            <strong>Fire Protection</strong> covers extinguishers, hose reels, dry riser, wet riser, down comer, yard hydrant systems, automatic sprinkler installation, manual and automatic fire alarm systems, and storage tanks and pump systems. Additional features in NBC 2016 include fire protection in car parking facilities, malls and multiplexes, hospitals, hotels, commercial cooking protection, and super high-rise structures over 100 m.
+          </p>
+        </div>
+        <p>
+          Regular fire safety audits are helpful in finding anomalies/defects in the existing system and give time to get the required changes done to avoid any dreadful fire accident.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog44': {
+    category: "BLOG",
+    title: "POWER QUALITY – EVENTS AND PARAMETERS",
+    date: "",
+    imageUrl: "/BlogImg/blog-44.png",
+    metaTags: {
+      title: "Power Quality – Events and Parameters | JEF Techno",
+      description: "Understand power quality events and parameters as defined by IEEE and IEC. Learn about interruptions, voltage sags, swells, transients, harmonics, notching, noise, voltage unbalance, and frequency variations.",
+      keywords: "power quality events, voltage sag, voltage swell, harmonics power quality, IEC 61000-4-30, IEEE power quality, transient overvoltage, voltage unbalance, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/power-quality-events-parameters",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Power Quality is used synonymously with supply reliability, service quality, voltage quality, and quality of supply. IEEE defines it as "the concept of powering and grounding sensitive equipment in a manner that is suitable to the operation of that equipment." IEC 61000-4-30 defines it as "Characteristics of the electricity at a given point on an electrical system, evaluated against a set of reference technical parameters."
+        </p>
+        <p>
+          In general, power quality is related to disturbances in voltage, current, frequency, and power factor. Poor power quality means there is ample deviation from norms in the power supply that may cause equipment malfunction or failure.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Power Quality Events</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-4">
+            <li>
+              <strong>Interruptions:</strong> A condition in which the voltage at the supply terminals is close to zero — lower than 1% of declared voltage per IEC, lower than 10% per IEEE.
+            </li>
+            <li>
+              <strong>Under Voltages (Sags/Dips):</strong> Short duration under voltages are called voltage sags or voltage dips. A supply voltage dip is a sudden reduction to a value between 90% and 1% of the declared voltage, followed by a recovery between 10 ms and 1 minute later.
+            </li>
+            <li>
+              <strong>Over Voltages (Surges/Swells):</strong> Overvoltages of very short duration and high magnitude are called transient over voltages, voltage spikes, or voltage surges. Overvoltages within a duration of about 1 cycle and 1 minute are called voltage swells.
+            </li>
+            <li>
+              <strong>Transients:</strong> Impulsive transients are sudden, non-power frequency changes that are unidirectional in polarity. Oscillatory transients are sudden changes that include both positive and negative polarity values.
+            </li>
+            <li>
+              <strong>Voltage Unbalance:</strong> The maximum deviation from the average of the three-phase voltages or currents, divided by the average, expressed in percent.
+            </li>
+            <li>
+              <strong>Waveform Distortion:</strong> A steady-state deviation from an ideal sine wave, with five types: DC Offset, Harmonics, Interharmonics, Notching, and Noise.
+            </li>
+            <li>
+              <strong>Power Frequency Variations:</strong> Deviation of the power system's fundamental frequency from its specified nominal value (e.g., 50 Hz or 60 Hz).
+            </li>
+            <li>
+              <strong>Voltage Fluctuations:</strong> Systematic variations of the voltage envelope whose magnitude does not normally exceed 0.9 pu to 1.1 pu. Loads with continuous, rapid variations in load current magnitude can cause voltage variations referred to as flicker.
+            </li>
+          </ul>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog45': {
+    category: "BLOG",
+    title: "NEED FOR LPS – LIGHTNING PROTECTION SYSTEM ADEQUACY STUDY",
+    date: "",
+    imageUrl: "/BlogImg/blog-45.png",
+    metaTags: {
+      title: "Need for LPS – Lightning Protection System Adequacy Study | JEF Techno",
+      description: "Learn why a Lightning Protection System Adequacy Study is essential. Understand how IS/IEC 62305 replaced IS 2309, the methodology of LPS adequacy study, and the protection techniques to minimize lightning risk.",
+      keywords: "LPS adequacy study, IS/IEC 62305, IS 2309 replaced, lightning protection system study, NBC 2016 lightning, CEA lightning regulations, risk assessment lightning, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/need-for-lps",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          As technology develops, standards are revised or superseded to take into account advancements and precautions needed to minimise risk within tolerable levels. <strong>Erstwhile IS 2309 was superseded by IS/IEC 62305</strong> — a comprehensive standard so that not only structures and people are protected but also the electronics inside the structure. Because of this change, <strong>NBC — National Building Code &amp; CEA — Central Electricity Authority regulations</strong> were also revised to adopt the recommendations given in IS/IEC 62305.
+        </p>
+        <p>
+          Risk analysis of the building that needs protection is a specialised activity that must be carried out by experts so that customers have their investment well protected. Hence, it is mandatory to conduct an audit, collect data for risk assessment, and implement the recommendations of risk assessment so that people, structure, and all electronics inside the structure are well protected within the tolerable levels.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Methodology of LPS Adequacy Study</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Ascertain whether a lightning protection system is provided for all the structures in the facility and, if so, to which Indian/international standard they conform</li>
+            <li>If they conform to IS 2309 or NFC 17-102, they are invalid as highlighted in NBC 2016 — risk analysis must be done as per IS/IEC 62305 and recommendations implemented</li>
+            <li>Whether protection measures are needed and to what extent should be determined by the Risk Assessment (IS/IEC 62305-2)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Protection Techniques (Standalone or in Combination)</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Lightning protection as per LPL 1 to 4</li>
+            <li>Co-ordinated SPD protection</li>
+            <li>Fire protection (manual or automatic)</li>
+            <li>Soil equi-potentialization / Earthing</li>
+            <li>Equi-potential bonding, shielding &amp; routing</li>
+          </ul>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog46': {
+    category: "BLOG",
+    title: "HOW DOES A LIGHTNING PROTECTION SYSTEM WORK",
+    date: "",
+    imageUrl: "/BlogImg/blog-41.png",
+    metaTags: {
+      title: "How Does a Lightning Protection System Work | JEF Techno",
+      description: "Understand how a lightning protection system works — from lightning rods and grounding conductors to surge protection devices. Learn about fire risks, LPS installation, and the role of SPDs in protecting buildings.",
+      keywords: "how lightning protection works, lightning rod, LPS installation, surge protection device SPD, grounding electricity, fire risk lightning, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/how-lps-work-2",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          Thunder storms occur almost everywhere in the world. A lightning strike has the potential to damage just about any type of structure. Although nothing can prevent lightning from striking, a lightning protection system will intercept the strike and disperse it safely into the ground — saving households and businesses from a great deal of upset and inconvenience.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Dangers of Lightning</h3>
+          <p>
+            Lightning is a natural phenomenon that can produce voltages greater than 100 million volts, while reaching temperatures hotter than the surface of the sun. A lightning strike can create power surges, causing electricity to sweep through a property's wiring or plumbing system. With a real risk of fire, the attic will commonly catch light when a lightning bolt comes through the roof.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Lightning Rods</h3>
+          <p>
+            In a lightning protection system, strike termination rods in the shape of lightning rods are positioned in the most exposed extremities and on the highest parts of a structure at regular intervals — they become the most likely point of contact for the lightning, creating the quickest path to the ground. A lightning protection system provides an effective grounding network that creates a low-resistance path to the ground.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Grounding Electricity</h3>
+          <p>
+            Copper and Aluminium materials create a low-resistance path to the ground for the lightning's potentially dangerous electricity. When a lightning protection system is in place it intercepts the strike, directing it safely to the ground without impacting a building's structure or contents. Today, lightning protection systems are built into the structural design of many homes, public buildings, and business premises.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Surge Protection</h3>
+          <p>
+            Post lightning strike, impulse current is dissipated through a low impedance path (down conductors to the earth termination system). Part of the lightning/impulse current gets coupled into the building through utility services like power lines, data lines, and metallic pipelines. Since lightning overvoltages are typically limited to few microseconds, normal protective devices (fuses, MCBs) are unable to protect against these. New class of protective devices (SPD) which respond in a few microseconds are needed. The complete system will include conductors, strike termination rods, ground terminals, inter-connecting bonding to minimize side-flashing, and surge protection devices to prevent harmful electrical surges in power, data, and communication lines.
+          </p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Installation</h3>
+          <p>
+            The SPDs are installed on the electrical service panels and on any other incoming lines. Lightning rods are installed at the highest point, such as on the roof. All buildings must have a minimum of two ground rods set as wide apart as possible. Once a lightning protection system is installed, regular maintenance and periodic safety checks are required. JEF Techno offers a wide range of technical services for maintaining your lightning protection system &amp; SPDs.
+          </p>
+        </div>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  
+  
+  
+  'blog50': {
+    category: "BLOG",
+    title: "POWER LINE AND DATA LINE SPD PROTECTION – SELECTION TIPS",
+    date: "",
+    imageUrl: "/BlogImg/blog-29.png",
+    metaTags: {
+      title: "Power Line and Data Line SPD Protection – Selection Tips | JEF Techno",
+      description: "Learn the selection criteria for power line and data line SPDs. Covers voltage protection levels, impulse current ratings, IS/IEC 61643 standards, instrumentation line SPDs, RS 232, and RF coaxial protection.",
+      keywords: "SPD selection tips, power line SPD, data line SPD, IS/IEC 61643, impulse current, voltage protection level, instrumentation SPD, RS 232 SPD, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/power-line-data-line-spd-protection-selection-tips-3",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          The Power line SPD and Data line SPDs have distinct selection principles compared to fuse/MCBs, as well as different selection criteria. Data line SPDs include all SPDs other than power line applications — viz. Communication, Instrumentation, Voice, data, Ethernet, RS 485, RS 422, etc.
+        </p>
+        <p>
+          <strong>Power Line</strong> — Most power line protectors used in AC power low voltage applications, especially those used in Main DB &amp; Sub DB, are connected parallel to the load. Low voltage means any AC RMS voltage from 1V to 1000 V and DC up to 1500 V.
+        </p>
+        <p>
+          <strong>Data Line</strong> — All data line protectors are connected in series to the load, though the basic protection components (GDT, MOV, SAD) are always connected in parallel. In data line SPDs, the series component — generally resistors or inductors — determines the load current that can pass through the SPDs.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Power Line SPD Selection Criteria</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li>Voltage Protection level (Up) based on Voltage withstanding level of the equipment (Uw) — ensure Up is lower than Uw in all cases</li>
+            <li>Nominal Discharge current</li>
+            <li>Maximum Discharge Current</li>
+            <li>Impulse current (for Class I SPDs only)</li>
+            <li>Tested as per IS/IEC 61643 for Class 1, Class 2 &amp; Class 3 applications</li>
+            <li>Response time</li>
+          </ul>
+          <p className="mt-4">Other features to consider for ease of maintenance: Pluggable modules, Local indication of failure, Remote indication of failure, DIN-RAIL mounting.</p>
+        </div>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Data Line SPD Selection Criteria</h3>
+          <p>
+            <a href="https://www.jeftechno.com/power-system-studies" className="underline">Data line SPDs</a> selection criteria is based on sub-category, but all are tested as per IS/IEC 61643-21.
+          </p>
+          <ul className="list-disc pl-5 flex flex-col gap-3 mt-4">
+            <li><strong>Instrumentation line protection:</strong> Control room side SPDs — DIN rail mountable, spring loaded terminals; Field side SPDs for 2-wire &amp; 4-wire applications</li>
+            <li><strong>RS 232 line SPDs:</strong> Suitable for 9 PIN, 15 PIN &amp; 25 PIN SPDs (male-male, female-female &amp; male-female)</li>
+            <li><strong>RF Co-axial line protection SPDs:</strong> Consider signal amplitude, frequency band, connector type, gender type, voltage protection level, insertion loss/return loss/NEXT</li>
+          </ul>
+        </div>
+        <p>
+          Though selection of SPDs is important, installation is more crucial because <a href="https://www.jeftechno.com/blog/spd-selection-and-installation-myths-and-fact" className="underline">SPD installation</a> is different from Fuse/MCB installation.
+        </p>
+        <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
+      </div>
+    )
+  },
+
+  'blog51': {
+    category: "BLOG",
+    title: "APPLICATION NOTE – WIND MILLS | LPS & SPD",
+    date: "",
+    imageUrl: "/BlogImg/blog-39.png",
+    metaTags: {
+      title: "Application Note – Wind Mills | LPS & SPD | JEF Techno",
+      description: "Understand lightning and surge protection requirements for wind turbines as per IEC 61400-24. Covers LPZ concepts, shielding, global earthing, and SPD selection for windmill electronics.",
+      keywords: "wind turbine lightning protection, IEC 61400-24, LPZ windmill, SPD windmill, surge protection wind energy, global earthing windmill, JEF Techno",
+      robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      canonical: "https://www.jeftechno.com/blog/application-note-wind-mills-lps-spd-3",
+    },
+    content: (
+      <div className="flex flex-col gap-8 text-white/80 font-light leading-relaxed">
+        <p>
+          <strong>Application Note: Lightning protection &amp; Surge protection requirement for Wind Turbines as per IEC 61400-24.</strong>
+        </p>
+        <p>
+          A windmill is a device that uses sails set on a spinning shaft to harness the energy of the wind. India's economy is growing rapidly and the utilization of regenerative energy is on a steady rise. Windmills, Solar PV &amp; bio-gas plants are becoming popular day by day.
+        </p>
+        <p>
+          IEC 61400-24: Lightning Protection of Wind Turbines is the basis for the solution. There are two common challenges for windmills: they are much taller than the surrounding environment (100 m &amp; above), and the concentration of electrical &amp; electronic systems is confined in a small area. The electrical &amp; electronic system includes switchgear cabinets, motors, drives, frequency converters, actuators, sensors, and control electronics including communication bus systems.
+        </p>
+        <div>
+          <h3 className="text-white font-bold mb-4 uppercase">Lightning Protection Zones (LPZ)</h3>
+          <ul className="list-disc pl-5 flex flex-col gap-3">
+            <li><strong>LPZ O A:</strong> The area above the <a href="https://www.jeftechno.com/blog/how-lps-work" className="underline">LPS installation</a> (electric &amp; magnetic field are maximum)</li>
+            <li><strong>LPZ O B:</strong> The area just below the external LPS covered by rolling sphere radius (first level of attenuation)</li>
+            <li><strong>LPZ 1:</strong> Entry point of power &amp; signal cables from the windmill tower to the building (second level of attenuation)</li>
+            <li><strong>LPZ 2:</strong> Place where sensitive electronic equipment is located (final level of attenuation)</li>
+          </ul>
+        </div>
+        <p>
+          <strong>Shielding:</strong> Nacelle are made of metal, acting as a closed structure to protect from radiated effects of lightning. Shielded cables shall be used with 360-degree bonding at entry &amp; exit points connected to EBB (Equipotential Bonding Bar).
+        </p>
+        <p>
+          <strong>Earthing:</strong> "Global earthing" as explained in IS3043 latest edition (2018) shall be followed, including the structural steel reinforcement of the wind turbine with the earth grid surrounding the windmill &amp; the building.
+        </p>
+        <p>
+          <strong>SPDs:</strong> Conducted surges are reduced below the withstanding level of equipment by using <a href="https://www.jeftechno.com/blog/power-line-and-data-line-spd-protection" className="underline">SPDs for power, data, and communication lines</a>. Either Class I or Class I+II 3-phase SPD with 400/690 V compatible with minimum Iimp of 12.5 kA for TN-C system shall be employed in parallel at the main DB. SPD shall have local &amp; remote indication in the form of relay contact with NO/NC points.
+        </p>
         <p>Please let us know if you need further assistance or have any requirements: marketing@jeftechno.com</p>
       </div>
     )
