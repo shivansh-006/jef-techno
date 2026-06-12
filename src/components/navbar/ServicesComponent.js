@@ -79,12 +79,12 @@ const ServicesComponent = () => {
     { icon: "/nav-industrial.png", text: "INDUSTRIAL", path: "/power-system-studies" },
     {
       icon: "/nav-renewable.png",
-      text: "RENEWABLE",
-      path: "/renewable",
+      text: "POWER SYSTEM STUDIES",
+      path: "/power-system-studies",
       subItems: [
         
-        { text: "1. PSS", path: "/power-system-studies" },
-        { text: "2. RCA", path: "/root-cause-analysis" },
+       
+        { text: "1. ROOT CAUSE ANALYSIS", path: "/root-cause-analysis" },
       ],
     },
   ];
@@ -159,7 +159,7 @@ const ServicesComponent = () => {
                         </div>
                         <div className="flex items-center gap-4">
                           <Link href={service.path}>
-                            <div className="text-sm uppercase tracking-[3.36px] font-medium hover:text-gray-400">
+                            <div className="text-[13px] whitespace-normal uppercase tracking-[3.36px] font-medium hover:text-gray-400">
                               {service.text}
                             </div>
                           </Link>
@@ -175,7 +175,7 @@ const ServicesComponent = () => {
                         <div className={`ml-[72px] mt-4 flex flex-col gap-6 transition-all duration-700 delay-150 ${isHovered3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
                           {service.subItems.map((sub, i) => (
                             <Link key={i} href={sub.path}>
-                              <div className="text-xl font-medium tracking-[3px] text-white hover:text-red-700 transition-colors duration-300">
+                              <div className="text-[13px] whitespace-normal font-medium tracking-[3px] text-white  ml-2 hover:text-red-700 transition-colors duration-300">
                                 {sub.text}
                               </div>
                             </Link>

@@ -64,8 +64,8 @@ export default function WhatWeDoSection() {
 
 • Protects people, equipment, and structures
         `,
-        x: 350,
-        y: 80,
+        x: 280,
+        y: 55,
         xmob: 315,
         ymob: 380,
         labelPos: "top",
@@ -82,7 +82,7 @@ export default function WhatWeDoSection() {
 
 • Step-by-step guided installation workflow
         `,
-        x: -10,
+        x: 70,
         y: 320,
         xmob: 550,
         ymob: 660,
@@ -98,7 +98,7 @@ export default function WhatWeDoSection() {
 
 • Compliant with IEC 61643 standard
         `,
-        x: 200,
+        x: 250,
         y: 410,
         xmob: 130,
         ymob: 845,
@@ -114,8 +114,8 @@ export default function WhatWeDoSection() {
 
 • Certified to NFC 17-102 standard
         `,
-        x: 305,
-        y: 305,
+        x: 315,
+        y: 280,
         xmob: 265,
         ymob: 715,
         labelPos: "bottom",
@@ -130,11 +130,11 @@ export default function WhatWeDoSection() {
 
 • Low-resistance, long-lasting installations
         `,
-        x: 430,
-        y: 180,
+        x: 400,
+        y: 115,
         xmob: 425,
         ymob: 560,
-        labelPos: "bottom",
+        labelPos: "top",
       },
     ],
   },
@@ -168,11 +168,11 @@ export default function WhatWeDoSection() {
 
 • Validates against current IEC/IS standards
         `,
-        x: 0,
+        x: 20,
         y: 320,
         xmob: 440,
         ymob: 500,
-        labelPos: "top",
+        labelPos: "left",
       },
 
       {
@@ -184,8 +184,8 @@ export default function WhatWeDoSection() {
 
 • Ensures accurate, reliable readings
         `,
-        x: 420,
-        y: 140,
+        x: 400,
+        y: 110,
         xmob: 420,
         ymob: 720,
         labelPos: "top",
@@ -200,8 +200,8 @@ export default function WhatWeDoSection() {
 
 • Cuts energy waste and utility penalties
         `,
-        x: 290,
-        y: 245,
+        x: 280,
+        y: 240,
         xmob: 300,
         ymob: 880,
         labelPos: "bottom",
@@ -216,8 +216,8 @@ export default function WhatWeDoSection() {
 
 • Keeps you legally compliant and insurable
         `,
-        x: 290,
-        y: 410,
+        x: 300,
+        y: 400,
         xmob: 130,
         ymob: 700,
         labelPos: "bottom",
@@ -238,8 +238,8 @@ export default function WhatWeDoSection() {
 
 • Supports solar, wind, and hybrid projects
         `,
-        x: 440,
-        y: 245,
+        x: 420,
+        y: 180,
         xmob: 370,
         ymob: 560,
         labelPos: "top",
@@ -254,11 +254,11 @@ export default function WhatWeDoSection() {
 
 • Supports plant upgrades, expansions, and audits
         `,
-        x: 290,
-        y: 310,
+        x: 300,
+        y: 290,
         xmob: 270,
         ymob: 720,
-        labelPos: "bottom",
+        labelPos: "bottom left-[20px] ",
       },
     ],
   },
@@ -475,6 +475,7 @@ export default function WhatWeDoSection() {
                   inset-0
                   w-full
                   h-full
+
                   object-contain
                   opacity-90
                   pointer-events-none
@@ -487,11 +488,7 @@ export default function WhatWeDoSection() {
 
                   animate-[fadeScale_0.7s_ease]
 
-                  ${
-                    activeSection === "audit"
-                      ? "rotate-[-12deg]"
-                      : ""
-                  }
+                rotate-[-20deg]
                 `}
               />
             )}
