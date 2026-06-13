@@ -31,12 +31,12 @@ export default function AboutUsServicesSection() {
       description:
         "Power System Studies using ETAP, PSCAD/EMTDC, PSS/E, DIgSILENT, SKM, and DSA Tools; and EMI/EMC Studies including AC interference analysis for pipelines.",
       background: "/HomePageImg/WhatWeDoSection/Solution-1.png",
-      x: 270,
+      x: 320,
       y: 450,
       xmob: 110,
       ymob: 200,
-      labelLeft: "-100px",
-      labelTop: "-35px",
+      labelLeft: "-10px",
+      labelTop: "50px",
       labelWidth: "120px",
       mobileLabelLeft: "-55px",
       mobileLabelTop: "-22px",
@@ -51,11 +51,11 @@ export default function AboutUsServicesSection() {
         "Electrical and Fire Safety Audit powered by JEF Safety Audit Tool, Earthing Health Assessment of live installations and Instrumentation Earthing Audit for I&C systems.",
       background: "/HomePageImg/WhatWeDoSection/Solution-2.png",
       x: 380,
-      y: 350,
+      y: 330,
       xmob: 250,
       ymob: 250,
       labelLeft: "0px",
-      labelTop: "60px",
+      labelTop: "50px",
       labelWidth: "150px",
       mobileLabelLeft: "20px",
       mobileLabelTop: "20px",
@@ -69,12 +69,12 @@ export default function AboutUsServicesSection() {
       description:
         "Type-tested lightning protection components and systems, earthing and grounding system solutions, surge protective devices, and lightning risk assessment tools.",
       background: "/HomePageImg/WhatWeDoSection/Solution-5.png",
-      x: 500,
-      y: 230,
+      x: 460,
+      y: 170,
       xmob: 410,
       ymob: 300,
-      labelLeft: "-20px",
-      labelTop: "30px",
+      labelLeft: "0px",
+      labelTop: "50px",
       labelWidth: "120px",
       mobileLabelLeft: "0px",
       mobileLabelTop: "25px",
@@ -159,6 +159,7 @@ export default function AboutUsServicesSection() {
               md:block
               w-[420px]
               opacity-90
+              rotate-[-20deg]
             "
           />
 

@@ -16,12 +16,12 @@ const standards = [
 
 export default function ReferenceStandards() {
   return (
-    <section className="w-full bg-[#232427] py-14 md:py-20 font-montserrat">
+    <section className="w-full bg-[#232427] py-14 md:py-20 font-montserrat overflow-hidden">
       <div className="section-container px-5 md:px-0">
         <motion.h2
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
           className="mb-10 text-[#C02429] text-[22px] md:text-[32px] font-bold uppercase tracking-[4px]"
         >
@@ -29,19 +29,35 @@ export default function ReferenceStandards() {
         </motion.h2>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          className="flex max-w-[900px] flex-wrap gap-x-4 gap-y-9"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          className="grid max-w-[900px] grid-cols-1 gap-4 sm:grid-cols-2 md:gap-x-10 md:gap-y-5"
         >
           {standards.map((item) => (
-            <span
+            <motion.div
               key={item}
-              className="rounded-full bg-white px-7 py-3 text-[13px] md:text-[15px] text-[#232427] leading-none"
+              variants={{
+                hidden: { opacity: 0, x: -22 },
+                visible: { opacity: 1, x: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="flex items-start gap-4"
             >
-              {item}
-            </span>
+              <span className="mt-[8px] h-2.5 w-2.5 min-w-2.5 rounded-full bg-[#C02429]" />
+
+              <p className="text-white text-[14px] sm:text-[15px] md:text-[17px] leading-[1.7]">
+                {item}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

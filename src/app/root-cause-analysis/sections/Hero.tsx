@@ -33,9 +33,7 @@ const Hero = ({ videoSrc }: { videoSrc: string }) => {
             </h1>
 
             <p className="max-w-[1100px] text-[13px] leading-[1.45] text-white/90 sm:text-[15px] md:text-[20px] md:leading-[1.5]">
-              Advanced Computer Simulations to test your System before it goes
-              Live. Using industry-leading software, our experts build a virtual
-              model of your plant to find and fix weak spots early.
+              We offers comprehensive Root Cause Analysis (RCA) services to identify underlying issues, prevent recurring problems, and optimize system performance across industries.
             </p>
           </motion.div>
         </div>

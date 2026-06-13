@@ -43,7 +43,7 @@ function MainFooter() {
     const itemsLocation = [
         { name: 'India', path: 'https://www.jeftechno.com/' },
         { name: 'UAE', path: 'https://www.jefuae.com/' },
-        { name: 'USA', path: '/' },
+        
     ];
 
     const itemsBusiness = [

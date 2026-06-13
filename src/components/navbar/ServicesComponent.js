@@ -62,7 +62,7 @@ const ServicesComponent = () => {
     { icon: "/nav-clps.png", text: "CLPS", path: "/Products/clps-products" },
     { icon: "/nav-earthing-grounding.png", text: "EARTHING GROUNDING", path: "/Products/earthing-studies" },
     { icon: "/nav-ese.png", text: "ESE", path: "/Products/ese-lightning-protection" },
-    { icon: "/nav-ese-lightning-protection.png", text: "ESA NIMBUS", path: "/Products/lightning-protection-studies" },
+    { icon: "/nav-ese-lightning-protection.png", text: "ESE NIMBUS", path: "/Products/lightning-protection-studies" },
     { icon: "/nav-jef-shield.png", text: "JEF-SHIELD & E-BUILD", path: "/Products/JEF-shield" },
     { icon: "/nav-spd.png", text: "SURGE PROTECTION DEVICES", path: "/Products/surge-protective-devices" },
   ];
@@ -76,17 +76,18 @@ const ServicesComponent = () => {
   ];
 
   const services3 = [
-    { icon: "/nav-industrial.png", text: "INDUSTRIAL", path: "/power-system-studies" },
+    { icon: "/nav-industrial.png", text: "Industrial – Power System Studies", path: "/power-system-studies" },
     {
       icon: "/nav-renewable.png",
-      text: "POWER SYSTEM STUDIES",
+      text: "Renewable – Power System Studies",
       path: "/power-system-studies",
-      subItems: [
-        
-       
-        { text: "1. ROOT CAUSE ANALYSIS", path: "/root-cause-analysis" },
-      ],
+    
     },
+    {
+      icon: "/nav-rca.png",
+      text: "ROOT CAUSE ANALYSIS",
+      path: "/root-cause-analysis",
+    }
   ];
 
   return (

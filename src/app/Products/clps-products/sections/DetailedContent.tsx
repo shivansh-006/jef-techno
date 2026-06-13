@@ -11,7 +11,7 @@ const pages = [
     content: (
       <>
         <p>Lightning causes two distinct categories of damage.</p>
-        <br />
+        <br/>
         <p>
           The first is Direct physical damage. It occurs when strike current —
           ranging from a few kiloamperes to several hundred kiloamperes —
@@ -25,14 +25,14 @@ const pages = [
           lightning channel induce transient overvoltages onto cables and conductors,
           destroying components, corrupting data, and causing hidden failures.
         </p>
-        br
+        <br/>
 
         <p>
           Modern facilities depend on electronic controls, communications, and data
           networks. Lightning damage extends beyond repair costs to production downtime,
           data loss, safety system unavailability, and regulatory exposure.
         </p>
-        br
+        <br/>
         
         <p>
           A comprehensive lightning protection system addresses both: the external

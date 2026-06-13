@@ -41,7 +41,7 @@ const MobileMenu = () => {
       { label: "CLPS", path: "/Products/clps-products" },
       { label: "EARTHING GROUNDING", path: "/Products/earthing-studies" },
       { label: "ESE", path: "/Products/ese-lightning-protection" },
-      { label: "ESA NIMBUS", path: "/Products/lightning-protection-studies" },
+      { label: "ESE NIMBUS", path: "/Products/lightning-protection-studies" },
       { label: "JEF-SHIELD & E-BUILD", path: "/Products/JEF-shield" },
       { label: "SURGE PROTECTION DEVICES", path: "/Products/surge-protective-devices" },
     ],

@@ -7,37 +7,37 @@ const cards = [
   {
     id: 1,
     image: "/RCA/1.png",
-    title: "OIL & GAS",
+    title: "FULL STUDY RANGE, SINGLE ACCOUNTABLE TEAM",
     description:
-      "Investigating equipment failures, grounding deficiencies, lightning-related incidents, and power system disturbances across offshore platforms, refineries, LNG terminals, and petrochemical facilities.",
+      "From ETAP-based steady-state studies to PSCAD electromagnetic transient analysis, we deliver the complete study programme end-to-end — with one team responsible for both the analysis and the engineering outcomes.",
   },
   {
     id: 2,
     image: "/RCA/2.png",
-    title: "POWER UTILITIES",
+    title: "SOFTWARE INDEPENDENCE",
     description:
-      "Root cause investigations for substation failures, transmission line disturbances, protection maloperations, transformer incidents, and grid reliability issues.",
+      "ETAP, PSCAD/EMTDC, PSS/E, DIgSILENT, SKM, and DSA Tools — no software constraint on what we can offer or how we work.",
   },
   {
     id: 3,
     image: "/RCA/3.png",
-    title: "MANUFACTURING",
+    title: "OIL AND GAS SECTOR DEPTH",
     description:
-      "Identifying recurring electrical faults, automation failures, motor trips, power quality problems, and distribution system issues affecting production continuity.",
+      "Offshore platforms, subsea cables, high-voltage GIS, complex multi-source networks. We know the operating environment and the standards that govern it.",
   },
   {
     id: 4,
     image: "/RCA/4.png",
-    title: "PROCESS PLANTS",
+    title: "STANDARDS-REFERENCED DELIVERABLES",
     description:
-      "Analyzing electrical safety incidents, process interruptions, equipment breakdowns, and reliability concerns in chemical, pharmaceutical, and food processing facilities.",
+      "Every finding traceable to the specific standard clause that defines the requirement.",
   },
   {
     id: 5,
     image: "/RCA/5.png",
-    title: "WAREHOUSES & COMMERCIAL BUILDINGS",
+    title: "METHODOLOGY BEYOND THE MINIMUM",
     description:
-      "Diagnosing power outages, grounding faults, surge damage, lightning protection failures, and electrical reliability issues in commercial and critical infrastructure facilities.",
+      "We identify constraints and failure modes beyond standard studies, providing the project team with a complete picture before decisions become irreversible.",
   },
 ];
 const duplicatedCards = [...cards, ...cards];
@@ -66,7 +66,7 @@ export default function WhyPss() {
               text-[#C02429]
             "
           >
-            INDUSTRY APPLICATIONS
+            WHY JEF
           </h2>
 
          
@@ -77,7 +77,7 @@ export default function WhyPss() {
               md:text-[16px]
               leading-[1.7]
             ">
-  JEF’s Root Cause Analysis services cater to a wide range of industries, providing customized solutions for:
+  As a pioneer in Earthing integrity testing services, we at JEF have over two decades of experience covering 300,000 riser connections <br/> spread across 18 countries, 400 substations ranging from 33kV to 765kV process plants and other critical installations. With several patents <br/> in this field, our level of expertise is unmatched even as we keep innovating further.
 </p>
          
         </motion.div>
