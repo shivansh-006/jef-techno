@@ -15,7 +15,7 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/ESE/ESE.mp4" type="video/mp4" />
+          <source src="/Products/JEF Shield.mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -36,7 +36,7 @@ const Hero = () => {
 
               <div className=" mt-2  mx-auto w-full">
                 <p className="font-md sm:text-[12px] md:text-[18px] lg:text-[22px]">
-                  Get your Risk Assesment Report, Concept Design, Drawing & Bill of Materials in  99 sec! with a click of a button
+                  Get your Risk Assessment Report, Concept Design, Drawing & Bill of Materials in under 90 seconds, with a single click.
                 </p>
               </div>
             </motion.div>

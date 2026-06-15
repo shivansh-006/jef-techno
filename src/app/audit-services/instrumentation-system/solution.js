@@ -22,7 +22,7 @@ const InstrumentationSystemAudit = () => {
 
   return (
     <div className="bg-[#232427]">
-      <Hero videoSrc="/Audit Services/Instrumentation Earthing - Audit Services.mp4" />
+      <Hero videoSrc="\Audit Services\Instrumentation Earthing - Audit Services.mp4" />
       <ProductIntro 
        
       />

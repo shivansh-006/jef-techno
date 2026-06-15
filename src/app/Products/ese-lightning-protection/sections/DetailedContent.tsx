@@ -33,7 +33,7 @@ const pages = [
               <h4 className="text-[#C02429] text-[16px] md:text-[18px] font-bold uppercase">Internal LPS Components:</h4>
               <div className="flex flex-wrap gap-9 text-white/90 text-[14px] md:text-[16px]">
                 <span>• Equipotential bonding</span>
-                <span>• Surge protection Devices (SPD)</span>
+                <span>• Surge Protection Devices (SPD)</span>
               </div>
             </div>
           </div>
@@ -150,11 +150,11 @@ const pages = [
         customContent: (
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 mt-4">
             <div className="flex-1">
-              <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                 The NF C 17-102 standard defines the testing and performance requirements for ESE lightning protection systems. It ensures that products are tested under simulated lightning conditions to verify their effectiveness.
               </p>
               <br />
-              <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify">
+              <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                 The following flowchart gives the sequence of tests carried out on a sample during Type Testing of ESE.
               </p>
             </div>
@@ -273,7 +273,7 @@ const DetailedContent = () => {
                 if (React.isValidElement(child) && child.type === "p") {
                   const element = child as React.ReactElement<{ children?: React.ReactNode }>;
                   return (
-                    <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify">
+                    <p key={i} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                       {element.props.children}
                     </p>
                   );
@@ -317,7 +317,7 @@ const DetailedContent = () => {
                       <h4 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-bold uppercase">
                         {sub.tagDescriptions[activeTags[si]].title}
                       </h4>
-                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white whitespace-pre-line">
+                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white whitespace-pre-line">
                         {sub.tagDescriptions[activeTags[si]].description}
                       </p>
                       <button
@@ -338,9 +338,9 @@ const DetailedContent = () => {
                         className="mb-4"
                       >
                         {sub.body.split("\n\n").map((para, pi) => (
-                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white/80 text-justify">
-                            {para}
-                          </p>
+                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify">
+                          {para}
+                        </p>
                         ))}
                       </motion.div>
                     )
@@ -387,7 +387,7 @@ const DetailedContent = () => {
               )}
 
               {sub.footer && (
-                <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] mt-6 text-white italic opacity-80">
+                <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] mt-6 text-white italic opacity-80">
                   {sub.footer}
                 </p>
               )}
@@ -426,8 +426,8 @@ const DetailedContent = () => {
                     {/* Label */}
                     <span
                       className={`
-                        text-[10px] md:text-[14px] lg:text-[16px] 
-                        tracking-[1px] md:tracking-[2px] 
+                        text-[12px] md:text-[18px] 
+                        tracking-[1px] md:tracking-[2.5px] 
                         font-medium 
                         uppercase 
                         mt-1 

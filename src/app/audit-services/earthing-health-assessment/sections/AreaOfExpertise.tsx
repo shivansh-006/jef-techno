@@ -130,7 +130,7 @@ export default function ExcellenceinElectricalEngineering() {
                 font-bold
               "
             >
-              EARTHING HEALTH ASSESMENT DELIVERABLES
+              EARTHING HEALTH ASSESSMENT DELIVERABLES
             </motion.h1>
 
           
@@ -302,9 +302,7 @@ export default function ExcellenceinElectricalEngineering() {
                   {/* CARD */}
                   <motion.div
                     animate={{
-                      backgroundColor: isActive
-                        ? "#F9F7F2"
-                        : "rgba(27, 24, 24, 0.85)",
+                      backgroundColor: "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{
                       duration: 0.5,
@@ -327,9 +325,7 @@ export default function ExcellenceinElectricalEngineering() {
                   >
                     <motion.p
                       animate={{
-                        color: isActive
-                          ? "#312d2d"
-                          : "#e5e7eb",
+                        color: "#e5e7eb",
                       }}
                       transition={{
                         duration: 0.5,

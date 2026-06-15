@@ -29,7 +29,7 @@ const Hero = ({ title, videoSrc }) => {
             className="flex max-w-[1200px] flex-col gap-3 px-5 text-white sm:px-6 md:px-0"
           >
             <h1 className="font-montserrat text-[24px] font-bold uppercase leading-[1.15] tracking-[0.5px] sm:text-[30px] md:text-[42px] md:leading-[1.1]">
-              POWER SYSTEMS STUDIES
+              POWER SYSTEM STUDIES
             </h1>
 
             <p className="max-w-[1100px] text-[13px] leading-[1.45] text-white/90 sm:text-[15px] md:text-[20px] md:leading-[1.5]">

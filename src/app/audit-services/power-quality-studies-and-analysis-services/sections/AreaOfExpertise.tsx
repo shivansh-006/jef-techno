@@ -142,15 +142,13 @@ export default function AreaOfExpertise() {
 
                   <motion.div
                     animate={{
-                      backgroundColor: isActive
-                        ? "#F9F7F2"
-                        : "rgba(27, 24, 24, 0.85)",
+                      backgroundColor: "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{ duration: 0.5 }}
                     className="mt-[28px] md:mt-[32px] p-6 md:p-8 min-h-[260px] md:h-[370px]"
                   >
                     <motion.p
-                      animate={{ color: isActive ? "#312d2d" : "#e5e7eb" }}
+                      animate={{ color: "#e5e7eb" }}
                       transition={{ duration: 0.5 }}
                       className="text-[14px] md:text-[15px] leading-[180%]"
                     >

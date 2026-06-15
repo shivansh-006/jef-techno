@@ -244,7 +244,7 @@ export default function DetailedContent() {
                 return (
                   <p
                     key={i}
-                    className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify"
+                    className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify"
                   >
                     {element.props.children}
                   </p>
@@ -270,7 +270,7 @@ export default function DetailedContent() {
                       {sub.tagDescriptions[activeTags[si]].title}
                     </h3>
 
-                    <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white/90 text-justify">
+                    <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                       {sub.tagDescriptions[activeTags[si]].description}
                     </p>
 
@@ -302,7 +302,7 @@ export default function DetailedContent() {
                     </div>
 
                     {sub.body && (
-                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify">
+                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
                         {sub.body}
                       </p>
                     )}
@@ -333,7 +333,7 @@ export default function DetailedContent() {
                   </div>
 
                   <span
-                    className={`text-[10px] md:text-[12px] lg:text-[14px] tracking-[1px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
+                    className={`text-[12px] md:text-[18px] tracking-[1px] md:tracking-[2.5px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
                       isCurrent
                         ? "text-[#C02429]"
                         : "text-[#d4d0c8] group-hover:text-white"

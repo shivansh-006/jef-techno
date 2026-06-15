@@ -44,21 +44,24 @@ export default function OurCertification() {
               },
             },
           }}
-          className="flex max-w-[950px] flex-col gap-5"
+          className="flex max-w-[1100px] flex-col gap-5"
         >
           {standards.map((item) => (
-            <motion.span
+            <motion.div
               key={item}
               variants={{
                 hidden: { opacity: 0, x: -24 },
                 visible: { opacity: 1, x: 0 },
               }}
               transition={{ duration: 0.55, ease: "easeOut" }}
-              whileHover={{ scale: 1.02 }}
-              className="w-fit max-w-full rounded-full bg-white px-5 sm:px-7 md:px-10 py-3 text-[12px] sm:text-[14px] md:text-[20px] text-[#232427] leading-[1.5]"
+              className="flex items-start gap-4"
             >
-              {item}
-            </motion.span>
+              <span className="mt-[9px] h-2.5 w-2.5 min-w-2.5 rounded-full bg-[#C02429]" />
+
+              <p className="text-white text-[13px] sm:text-[15px] md:text-[20px] leading-[1.7]">
+                {item}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

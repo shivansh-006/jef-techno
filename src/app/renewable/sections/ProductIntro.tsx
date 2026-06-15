@@ -51,7 +51,7 @@ export default function ProductIntro() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          RENEWABLE
+          RENEWABLE – POWER SYSTEM STUDIES
         </motion.h1>
       </header>
     </section>

@@ -88,9 +88,9 @@ export default function WhyChooseJEFSection() {
             {/* DESCRIPTION */}
             <p className="text-[15px] sm:text-[16px] font-light leading-[170%] text-white font-montserrat">
               Our patented Smart Digitization process delivers consistency,
-              speed, accuracy and reliability at scale. Trusted by over 450+
+              speed, accuracy and reliability at scale. Trusted by 450+
               customers globally, it delivers secure, standardized reports
-              with customizable formats - over 15,000+ reports and 600k+
+              with customizable formats - 15K+ reports and 600K+
               data points captured to date.
             </p>
 

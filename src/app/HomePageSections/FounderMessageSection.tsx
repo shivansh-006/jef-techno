@@ -39,8 +39,7 @@ export default function FounderMessageSection() {
                 </p>
 
                 <p>
-                  Over the last 30 years of our existence, we have served more
-                  than 10K+
+                  Over the last 30 years of our existence, we have served 10K+
                   <br />
                   customers in 30+ countries. Consistently meeting & exceeding
                   their

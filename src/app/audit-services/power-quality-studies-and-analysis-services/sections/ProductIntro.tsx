@@ -17,7 +17,7 @@ export default function ProductIntro({
   const [expanded, setExpanded] = useState(false);
 
   const introText =
-    "At JEF, we specialize in providing top-notch Power Quality Studies to ensure your electrical systems operate efficiently and reliably. With years of experience and a team of experts, we help you identify and mitigate power quality issues that can affect your operations.";
+    "At JEF, we specialise in comprehensive Power Quality Studies to ensure your electrical systems operate efficiently and reliably. With years of experience and a team of experts, we help you identify and mitigate power quality issues that can affect your operations.";
 
   const expandedText =
     "JEF has a large number of class ‘A’ power analysers and highly trained engineers & technicians to carry out complete power quality measurements for various applications including Renewable Energy, Industries, Airports, Data Centre etc.\n\nWith a large team of qualified engineers around the globe, we cater to the requirements of clients in the entire India, GCC & North Africa areas.";

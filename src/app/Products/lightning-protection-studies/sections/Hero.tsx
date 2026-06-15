@@ -14,7 +14,7 @@ const Hero = () => {
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source
-          src="/Products/ESE.mp4"
+          src="/Products/ESA.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -42,7 +42,7 @@ const Hero = () => {
             <p className="max-w-[1000px] text-[13px] leading-[1.45] text-white/90 sm:text-[15px] md:text-[20px] md:leading-[1.5]">
               Early Streamer Emission technology uses the atmospheric gradient
               to generate ionization which can subsequently increase the
-              protected volume. These facilities the protection of large area,
+              protected volume. This facilitates the protection of large area,
               simplifying and reducing material and installation costs.
             </p>
           </motion.div>

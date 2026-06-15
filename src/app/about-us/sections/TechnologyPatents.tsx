@@ -25,7 +25,7 @@ const technologyData = [
     title: "JEF Safety Audit Tool",
     image: "/HomePageImg/IndustriesWeServe/weServe1.png",
     description:
-      "World's first automated safety audit tool. 16000+ reports, 630,000+ data points, 230,000+ images, zero data mix-up. Patented.",
+      "World's first automated safety audit tool. 15K+ reports, 630K+ data points, 230K+ images, zero data mix-up. Patented.",
   },
 
   {

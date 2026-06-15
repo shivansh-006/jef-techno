@@ -12,13 +12,13 @@ const pages = [
       <>
         <p>
           Low resistance alone does not define a good earthing system — impedance
-          determines how the system behaves during actual fault conditions
+          determines how the system behaves during actual fault conditions.
         </p>
         <br />
         <p>
           High loop impedance limits fault current, preventing protective devices
           from detecting and clearing faults — the root cause of prolonged fault
-          events, equipment damage, fire, and electric shock
+          events, equipment damage, fire, and electric shock.
         </p>
       </>
     ),
@@ -358,7 +358,7 @@ const DetailedContent = () => {
                   return (
                     <p
                       key={i}
-                      className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white text-justify"
+                      className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify"
                     >
                       {element.props.children}
                     </p>
@@ -393,7 +393,7 @@ const DetailedContent = () => {
                           [si]: prev[si] === ti ? undefined : ti,
                         }))
                       }
-                      className="text-[#C02429] text-[14px] md:text-[16px] font-medium underline underline-offset-4 text-left"
+                      className="text-[#C02429] text-[16px] md:text-[18px] lg:text-[20px] font-semibold underline underline-offset-4 text-left"
                     >
                       • {tag}
                     </button>
@@ -423,7 +423,7 @@ const DetailedContent = () => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 18 }}
                       transition={{ duration: 0.45, ease: "easeOut" }}
-                      className="mt-5 whitespace-pre-line text-[15px] md:text-[18px] lg:text-[20px] font-normal leading-[1.7] text-white/90"
+                      className="mt-5 whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white"
                     >
                       {sub.tagDescriptions[activeTags[si]]}
                     </motion.p>
@@ -470,7 +470,7 @@ const DetailedContent = () => {
             </div>
 
             <span
-              className={`text-[10px] md:text-[12px] tracking-[1px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
+              className={`text-[12px] md:text-[18px] tracking-[1px] md:tracking-[2.5px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
                 isCurrent
                   ? "text-[#C02429]"
                   : "text-[#d4d0c8] group-hover:text-white"

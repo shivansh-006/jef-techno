@@ -7,11 +7,11 @@ const navItems = [
   { label: "HOME", isActive: true },
   { label: "OUR BUSINESS", isActive: true },
   { label: "PRODUCTS", isActive: true },
-  { label: "ESE", isActive: false },
+  { label: "JEF SHIELD", isActive: false },
 ];
 
 export default function ProductIntro() {
-  const [expanded, setExpanded] = useState(false);
+  
 
   return (
     <section className="flex flex-col bg-[#232427] overflow-hidden -mb-11 md:mb-0">

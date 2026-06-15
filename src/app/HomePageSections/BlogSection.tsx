@@ -7,38 +7,38 @@ export default function BlogsSection() {
   const blogData = [
     {
       id: 2,
-      title: "EMI BETWEEN OVERHEAD POWER LINES & BURIED PIPELINES",
+      title: "Ram Mandir Lightning Protection System | 200kA Lightning Protection | JEF Techno",
       imageSrc: "/BlogImg/HomePageBlog4.png",
       description:
-        "The Analysis of electromagnetic interference between high-voltage overhead power transmission lines and nearby gas or oil pipeline has been a topic of growing interest for many years.",
-      path: "/blog/blog2",
+        "Discover how JEF built the world's first complete sequentially type-tested 200kA lightning protection system for the Shree Ram Janmabhoomi Temple in Ayodhya.",
+      path: "/blog/blog8",
     },
     {
       id: 1,
       title:
         "PQ SERVICES – ECONOMIC BENEFITS OF POWER FACTOR AND HARMONIC STUDIES",
       imageSrc: "/BlogImg/HomePageBlog1.png",
-      path: "/blog/blog1",
+      path: "/blog",
     },
     {
       id: 3,
       title: "Ensuring Electrical Safety in Greenfield Projects",
       imageSrc: "/BlogImg/HomePageBlog2.png",
-      path: "/blog/blog3",
+      path: "/blog",
     },
     {
       id: 4,
       title:
         "Measurement, simulation, validation - The 3 key steps of Power System Studies",
       imageSrc: "/BlogImg/HomePageBlog3.png",
-      path: "/blog/blog4",
+      path: "/blog",
     },
     {
       id: 5,
       title:
         "Importance of Electrical Safety in Chemical and Pharma Industries: Best Practices for Preventing Workplace Accidents",
       imageSrc: "/BlogImg/Blog 5.png",
-      path: "/blog/blog5",
+      path: "/blog/blog4",
     },
     {
       id: 6,
@@ -109,6 +109,9 @@ export default function BlogsSection() {
               }}
               viewport={{ once: true }}
               style={{ willChange: "transform, opacity" }}
+              onClick={()=>{
+                window.location.href = `/blog`
+              }}
               className="
                 relative
                 overflow-hidden
@@ -261,7 +264,7 @@ export default function BlogsSection() {
               >
                 April 2026
               </span>
-               <Link href={"/"}>
+               <Link href={blogData[0].path}>
           <div
             className="
               mt-[35px]

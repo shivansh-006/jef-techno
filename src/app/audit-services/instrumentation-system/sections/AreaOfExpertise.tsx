@@ -287,9 +287,7 @@ const sectors = [
                   {/* CARD */}
                   <motion.div
                     animate={{
-                      backgroundColor: isActive
-                        ? "#F9F7F2"
-                        : "rgba(27, 24, 24, 0.85)",
+                      backgroundColor: "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{
                       duration: 0.5,
@@ -312,9 +310,7 @@ const sectors = [
                   >
                     <motion.p
                       animate={{
-                        color: isActive
-                          ? "#312d2d"
-                          : "#e5e7eb",
+                        color: "#e5e7eb",
                       }}
                       transition={{
                         duration: 0.5,

@@ -13,12 +13,12 @@ const pages = [
     title: "WHAT ACTUALLY GOES WRONG",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           The following 12 factors are identified as capable of interrupting the
           operation of instrumentation systems
         </p>
 
-        <ul className="list-disc space-y-3 pl-5">
+        <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>Surges, Spikes, and Glitches</li>
           <li>Leakage Current</li>
           <li>Circulating Current</li>
@@ -40,7 +40,7 @@ const pages = [
     title: "THE SCALE OF THE PROBLEM IN OPERATING PLANTS",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           The challenge is compounded by the sheer scale of instrumentation
           infrastructure in a typical process plant or generating station. A
           medium-sized plant may have hundreds of panels, thousands of junction
@@ -51,9 +51,9 @@ const pages = [
           additions that incrementally degrade the original design intent.
         </p>
 
-        <p>Errors accumulate silently.</p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">Errors accumulate silently.</p>
 
-        <ul className="list-disc space-y-5 pl-5">
+        <ul className="list-disc space-y-5 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>A shield grounded at both ends in one junction box.</li>
           <li>
             A signal ground bar inadvertently connected to a PE bar during a
@@ -62,7 +62,7 @@ const pages = [
           <li>An instrument earth pit left isolated from the plant grid.</li>
         </ul>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           None of these individually cause an immediate, visible failure.
           Together, they create the conditions for the intermittent,
           hard-to-diagnose problems that operations teams experience as
@@ -73,11 +73,11 @@ const pages = [
     ),
   },
   {
-    label: "WHY STANDARD\nELECTRICAL TESTING",
+    label: "WHY STANDARD\nELECTRICAL TESTING IS NOT ENOUGH",
     title: "WHY STANDARD ELECTRICAL TESTING DOES NOT SOLVE THIS",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Routine electrical testing — insulation resistance, continuity, earth
           pit resistance — is designed for the protective earthing system. It
           does not examine the signal reference ground, shield termination
@@ -89,7 +89,7 @@ const pages = [
           problems.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           This is the gap that a specialist Instrumentation Earthing Audit
           addresses.
         </p>
@@ -101,7 +101,7 @@ const pages = [
     title: "WHAT IS AN INSTRUMENTATION EARTHING AUDIT?",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           An Instrumentation Earthing Audit is a detailed, structured and
           end-to-end technical evaluation of the grounding architecture that
           supports instrumentation and control systems in industrial facilities.
@@ -114,7 +114,7 @@ const pages = [
           globally accepted standards.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Aligned with IEEE 1050-2004, IEEE 1100-2005, and IEC 61000-5-2, the
           audit combines precision measurements—such as shield loop current,
           millivolt drop, continuity, EM field intensity, and power
@@ -132,7 +132,7 @@ const pages = [
     title: "JEF APPROACH",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF’s Instrumentation Earthing Audit covers 15 structured tests and
           inspections applied across panels, junction boxes, field instruments.
           The scope escalates logically: where shield loop current measurements
@@ -145,9 +145,9 @@ const pages = [
           limits prescribed in standards there by ensuring a fool proof system.
         </p>
 
-        <p>The approach involves 3 phases</p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">The approach involves 3 phases</p>
 
-        <ul className="list-disc space-y-5 pl-5">
+        <ul className="list-disc space-y-5 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>Phase -1 – Audit and Identification of gaps / anomalies</li>
           <li>Phase-2 – Rectification of anomalies</li>
           <li>Phase -3 – Retesting after rectification.</li>
@@ -227,7 +227,7 @@ export default function DetailedContent() {
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[18px] sm:text-[22px] md:text-[28px] font-bold uppercase tracking-[4px] leading-[1.5]"
+          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
         >
           {page.title}
         </motion.h2>
@@ -237,7 +237,7 @@ export default function DetailedContent() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="flex-1 text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.65] text-white/95"
+          className="flex-1"
         >
           <div className="flex max-w-[1500px] flex-col gap-6">
             {page.content}
@@ -272,7 +272,7 @@ export default function DetailedContent() {
                   </div>
 
                   <span
-                    className={`whitespace-pre-line text-[10px] sm:text-[11px] md:text-[13px] lg:text-[16px] uppercase tracking-[1.8px] leading-[1.35] transition-all ${
+                    className={`whitespace-pre-line text-[12px] md:text-[18px] uppercase tracking-[1px] md:tracking-[2.5px] font-medium leading-[1.35] transition-all ${
                       isCurrent
                         ? "text-[#C02429]"
                         : "text-[#d4d0c8] group-hover:text-white"

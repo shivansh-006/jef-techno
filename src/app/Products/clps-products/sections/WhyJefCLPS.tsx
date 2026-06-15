@@ -1,6 +1,7 @@
 "use client";
 
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const cards = [
@@ -51,6 +52,24 @@ const cards = [
 const duplicatedCards = [...cards, ...cards];
 
 export default function WhyJefCLPS() {
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Add the keyframe animation dynamically to the document
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes scroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <section className="w-full bg-[#232427] py-16 md:py-[72px] overflow-hidden">
       <div className="section-container">
@@ -79,32 +98,22 @@ export default function WhyJefCLPS() {
 
          
            
-           <p className="
-              text-white
-              text-[14px]
-              md:text-[16px]
-              leading-[1.7]
-            ">
-  As a pioneer in Earthing integrity testing services, we at JEF have over two decades of experience covering 300,000 riser connections
-  <br />
-  spread across 18 countries, 400 substations ranging from 33kV to 765kV process plants and other critical installations. With several patents
-  <br />
-  in this field, our level of expertise is unmatched even as we keep innovating further.
-</p>
+           
+
          
         </motion.div>
 
         {/* Infinite Slider */}
-        <div className="mt-12 md:mt-20 relative overflow-hidden w-full">
-          <motion.div
+        <div 
+          className="mt-12 md:mt-20 relative overflow-hidden w-full"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div
             className="flex gap-6 md:gap-12 w-max"
-            animate={{
-              x: ["0%", "-50%"],
-            }}
-            transition={{
-              duration: 45,
-              ease: "linear",
-              repeat: Infinity,
+            style={{
+              animation: "scroll 45s linear infinite",
+              animationPlayState: isPaused ? "paused" : "running",
             }}
           >
             {duplicatedCards.map((card, index) => (
@@ -173,7 +182,7 @@ export default function WhyJefCLPS() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

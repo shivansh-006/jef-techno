@@ -13,13 +13,13 @@ const pages = [
     title: "THE GAP IN CONVENTIONAL EARTHING ASSESSMENT",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Standard practice is to measure the resistance of the earth electrode
           and compare it against the design value. If within acceptable limits,
           the earthing system is considered satisfactory and safe.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           This has a significant limitation addressed in both IEEE Std 80 and
           IEEE Std 81. A ground grid has multiple parallel current paths. A
           corroded joint, disconnected riser, or isolated grid section creates a
@@ -29,14 +29,14 @@ const pages = [
           all, yet the resistance test gives no indication regarding the defects.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           A facility can show a satisfactory earth resistance measurement while
           specific switchgear panels, transformer neutrals, or plant structures
           have open or high-resistance connections to the grid that would prevent
           the protection system from operating timely during a fault.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF’s Earthing Health Assessment is designed specifically to address
           these gaps.
         </p>
@@ -48,12 +48,12 @@ const pages = [
     title: "WHY EARTHING SYSTEMS DETERIORATE",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           An earthing system which is adequate during commissioning may become
           deficient over its service life through several mechanisms:
         </p>
 
-        <ul className="list-disc space-y-5 pl-5">
+        <ul className="list-disc space-y-5 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white">
           <li>
             Environmental corrosion — electrochemical interaction between buried
             conductors and soil causes progressive corrosion of conductor
@@ -83,7 +83,7 @@ const pages = [
           </li>
         </ul>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Periodic Comprehensive health assessment — not just resistance
           measurement — is necessary to identify these deficiencies before they
           compromise safety.
@@ -96,9 +96,11 @@ const pages = [
     title: "WHAT IS AT STAKE",
     content: (
       <>
-        <p>A deficient earthing system puts three things at risk:</p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
+          A deficient earthing system puts three things at risk:
+        </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           A. Protection system operation — The CEA (Measures Relating to Safety
           and Electric Supply) Regulations, 2023 require that earthing system
           impedance be maintained as low as possible to ensure timely breaker
@@ -110,7 +112,7 @@ const pages = [
           potentials larger than the safe limits.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           B. Personnel safety — During a fault, current flowing through the
           earthing system causes Ground Potential Rise (GPR). IEEE Std 80 defines
           tolerable limits for touch and step potentials as a function of
@@ -119,7 +121,7 @@ const pages = [
           fibrillation, and fatality.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           C. Equipment reliability — High neutral-to-ground voltages,
           electromagnetic interference from inadequate equipotential bonding, and
           nuisance tripping of earth fault protection are symptoms of earthing
@@ -136,7 +138,7 @@ const pages = [
     title: "JEF EARTHING HEALTH ASSESSMENT",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF’s assessment covers the full circuit from the equipment to be
           protected, through the earthing conductor, through the buried grid, to
           the electrode — not just the electrode in isolation. It is structured
@@ -145,7 +147,7 @@ const pages = [
           high-resistance connections, and inadequate earth loop impedance.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           All measurements are carried out on live systems, without requiring a
           shutdown, with sophisticated meters and test equipment and these values
           are processed using our proprietary algorithm to determine the
@@ -160,11 +162,11 @@ const pages = [
     content: (
       <div className="grid gap-14 lg:grid-cols-2">
         <div>
-          <h3 className="mb-5 text-[#C02429] text-[20px] md:text-[24px] font-bold uppercase tracking-[4px] leading-[1.6]">
+          <h3 className="mb-5 text-[#C02429] text-[18px] md:text-[20px] font-bold uppercase tracking-[1px] leading-[1.4]">
             EHV SUBSTATION <br /> EARTHING ASSESSMENT
           </h3>
 
-          <ul className="list-disc space-y-3 pl-5">
+          <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
             <li>Soil Resistivity Test</li>
             <li>Earth Electrode Resistance Test</li>
             <li>Grid Resistance</li>
@@ -184,11 +186,11 @@ const pages = [
         </div>
 
         <div>
-          <h3 className="mb-5 text-[#C02429] text-[20px] md:text-[24px] font-bold uppercase tracking-[4px] leading-[1.6]">
+          <h3 className="mb-5 text-[#C02429] text-[18px] md:text-[20px] font-bold uppercase tracking-[1px] leading-[1.4]">
             LV EARTHING ASSESSMENT <br /> INDUSTRIAL AND COMMERCIAL
           </h3>
 
-          <ul className="list-disc space-y-3 pl-5">
+          <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
             <li>Soil Resistivity Test</li>
             <li>Earth Electrode Resistance Test</li>
             <li>Earth Loop Impedance Test</li>
@@ -207,9 +209,9 @@ const pages = [
     title: "WHAT THE ASSESSMENT IDENTIFIES AND DELIVERS",
     content: (
       <>
-        <p className="text-[#C02429] font-medium">What We Identify</p>
+        <p className="text-[#C02429] text-[16px] md:text-[18px] lg:text-[20px] font-medium">What We Identify</p>
 
-        <ul className="list-disc space-y-5 pl-5">
+        <ul className="list-disc space-y-5 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>Open and defective risers</li>
           <li>Grid islanding (intra-grid)</li>
           <li>Disconnected grids (inter-grid)</li>
@@ -218,7 +220,7 @@ const pages = [
           <li>Corrosion-affected conductors and connections</li>
         </ul>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Our study doesn’t end with identification of anomalies but will also
           provide corrective actions with practically implementable solutions.
         </p>
@@ -230,13 +232,13 @@ const pages = [
     title: "WHY JEF FOR COMPREHENSIVE EHA?",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF combines deep field experience, patented testing methodology,
           sophisticated instruments, and proprietary analysis to deliver a
           comprehensive understanding of the true health of an earthing system.
         </p>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           The assessment is carried out without shutdown and is designed to
           detect practical field failures that conventional resistance
           measurements often miss.
@@ -249,13 +251,13 @@ const pages = [
     title: "APPLICATION AREAS",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF provides earthing health assessment and grounding testing services
           across:
         </p>
 
         <div className="grid gap-3 md:grid-cols-2">
-          <ul className="list-disc space-y-3 pl-5">
+          <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
             <li>AIS and GIS substations — EHV, HV, and MV</li>
             <li>Transmission</li>
             <li>Power generating stations</li>
@@ -266,7 +268,7 @@ const pages = [
             <li>Automobile and heavy industries</li>
           </ul>
 
-          <ul className="list-disc space-y-3 pl-5">
+          <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
             <li>Chemical and paints</li>
             <li>Pharmaceutical</li>
             <li>Data centres</li>
@@ -280,7 +282,7 @@ const pages = [
           </ul>
         </div>
 
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           JEF has conducted comprehensive earthing health assessments at over
           500+ substations and carried out earth grid simulation for over 650+
           grids.
@@ -360,7 +362,7 @@ export default function DetailedContent() {
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[18px] sm:text-[22px] md:text-[28px] font-bold uppercase tracking-[4px] leading-[1.5]"
+          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
         >
           {page.title}
         </motion.h2>
@@ -370,7 +372,7 @@ export default function DetailedContent() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="flex-1 text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.65] text-white/95"
+          className="flex-1"
         >
           <div className="flex max-w-[1500px] flex-col gap-6">
             {page.content}
@@ -405,7 +407,7 @@ export default function DetailedContent() {
                   </div>
 
                   <span
-                    className={`whitespace-pre-line text-[10px] sm:text-[11px] md:text-[13px] lg:text-[16px] uppercase tracking-[1.8px] leading-[1.35] transition-all ${
+                    className={`whitespace-pre-line text-[12px] md:text-[18px] uppercase tracking-[1px] md:tracking-[2.5px] font-medium leading-[1.35] transition-all ${
                       isCurrent
                         ? "text-[#C02429]"
                         : "text-[#d4d0c8] group-hover:text-white"

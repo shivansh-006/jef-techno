@@ -11,7 +11,7 @@ const ServiceItem = ({ icon, text, path, isVisible }) => (
         : "opacity-0 translate-y-4 invisible"
     }`}
   >
-    <div className="w-13 h-13 flex items-center justify-center shrink-0">
+    <div className="w-14 h-14 flex items-center justify-center shrink-0">
       <img
         loading="lazy"
         src={icon}
@@ -36,7 +36,7 @@ const ServiceItem2 = ({ icon, text, path, isVisible }) => (
         : "opacity-0 translate-y-4 invisible"
     }`}
   >
-    <div className="w-13 h-13 flex items-center justify-center shrink-0">
+    <div className="w-14 h-14 flex items-center justify-center shrink-0">
       <img
         loading="lazy"
         src={icon}
@@ -62,31 +62,32 @@ const ServicesComponent = () => {
     { icon: "/nav-clps.png", text: "CLPS", path: "/Products/clps-products" },
     { icon: "/nav-earthing-grounding.png", text: "EARTHING GROUNDING", path: "/Products/earthing-studies" },
     { icon: "/nav-ese.png", text: "ESE", path: "/Products/ese-lightning-protection" },
-    { icon: "/nav-ese-lightning-protection.png", text: "ESA LIGHTNING PROTECTION", path: "/Products/lightning-protection-studies" },
+    { icon: "/nav-ese-lightning-protection.png", text: "ESE NIMBUS", path: "/Products/lightning-protection-studies" },
     { icon: "/nav-jef-shield.png", text: "JEF-SHIELD & E-BUILD", path: "/Products/JEF-shield" },
-    { icon: "/nav-spd.png", text: "SPD", path: "/Products/surge-protective-devices" },
+    { icon: "/nav-spd.png", text: "SURGE PROTECTION DEVICES", path: "/Products/surge-protective-devices" },
   ];
 
   const services2 = [
     { icon: "/nav-ehs.png", text: "EARTHING HEALTH ASSESSMENT", path: "/audit-services/earthing-health-assessment" },
-    { icon: "/nav-ie.png", text: "INSTRUMENTATION SYSTEMS", path: "/audit-services/instrumentation-system" },
-    { icon: "/nav-lps.png", text: "LIGHTNING PROTECTION AUDIT", path: "/audit-services/lightning-protection-sytem-adequacy-audit" },
+    { icon: "/nav-ie.png", text: "INSTRUMENTATION EARTHING SYSTEM", path: "/audit-services/instrumentation-system" },
+    { icon: "/nav-lps.png", text: "LIGHTNING PROTECTION AUDIT", path: "/audit-services/lightning-protection-system-adequacy-audit" },
     { icon: "/nav-pqs.png", text: "POWER QUALITY STUDIES", path: "/audit-services/power-quality-studies-and-analysis-services" },
-    { icon: "/nav-efs.png", text: "ELECTRICAL FIRE SAFETY", path: "/audit-services/electical-and-fire-safety-audit" },
+    { icon: "/nav-efs.png", text: "ELECTRICAL & FIRE SAFETY", path: "/audit-services/electrical-and-fire-safety-audit" },
   ];
 
   const services3 = [
-    { icon: "/nav-industrial.png", text: "INDUSTRIAL", path: "/power-system-studies" },
+    { icon: "/nav-industrial.png", text: "Industrial – Power System Studies", path: "/power-system-studies" },
     {
       icon: "/nav-renewable.png",
-      text: "RENEWABLE",
-      path: "/renewable",
-      subItems: [
-        
-        { text: "1. PSS", path: "/power-system-studies" },
-        { text: "2. RCA", path: "/root-cause-analysis" },
-      ],
+      text: "Renewable – Power System Studies",
+      path: "/power-system-studies",
+    
     },
+    {
+      icon: "/nav-rca.png",
+      text: "ROOT CAUSE ANALYSIS",
+      path: "/root-cause-analysis",
+    }
   ];
 
   return (
@@ -154,12 +155,12 @@ const ServicesComponent = () => {
                   {services3.map((service, index) => (
                     <div key={index} className="flex flex-col">
                       <div className={`flex gap-5 items-center mt-8 first:mt-10 min-h-[50px] transition-all duration-500 ease-in-out ${isHovered3 ? "opacity-100 translate-y-0 visible" : "opacity-0 translate-y-4 invisible"}`}>
-                        <div className="w-13 h-13 flex items-center justify-center shrink-0">
+                        <div className="w-14 h-14 flex items-center justify-center shrink-0">
                           <img loading="lazy" src={service.icon} alt="" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex items-center gap-4">
                           <Link href={service.path}>
-                            <div className="text-sm uppercase tracking-[3.36px] font-medium hover:text-gray-400">
+                            <div className="text-[13px] whitespace-normal uppercase tracking-[3.36px] font-medium hover:text-gray-400">
                               {service.text}
                             </div>
                           </Link>
@@ -175,7 +176,7 @@ const ServicesComponent = () => {
                         <div className={`ml-[72px] mt-4 flex flex-col gap-6 transition-all duration-700 delay-150 ${isHovered3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
                           {service.subItems.map((sub, i) => (
                             <Link key={i} href={sub.path}>
-                              <div className="text-xl font-medium tracking-[3px] text-white hover:text-red-700 transition-colors duration-300">
+                              <div className="text-[13px] whitespace-normal font-medium tracking-[3px] text-white  ml-2 hover:text-red-700 transition-colors duration-300">
                                 {sub.text}
                               </div>
                             </Link>

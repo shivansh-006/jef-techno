@@ -20,7 +20,7 @@ const cards = [
     image: "/EHA/eha-3.png",  
     title: "LOCATION-SPECIFIC FINDINGS",
     description:
-      "JEF’s methodology pin points the specific location of each deficiency — open riser, isolated grid section, or corroded connection — enabling targeted corrective action.",
+      "JEF’s methodology pinpoints the specific location of each deficiency — open riser, isolated grid section, or corroded connection — enabling targeted corrective action.",
   },
   {
     image: "/EHA/eha-4.png",
@@ -56,7 +56,7 @@ export default function WhyJefCLPS() {
               text-[#C02429]
             "
           >
-            Why us for Earthing Health Assessment
+            WHY CHOOSE JEF FOR EARTHING HEALTH ASSESSMENT
           </h2>
 
          

@@ -57,7 +57,7 @@ export default function AdditionalSpecialistStudies() {
     {
       name: "SUBSEA CABLE EM INTERFERENCE",
       description:
-        "EM fields from subsea cables and interaction with adjacent pipe lines, structures, and control systems.",
+        "EM fields from subsea cables and interaction with adjacent pipelines, structures, and control systems.",
     },
     {
       name: "PSS/E NETWORK MODELLING",
@@ -202,16 +202,14 @@ export default function AdditionalSpecialistStudies() {
 
                   <motion.div
                     animate={{
-                      backgroundColor: isActive
-                        ? "#F9F7F2"
-                        : "rgba(27, 24, 24, 0.85)",
+                      backgroundColor: "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{ duration: 0.5 }}
                     className="mt-[28px] min-h-[210px] p-6 transition-all duration-500 ease-in-out md:mt-[32px] md:h-[260px] md:p-8"
                   >
                     <motion.p
                       animate={{
-                        color: isActive ? "#312d2d" : "#e5e7eb",
+                        color: "#e5e7eb",
                       }}
                       transition={{ duration: 0.5 }}
                       className="text-[13px] leading-[180%] md:text-[14px]"

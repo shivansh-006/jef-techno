@@ -222,7 +222,10 @@ const DetailedContent = () => {
 
   return (
     <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[1000px] flex flex-col">
-      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8">
+      <div 
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        className="section-container flex flex-col flex-1 gap-6 md:gap-8">
         <motion.h2
           key={`title-${activePage}`}
           initial={{ opacity: 0, x: -20 }}

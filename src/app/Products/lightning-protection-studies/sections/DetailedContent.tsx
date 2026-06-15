@@ -154,7 +154,7 @@ const DetailedContent = () => {
             transition={{ duration: 0.45 }}
             className="w-full"
           >
-            <h2 className="text-[#C02427] text-[18px] md:text-[24px] font-bold tracking-[1.5px] md:tracking-[2px] leading-[1.4] uppercase mb-8">
+            <h2 className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase mb-8">
               {page.title}
             </h2>
 
@@ -166,7 +166,7 @@ const DetailedContent = () => {
                     return (
                       <p
                         key={i}
-                        className="text-[14px] md:text-[16px] lg:text-[18px] font-normal leading-[1.7] text-white"
+                        className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify"
                       >
                         {element.props.children}
                       </p>
@@ -239,9 +239,9 @@ const DetailedContent = () => {
                   </div>
 
                   <span
-                    className={`text-[10px] md:text-[12px] lg:text-[13px] tracking-[1px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
+                    className={`text-[12px] md:text-[18px] tracking-[1px] md:tracking-[2.5px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
                       isCurrent
-                        ? "text-[#C02427]"
+                        ? "text-[#C02429]"
                         : "text-[#d4d0c8] group-hover:text-white"
                     }`}
                   >
@@ -249,7 +249,7 @@ const DetailedContent = () => {
                   </span>
 
                   {isCurrent && isManualPaused && (
-                    <span className="mt-2 text-[9px] uppercase tracking-[1px] text-[#C02427]">
+                    <span className="mt-2 text-[9px] uppercase tracking-[1px] text-[#C02429]">
                       Paused
                     </span>
                   )}

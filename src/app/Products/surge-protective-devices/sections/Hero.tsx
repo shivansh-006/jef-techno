@@ -13,7 +13,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/SerivePage/CLPS products.mp4" type="video/mp4" />
+        <source src="/Products/SPD.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -35,10 +35,7 @@ const Hero = () => {
             </h1>
 
             <p className="max-w-[920px] text-[13px] leading-[1.45] text-white/90 sm:text-[15px] md:text-[20px] md:leading-[1.5]">
-              Neutralizing the invisible risk: High-voltage lightning and
-              internal switching transients safeguard sensitive electronic
-              components and extend equipment service life from relentless,
-              repetitive surge events.
+             Neutralising the invisible risk — protecting sensitive electronic components from high-voltage lightning and internal switching transients.
             </p>
           </motion.div>
         </div>

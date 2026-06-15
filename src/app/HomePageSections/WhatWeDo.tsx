@@ -64,8 +64,8 @@ export default function WhatWeDoSection() {
 
 • Protects people, equipment, and structures
         `,
-        x: 350,
-        y: 80,
+        x: 280,
+        y: 55,
         xmob: 315,
         ymob: 380,
         labelPos: "top",
@@ -82,7 +82,7 @@ export default function WhatWeDoSection() {
 
 • Step-by-step guided installation workflow
         `,
-        x: -10,
+        x: 70,
         y: 320,
         xmob: 550,
         ymob: 660,
@@ -98,7 +98,7 @@ export default function WhatWeDoSection() {
 
 • Compliant with IEC 61643 standard
         `,
-        x: 200,
+        x: 250,
         y: 410,
         xmob: 130,
         ymob: 845,
@@ -114,8 +114,8 @@ export default function WhatWeDoSection() {
 
 • Certified to NFC 17-102 standard
         `,
-        x: 305,
-        y: 305,
+        x: 315,
+        y: 280,
         xmob: 265,
         ymob: 715,
         labelPos: "bottom",
@@ -130,11 +130,11 @@ export default function WhatWeDoSection() {
 
 • Low-resistance, long-lasting installations
         `,
-        x: 430,
-        y: 180,
+        x: 400,
+        y: 115,
         xmob: 425,
         ymob: 560,
-        labelPos: "bottom",
+        labelPos: "top",
       },
     ],
   },
@@ -168,11 +168,11 @@ export default function WhatWeDoSection() {
 
 • Validates against current IEC/IS standards
         `,
-        x: 0,
+        x: 20,
         y: 320,
         xmob: 440,
         ymob: 500,
-        labelPos: "top",
+        labelPos: "left",
       },
 
       {
@@ -184,8 +184,8 @@ export default function WhatWeDoSection() {
 
 • Ensures accurate, reliable readings
         `,
-        x: 420,
-        y: 140,
+        x: 400,
+        y: 110,
         xmob: 420,
         ymob: 720,
         labelPos: "top",
@@ -200,8 +200,8 @@ export default function WhatWeDoSection() {
 
 • Cuts energy waste and utility penalties
         `,
-        x: 290,
-        y: 245,
+        x: 280,
+        y: 240,
         xmob: 300,
         ymob: 880,
         labelPos: "bottom",
@@ -216,8 +216,8 @@ export default function WhatWeDoSection() {
 
 • Keeps you legally compliant and insurable
         `,
-        x: 290,
-        y: 410,
+        x: 300,
+        y: 400,
         xmob: 130,
         ymob: 700,
         labelPos: "bottom",
@@ -238,8 +238,8 @@ export default function WhatWeDoSection() {
 
 • Supports solar, wind, and hybrid projects
         `,
-        x: 440,
-        y: 245,
+        x: 420,
+        y: 180,
         xmob: 370,
         ymob: 560,
         labelPos: "top",
@@ -254,11 +254,11 @@ export default function WhatWeDoSection() {
 
 • Supports plant upgrades, expansions, and audits
         `,
-        x: 290,
-        y: 310,
+        x: 300,
+        y: 290,
         xmob: 270,
         ymob: 720,
-        labelPos: "bottom",
+        labelPos: "bottom left-[20px] ",
       },
     ],
   },
@@ -275,8 +275,17 @@ export default function WhatWeDoSection() {
     "/HomePageImg/WhatWeDoSection/Solution-5.png",
   ];
 
-  const background =
-    backgrounds[activeCard % backgrounds.length];
+const isCLPS =
+  activeSection === "products" &&
+  currentData.heading.includes("CLPS");
+
+const isConsulting = activeSection === "consulting";
+
+const background = isCLPS
+  ? "/HomePageImg/WhatWeDoSection/solution-clps.jpeg"
+  : isConsulting
+  ? "/HomePageImg/WhatWeDoSection/solution-consulting.jpeg"
+  : backgrounds[activeCard % backgrounds.length];
 
   return (
     <section
@@ -341,7 +350,8 @@ export default function WhatWeDoSection() {
       flex-col
       lg:flex-row
       items-start
-      lg:items-center
+      lg:items-start
+     
       justify-start
       lg:justify-between
       gap-25
@@ -440,11 +450,12 @@ export default function WhatWeDoSection() {
           </div>
          </div>
 
-          {/* CENTER GRAPH */}
+       
          {/* CENTER GRAPH */}
 <div
   className={`
     relative
+    lg:mt-40
     w-full
     max-w-[450px]
     h-[350px]
@@ -460,6 +471,7 @@ export default function WhatWeDoSection() {
     duration-1000
     mx-auto
     lg:mx-0
+   
     ${showContent ? "opacity-100" : "opacity-0"}
   `}
 >
@@ -474,6 +486,7 @@ export default function WhatWeDoSection() {
                   inset-0
                   w-full
                   h-full
+
                   object-contain
                   opacity-90
                   pointer-events-none
@@ -486,11 +499,7 @@ export default function WhatWeDoSection() {
 
                   animate-[fadeScale_0.7s_ease]
 
-                  ${
-                    activeSection === "audit"
-                      ? "rotate-[-12deg]"
-                      : ""
-                  }
+                rotate-[-20deg]
                 `}
               />
             )}
@@ -623,6 +632,7 @@ export default function WhatWeDoSection() {
 <div
   className={`
     w-full
+    lg:mt-65
     lg:flex-1
     min-w-0
     max-w-full

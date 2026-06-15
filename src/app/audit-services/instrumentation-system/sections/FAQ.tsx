@@ -21,7 +21,7 @@ const faqData = [
   {
     id: 3,
     question:
-      "Why does some plants fail despite passing routine electrical tests?",
+      "Why do some plants fail despite passing routine electrical tests?",
     answer:
       "Routine tests (insulation resistance, continuity, etc.) are designed for protective earthing, not signal integrity. They do not examine signal reference grounds, shield loop currents, or earthing architecture. An installation can pass these tests while remaining non-compliant with instrumentation earthing standards.",
   },

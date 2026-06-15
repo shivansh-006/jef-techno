@@ -14,7 +14,7 @@ const Hero = () => {
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source
-          src="/Products/Earthing Instrumentation.mp4"
+          src="/Earthing-Grounding/Earthing-Grounding.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.

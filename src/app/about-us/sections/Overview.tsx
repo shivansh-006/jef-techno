@@ -95,22 +95,23 @@ const Overview = () => {
         </motion.h1>
 
         {/* STATS GRID */}
-        <div
-          className="
-            w-full
-            max-w-[1000px]
-             grid
+       <div
+  className="
+    w-full
+    max-w-[1200px]
+    mx-auto
+    grid
     grid-cols-1
     sm:grid-cols-2
     md:grid-cols-3
-    lg:grid-cols-4
-    xl:grid-cols-5
+    lg:grid-cols-5
     gap-6
     md:gap-8
-    lg:gap-40
+    lg:gap-10
+    xl:gap-[300px]
     place-items-center
-          "
-        >
+  "
+>
           {stats.map((item, index) => (
             <motion.div
               key={index}
@@ -138,18 +139,17 @@ const Overview = () => {
                 className="
                   relative
 
-                  w-[150px]
-                  h-[150px]
+                 
 
-                  sm:w-[170px]
-                  sm:h-[170px]
+                  sm:w-[100px]
+                  sm:h-[100px]
 
-                  md:w-[230px]
-                  md:h-[190px]
-                  lg:w-[250px]
-                  lg:h-[190px]
-                  xl:w-[340px]
-                  xl:h-[300px]
+                  md:w-[130px]
+                  md:h-[130px]
+                  lg:w-[150px]
+                  lg:h-[150px]
+                  xl:w-[180px]
+                  xl:h-[180px]
 
                   transition-transform
                   duration-500
@@ -167,7 +167,7 @@ const Overview = () => {
                 />
               </div>
                {/* LABEL */}
-               <h2 className="font-medium text-white text-[16px] tracking-[2px] whitespace-nowrap">{item.label}</h2>
+               <h2 className="font-medium text-white text-[16px] tracking-[2px] whitespace-nowrap md:mt-6 lg:mt-9">{item.label}</h2>
 
 
 

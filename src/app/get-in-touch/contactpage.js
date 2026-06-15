@@ -1308,7 +1308,7 @@ const GetInTouchForm = () => {
             <section className="flex p-5 py-32 overflow-hidden flex-col bg-[#232427]">
                 <div className="flex flex-col self-center mt-24 w-full max-w-[1300px] max-md:mt-10 max-md:max-w-full">
                     <h1 className="pb-px w-full text-[28px] md:text-[36px] font-bold text-white tracking-[1px] uppercase mb-12">
-                        We just need your contact details
+                        JUST A FEW DETAILS TO GET STARTED
                     </h1>
                     {showConfirmation ? (
                         <div className='w-full flex flex-col items-start gap-12 thank-you mt-16 text-3xl leading-loose uppercase text-white tracking-[3.36px] max-md:max-w-full'>
@@ -1588,7 +1588,7 @@ export function OfficeLocations() {
         },
         {
             title: "UAE Office",
-            address: "Ground Floor, Accelerator Building Masdar City, Abu Dhabi, UAE. Dhabi, UAE.",
+            address: "Ground Floor, Accelerator Building Masdar City, Abu Dhabi, UAE.",
             phone: "+971 552447290",
             email: "marketing@jeftechno.com",
         },

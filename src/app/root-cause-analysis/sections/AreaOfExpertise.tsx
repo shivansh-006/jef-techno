@@ -167,16 +167,14 @@ export default function WhyChooseRootCauseAnalysis() {
 
                   <motion.div
                     animate={{
-                      backgroundColor: isActive
-                        ? "#F9F7F2"
-                        : "rgba(27, 24, 24, 0.85)",
+                      backgroundColor: "rgba(27, 24, 24, 0.85)",
                     }}
                     transition={{ duration: 0.5 }}
                     className="mt-[28px] min-h-[317px] p-6 transition-all duration-500 ease-in-out md:mt-[32px] md:h-[240px] md:p-8"
                   >
                     <motion.p
                       animate={{
-                        color: isActive ? "#312d2d" : "#e5e7eb",
+                        color: "#e5e7eb",
                       }}
                       transition={{ duration: 0.5 }}
                       className="text-[13px] leading-[180%] md:text-[14px]"

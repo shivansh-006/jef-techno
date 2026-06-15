@@ -36,12 +36,12 @@ const Hero = () => {
             >
               {/* Heading */}
               <h1 className="font-montserrat font-lg text-[40px] md:text-[40px] leading-[1.2] md:leading-[100%] tracking-[0.5px] uppercase mb-4 sm:font-bold">
-                ESE 
+                ESE — EARLY STREAMER EMISSION LIGHTNING PROTECTION
               </h1>
 
               {/* Body */}
               <div className=" mt-2 w-full">
-               <p className="font-md sm:text-[12px] md:text-[18px] lg:text-[22px]">Preventing Plant Shutdowns and Revenue Loss from Lightning strikes, deploy scientifically validated protection <br /> designed specifically for high-risk, open-area solar installations.</p>
+               <p className="font-md sm:text-[12px] md:text-[18px] lg:text-[22px]">Preventing Plant Shutdowns and Revenue Loss from Lightning strikes, Deploy scientifically validated protection <br /> designed specifically for high-risk, open-area solar installations.</p>
               </div>
             </motion.div>
           </div>

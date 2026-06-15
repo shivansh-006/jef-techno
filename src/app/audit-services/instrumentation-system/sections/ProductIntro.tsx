@@ -7,7 +7,7 @@ const defaultNavItems = [
   { label: "Home", isActive: true },
   { label: "Our Business", isActive: true },
   { label: "Audit Services", isActive: true },
-  { label: "Instrumentation System", isActive: false },
+  { label: "Instrumentation Earthing System", isActive: false },
 ];
 
 export default function ProductIntro({
@@ -21,7 +21,7 @@ export default function ProductIntro({
     "Process plants and industrial facilities invest significantly in their instrumentation and control infrastructure — DCS systems, PLCs, 4–20 mA signal loops, Foundation Field Bus, HART protocols, transmitters, junction boxes, and field instruments. These systems are carefully designed, commissioned, and regularly maintained.\n\nYet across industries and geographies, the familiar pattern of problems recurs: unexplained trips, nuisance alarms, signal drifts, communication failures, and intermittent malfunctions that are not only difficult to diagnose but more challenging to eliminate.";
 
   const expandedText =
-    "JEF has conducted Instrumentation Earthing Audits across more than 120 control rooms and instrumentation panel rooms, auditing over 9,500 panels, 32,053 junction boxes, and 2,04,963 field instruments and field assets.";
+    "JEF has conducted Instrumentation Earthing Audits across more than 120 control rooms and instrumentation panel rooms, auditing over 9,500  panels, 32,053 junction boxes, and 204,963 field instruments and field assets.";
 
   return (
     <section className="bg-[#232427] font-montserrat text-white overflow-hidden">

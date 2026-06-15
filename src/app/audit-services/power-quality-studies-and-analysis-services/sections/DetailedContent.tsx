@@ -12,12 +12,12 @@ const pages = [
     title: "IMPORTANCE OF POWER QUALITY STUDIES",
     content: (
       <>
-        <p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
           Power Quality Studies are crucial for maintaining the integrity and
           performance of your electrical systems. They help in:
         </p>
 
-        <ul className="list-disc space-y-3 pl-5">
+        <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>
             Identifying potential power quality issues that can cause tripping,
             equipment failures and/or inefficiencies.
@@ -39,9 +39,9 @@ const pages = [
     title: "DETAILED STUDY REPORTS AND ANALYSIS",
     content: (
       <>
-        <p>Our detailed reports include:</p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">Our detailed reports include:</p>
 
-        <ul className="list-disc space-y-3 pl-5">
+        <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>
             Clear documentation of power quality measurements, observations &
             Analysis.
@@ -99,13 +99,16 @@ export default function DetailedContent() {
 
   return (
     <section className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
-      <div className="section-container flex min-h-[650px] flex-col px-5 md:px-0">
+      <div 
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        className="section-container flex min-h-[650px] flex-col px-5 md:px-0">
         <motion.h2
           key={`title-${activePage}`}
           initial={{ opacity: 0, x: -18 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[18px] sm:text-[22px] md:text-[28px] font-bold uppercase tracking-[4px] leading-[1.5]"
+          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
         >
           {page.title}
         </motion.h2>
@@ -115,7 +118,7 @@ export default function DetailedContent() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="flex-1 text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-[1.65] text-white/95"
+          className="flex-1"
         >
           <div className="flex max-w-[1500px] flex-col gap-6">
             {page.content}
@@ -144,7 +147,7 @@ export default function DetailedContent() {
                   </div>
 
                   <span
-                    className={`whitespace-pre-line text-[10px] sm:text-[11px] md:text-[13px] lg:text-[16px] uppercase tracking-[1.8px] leading-[1.35] transition-all ${
+                    className={`whitespace-pre-line text-[12px] md:text-[18px] uppercase tracking-[1px] md:tracking-[2.5px] font-medium leading-[1.35] transition-all ${
                       isCurrent
                         ? "text-[#C02429]"
                         : "text-[#d4d0c8] group-hover:text-white"

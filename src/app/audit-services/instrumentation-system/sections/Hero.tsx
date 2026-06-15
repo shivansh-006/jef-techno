@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 
 
-const Hero = ({ title = "INSTRUMENTATION SYSTEMS", videoSrc }) => {
+const Hero = ({ title = "INSTRUMENTATION EARTHING AUDIT", videoSrc }) => {
   return (
     <section className="relative h-[75vh] sm:h-[85vh] lg:h-screen overflow-hidden bg-[#232427] font-montserrat">
       <video
@@ -35,8 +35,8 @@ const Hero = ({ title = "INSTRUMENTATION SYSTEMS", videoSrc }) => {
             <p className="max-w-[1500px] text-[13px] sm:text-[15px] md:text-[17px] lg:text-[22px] leading-[1.7] text-white/90">
               JEF has conducted Instrumentation Earthing Audits across more than
               <span>120</span> control rooms and instrumentation
-              panel rooms, auditing over <span>9,500</span>
-              panels, <span>32,053</span> junction boxes,
+              panel rooms, auditing over <span>9,500 </span>
+               panels, <span>32,053</span> junction boxes,
               and <span>2,04,963</span> field instruments 
               and field assets.
             </p>
