@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL('https://www.jefuae.com'),
-  title: "JEF UAE | Engineering Solutions for Electrical & Safety Systems",
+  title: "JEF TECHNO | Engineering Solutions for Electrical & Safety Systems",
   description:
     "Providing advanced engineering solutions in earthing, lightning protection, power quality, and fire safety across various industries globally.",
   keywords:
