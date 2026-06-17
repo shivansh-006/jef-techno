@@ -15,16 +15,39 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL('https://www.jefuae.com'),
-  title: "JEF TECHNO | Engineering Solutions for Electrical & Safety Systems",
+  title: "Industrial Electrical Engineering Services | JEF Techno",
   description:
-    "Providing advanced engineering solutions in earthing, lightning protection, power quality, and fire safety across various industries globally.",
+    "JEF Techno delivers industrial electrical engineering, lightning protection, and technical solutions with expert support, quality service, and trusted results.",
   keywords:
-    "JEF UAE, lightning protection, grounding system, grounding products, surge protection, UAE, electrical safety, lightning protection, power quality, fire safety, EMI EMC studies, engineering solutions, industrial safety",
+    "industrial electrical engineering services, electrical engineering company, industrial electrical solutions, electrical engineering consultant, electrical services provider, electrical system design, industrial power solutions, electrical maintenance services, engineering consultancy services, industrial automation solutions, lightning protection services, lightning protection system, earthing solutions, electrical safety solutions, electrical inspection services, power distribution solutions, industrial electrical services India, manufacturing electrical solutions, commercial electrical engineering, infrastructure electrical solutions, industrial safety solutions",
   openGraph: {
+    title: "Industrial Electrical Engineering Services | JEF Techno",
     url: "https://www.jefuae.com/",
     description:
-      "Providing advanced engineering solutions in earthing, lightning protection, power quality, and fire safety across various industries globally.",
-    siteName: "JEF UAE | Engineering Solutions for Electrical & Safety Systems",
+      "JEF Techno provides industrial electrical engineering, lightning protection, and reliable technical solutions for businesses.",
+    siteName: "JEF Techno",
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Electrical Engineering Services | JEF Techno",
+    description:
+      "Expert industrial electrical engineering, lightning protection, and technical solutions from JEF Techno.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://www.jefuae.com/",
   },
   icons: {
     icon: "/HomePageImg/NavbarImg/JefTechno_logo_ 2.png",
