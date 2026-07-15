@@ -6,42 +6,42 @@ import { motion } from "framer-motion";
 const cards = [
   {
     id: 1,
-    image: "/RCA/1.png",
+    image: "/EMIEMC/IDENTIFIES EMI ISSUES DURING DESIGN TO ENABLE ECONOMICAL MITIGATION.png",
     title: "SITE SURVEYS AND EMI/EMC ANALYSIS",
     description:
       "Comprehensive on-site surveys to identify sources of electromagnetic interference.\nDetailed analysis of interference levels affecting system performance.",
   },
   {
     id: 2,
-    image: "/RCA/2.png",
+    image: "/EMIEMC/IMPROVES THE RELIABILITY OF ELECTRICAL AND CONTROL SYSTEMS.png",
     title: "SHIELDING EFFECTIVENESS EVALUATION",
     description:
       "Assessment of shielding effectiveness in protecting sensitive areas from electromagnetic disturbances. Recommendations for improving shielding to ensure system reliability.",
   },
   {
     id: 3,
-    image: "/RCA/3.png",        
+    image: "/EMIEMC/MINIMIZES NUISANCE TRIPPING AND UNPLANNED DOWNTIME.png",        
     title: "Grounding and Bonding Assessments",
     description:
       "Evaluation of grounding and bonding systems to minimize electromagnetic emissions. Design recommendations for improving system grounding, ensuring compatibility with sensitive devices.",
   },
   {
     id: 4,
-    image: "/RCA/4.png",
+    image: "/EMIEMC/REDUCES SYSTEM ERRORS AND COMMUNICATION DISTURBANCES.png",
     title: "EMC Compliance Testing",
     description:
       "Conducting tests to ensure equipment and systems comply with international EMC standards such as IEC 61000. Providing actionable insights for achieving regulatory compliance.",
   },
   {
     id: 5,
-    image: "/RCA/5.png",
+    image: "/EMIEMC/SUPPORTS COMPLIANCE WITH INTERNATIONAL EMC STANDARDS.png",
     title: "Mitigation Solutions",
     description:
       "Tailored solutions for mitigating EMI issues, including filtering, shielding, and redesigning system layouts. Implementation of advanced techniques to enhance electromagnetic compatibility.",
   },  
   {
     id: 6,
-    image: "/RCA/3.png",
+    image: "/EMIEMC/DELIVERS COMPLETE ENGINEERING SOLUTIONS FROM STUDY TO MITIGATION.png",
     title: "Simulation and Modelling",
     description:
       "Utilizing cutting-edge tools for simulating electromagnetic environments and analyzing interference patterns.Designing optimized layouts to minimize EMI risks.",
@@ -99,10 +99,10 @@ export default function WhyRca() {
         {/* Manual Carousel */}
         <div className="mt-12 md:mt-20 relative">
           {/* Toggle Buttons */}
-          <div className="flex gap-4 md:gap-6 mb-8 justify-center md:justify-start">
+          <div className="flex gap-4 md:gap-6 mb-8 justify-center">
             <button
               onClick={handlePrev}
-              className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white hover:bg-[#C02429] hover:border-[#C02429] transition-all flex items-center justify-center text-white"
+              className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white hover:bg-[#C02429] hover:border-[#C02429] transition-all flex items-center justify-center text-white "
               aria-label="Previous"
             >
               ←

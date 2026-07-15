@@ -53,7 +53,7 @@ export default function ProductIntro() {
         <motion.img
           src="/EMIEMC/EMIEMCLogo.png"
           alt="Root Cause Analysis Logo"
-          className="w-[48px] md:w-[64px]"
+          className="w-[55px] md:w-[55px]"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
