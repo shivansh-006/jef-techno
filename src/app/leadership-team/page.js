@@ -64,7 +64,7 @@ export default function Team() {
                         <div className="flex flex-col justify-center self-stretch my-auto min-h-[7px] w-[7px]">
                           <img
                             loading="lazy"
-                            src="/AboutUs/DropdownArr.png"
+                            src="/AboutUs/DropDownArr.png"
                             alt=""
                             className="object-contain w-[10px] h-[10px] rotate-[-90deg] brightness-0"
                             style={{

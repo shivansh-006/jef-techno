@@ -101,7 +101,7 @@ const MobileMenu = () => {
                 {item.label}
               </span>
               <img
-                src="/AboutUs/DropdownArr.png"
+                src="/AboutUs/DropDownArr.png"
                 alt="→"
                 className="w-4 h-4 object-contain -rotate-90"
               />
