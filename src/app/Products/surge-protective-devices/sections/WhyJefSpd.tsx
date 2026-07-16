@@ -82,6 +82,10 @@ export default function WhyRca() {
   return (
     <section className="w-full bg-[#232427] py-16 md:py-[72px] overflow-hidden">
       <div className="section-container">
+
+
+        {/* --- NAVIGATION BUTTONS AND SECTION HEADER --- */}
+        <div className="flex justify-between items-start w-full mt-12 mb-8">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -117,15 +121,9 @@ export default function WhyRca() {
           </p>
 
         </motion.div>
-
-        {/* --- NAVIGATION BUTTONS AND SECTION HEADER --- */}
-        <div className="flex justify-between items-center w-full mt-12 mb-8">
-          <h2 className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1.49px] uppercase">
-            Why JEF CLPS?
-          </h2>
           
           {/* Control Buttons Container */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 ">
             <button
               onClick={handlePrev}
               className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-[#161414] transition-all duration-300"
