@@ -4,37 +4,37 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const cards = [
-  {
+  { id: 1,
     image: "/IS/is-1.png",
     title: "REDUCES ELECTRICAL NOISE AND SIGNAL DISTURBANCE",
     description:
       "By identifying and eliminating ground loops, circulating currents, and shield termination errors that corrupt 4–20 mA and digital signals.",
   },
-  {
+  { id: 2,
     image: "/IS/is-2.png",
     title: "PREVENTS MALFUNCTIONS, FALSE ALARMS, AND NUISANCE TRIPS",
     description:
       "By addressing the root causes that standard electrical testing does not detect.",
   },
-  {
+  { id: 3,
     image: "/IS/is-3.png",
     title: "IMPROVES SYSTEM RELIABILITY AND REDUCES DOWNTIME",
     description:
       "By eliminating the intermittent, hard-to-diagnose failure modes that occur when earthing problems are left uncorrected.",
   },
-  {
+  { id: 4,
     image: "/IS/is-4.png",
     title: "ENHANCES PERSONNEL AND EQUIPMENT SAFETY",
     description:
       "By identifying isolated grounding elements and earth bar mix-ups that represent genuine safety hazards under fault conditions.",
   },
-  {
+  { id: 5,
     image: "/IS/is-5.png",
     title: "IMPROVES PROCESS STABILITY AND PRODUCTION EFFICIENCY",
     description:
       "By restoring signal integrity and eliminating the operational disruptions caused by instrumentation system noise.",
   },
-  {
+  { id: 6,
     image: "/IS/is-4.png",
     title: "COMPLIANCE WITH INTERNATIONAL STANDARDS",
     description:
@@ -174,7 +174,7 @@ export default function WhyRca() {
                       font-medium
                     "
                   >
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
 
                   <p

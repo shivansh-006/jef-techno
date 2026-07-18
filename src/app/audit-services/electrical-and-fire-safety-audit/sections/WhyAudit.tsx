@@ -49,16 +49,16 @@ const cards = [
   {
     id: 7,
     image: "/EFS/7.png",
-    title: "CERTIFIED STAFF",
+    title: "TRAINED STAFF",
     description:
-      "Assessed, competent, documented.",
+      "Periodic training programs for staff on awareness of best operational and maintenance practices to help ensure safety.",
   },
   {
     id: 8,
     image: "/EFS/4.png",
     title: "JEF SAFETY CERTIFICATION",
     description:
-      "Displayed where the people it protects can see it.",
+      "For the facilities that go all the way: a mark specific to your building/facility, displayed where the people it protects can see it, telling them that this space was held to a higher standard — and passed.",
   },
 ];
 
@@ -196,7 +196,7 @@ export default function WhyRca() {
                       font-medium
                     "
                   >
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
 
                   <p

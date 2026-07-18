@@ -6,24 +6,25 @@ import { useState } from "react";
 
 const cards = [
   {
+    id: 1,
     image: "/EHA/eha-1.png",
     title: "ASSESSMENT, NOT JUST TESTING",
     description:
       "Each test result is interpreted in the context of the complete earthing system — soil conditions, grid geometry, fault current levels, and protection settings — to produce directly actionable findings",
   },
-  {
+  { id: 2,
     image: "/EHA/eha-2.png",
     title: "CARRIED OUT ON LIVE SYSTEMS",
     description:
       "Designed for live systems, eliminating the production impact that would make comprehensive testing impractical for most facilities.",
   },
-  {
+  { id: 3,
     image: "/EHA/eha-3.png",  
     title: "LOCATION-SPECIFIC FINDINGS",
     description:
       "JEF’s methodology pinpoints the specific location of each deficiency — open riser, isolated grid section, or corroded connection — enabling targeted corrective action.",
   },
-  {
+  { id: 4,
     image: "/EHA/eha-4.png",
     title: "EARTH GRID MODELLING AND SIMULATION",
     description:
@@ -174,7 +175,7 @@ export default function WhyRca() {
                       font-medium
                     "
                   >
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
 
                   <p

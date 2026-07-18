@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import { motion } from "framer-motion";
 
-const PROGRESS_DURATION = 15000;
-const PROGRESS_INTERVAL = 50;
 const VISIBLE_TABS = 5;
 
 const pages = [
@@ -293,9 +291,6 @@ const pages = [
 
 export default function DetailedContent() {
   const [activePage, setActivePage] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isManualPaused, setIsManualPaused] = useState(false);
 
   const getVisibleTabs = () => {
     let start = activePage - Math.floor(VISIBLE_TABS / 2);
@@ -314,57 +309,54 @@ export default function DetailedContent() {
 
   const visibleTabs = getVisibleTabs();
 
-  useEffect(() => {
-    if (isPaused || isManualPaused) return;
-
-    const interval = setInterval(() => {
-      setProgress((prev) =>
-        prev >= 100
-          ? 100
-          : prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100
-      );
-    }, PROGRESS_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [activePage, isPaused, isManualPaused]);
-
-  useEffect(() => {
-    if (progress >= 100) {
-      setActivePage((prev) => (prev + 1) % pages.length);
-      setProgress(0);
-    }
-  }, [progress]);
-
   const handleTabClick = (index) => {
-    if (index === activePage) {
-      setIsManualPaused((prev) => !prev);
-      return;
-    }
-
+    if (index === activePage) return;
     setActivePage(index);
-    setProgress(0);
-    setIsPaused(false);
-    setIsManualPaused(false);
+  };
+
+  const handlePrevPage = () => {
+    setActivePage((prev) => (prev - 1 + pages.length) % pages.length);
+  };
+
+  const handleNextPage = () => {
+    setActivePage((prev) => (prev + 1) % pages.length);
   };
 
   const page = pages[activePage];
 
   return (
-    <section className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
-      <div
-        onMouseEnter={() => !isManualPaused && setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex min-h-[650px] flex-col px-5 md:px-0"
-      >
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -18 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
-        >
-          {page.title}
-        </motion.h2>
+    <section className="min-h-190 bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
+      <div className="section-container flex min-h-162.5 flex-col px-5 md:px-0">
+        <div className="mb-9 flex items-center justify-between gap-4">
+          <motion.h2
+            key={`title-${activePage}`}
+            initial={{ opacity: 0, x: -18 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.45 }}
+            className="text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
+          >
+            {page.title}
+          </motion.h2>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              type="button"
+              onClick={handlePrevPage}
+              aria-label="Previous tab"
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] transition-colors duration-300 hover:border-white hover:text-white"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={handleNextPage}
+              aria-label="Next tab"
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[20px] md:text-[14px] transition-colors duration-300 hover:border-white hover:text-white"
+            >
+              →
+            </button>
+          </div>
+        </div>
 
         <motion.div
           key={`content-${activePage}`}
@@ -373,7 +365,7 @@ export default function DetailedContent() {
           transition={{ duration: 0.45 }}
           className="flex-1"
         >
-          <div className="flex max-w-[1500px] flex-col gap-6">
+          <div className="flex max-w-375 flex-col gap-6">
             {page.content}
           </div>
         </motion.div>
@@ -395,12 +387,10 @@ export default function DetailedContent() {
                   onClick={() => handleTabClick(tab.realIndex)}
                   className="group flex w-full flex-col items-start text-left"
                 >
-                  <div className="relative mb-3 h-[2px] w-full bg-[#d4d0c8]/80">
+                  <div className="relative mb-3 h-0.5 w-full bg-[#d4d0c8]/80">
                     <motion.div
                       className="absolute left-0 top-0 h-full bg-[#C02429]"
-                      animate={{
-                        width: isCurrent ? `${progress}%` : "0%",
-                      }}
+                      animate={{ width: isCurrent ? "100%" : "0%" }}
                       transition={{ ease: "linear" }}
                     />
                   </div>

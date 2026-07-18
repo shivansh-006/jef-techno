@@ -1,18 +1,30 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+ 
+type Subsection = {
+  tags?: string[];
+  tagImages?: string[];
+  tagDescriptions?: Array<React.ReactNode | undefined>;
+};
 
-const PROGRESS_DURATION = 15000;
-const PROGRESS_INTERVAL = 50;
+type Page = {
+  label: string;
+  nav?: string;
+  title: string;
+  content: React.ReactElement<{ children?: React.ReactNode }>;
+  image?: string;
+  subsections?: Subsection[];
+};
 
-const pages = [
+const pages: Page[] = [
   {
     label: "IMPORTANCE OF\nPOWER QUALITY\nSTUDIES",
     title: "IMPORTANCE OF POWER QUALITY STUDIES",
     content: (
       <>
-        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white text-justify">
           Power Quality Studies are crucial for maintaining the integrity and
           performance of your electrical systems. They help in:
         </p>
@@ -39,7 +51,7 @@ const pages = [
     title: "DETAILED STUDY REPORTS AND ANALYSIS",
     content: (
       <>
-        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify">Our detailed reports include:</p>
+        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white text-justify">Our detailed reports include:</p>
 
         <ul className="list-disc space-y-3 pl-5 text-[16px] md:text-[18px] lg:text-[20px] font-medium leading-relaxed text-white">
           <li>
@@ -57,110 +69,210 @@ const pages = [
   },
 ];
 
-export default function DetailedContent() {
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const DetailedContent = () => {
   const [activePage, setActivePage] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = setInterval(() => {
-      setProgress((prev) =>
-        prev >= 100
-          ? 100
-          : prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100
-      );
-    }, PROGRESS_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [activePage, isPaused]);
-
-  useEffect(() => {
-    if (progress >= 100) {
-      setActivePage((prev) => (prev + 1) % pages.length);
-      setProgress(0);
-      setIsPaused(false);
-    }
-  }, [progress]);
+  const [activeTags, setActiveTags] = useState<Record<number, number | undefined>>({});
 
   const handleTabClick = (index) => {
-    if (index === activePage) {
-      setIsPaused((prev) => !prev);
-      return;
-    }
-
+    if (index === activePage) return;
     setActivePage(index);
-    setProgress(0);
-    setIsPaused(false);
+    setActiveTags({});
+  };
+
+  const handlePrevPage = () => {
+    setActivePage((prev) => (prev - 1 + pages.length) % pages.length);
+    setActiveTags({});
+  };
+
+  const handleNextPage = () => {
+    setActivePage((prev) => (prev + 1) % pages.length);
+    setActiveTags({});
   };
 
   const page = pages[activePage];
 
   return (
-    <section className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
-      <div 
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex min-h-[650px] flex-col px-5 md:px-0">
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -18 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
-        >
-          {page.title}
-        </motion.h2>
+    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-200 flex flex-col">
+      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8">
+        <div className="flex items-center justify-between gap-4">
+          <motion.h2
+            key={`title-${activePage}`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase"
+          >
+            {page.title}
+          </motion.h2>
 
-        <motion.div
-          key={`content-${activePage}`}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45 }}
-          className="flex-1"
-        >
-          <div className="flex max-w-[1500px] flex-col gap-6">
-            {page.content}
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={handlePrevPage}
+              aria-label="Previous tab"
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextPage}
+              aria-label="Next tab"
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              →
+            </button>
           </div>
-        </motion.div>
+        </div>
 
-        <div className="mt-12 md:mt-20 overflow-hidden">
-          <div className="flex gap-4 md:gap-8">
-            {pages.map((tab, index) => {
-              const isCurrent = activePage === index;
+        <div className="w-full relative z-20 flex-1">
+          <motion.div
+            key={`content-${activePage}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className={`flex gap-8 ${
+              page.image ? "flex-col lg:flex-row lg:items-start" : "flex-col"
+            }`}
+          >
+            {/* Added a safety layout check if content exists */}
+            {page.content && (
+              <div className="flex flex-col flex-1">
+                {React.Children.map(page.content?.props?.children, (child, i) => {
+                  if (React.isValidElement(child) && child.type === "p") {
+                    const element = child as React.ReactElement<{ children?: React.ReactNode }>;
+                    return (
+                      <p
+                        key={i}
+                        className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white text-justify"
+                      >
+                        {element.props.children}
+                      </p>
+                    );
+                  }
+                  return child;
+                })}
+              </div>
+            )}
 
-              return (
-                <button
-                  key={index}
-                  onClick={() => handleTabClick(index)}
-                  className="group flex flex-col items-start text-left shrink-0"
-                >
-                  <div className="relative mb-3 h-[2px] w-60 bg-[#d4d0c8]/80">
-                    <motion.div
-                      className="absolute left-0 top-0 h-full bg-[#C02429]"
-                      animate={{
-                        width: isCurrent ? `${progress}%` : "0%",
-                      }}
-                      transition={{ ease: "linear" }}
-                    />
-                  </div>
+            {page.image && (
+              <motion.img
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                src={page.image}
+                alt={page.title}
+                className="w-full max-w-82.5 lg:max-w-90 object-contain mx-auto lg:mx-0"
+              />
+            )}
+          </motion.div>
 
-                  <span
-                    className={`whitespace-pre-line text-[12px] md:text-[18px] uppercase tracking-[1px] md:tracking-[2.5px] font-medium leading-[1.35] transition-all ${
-                      isCurrent
-                        ? "text-[#C02429]"
-                        : "text-[#d4d0c8] group-hover:text-white"
-                    }`}
+          {page.subsections?.map((sub, si) => (
+            <div key={si} className="mt-8">
+              {sub.tags && (
+                <div className="flex flex-wrap gap-x-8 gap-y-4 mb-5">
+                  {sub.tags.map((tag, ti) => (
+                    <button
+                      key={ti}
+                      onClick={() =>
+                        setActiveTags((prev) => ({
+                          ...prev,
+                          [si]: prev[si] === ti ? undefined : ti,
+                        }))
+                      }
+                      className="text-[#C02429] text-[16px] md:text-[18px] lg:text-[20px] font-semibold underline underline-offset-4 text-left"
+                    >
+                      • {tag}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              <AnimatePresence mode="wait">
+                {activeTags[si] !== undefined && sub.tagImages?.[activeTags[si]] && (
+                  <motion.img
+                    key={`tag-img-${si}-${activeTags[si]}`}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 18 }}
+                    transition={{ duration: 0.45, ease: "easeOut" }}
+                    src={sub.tagImages[activeTags[si]]}
+                    alt={sub.tags[activeTags[si]]}
+                    className="mt-5 w-full max-w-130 object-contain"
+                  />
+                )}
+
+                {activeTags[si] !== undefined &&
+                  sub.tagDescriptions?.[activeTags[si]] && (
+                    <motion.p
+                      key={`tag-desc-${si}-${activeTags[si]}`}
+                      initial={{ opacity: 0, y: 18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 18 }}
+                      transition={{ duration: 0.45, ease: "easeOut" }}
+                      className="mt-5 whitespace-pre-line text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white"
+                    >
+                      {sub.tagDescriptions[activeTags[si]]}
+                    </motion.p>
+                  )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom tab row layout */}
+        <div className="mt-12 md:mt-20 pb-4">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 overflow-hidden">
+            {pages
+              .slice(
+                Math.min(
+                  Math.max(activePage - 2, 0),
+                  Math.max(pages.length - 5, 0)
+                ),
+                Math.min(
+                  Math.max(activePage - 2, 0),
+                  Math.max(pages.length - 5, 0)
+                ) + 5
+              )
+              .map((tab, visibleIndex) => {
+                const startIndex = Math.min(
+                  Math.max(activePage - 2, 0),
+                  Math.max(pages.length - 5, 0)
+                );
+
+                const realIndex = startIndex + visibleIndex;
+                const isCurrent = activePage === realIndex;
+
+                return (
+                  <button
+                    key={realIndex}
+                    onClick={() => handleTabClick(realIndex)}
+                    className="bg-none border-none cursor-pointer flex flex-col items-start w-full group"
                   >
-                    {tab.label}
-                  </span>
-                </button>
-              );
-            })}
+                    <div className="w-full h-0.5 bg-[#d4d0c8] mb-3 relative z-10">
+                      <motion.div
+                        className="absolute top-0 left-0 h-full bg-[#C02429]"
+                        animate={{ width: isCurrent ? "100%" : "0%" }}
+                        transition={{ ease: "linear" }}
+                      />
+                    </div>
+
+                    <span
+                      className={`text-[12px] md:text-[18px] tracking-[1px] md:tracking-[2.5px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
+                        isCurrent
+                          ? "text-[#C02429]"
+                          : "text-[#d4d0c8] group-hover:text-white"
+                      }`}
+                    >
+                      {tab.nav ?? tab.label}
+                    </span>
+                  </button>
+                );
+              })}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default DetailedContent;

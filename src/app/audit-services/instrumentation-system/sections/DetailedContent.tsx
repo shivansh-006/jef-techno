@@ -159,79 +159,56 @@ const pages = [
 
 export default function DetailedContent() {
   const [activePage, setActivePage] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isManualPaused, setIsManualPaused] = useState(false);
 
-  const getVisibleTabs = () => {
-    let start = activePage - Math.floor(VISIBLE_TABS / 2);
-
-    if (start < 0) start = 0;
-
-    if (start + VISIBLE_TABS > pages.length) {
-      start = pages.length - VISIBLE_TABS;
-    }
-
-    return pages.slice(start, start + VISIBLE_TABS).map((page, index) => ({
-      ...page,
-      realIndex: start + index,
-    }));
+  const handlePrevPage = (e) => {
+    e.stopPropagation();
+    setActivePage((prev) => (prev - 1 + pages.length) % pages.length);
   };
 
-  const visibleTabs = getVisibleTabs();
-
-  useEffect(() => {
-    if (isPaused || isManualPaused) return;
-
-    const interval = setInterval(() => {
-      setProgress((prev) =>
-        prev >= 100
-          ? 100
-          : prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100
-      );
-    }, PROGRESS_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [activePage, isPaused, isManualPaused]);
-
-  useEffect(() => {
-    if (progress >= 100) {
-      setActivePage((prev) => (prev + 1) % pages.length);
-      setProgress(0);
-    }
-  }, [progress]);
-
-  const handleTabClick = (index) => {
-    if (index === activePage) {
-      setIsManualPaused((prev) => !prev);
-      return;
-    }
-
-    setActivePage(index);
-    setProgress(0);
-    setIsPaused(false);
-    setIsManualPaused(false);
+  const handleNextPage = (e) => {
+    e.stopPropagation();
+    setActivePage((prev) => (prev + 1) % pages.length);
   };
 
   const page = pages[activePage];
 
   return (
-    <section className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden">
-      <div
-        onMouseEnter={() => !isManualPaused && setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex min-h-[650px] flex-col px-5 md:px-0"
-      >
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -18 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.45 }}
-          className="mb-9 text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
-        >
-          {page.title}
-        </motion.h2>
+    <section 
+      className="min-h-[760px] bg-[#161414] py-14 md:py-20 font-montserrat text-white overflow-hidden"
+    >
+      <div className="section-container flex min-h-[650px] flex-col px-5 md:px-0">
+        
+        {/* Top Header Row with Title and Arrow Navigation Buttons */}
+        <div className="flex items-center justify-between gap-4 mb-9">
+          <motion.h2
+            key={`title-${activePage}`}
+            initial={{ opacity: 0, x: -18 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.45 }}
+            className="text-[#C02429] text-[20px] md:text-[26px] font-bold uppercase tracking-[1px] md:tracking-[1.49px] leading-[1.4]"
+          >
+            {page.title}
+          </motion.h2>
 
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={handlePrevPage}
+              aria-label="Previous tab"
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextPage}
+              aria-label="Next tab"
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        {/* Content Panel Area */}
         <motion.div
           key={`content-${activePage}`}
           initial={{ opacity: 0, y: 12 }}
@@ -239,35 +216,30 @@ export default function DetailedContent() {
           transition={{ duration: 0.45 }}
           className="flex-1"
         >
-          <div className="flex max-w-[1500px] flex-col gap-6">
-            {page.content}
-          </div>
+          <div className="flex max-w-[1500px] flex-col gap-6">{page.content}</div>
         </motion.div>
 
+        {/* Bottom Tab Row Layout Container */}
         <div className="mt-12 md:mt-20 overflow-hidden">
-          <motion.div
-            key={visibleTabs[0]?.realIndex}
-            initial={{ x: 80, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-            className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5"
-          >
-            {visibleTabs.map((tab) => {
-              const isCurrent = activePage === tab.realIndex;
+          <div className="flex gap-4 md:gap-8">
+            {pages.map((tab, index) => {
+              const isCurrent = activePage === index;
 
               return (
                 <button
-                  key={tab.realIndex}
-                  onClick={() => handleTabClick(tab.realIndex)}
-                  className="group flex w-full flex-col items-start text-left"
+                  key={index}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setActivePage(index);
+                  }}
+                  className="group flex flex-col items-start text-left shrink-0 cursor-pointer"
                 >
-                  <div className="relative mb-3 h-[2px] w-full bg-[#d4d0c8]/80">
+                  {/* Dynamic Progress Indicator Strip */}
+                  <div className="relative mb-3 h-[2px] w-60 bg-[#d4d0c8]/80">
                     <motion.div
                       className="absolute left-0 top-0 h-full bg-[#C02429]"
-                      animate={{
-                        width: isCurrent ? `${progress}%` : "0%",
-                      }}
-                      transition={{ ease: "linear" }}
+                      animate={{ width: isCurrent ? "100%" : "0%" }}
+                      transition={{ ease: "linear", duration: 0.3 }}
                     />
                   </div>
 
@@ -283,7 +255,7 @@ export default function DetailedContent() {
                 </button>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

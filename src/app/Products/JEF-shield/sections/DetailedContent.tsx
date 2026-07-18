@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type TagDescription = {
@@ -170,71 +170,58 @@ const pages: PageItem[] = [
 }
 ];
 
-const PROGRESS_DURATION = 15000;
-const PROGRESS_INTERVAL = 50;
-
 const DetailedContent = () => {
   const [activePage, setActivePage] = useState<number>(0);
   const [activeTags, setActiveTags] = useState<Record<number, number>>({});
-  const [progress, setProgress] = useState<number>(0);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const startTimeRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (isPaused) {
-      clearInterval(intervalRef.current);
-      return;
-    }
-
-    if (startTimeRef.current === null) {
-      startTimeRef.current = Date.now();
-    } else {
-      startTimeRef.current = Date.now() - PROGRESS_DURATION * (progress / 100);
-    }
-
-    intervalRef.current = setInterval(() => {
-      const elapsed = Date.now() - startTimeRef.current;
-      const pct = Math.min((elapsed / PROGRESS_DURATION) * 100, 100);
-      setProgress(pct);
-
-      if (pct >= 100) {
-        clearInterval(intervalRef.current);
-        const next = (activePage + 1) % pages.length;
-        setActivePage(next);
-        setActiveTags({});
-        setProgress(0);
-        startTimeRef.current = Date.now();
-      }
-    }, PROGRESS_INTERVAL);
-
-    return () => clearInterval(intervalRef.current);
-  }, [activePage, isPaused, progress]);
 
   const handleTabClick = (index) => {
     setActivePage(index);
     setActiveTags({});
-    setProgress(0);
-    startTimeRef.current = Date.now();
+  };
+
+  const handlePrevPage = () => {
+    setActivePage((prev) => (prev - 1 + pages.length) % pages.length);
+    setActiveTags({});
+  };
+
+  const handleNextPage = () => {
+    setActivePage((prev) => (prev + 1) % pages.length);
+    setActiveTags({});
   };
 
   const page = pages[activePage];
 
   return (
-    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[1000px] flex flex-col">
-      <div 
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex flex-col flex-1 gap-6 md:gap-8">
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] md:line-height-[60px] uppercase"
-        >
-          {page.title}
-        </motion.h2>
+    <section className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-250 flex flex-col">
+      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8">
+        <div className="flex items-center justify-between gap-4">
+          <motion.h2
+            key={`title-${activePage}`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] md:line-height-[60px] uppercase"
+          >
+            {page.title}
+          </motion.h2>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={handlePrevPage}
+              aria-label="Previous tab"
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextPage}
+              aria-label="Next tab"
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              →
+            </button>
+          </div>
+        </div>
 
         <div className="w-full relative z-20 flex-1">
           <div className="min-h-0">
@@ -254,7 +241,7 @@ const DetailedContent = () => {
                   return (
                     <p
                       key={i}
-                      className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white text-justify"
+                      className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white text-justify"
                     >
                       {paragraphChild.props.children}
                     </p>
@@ -274,7 +261,7 @@ const DetailedContent = () => {
                   </h3>
                 )}
 
-                <div className="min-h-[50px]">
+                <div className="min-h-12.5">
                   <AnimatePresence mode="wait">
                     {activeTags[si] !== undefined &&
                     sub.tagDescriptions?.[activeTags[si]] ? (
@@ -284,12 +271,12 @@ const DetailedContent = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.4 }}
-                        className="flex flex-col gap-4 mb-4 mt-5 mb-5"
+                        className="flex flex-col gap-4 mt-5 mb-5"
                       >
                         <h4 className="text-[#C02429] text-[16px] md:text-[18px] lg:text-[20px] font-bold uppercase">
                           {sub.tagDescriptions[activeTags[si]].title}
                         </h4>
-                        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white whitespace-pre-line">
+                        <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white whitespace-pre-line">
                           {sub.tagDescriptions[activeTags[si]].description}
                         </p>
                         <button
@@ -312,7 +299,7 @@ const DetailedContent = () => {
                           {sub.body.split("\n\n").map((para, pi) => (
                             <p
                               key={pi}
-                              className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify"
+                              className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-normal text-white/80 text-justify"
                             >
                               {para}
                             </p>
@@ -382,17 +369,13 @@ const DetailedContent = () => {
               <button
                 key={index}
                 onClick={() => handleTabClick(index)}
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
                 className="bg-none border-none cursor-pointer flex flex-col items-start w-full group"
               >
-                <div className="w-full h-[2px] bg-[#d4d0c8] mb-3 relative z-10">
+                  <div className="w-full h-0.5 bg-[#d4d0c8] mb-3 relative z-10">
                   <motion.div
                     className="absolute top-0 left-0 h-full bg-[#C02429]"
                     initial={{ width: 0 }}
-                    animate={{
-                      width: activePage === index ? `${progress}%` : "0%",
-                    }}
+                    animate={{ width: activePage === index ? "100%" : "0%" }}
                     transition={{ ease: "linear" }}
                   />
                 </div>

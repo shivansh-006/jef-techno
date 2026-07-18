@@ -177,7 +177,7 @@ export default function WhyRca() {
                       font-medium
                     "
                   >
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
 
                   <p

@@ -24,7 +24,7 @@ const cards = [
     image: "/clps/3.png",
     title: "COMPREHENSIVE SYSTEM FROM ONE SOURCE",
     description:
-      "Every component required for a comprehensive lightning protection system — from air termination rod to point-of-use SPD — is available from JEF as a coordinated, type-tested range.",
+      "Every component required for a comprehensive lightning protection system — from air termination rod to point-of-use SPD — is available from JEF as a coordinated, type-tested range.", 
   },
   {
     id: 4,
@@ -173,7 +173,7 @@ export default function WhyRca() {
                       font-medium
                     "
                   >
-                    {card.title}
+                    {card.id}. {card.title}
                   </h3>
 
                   <p

@@ -57,15 +57,18 @@ const NavHeader = ({
                 className="lg:flex cursor-pointer hidden gap-2 justify-center items-center self-stretch my-auto group"
               >
                 {item.path ? (
-                  <Link
-                    href={item.path}
-                    className={`nav-item cursor-pointer uppercase md:text-xs xl:text-sm font-medium tracking-[2px] text-white ${
-                      pathname === item.path ? "active" : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
+  <Link
+    href={item.path}
+    // Check if the path starts with 'http' to open in a new tab
+    target={item.path.startsWith("http") ? "_blank" : undefined}
+    rel={item.path.startsWith("http") ? "noopener noreferrer" : undefined}
+    className={`nav-item cursor-pointer uppercase md:text-xs xl:text-sm font-medium tracking-[2px] text-white ${
+      pathname === item.path ? "active" : ""
+    }`}
+  >
+    {item.label}
+  </Link>
+) : (
                   <button
                     onMouseEnter={() => handleMenuHover(item.label)}
                     onMouseLeave={handleMouseLeave}

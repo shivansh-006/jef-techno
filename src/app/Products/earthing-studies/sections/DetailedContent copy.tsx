@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
@@ -196,7 +196,7 @@ const pages = [
       },
     ],
   },
-  { 
+  { //////////////////////////////////
     label: "THE TECHNOLOGY ADVANTAGE CARBON-BASED BACKFILL",
     nav: "THE TECHNOLOGY ADVANTAGE-\nCARBON-BASED\nBACKFILL",
     title:
@@ -296,6 +296,9 @@ const pages = [
     subsections: null,
   },
 ];
+
+
+
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

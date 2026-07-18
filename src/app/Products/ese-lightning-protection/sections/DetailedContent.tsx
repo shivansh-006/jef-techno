@@ -183,56 +183,29 @@ const pages = [
   },
 ];
 
-const PROGRESS_DURATION = 15000;
-const PROGRESS_INTERVAL = 50;
+
+
+
 
 const DetailedContent = () => {
   const [activePage, setActivePage] = useState(0);
   const [activeTags, setActiveTags] = useState<Record<number, number | undefined>>({});
-  const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isManualPaused, setIsManualPaused] = useState(false);
-  const [restartKey, setRestartKey] = useState(0);
 
-  useEffect(() => {
-    if (isPaused || isManualPaused) return;
+  const handlePrevPage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActivePage((prev) => (prev - 1 + pages.length) % pages.length);
+    setActiveTags({});
+  };
 
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 100;
-        return prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100;
-      });
-    }, PROGRESS_INTERVAL);
+  const handleNextPage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setActivePage((prev) => (prev + 1) % pages.length);
+    setActiveTags({});
+  };
 
-    return () => clearInterval(interval);
-  }, [activePage, isPaused, isManualPaused, restartKey]);
-
-  // Effect to handle page transition when progress reaches 100
-  useEffect(() => {
-    if (progress >= 100) {
-      const next = (activePage + 1) % pages.length;
-      setActivePage(next);
-      setActiveTags({});
-      setProgress(0);
-    }
-  }, [progress, activePage]);
-
-  const handleTabClick = (index) => {
-    if (index === activePage) {
-      if (isManualPaused) {
-        setIsManualPaused(false);
-        setIsPaused(false);
-      } else {
-        setIsManualPaused(true);
-      }
-    } else {
-      setIsManualPaused(false);
-      setIsPaused(false);
-      setActivePage(index);
-      setActiveTags({});
-      setProgress(0);
-      setRestartKey((prev) => prev + 1);
-    }
+  const handleTabClick = (index: number) => {
+    setActivePage(index);
+    setActiveTags({});
   };
 
   const page = pages[activePage];
@@ -241,21 +214,37 @@ const DetailedContent = () => {
     <section 
       className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[1000px] flex flex-col"
     >
-      <div 
-        onMouseEnter={() => !isManualPaused && setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex flex-col flex-1 gap-6 md:gap-8"
-      >
-        {/* Heading */}
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] md:line-height-[60px] uppercase"
-        >
-          {page.title}
-        </motion.h2>
+      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8">
+        
+        {/* Heading & Control Row */}
+        <div className="flex items-center justify-between gap-4">
+          <motion.h2
+            key={`title-${activePage}`}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase"
+          >
+            {page.title}
+          </motion.h2>
+
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={handlePrevPage}
+              aria-label="Previous tab"
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] flex items-center justify-center hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextPage}
+              aria-label="Next tab"
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] flex items-center justify-center hover:text-white hover:border-white transition-colors duration-300 cursor-pointer"
+            >
+              →
+            </button>
+          </div>
+        </div>
 
         {/* Content Area */}
         <div className="w-full relative z-20 flex-1">
@@ -339,8 +328,8 @@ const DetailedContent = () => {
                       >
                         {sub.body.split("\n\n").map((para, pi) => (
                           <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify">
-                          {para}
-                        </p>
+                            {para}
+                          </p>
                         ))}
                       </motion.div>
                     )
@@ -401,25 +390,23 @@ const DetailedContent = () => {
             {pages
               .map((tab, index) => ({ ...tab, originalIndex: index }))
               .slice(activePage < 5 ? 0 : 2, activePage < 5 ? 5 : 7)
-              .map((tab, index) => {
+              .map((tab) => {
                 const isCurrent = activePage === tab.originalIndex;
                 return (
                   <button
                     key={tab.originalIndex}
                     onClick={() => handleTabClick(tab.originalIndex)}
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
                     className="bg-none border-none cursor-pointer flex flex-col items-start w-full group transition-all duration-500"
                   >
-                    {/* Progress bar */}
+                    {/* Visual Tab Fill Line Indicator */}
                     <div className="w-full h-[2px] bg-[#d4d0c8] mb-3 relative z-10">
                       <motion.div
                         className="absolute top-0 left-0 h-full bg-[#C02429]"
                         initial={{ width: 0 }}
                         animate={{
-                          width: isCurrent ? `${progress}%` : activePage > tab.originalIndex ? "100%" : "0%",
+                          width: isCurrent || activePage > tab.originalIndex ? "100%" : "0%",
                         }}
-                        transition={{ ease: "linear" }}
+                        transition={{ ease: "easeInOut", duration: 0.3 }}
                       />
                     </div>
 

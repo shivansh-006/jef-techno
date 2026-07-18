@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
@@ -115,9 +115,78 @@ const pages = [
         </p>
       </>
     ),
+    // subsections: [
+    //   {
+    //     heading: "EXTERNAL LIGHTNING PROTECTION",
+    //     tags: [
+    //       "Air Termination System",
+    //       "Down Conductor System",
+    //       "Earth Termination System",
+    //       "Equipotential Bonding",
+    //       // "Air Termination Positioning Methods",
+    //       // "Permitted Air Termination Types",
+    //     ],
+    //     isListOnly: false,
+    //     layout: "col",
+    //     tagDescriptions: [
+    //       {
+    //         title: "Air Termination System",
+    //         description: "The air termination system is positioned at the highest and most exposed points of the structure — the locations where a lightning leader is most likely to terminate. By placing conductors and rods at these positions and connecting them to the down conductor system, the air termination gives the strike a defined entry point into the protected system, rather than allowing it to contact uncontrolled elements of the structure such as cladding, roofing materials, or building services.",
+    //       },
+    //       {
+    //         title: "Down Conductor System",
+    //         description: "The down conductor system is responsible for safely conducting the lightning current from the air termination system to the earth termination system. It consists of conductors that are strategically placed to provide the most effective path for the lightning current.",
+    //       },
+    //       {
+    //         title: "Earth Termination System",
+    //         description: "The earth termination system is responsible for safely dissipating the lightning current into the ground. It consists of electrodes and connections that ensure the lightning current is effectively directed into the earth.",
+    //       },
+    //       {
+    //         title: "Equipotential Bonding",
+    //         description: "When lightning current flows through the down conductors and into the earth, it raises the electrical potential of the entire LPS — conductors, bonded metalwork, and earthing system — relative to any conducting objects not connected to it. If the potential difference between the LPS and an adjacent metallic service or structural element becomes large enough, a disruptive discharge will occur across the gap between them. This side-flash can ignite combustible materials, damage electrical equipment, and cause injury or death.\nEquipotential bonding prevents this by connecting all conducting elements within and entering the structure to the LPS, so that every conducting part rises to approximately the same potential simultaneously during a strike.",
+    //       },
+    //       null,
+    //       null,
+    //     ],
+    //   },
+    // ],
+  },{
+    label: "COMPONENTS LIGHTNING PROTECTION SYSTEM ",
+    nav: "COMPONENTS\nLIGHTNING\nPROTECTION",
+    title: "COMPONENTS LIGHTNING PROTECTION SYSTEM ",
+    content: (
+      <>
+        {/* <p>
+          IEC 62305:2024 treats lightning protection as a system with two 
+          interdependent parts. Each addresses a distinct category of threat, 
+          and neither is adequate on its own.
+        </p>
+        <p>
+          The external system manages the direct strike. It intercepts lightning
+          at the air termination, routes current through the down conductors and
+          disperses energy to ground via the earth termination — protecting the
+          structure from physical damage, fire, and dangerous touch and step
+          voltages.
+        </p>
+        <p>
+          The internal system manages the electrical consequences within the
+          building. It uses Equipotential bonding to eliminate dangerous
+          potential differences between LPS conductors and metallic services and
+          structural elements inside the building. Surge Protective Devices
+          installed on all electrical and electronic lines limit transient
+          overvoltages — from strikes or internal switching — to levels
+          equipment can safely withstand.
+        </p>
+        <p>
+          IEC 62305-3 requires periodic inspection and maintenance of both
+          systems, in intervals set by the Lightning Protection Level and site
+          conditions.
+        </p> */}
+      </>
+    ),
     subsections: [
       {
-        heading: "EXTERNAL LIGHTNING PROTECTION",
+        // heading: "EXTERNAL LIGHTNING PROTECTION",
         tags: [
           "Air Termination System",
           "Down Conductor System",
@@ -154,18 +223,20 @@ const pages = [
 {
   label: "JEF CLPS PRODUCTS",
   nav: "JEF CLPS\nPRODUCTS",
-  title: (
-  <>
-   <span className="whitespace-nowrap inline-flex text-center items-center gap-1">
-      JEF CLPS PRODUCTS — TYPE-TESTED TO 200 KA / 10/350
-      <img
-        src="/clps/µs.png"
-        alt="µs"
-        className=" md:mt-2 inline-block sm:w-[18px] md:w-[30px] h-auto align-middle"
-      />
-    </span>
-  </>
-),
+  title: "JEF CLPS PRODUCTS — TYPE-TESTED TO 200 KA / 10/350"
+//   (
+//   <>
+//    <span className="whitespace-nowrap inline-flex text-center items-center gap-1">
+//       JEF CLPS PRODUCTS — TYPE-TESTED TO 200 KA / 10/350
+//       <img
+//         src="/clps/µs.png"
+//         alt="µs"
+//         className=" md:mt-2 inline-block sm:w-[18px] md:w-[30px] h-auto align-middle"
+//       />
+//     </span>
+//   </>
+// )
+,
   content: (
     <>
       <p>
@@ -210,60 +281,29 @@ const pages = [
 }
 ];
 
-const PROGRESS_DURATION = 15000;
-const PROGRESS_INTERVAL = 50;
+
+// ===================================================================================================================================
 
 const DetailedContent = () => {
   const [activePage, setActivePage] = useState(0);
   const [activeTags, setActiveTags] = useState<Record<number, number | undefined>>({}); // format: { [si]: ti }
-  const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isManualPaused, setIsManualPaused] = useState(false);
-  const [restartKey, setRestartKey] = useState(0);
-  const intervalRef = useRef(null);
-
-  useEffect(() => {
-    if (isPaused || isManualPaused) {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      return;
-    }
-
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 100;
-        return prev + (PROGRESS_INTERVAL / PROGRESS_DURATION) * 100;
-      });
-    }, PROGRESS_INTERVAL);
-
-    return () => clearInterval(interval);
-  }, [activePage, isPaused, isManualPaused, restartKey]);
-
-  // Effect to handle page transition when progress reaches 100
-  useEffect(() => {
-    if (progress >= 100) {
-      const next = (activePage + 1) % pages.length;
-      setActivePage(next);
-      setActiveTags({});
-      setProgress(0);
-    }
-  }, [progress, activePage]);
 
   const handleTabClick = (index) => {
-    if (index === activePage) {
-      if (isManualPaused) {
-        setIsManualPaused(false);
-        setIsPaused(false);
-      } else {
-        setIsManualPaused(true);
-      }
-    } else {
-      setIsManualPaused(false);
-      setIsPaused(false);
-      setActivePage(index);
-      setActiveTags({});
-      setProgress(0);
-      setRestartKey((prev) => prev + 1);
-    }
+    if (index === activePage) return;
+    setActivePage(index);
+    setActiveTags({});
+  };
+
+  const handlePrevPage = () => {
+    const prev = (activePage - 1 + pages.length) % pages.length;
+    setActivePage(prev);
+    setActiveTags({});
+  };
+
+  const handleNextPage = () => {
+    const next = (activePage + 1) % pages.length;
+    setActivePage(next);
+    setActiveTags({});
   };
 
   const page = pages[activePage];
@@ -272,21 +312,42 @@ const DetailedContent = () => {
     <section 
       className="bg-[#161414] font-montserrat py-10 md:pt-16 md:pb-12 overflow-hidden min-h-[1000px] flex flex-col"
     >
-      <div 
-        onMouseEnter={() => !isManualPaused && setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        className="section-container flex flex-col flex-1 gap-6 md:gap-8"
-      >
-        {/* Heading */}
-        <motion.h2
-          key={`title-${activePage}`}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] md:line-height-[60px] uppercase"
-        >
-          {page.title}
-        </motion.h2>
+      <div className="section-container flex flex-col flex-1 gap-6 md:gap-8" >
+
+
+
+
+
+        <div className="flex justify-between items-center w-full mt-12 mb-8">
+
+
+                {/* Heading */}
+            <motion.h2
+              key={`title-${activePage}`}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] md:line-height-[60px] uppercase"
+            >
+              {page.title}
+            </motion.h2>
+
+          
+          <div className="flex items-center justify-end gap-3 mb-6">
+            <button
+              onClick={handlePrevPage}
+              className="rounded-full h-12 w-12 border border-[#d4d0c8] text-[#d4d0c8] text-[20px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNextPage}
+              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+            >
+              →
+            </button>
+          </div>
+        </div>  
 
         {/* Content Area */}
         <div className="w-full relative z-20 flex-1">
@@ -323,52 +384,7 @@ const DetailedContent = () => {
                 </h3>
               )}
 
-              {/* Swappable Area: Body OR Tag Description */}
-              <div className="min-h-[5[px]50px]">
-                <AnimatePresence mode="wait">
-                  {activeTags[si] !== undefined && sub.tagDescriptions?.[activeTags[si]] ? ( //means if a tag is active and has a description, show the description else show the body where body is not null
-                    <motion.div
-                      key={`tag-desc-${si}-${activeTags[si]}`}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.4 }}
-                      className="flex flex-col gap-4 mb-4"
-                    >
-                      <h4 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-bold uppercase">
-                        {sub.tagDescriptions[activeTags[si]].title}
-                      </h4>
-                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white whitespace-pre-line">
-                        {sub.tagDescriptions[activeTags[si]].description}
-                      </p>
-                      <button
-                        onClick={() => setActiveTags({})}
-                        className="text-[#C02429] text-[14px] uppercase font-bold hover:underline w-fit"
-                      >
-                        ← Back to overview
-                      </button>
-                    </motion.div>
-                  ) : (
-                    sub.body && (
-                      <motion.div
-                        key={`sub-body-${si}`}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.4 }}
-                        className="mb-4"
-                      >
-                        {sub.body.split("\n\n").map((para, pi) => (
-                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify">
-                            {para}
-                          </p>
-                        ))}
-                      </motion.div>
-                    )
-                  )}
-                </AnimatePresence>
-              </div>
-
+         
               {/* Tags Area */}
               {sub.tags && ( // if 
                 <>
@@ -454,6 +470,52 @@ const DetailedContent = () => {
                 </>
               )}
 
+                            {/* Swappable Area: Body OR Tag Description */}
+              <div className="min-h-[5[px]50px]">
+                <AnimatePresence mode="wait">
+                  {activeTags[si] !== undefined && sub.tagDescriptions?.[activeTags[si]] ? ( //means if a tag is active and has a description, show the description else show the body where body is not null
+                    <motion.div
+                      key={`tag-desc-${si}-${activeTags[si]}`}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.4 }}
+                      className="flex flex-col gap-4 mb-4"
+                    >
+                      <h4 className="text-white text-[16px] md:text-[18px] lg:text-[20px] font-bold uppercase">
+                        {sub.tagDescriptions[activeTags[si]].title}
+                      </h4>
+                      <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white whitespace-pre-line">
+                        {sub.tagDescriptions[activeTags[si]].description}
+                      </p>
+                      {/* <button
+                        onClick={() => setActiveTags({})}
+                        className="text-[#C02429] text-[14px] uppercase font-bold hover:underline w-fit"
+                      >
+                        ← Back to overview
+                      </button> */}
+                    </motion.div>
+                  ) : (
+                    sub.body && (
+                      <motion.div
+                        key={`sub-body-${si}`}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.4 }}
+                        className="mb-4"
+                      >
+                        {sub.body.split("\n\n").map((para, pi) => (
+                          <p key={pi} className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] text-white/80 text-justify">
+                            {para}
+                          </p>
+                        ))}
+                      </motion.div>
+                    )
+                  )}
+                </AnimatePresence>
+              </div>
+
               {sub.footer && !activeTags[si] && (
                 <p className="text-[16px] md:text-[18px] lg:text-[20px] font-normal leading-[1.5] mt-6 text-white italic opacity-80">
                   {sub.footer}
@@ -463,9 +525,11 @@ const DetailedContent = () => {
           ))}
         </div>
 
-        {/* Bottom Navigation */}
+        {/* Bottom */}
         <div className="mt-12 md:mt-20 pb-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 overflow-hidden">
             {pages.map((tab, index) => {
               const isCurrent = activePage === index;
               return (
@@ -480,7 +544,7 @@ const DetailedContent = () => {
                         className="absolute top-0 left-0 h-full bg-[#C02429]"
                         initial={{ width: 0 }}
                         animate={{
-                          width: isCurrent ? `${progress}%` : activePage > index ? "100%" : "0%",
+                          width: isCurrent ? "100%" : "0%",
                         }}
                         transition={{ ease: "linear" }}
                       />
