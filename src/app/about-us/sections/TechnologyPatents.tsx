@@ -8,6 +8,7 @@ const technologyData = [
     id: 0,
     title: "TECHNOLOGY AND PATENTS",
     image: "/AboutUs/technpat.jpeg",
+    icon: null,
     description:
       "9 granted patents — India, United States, European Union. JEF's proprietary tools are not incremental improvements to existing approaches. They are purpose-built responses to specific gaps in what the industry was delivering.",
   },
@@ -16,6 +17,7 @@ const technologyData = [
     id: 1,
     title: "JEF Shield",
     image: "/HomePageImg/IndustriesWeServe/weServe2.png",
+    icon: "/AboutUs/Tools PNG-04.png",
     description:
       "Automated LPS risk assessment and design to IEC 62305-2. Complete report, drawings, and BOM in under 90 seconds.",
   },
@@ -24,6 +26,7 @@ const technologyData = [
     id: 2,
     title: "JEF Safety Audit Tool",
     image: "/HomePageImg/IndustriesWeServe/weServe1.png",
+    icon: "/AboutUs/Tools PNG-05.png",
     description:
       "World's first automated safety audit tool. 15K+ reports, 630K+ data points, 230K+ images, zero data mix-up. Patented.",
   },
@@ -32,6 +35,7 @@ const technologyData = [
     id: 3,
     title: "JEF E-Build",
     image: "/HomePageImg/IndustriesWeServe/weServe5.png",
+    icon: "/AboutUs/Tools PNG-06.png",
     description:
       "Real-time LPS installation monitoring and remote certification.",
   },
@@ -153,6 +157,24 @@ export default function TechnologyPatents() {
               >
                 {/* RED LINE */}
                 <div className="w-[2px] h-[50px] sm:h-[60px] bg-[#C02429] mt-1 shrink-0" />
+                <div className="flex flex-col gap-1 sm:gap-2">
+                  {/* ICON */}
+                  {item.icon && (
+                    <motion.img
+                      src={item.icon}
+                      alt={item.title}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: 0.1,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      viewport={{ once: true }}
+                      className="w-12 h-12 sm:w-18 sm:h-20 object-contain"
+                    />
+                  )}
+                </div>
 
                 {/* TITLE TEXT */}
                 <motion.h2
