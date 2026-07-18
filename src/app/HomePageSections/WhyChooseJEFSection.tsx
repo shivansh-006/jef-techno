@@ -41,29 +41,33 @@ export default function WhyChooseJEFSection() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-[50px] md:gap-[80px]">
           
           {/* IMAGE */}
-          <motion.div
-            variants={fadeLeft}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[45%] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
-          >
-            <img
-              src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef3.jpeg"
-              alt="Smart Digitization"
-              className="
-                w-full
-                h-full
-                object-cover
-                transform-gpu
-                will-change-transform
-                transition-transform
-                duration-700
-                ease-out
-                hover:scale-110
-              "
-            />
+                  <motion.div
+                    variants={fadeRight}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    style={{ willChange: "transform, opacity" }}
+                    // 1. aspect-video keeps the 2:1 ratio (like your 40rem x 20rem).
+                    // 2. w-full ensures it scales down to mobile screens perfectly.
+                    // 3. max-w-2xl limits its maximum size on large screens so it doesn't get massive.
+                    className="w-full max-w-2xl aspect-[2/1] overflow-hidden mx-auto bg-gray-50/50"
+                  >
+                    <img
+                      src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef3.jpeg"
+                      alt="L&D Center"
+                      className="
+                        w-full h-full 
+                        object-cover
+                        bg-no-repeat
+                        bg-center
+                        transform-gpu
+                        will-change-transform
+                        transition-transform
+                        duration-700
+                        ease-out
+                        hover:scale-105
+                      "
+                    />
           </motion.div>
 
           {/* CONTENT */}
@@ -90,7 +94,7 @@ export default function WhyChooseJEFSection() {
               Our patented Smart Digitization process delivers consistency,
               speed, accuracy and reliability at scale. Trusted by 450+
               customers globally, it delivers secure, standardized reports
-              with customizable formats - 15K+ reports and 600K+
+              with customizable formats - 16K+ reports and 600K+
               data points captured to date.
             </p>
 
@@ -228,30 +232,34 @@ export default function WhyChooseJEFSection() {
           </motion.div>
 
           {/* IMAGE */}
-          <motion.div
-            variants={fadeRight}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            style={{ willChange: "transform, opacity" }}
-            className="w-full lg:w-[45%] h-[250px] sm:h-[320px] lg:h-[375px] overflow-hidden"
-          >
-            <img
-              src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef2.png"
-              alt="L&D Center"
-              className="
-                w-full
-                h-full
-                object-cover
-                transform-gpu
-                will-change-transform
-                transition-transform
-                duration-700
-                ease-out
-                hover:scale-110
-              "
-            />
-          </motion.div>
+              <motion.div
+                variants={fadeRight}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                style={{ willChange: "transform, opacity" }}
+                // 1. aspect-video keeps the 2:1 ratio (like your 40rem x 20rem).
+                // 2. w-full ensures it scales down to mobile screens perfectly.
+                // 3. max-w-2xl limits its maximum size on large screens so it doesn't get massive.
+                className="w-full max-w-2xl aspect-[2/1] overflow-hidden mx-auto bg-gray-50/50"
+              >
+                <img
+                  src="/HomePageImg/WhyChooseJEFImg/WhyChooseJef2.png"
+                  alt="L&D Center"
+                  className="
+                    w-full h-full 
+                    object-cover
+                    bg-no-repeat
+                    bg-center
+                    transform-gpu
+                    will-change-transform
+                    transition-transform
+                    duration-700
+                    ease-out
+                    hover:scale-105
+                  "
+                />
+              </motion.div>
         </div>
       </div>
     </section>

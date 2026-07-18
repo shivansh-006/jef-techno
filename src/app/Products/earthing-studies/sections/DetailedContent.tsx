@@ -97,7 +97,7 @@ const pages = [
 
       </>
     ),
-    image: "/Earthing-Grounding/Image 25.png",
+    image: "/Earthing-Grounding/image 25.png",
     subsections: null,
   },
   {

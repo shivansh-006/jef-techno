@@ -31,29 +31,23 @@ export default function FounderMessageSection() {
                 <p>
                   Every single day, we endeavour to make more customers across
                   continents
-                  <br />
                   benefit from our work as a step to enhance reliability &
                   safety in the electrical
-                  <br />
                   network.
                 </p>
 
                 <p>
                   Over the last 30 years of our existence, we have served 10K+
-                  <br />
                   customers in 30+ countries. Consistently meeting & exceeding
                   their
-                  <br />
                   expectations at every given opportunity, we at Team JEF have
                   created a
-                  <br />
                   formidable track record for ourselves.
                 </p>
 
                 <p>
                   No wonder customers <strong>THINK "JEF"</strong> when they{" "}
                   <strong>THINK ELECTRICAL</strong>
-                  <br />
                   engineering.
                 </p>
               </div>
@@ -73,52 +67,31 @@ export default function FounderMessageSection() {
             </div>
           </motion.div>
 
-          {/* DESKTOP IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.05,
-              ease: "easeOut",
-            }}
-            viewport={{ once: true }}
-            style={{ willChange: "transform, opacity" }}
-            className="hidden lg:flex flex-col w-full lg:w-[542px] mt-auto 2xl:max-h-[600px]"
-          >
-            <img
-             className="
-  h-[70vh]
-  md:max-lg:w-[420px]
-  md:max-lg:h-[50vh]
-  lg:w-[542px]
-  lg:h-[70vh]
-  xl:h-[75vh]
-  transform-gpu
-"
-              src="/HomePageImg/founder.png"
-              alt="Founder"
-            />
-          </motion.div>
-
-          {/* MOBILE IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-            }}
-            viewport={{ once: true }}
-            style={{ willChange: "transform, opacity" }}
-            className="flex lg:hidden flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:mt-auto 2xl:max-h-[600px]"
-          >
-            <img
-              className="object-contain lg:h-full transform-gpu"
-              src="/HomePageImg/founder.png"
-              alt="Founder"
-            />
-          </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 40 : 0, y: typeof window !== 'undefined' && window.innerWidth < 1024 ? 30 : 0 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: 0.05,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true }}
+                  style={{ willChange: "transform, opacity" }}
+                  // The container controls the structure across all screen sizes cleanly
+                  className="flex flex-col w-full max-w-[420px] lg:max-w-[542px] mt-auto mx-auto lg:mx-0"
+                >
+                  <img
+                    src="/HomePageImg/founder.png"
+                    alt="Founder"
+                    className="
+                      w-full 
+                      h-auto 
+                      object-contain 
+                      aspect-[3/4] 
+                      transform-gpu
+                    "
+                  />
+                </motion.div>
         </div>
       </section>
   );

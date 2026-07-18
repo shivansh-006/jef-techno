@@ -100,7 +100,7 @@ const pages = [
     title: "LIGHTNING PROTECTION SYSTEM FOR SOLAR FIELDS",
     content: (
       <>
-        <p>Conventional lightning protection systems (LPS), designed in accordance with IEC 62305, offer significant advantages in solar PV fields due to their proven reliability, standardized design approach, and universal acceptance. Their design methodologies—such as the rolling sphere and mesh methods.</p>
+        <p>Conventional lightning protection systems (LPS), designed in accordance with IEC 62305, offer significant advantages in solar PV fields due to their proven reliability, standardized design approach, and universal acceptance. Their design methodologies—such as the rolling sphere and mesh methods—are well established, enabling transparent engineering, easy validation, and regulatory approval.</p>
         <br />
         <p>One of the most significant challenges in conventional Lightning protection system is the requirement for a large number of air terminals and conductors to cover vast, low-height panel areas, which can create shading on panels, resulting in energy losses and potential hotspot formation.</p>
         <br />

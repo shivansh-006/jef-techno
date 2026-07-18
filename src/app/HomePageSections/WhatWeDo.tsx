@@ -150,7 +150,7 @@ export default function WhatWeDoSection() {
 
         • Prevents equipment damage and shock risk
 
-        • Ensures compliance with relevant standards
+        • Meets safety compliance standards
         `,
         x: 150,
         y: 40,
@@ -214,7 +214,7 @@ export default function WhatWeDoSection() {
 
 • Checks fire suppression and alarm systems
 
-• Keeps you legally compliant and insurable
+• Ensures compliance with relevant standards
         `,
         x: 300,
         y: 400,
@@ -259,6 +259,21 @@ export default function WhatWeDoSection() {
         xmob: 270,
         ymob: 720,
         labelPos: "bottom left-[20px] ",
+      },
+      {
+        heading: "EMI - EMC",
+        description: `
+• Comprehensive on-site surveys to identify sources of electromagnetic interference
+
+• Detailed analysis of interference levels affecting system performance.
+
+• Assessment of shielding effectiveness in protecting sensitive areas from electromagnetic disturbances
+        `,
+        x: 150,
+        y: 465,
+        xmob: 370,
+        ymob: 560,
+        labelPos: "right",
       },
     ],
   },

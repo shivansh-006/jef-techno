@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const cards = [
   {
     id: 1,
-    image: "/clps/1.png",
+    image: "/clps/1.jpeg",
     title: "TESTED TO 200 kA — DOUBLE THE IEC STANDARD LIMIT",
     description:
       "JEF type-tests its CLPS components at 200 kA on the 10/350 μs waveform — twice the 100 kA limit required by IEC 62561. Type-test certificates are available for review.",
