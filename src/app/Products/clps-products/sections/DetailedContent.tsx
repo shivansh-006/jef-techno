@@ -156,6 +156,10 @@ const pages = [
     title: "COMPONENTS LIGHTNING PROTECTION SYSTEM ",
     content: (
       <>
+
+        <p>
+          There are four components of External Lightning Protection Systems – 
+        </p>
         {/* <p>
           IEC 62305:2024 treats lightning protection as a system with two 
           interdependent parts. Each addresses a distinct category of threat, 
