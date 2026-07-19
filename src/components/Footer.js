@@ -86,24 +86,24 @@ function MainFooter() {
 
         {/* FIRST ROW */}
 {/* UNIFIED CONTAINER (Handles both horizontal columns and vertical rows) */}
-        <div className="section-container grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-14 tracking-wider">
-        
-        {/* FIRST ROW ITEMS */}
-        <Section title="About" items={itemsAbout} />
-        <Section title="Locations" items={itemsLocation} />
-        <Section title="Our Businesses" items={itemsBusiness} />
-        <Section title="News" items={itemNews} />
+<div className="section-container hidden lg:grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-14 tracking-wider">
+    
+  {/* FIRST ROW ITEMS */}
+  <Section title="About" items={itemsAbout} />
+  <Section title="Locations" items={itemsLocation} />
+  <Section title="Our Businesses" items={itemsBusiness} />
+  <Section title="News" items={itemNews} />
 
-        {/* SECOND ROW ITEMS (They will automatically drop down and align perfectly under the first two columns) */}
-        <Section title="Internal Use" items={itemInternalUse} />
-        <Section title="Internal Links" items={itemJefShield} />
-        
-        </div>
+  {/* SECOND ROW ITEMS */}
+  <Section title="Internal Use" items={itemInternalUse} />
+  <Section title="Internal Links" items={itemJefShield} />
+    
+</div>
 
-    {/* MOBILE FAQ */}
-    <div className="lg:hidden w-full">
-        <FAQComponent />
-    </div>
+{/* MOBILE FAQ */}
+<div className="lg:hidden w-full">
+  <FAQComponent />
+</div>
 
     <Footer />
 </main>

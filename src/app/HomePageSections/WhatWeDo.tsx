@@ -202,7 +202,7 @@ export default function WhatWeDoSection() {
   const background = isCLPS
     ? "/HomePageImg/WhatWeDoSection/solution-clps.jpeg"
     : isConsulting
-    ? "/HomePageImg/WhatWeDoSection/.jpeg"
+    ? "/HomePageImg/WhatWeDoSection/solution-consulting.jpeg"
     : backgrounds[activeCard % backgrounds.length];
 
   return (
