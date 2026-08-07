@@ -157,7 +157,7 @@ function LeadershipSection() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-4 h-4 text-[#C02429]"
+                className="w-4 h-4 text-brand"
               >
                 <path
                   strokeLinecap="round"
@@ -191,7 +191,7 @@ function LeadershipSection() {
               </h2>
 
               {/* Role */}
-              <p className="mt-3 min-h-[48px] text-[14px] leading-[24px] font-light text-[#C02429] uppercase">
+              <p className="mt-3 min-h-[48px] text-[14px] leading-[24px] font-light text-brand uppercase">
                 {leader.title}
               </p>
 
@@ -210,18 +210,16 @@ function LeadershipSection() {
         {/* Overlay — z-[9998] to sit above navbar */}
         <div
           onClick={() => setSelectedLeader(null)}
-          className={`fixed inset-0 bg-black/30 z-[9998] transition-opacity duration-500 ${
-            selectedLeader
+          className={`fixed inset-0 bg-black/30 z-[9998] transition-opacity duration-500 ${selectedLeader
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
-          }`}
+            }`}
         />
 
         {/* Sliding Panel — z-[9999] to sit above overlay AND navbar */}
         <div
-          className={`fixed top-0 right-0 h-screen w-full sm:w-[575px] bg-[#F5F5F5] z-[9999] transition-transform duration-500 ease-in-out overflow-hidden ${
-            selectedLeader ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-screen w-full sm:w-[575px] bg-[#F5F5F5] z-[9999] transition-transform duration-500 ease-in-out overflow-hidden ${selectedLeader ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {selectedLeader &&
             (() => {
@@ -239,11 +237,11 @@ function LeadershipSection() {
               };
 
               return (
-               <div className="relative h-screen px-[50px] pt-[85px] pb-[40px]">
+                <div className="relative h-screen px-[50px] pt-[85px] pb-[40px]">
                   {/* Close Button */}
                   <button
                     onClick={() => setSelectedLeader(null)}
-                    className="absolute top-10 right-10 w-[54px] h-[54px] rounded-full bg-[#C02429] flex items-center justify-center text-white text-2xl font-light"
+                    className="absolute top-10 right-10 w-[54px] h-[54px] rounded-full bg-brand flex items-center justify-center text-white text-2xl font-light"
                   >
                     ×
                   </button>
@@ -264,7 +262,7 @@ function LeadershipSection() {
                       <h2 className="text-[21px] leading-[40px] font-medium text-[#1A1A1A]">
                         {selectedLeader.name}
                       </h2>
-                      <p className="text-[16px] leading-[24px] font-light text-[#C02429]">
+                      <p className="text-[16px] leading-[24px] font-light text-brand">
                         {selectedLeader.title}
                       </p>
                     </div>
@@ -284,7 +282,7 @@ function LeadershipSection() {
                           width: "60px",
                           height: "60px",
                           borderRadius: "60px",
-                          border: "1px solid #C02429",
+                          border: "1px solid var(--color-brand)",
                           padding: "18px",
                           background: "transparent",
                           display: "flex",
@@ -305,7 +303,7 @@ function LeadershipSection() {
                         >
                           <path
                             d="M17 7H1M1 7L7 1M1 7L7 13"
-                            stroke="#C02429"
+                            stroke="var(--color-brand)"
                             strokeWidth="1.8"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -321,9 +319,9 @@ function LeadershipSection() {
                           width: "60px",
                           height: "60px",
                           borderRadius: "60px",
-                          border: "1px solid #C02429",
+                          border: "1px solid var(--color-brand)",
                           padding: "18px",
-                          background: "#C02429",
+                          background: "var(--color-brand)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",

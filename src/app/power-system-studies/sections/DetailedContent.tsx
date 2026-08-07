@@ -19,7 +19,7 @@ const pages = [
         </p>
         <br />
         <p>
-          • <span className="text-[#C02429]">Power System Studies</span> -
+          • <span className="text-brand">Power System Studies</span> -
           Steady-state and dynamic analysis using ETAP, PSS®E, DIgSILENT
           PowerFactory and SKM for Load flow, short circuit, Motor starting,
           Harmonic analysis, Protection coordination, Arc flash assessment,
@@ -28,7 +28,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Electromagnetic Transient and Insulation Coordination Studies
           </span>{" "}
           - High-fidelity time-domain simulation using PSCAD/EMTDC: Switching
@@ -120,7 +120,7 @@ const pages = [
       <>
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Greenfield Offshore Platform Developments
           </span>{" "}
           - Multi-platform electrical system studies — 132kV GIS through to 415V
@@ -130,7 +130,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Long Term Development Plan Expansions
           </span>{" "}
           - Power system studies for major oil and gas production expansion —
@@ -140,7 +140,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Artificial Island Power Systems
           </span>{" "}
           - 132kV/33kV/6.6kV network expansion, CTG integration, grid
@@ -150,7 +150,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Process Plant and Industrial Facility Studies
           </span>{" "}
           - Periodic power system studies for operating refineries, petrochemical
@@ -160,7 +160,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">
+          <span className="text-brand">
             Existing System Tie-Ins and Modifications
           </span>{" "}
           - Fault level, protection coordination, and voltage profile impact
@@ -170,7 +170,7 @@ const pages = [
         <br />
         <p>
           •{" "}
-          <span className="text-[#C02429]">EPC and EPCC Project Support</span>{" "}
+          <span className="text-brand">EPC and EPCC Project Support</span>{" "}
           - Embedded study delivery for EPC contractors on oil and gas,
           petrochemical, and process industry projects — to schedule, in
           coordination with vendors and owner-operator engineering teams.
@@ -216,7 +216,7 @@ const DetailedContent = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[#C02429] text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase"
+            className="text-brand text-[20px] md:text-[26px] font-bold tracking-[1px] md:tracking-[1.49px] leading-[1.4] uppercase"
           >
             {page.title}
           </motion.h2>
@@ -232,7 +232,7 @@ const DetailedContent = () => {
             <button
               onClick={handleNextPage}
               aria-label="Next tab"
-              className="rounded-full h-12 w-12 border border-[#C02429] text-[#C02429] text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
+              className="rounded-full h-12 w-12 border border-brand text-brand text-[18px] md:text-[14px] tracking-[1px] uppercase hover:text-white hover:border-white transition-colors duration-300"
             >
               →
             </button>
@@ -294,7 +294,7 @@ const DetailedContent = () => {
                           [si]: prev[si] === ti ? undefined : ti,
                         }))
                       }
-                      className="text-[#C02429] text-[16px] md:text-[18px] lg:text-[20px] font-semibold underline underline-offset-4 text-left"
+                      className="text-brand text-[16px] md:text-[18px] lg:text-[20px] font-semibold underline underline-offset-4 text-left"
                     >
                       • {tag}
                     </button>
@@ -365,7 +365,7 @@ const DetailedContent = () => {
                   >
                     <div className="w-full h-[2px] bg-[#d4d0c8] mb-3 relative z-10">
                       <motion.div
-                        className="absolute top-0 left-0 h-full bg-[#C02429]"
+                        className="absolute top-0 left-0 h-full bg-brand"
                         animate={{ width: isCurrent ? "100%" : "0%" }}
                         transition={{ ease: "linear" }}
                       />
@@ -374,7 +374,7 @@ const DetailedContent = () => {
                     <span
                       className={`text-[12px] md:text-[18px] tracking-[1px] md:tracking-[2.5px] font-medium uppercase mt-1 transition-all duration-300 text-left whitespace-pre-line ${
                         isCurrent
-                          ? "text-[#C02429]"
+                          ? "text-brand"
                           : "text-[#d4d0c8] group-hover:text-white"
                       }`}
                     >

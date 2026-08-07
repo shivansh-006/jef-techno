@@ -23,7 +23,7 @@ const BlogPostPage = () => {
       <div className="bg-[#121212] min-h-screen font-montserrat pt-[100px] flex items-center justify-center text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
-          <Link href="/blog" className="text-[#C02429] hover:underline">Back to Blog</Link>
+          <Link href="/blog" className="text-brand hover:underline">Back to Blog</Link>
         </div>
       </div>
     );
@@ -61,11 +61,11 @@ const BlogPostPage = () => {
       {/* Breadcrumbs */}
       <div className="w-full bg-[#2D2E30] py-4 border-b border-white/5">
         <div className="section-container px-4 sm:px-6 lg:px-0 flex flex-wrap items-center gap-2 text-[8px] sm:text-[10px] md:text-xs tracking-tight md:tracking-[1px] uppercase">
-          <Link href="/" className="text-[#C02429]">Home</Link>
+          <Link href="/" className="text-brand">Home</Link>
           <span className="text-white/20">›</span>
-          <Link href="/blog" className="text-[#C02429] hover:text-[#C02429]">Our Blogs</Link>
+          <Link href="/blog" className="text-brand hover:text-brand">Our Blogs</Link>
           <span className="text-white/20">›</span>
-          <span className="text-[#C02429]">Consulting Services</span>
+          <span className="text-brand">Consulting Services</span>
           <span className="text-white/20">›</span>
           <span className="text-white/40">Our Blogs</span>
         </div>
@@ -84,7 +84,7 @@ const BlogPostPage = () => {
             <span className="text-white/40 text-xs md:text-sm tracking-wide">
               {post.date}
             </span>
-            <h1 className="text-[#C02429] text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase tracking-wide">
+            <h1 className="text-brand text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase tracking-wide">
               {post.title}
             </h1>
           </div>

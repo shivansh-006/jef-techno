@@ -19,7 +19,7 @@ export default function GeneralFireSafety() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-[#C02429] text-[24px] md:text-[32px] uppercase font-bold tracking-[4px] mb-8"
+          className="text-brand text-[24px] md:text-[32px] uppercase font-bold tracking-[4px] mb-8"
         >
           GENERAL FIRE SAFETY
         </motion.h2>
@@ -69,7 +69,7 @@ export default function GeneralFireSafety() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="flex items-start gap-4"
             >
-              <span className="mt-[9px] h-2.5 w-2.5 min-w-2.5 rounded-full bg-[#C02429]" />
+              <span className="mt-[9px] h-2.5 w-2.5 min-w-2.5 rounded-full bg-brand" />
 
               <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] leading-[1.7]">
                 {item}

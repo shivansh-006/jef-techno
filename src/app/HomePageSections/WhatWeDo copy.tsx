@@ -436,7 +436,7 @@ const background = isCLPS
                 >
                   <div className="relative h-[1px] bg-white/20 overflow-hidden mb-2 lg:mb-3">
                     <span
-                      className={`absolute left-0 top-0 h-full bg-[#C02429] transition-all duration-500 ${
+                      className={`absolute left-0 top-0 h-full bg-brand transition-all duration-500 ${
                         activeSection === item.id
                           ? "w-full"
                           : "w-0 group-hover:w-full"
@@ -447,14 +447,14 @@ const background = isCLPS
                   <div
                     className={`text-[12px] sm:text-[14px] md:text-[15px] xl:whitespace-nowrap tracking-[1.5px] uppercase transition-all duration-300 flex items-center justify-between gap-2 ${
                       activeSection === item.id
-                        ? "text-[#C02429]"
+                        ? "text-brand"
                         : "text-white"
                     }`}
                   >
                     {item.title}
 
                     {activeSection === item.id && (
-                      <span className="text-[#C02429] text-[25px] hidden md:inline ml-2 lg:text-[30px]">
+                      <span className="text-brand text-[25px] hidden md:inline ml-2 lg:text-[30px]">
                         →
                       </span>
                     )}
@@ -660,7 +660,7 @@ const background = isCLPS
     z-[60]
   `}
 >
-            <div className="w-full h-[2px] bg-[#C02429] mb-4 lg:mb-6" />
+            <div className="w-full h-[2px] bg-brand mb-4 lg:mb-6" />
 
             <div
               key={activeCard + activeSection}

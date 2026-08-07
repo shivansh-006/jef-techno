@@ -3007,7 +3007,7 @@ const NewsCard = ({ category, title, date, imageUrl, path, index }) => (
         <span className="text-white text-[10px] md:text-xs tracking-[2px] uppercase">
           {category}
         </span>
-        <h3 className="text-white text-sm md:text-[15px]  tracking-[2px] leading-[1.4] uppercase tracking-wide group-hover:text-[#C02429] transition-colors">
+        <h3 className="text-white text-sm md:text-[15px]  tracking-[2px] leading-[1.4] uppercase tracking-wide group-hover:text-brand transition-colors">
           {title}
         </h3>
         <span className="text-gray-400 text-xs md:text-sm font-light">
@@ -3090,9 +3090,9 @@ const MainBlogPage = () => {
       {/* Breadcrumbs */}
       <div className="w-full bg-[#2D2E30] py-4 border-t border-white/5">
         <div className="section-container px-4 sm:px-6 lg:px-0 flex flex-wrap items-center gap-2 text-[8px] sm:text-[10px] md:text-xs tracking-tight md:tracking-[1px] uppercase">
-          <Link href="/" className="text-white/40 hover:text-[#C02429]">Home</Link>
+          <Link href="/" className="text-white/40 hover:text-brand">Home</Link>
           <span className="text-white/20">›</span>
-          <Link href="/blog" className="text-[#C02429] hover:text-[#C02429]">Our Blogs</Link>
+          <Link href="/blog" className="text-brand hover:text-brand">Our Blogs</Link>
           
           
         </div>
@@ -3106,7 +3106,7 @@ const MainBlogPage = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-[#C02429] text-2xl md:text-3xl font-bold tracking-[2px] uppercase mb-10 sm:mb-12"
+          className="text-brand text-2xl md:text-3xl font-bold tracking-[2px] uppercase mb-10 sm:mb-12"
         >
           All BLOGS
         </motion.h2>
@@ -3142,7 +3142,7 @@ const MainBlogPage = () => {
                 onClick={() => handlePageChange(page)}
                 className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all ${
                   page === currentPage 
-                  ? 'bg-transparent border border-[#C02429] text-[#C02429]' 
+                  ? 'bg-transparent border border-brand text-brand' 
                   : 'text-white/40 hover:text-white'
                 }`}
               >

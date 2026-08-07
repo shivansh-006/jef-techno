@@ -185,7 +185,7 @@ export default function OurIndustriesSection() {
             <div className="relative z-20 h-full px-5 sm:px-8 py-8 sm:py-10 flex flex-col">
               {/* TITLE */}
               <div className="flex items-start gap-4 sm:gap-5">
-                <div className="w-[2px] h-[50px] sm:h-[60px] bg-[#C02429] mt-1 shrink-0" />
+                <div className="w-[2px] h-[50px] sm:h-[60px] bg-brand mt-1 shrink-0" />
 
                 <div className="flex items-center gap-3 sm:gap-4">
                   <img

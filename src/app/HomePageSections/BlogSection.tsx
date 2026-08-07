@@ -67,7 +67,7 @@ export default function BlogsSection() {
                   leading-none
                   tracking-[3.36px]
                   uppercase
-                  text-[#C02429]
+                  text-brand
                 "
               >
                 Latest Blogs
@@ -122,8 +122,8 @@ export default function BlogsSection() {
                 tracking-[2px]
                 transition-colors
                 duration-300
-                hover:bg-[#C02429]
-                hover:border-[#C02429]
+                hover:bg-brand
+                hover:border-brand
               "
             >
               <span

@@ -116,7 +116,7 @@ export default function WhyRca() {
               font-bold
               tracking-[2px]
               md:tracking-[4px]
-              text-[#C02429]
+              text-brand
             "
           >
             WHAT THE AUDIT DELIVERS

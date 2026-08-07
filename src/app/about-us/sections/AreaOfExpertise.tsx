@@ -110,7 +110,7 @@ const sectors = [
               }}
               viewport={{ once: true }}
               className="
-                text-[#C02429]
+                text-brand
                 uppercase
                 mb-6
 
@@ -279,7 +279,7 @@ const sectors = [
                   {/* DOT */}
                   <div className="relative w-full h-[2px] flex items-center">
                     {isActive ? (
-                      <div className="absolute left-0 w-[14px] h-[14px] bg-[#C02429] rounded-full z-10" />
+                      <div className="absolute left-0 w-[14px] h-[14px] bg-brand rounded-full z-10" />
                     ) : (
                       <div className="absolute left-0 w-2.5 h-2.5 bg-white rounded-full z-10" />
                     )}

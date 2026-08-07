@@ -1,8 +1,8 @@
 const ArrowButton = ({
   text = "Read More",
-  buttonColor = "#C02429",
-  textColor = "#C02429",
-  hoverButtonColor = "#C02429",
+  buttonColor = "var(--color-brand)",
+  textColor = "var(--color-brand)",
+  hoverButtonColor = "var(--color-brand)",
   hoverTextColor = "#ffffff",
   className = "",
 }) => {

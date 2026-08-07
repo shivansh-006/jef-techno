@@ -4,6 +4,12 @@
   --font-sans: var(--font-montserrat);
 }
 
+@theme {
+  --color-brand: #FF0000;
+  --color-red-600: var(--color-brand);
+  --color-red-700: var(--color-brand);
+}
+
 body {
   font-family: var(--font-sans), sans-serif;
   top: 0px !important;
@@ -139,7 +145,7 @@ table {
 }
 
 thead {
-  background-color: #c12328;
+  background-color: var(--color-brand);
   color: #fff;
 }
 
@@ -196,7 +202,7 @@ tbody tr:nth-child(even) {
     display: none !important;
   }
   .mobile-head {
-    background-color: #c12328 !important;
+    background-color: var(--color-brand) !important;
     color: #fff !important;
   }
 }

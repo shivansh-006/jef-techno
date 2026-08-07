@@ -49,7 +49,7 @@ export default function WhoWeAreSection() {
             }}
             viewport={{ once: true }}
             className="
-              text-[#C02429]
+              text-brand
               font-semibold
               text-[26px]
               md:text-[32px]

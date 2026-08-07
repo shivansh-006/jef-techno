@@ -71,7 +71,7 @@ import Image from "next/image";
           }}
           viewport={{ once: true }}
           className="
-            text-[#C02429]
+            text-brand
 
             text-[28px]
             md:text-[36px]

@@ -204,7 +204,7 @@ function Section({ title, items }) {
                         <div className="flex items-center">
 
                            <Link href={item.path} target={item.newTab ? "_blank" : undefined} rel={item.newTab ? "noopener noreferrer" : undefined}>
-                            <div className="self-stretch my-auto transition-colors duration-300 hover:text-[#C02429]">
+                            <div className="self-stretch my-auto transition-colors duration-300 hover:text-brand">
                                 {item.name}
                             </div>
                            </Link>
@@ -367,7 +367,7 @@ const FAQComponent = () => {
                                             target={item.newTab ? "_blank" : undefined}
                                             rel={item.newTab ? "noopener noreferrer" : undefined}
                                         >
-                                            <div className="text-stone-300 hover:text-[#C02429] transition-colors duration-300">
+                                            <div className="text-stone-300 hover:text-brand transition-colors duration-300">
                                                 {item.label}
                                             </div>
                                         </Link>
