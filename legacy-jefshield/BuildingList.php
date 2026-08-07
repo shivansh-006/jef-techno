@@ -7,7 +7,7 @@
   <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="assets/scripts/main.js"></script>
-  <script src="js/buildingmanagement13.js"></script>
+  <script src="js/buildingmanagement12.js"></script>
 
   <script type="text/javascript">
       var LocalData;

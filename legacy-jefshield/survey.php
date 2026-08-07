@@ -1,10 +1,5 @@
 <script>
-  var LocalData;
-try {
-    LocalData = JSON.parse(localStorage.getItem('MobileNumber'));
-} catch (e) {
-    LocalData = {};
-}
+  var LocalData = JSON.parse(localStorage.getItem('MobileNumber'));
   async function SubmitRiskAssessmentReport(Info){
     // console.log(Info)
     var resp_state = 0;
@@ -50,12 +45,60 @@ try {
   }
   console.log("In servey.php")
   var Country = '<?php echo $_REQUEST['countrySelect'] ?>';
-  var Riskoffire = '<?php echo $_REQUEST['risk_of_fire1'] ?>';
-  var Tws = '<?php echo $_REQUEST['tws'] ?>';
   console.log(Country);
   if('<?php echo $_REQUEST['radio'] ?>' == "Report1"){
     // console.log("Report-1")
-   var Request = {
+    var Request = {
+      filename: "",
+      fileSrc: "",
+      Projectname: '<?php echo $_REQUEST['project_name'] ?>',
+      clientName: '<?php echo $_REQUEST['client_name'] ?>',
+      country: Country,
+      State: Country != "India"?"":'<?php echo $_REQUEST['stateSelect'] ?>',
+      city: Country != "India"?"":'<?php echo $_REQUEST['selectedCity'] ?>', 
+      location: Country == "India"?"":'<?php echo $_REQUEST['location'] ?>',
+      thunderStormDays: Country == "India"?"":'<?php echo $_REQUEST['thunderstorm_days'] ?>',
+      buildinglength: '<?php echo $_REQUEST['building_length'] ?>',
+      buildingwidth: '<?php echo $_REQUEST['building_width'] ?>',
+      buildingheight: '<?php echo $_REQUEST['building_height'] ?>',
+      noofloor:'<?php echo $_REQUEST['number_of_floor'] ?>',
+      locationfactor: '<?php echo $_REQUEST['location_factor'] ?>',
+
+      lengthofpowerline: '<?php echo $_REQUEST['length_of_powerline'] ?>',
+      InstallationFactor: '<?php echo $_REQUEST['installation_factor1'] ?>',
+      Linetype: '<?php echo  $_REQUEST['line_type_factor'] ?>',
+      environmentalfactor: '<?php echo $_REQUEST['environmental_factor'] ?>',
+      shieldofcable: '<?php echo $_REQUEST['shield_of_line1'] ?>',
+      Impulsewithstand: '<?php echo $_REQUEST['impulse_voltage1'] ?>',
+      Typeofinstallation: '<?php echo $_REQUEST['shielding_isolation1'] ?>',
+      Lengthofdataline2: '<?php echo $_REQUEST['length_telecom_line'] ?>',
+      Shieldofcable1: '<?php echo $_REQUEST['shield_of_line'] ?>',
+      Impulsewithstand1: '<?php echo $_REQUEST['impulse_voltage'] ?>',
+      Equipotentialbonding: '<?php echo $_REQUEST['shielding_isolation'] ?>',
+
+      Typeoffloor:'<?php echo $_REQUEST['type_of_floor'] ?>',
+      riskoffire: '<?php echo $_REQUEST['risk_of_fire'] ?>',
+      fireprotection: '<?php echo $_REQUEST['fire_protection'] ?>',
+      special: '<?php echo $_REQUEST['special_consideration'] ?>',
+      Typeofbuilding: '<?php echo $_REQUEST['hazardlist'] ?>',
+      Noofpersons: '<?php echo $_REQUEST['total_person'] ?>',
+      Totalfunctionalhoursofbuilding: '<?php echo $_REQUEST['function_per_hour'] ?>',
+      Functionaldaysinayear: '<?php echo $_REQUEST['function_per_day'] ?>',
+      mobileno: LocalData.mobileNumber,
+      apiFlag: "RAR"
+    }
+    console.log("Sumitting Report-1 to server")
+    console.log(Request)
+    var reqData = {
+      urlapi: "https://dev.telibrahma.in/jefshield/riskAssessmentReportNew",
+      Data: Request
+    }
+    console.log(reqData)
+    SubmitRiskAssessmentReport(reqData);
+
+  }else{
+    // console.log("Report-2")
+    var Request = {
       filename: "",
       fileSrc: "",
       Projectname: '<?php echo $_REQUEST['project_name'] ?>',
@@ -126,107 +169,13 @@ try {
       mobileno: LocalData.mobileNumber,
       apiFlag: "RARBM"
     }
-    console.log("Sumitting Report-1 to server")
-    console.log(Request)
+    // console.log(Request)
+    console.log("Sumitting Report-2 to server")
     var reqData = {
       urlapi: "https://dev.telibrahma.in/jefshield/riskAssessmentReportNew",
       Data: Request
     }
-    console.log(reqData)
-    SubmitRiskAssessmentReport(reqData);
-
-  }else{
-    // console.log("Report-2")
-    var Request = {
-      filename: "",
-      fileSrc: "",
-      Projectname: '<?php echo $_REQUEST['project_name'] ?>',
-      clientName: '<?php echo $_REQUEST['client_name'] ?>',
-      country: Country,
-      State: "",
-      //city: Country != "India"?"":'<?php echo $_REQUEST['selectedCity'] ?>', 
-      city: "", 
-      location: Country == "India"?'<?php echo $_REQUEST['project_location'] ?>':'<?php echo $_REQUEST['location'] ?>',
-      thunderStormDays: Country == "India"?'<?php echo $_REQUEST['density'] ?>':'<?php echo $_REQUEST['thunderstorm_days'] ?>',
-      buildinglength: '<?php echo $_REQUEST['building_length'] ?>',
-      buildingwidth: '<?php echo $_REQUEST['building_width'] ?>',
-      buildingheight: '<?php echo $_REQUEST['building_height'] ?>',
-      noofloor:'<?php echo $_REQUEST['number_of_floor'] ?>',
-      locationfactor: '<?php echo $_REQUEST['location_factor'] ?>',
-
-      lengthofpowerline: '<?php echo $_REQUEST['length_of_powerline'] ?>',
-      InstallationFactor: '<?php echo $_REQUEST['installation_factor1'] ?>',
-      Linetype: '<?php echo  $_REQUEST['line_type_factor'] ?>',
-      environmentalfactor: '<?php echo $_REQUEST['environmental_factor'] ?>',
-      shieldofcable: '<?php echo $_REQUEST['shield_of_line1'] ?>',
-      Impulsewithstand: '<?php echo $_REQUEST['impulse_voltage2'] ?>',
-      Typeofinstallation: '<?php echo $_REQUEST['shielding_isolation1'] ?>',
-      Lengthofdataline2: '<?php echo $_REQUEST['length_telecom_line'] ?>',
-      Shieldofcable1: '<?php echo $_REQUEST['shield_of_line'] ?>',
-      Impulsewithstand1: '<?php echo $_REQUEST['impulse_voltage3'] ?>',
-      Equipotentialbonding: '<?php echo $_REQUEST['shielding_isolation'] ?>',
-
-      Typeoffloor:'<?php echo $_REQUEST['type_of_floor1'] ?>',
-      riskoffire: '<?php echo $_REQUEST['risk_of_fire1'] ?>',
-      riskofexplosion: Riskoffire == "Risk of Explosion"?'<?php echo $_REQUEST['risk_of_explosion'] ?>':"", //new
-      fireprotection: '<?php echo $_REQUEST['fire_protection'] ?>',
-      
-      special: '<?php echo $_REQUEST['special_consideration'] ?>',
-      Typeofbuilding: '<?php echo $_REQUEST['hazardlist1'] ?>',
-      Noofpersons: '<?php echo $_REQUEST['total_person'] ?>',
-      Totalfunctionalhoursofbuilding: '<?php echo $_REQUEST['function_per_hour'] ?>',
-      Functionaldaysinayear: '<?php echo $_REQUEST['function_per_day'] ?>',
-      Tws: '<?php echo $_REQUEST['tws'] ?>',
-      Twscount: Tws == "Yes"?'<?php echo $_REQUEST['twscount'] ?>':0, //new
-
-      Protectionmeasures: '<?php echo $_REQUEST['protection_measures'] ?>', //new
-
-      Typeofroof: '<?php echo $_REQUEST['roof_type'] ?>',
-      Equipment: '<?php echo $_REQUEST['equipment_needed'] ?>',
-      AirTerminalMaterial: '<?php echo $_REQUEST['air_terminal_material'] ?>',
-      Protectedterrace : '<?php echo $_REQUEST['protected_terrace'] ?>',
-      Maxheight : '<?php echo $_REQUEST['max_height_terrace'] ?>',
-      Noofequipment : '<?php echo $_REQUEST['number_of_equipment'] ?>',
-      Equipmentfilled : '<?php echo $_REQUEST['equipment_filled'] ?>',
-      Downconductorrouting : '<?php echo $_REQUEST['conductor_routing'] ?>',
-      Downconductormaterial : '<?php echo $_REQUEST['down_conductor_material'] ?>',
-      Earthingsystem : '<?php echo $_REQUEST['earthing_system'] ?>',
-      Earthingmaterial : '<?php echo $_REQUEST['earthing_material'] ?>',
-
-      mainIncomerPhase3: '<?php echo $_REQUEST['mainIncomerPhase3'] ?>',
-      mainIncomerPhase1: '<?php echo $_REQUEST['mainIncomerPhase1'] ?>',
-      subPanelsPhase3: '<?php echo $_REQUEST['subPanelsPhase3'] ?>',
-      subPanelsPhase1: '<?php echo $_REQUEST['subPanelsPhase1'] ?>',
-      floorDistributionBoardPhase3: '<?php echo $_REQUEST['floorDistributionBoardPhase3'] ?>',
-      floorDistributionBoardPhase1: '<?php echo $_REQUEST['floorDistributionBoardPhase1'] ?>',
-      liftPanelPhase3: '<?php echo $_REQUEST['liftPanelPhase3'] ?>',
-      liftPanelPhase1: '<?php echo $_REQUEST['liftPanelPhase1'] ?>',
-      fireFightingPanelPhase3: '<?php echo $_REQUEST['fireFightingPanelPhase3'] ?>',
-      fireFightingPanelPhase1: '<?php echo $_REQUEST['fireFightingPanelPhase1'] ?>',
-      automationPanelPhase3: '<?php echo $_REQUEST['automationPanelPhase3'] ?>',
-      automationPanelPhase1: '<?php echo $_REQUEST['automationPanelPhase1'] ?>',
-      outdootStreetlightPanelPhase3: '<?php echo $_REQUEST['outdootStreetlightPanelPhase3'] ?>',
-      outdootStreetlightPanelPhase1: '<?php echo $_REQUEST['outdootStreetlightPanelPhase1'] ?>',
-      roofTopSolarPanelPhase3: '<?php echo $_REQUEST['roofTopSolarPanelPhase3'] ?>',
-      roofTopSolarPanelPhase1: '<?php echo $_REQUEST['roofTopSolarPanelPhase1'] ?>',
-      securityPanelPhase3: '<?php echo $_REQUEST['securityPanelPhase3'] ?>',
-      securityPanelPhase1: '<?php echo $_REQUEST['securityPanelPhase1'] ?>',
-
-      lps_type: '<?php echo $_REQUEST['lps_calc'] ?>',
-      lps_int: '<?php echo $_REQUEST['lps_int'] ?>',
-      lps_ext: '<?php echo $_REQUEST['lps_ext'] ?>',
-
-
-      mobileno: LocalData.mobileNumber,
-      apiFlag: "RARBM"
-    }
-    // console.log(Request)
-    console.log("Sumitting Report-2 to server")
-    var reqData = {
-      urlapi: "https://dev.telibrahma.in/jefshield/riskAssessmentReportNewVersion",
-      Data: Request
-    }
-     console.log(reqData)
+    // console.log(reqData)
     SubmitRiskAssessmentReport(reqData);
   }
 </script>

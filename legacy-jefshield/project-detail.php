@@ -2,7 +2,7 @@
 <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <!-- <script src="js/buildingmanagement.js"></script> -->
-<script src="js/buildingmanagement29.js"></script>
+<script src="js/buildingmanagement2.js"></script>
 <script src="jefn/js/statecity_onedit.js"></script>
 <script src="js/dynamic_dropdowns.js"></script>
 <script type="text/javascript" >
@@ -24,46 +24,6 @@
 
         }        
     });  
-
-     $("#lps_calc").change(function() {
-        var rtype = $('#lps_calc').find(':selected').text();
-
-        if (rtype === "Autocalculated") {
-
-          $("#lps_int_div").hide();
-          $("#lps_ext_div").hide();
-
-          
-
-     $("#lps_int")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_ext")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-        } else  {
-          $("#lps_int_div").show();
-          $("#lps_ext_div").show();
-
-        }
-
-      });
-
-       $("#riskoffire1").change(function() {
-        var rtype = $('#riskoffire1').find(':selected').text();
-
-        if (rtype === "Risk of Explosion") {
-
-          $("#riskofexplosion").show();
-
-        } else  {
-          $("#riskofexplosion").hide();
-
-        }
-
-      });
 
     function SaveData(){
         let SaveBtn = document.getElementById("SaveButton");
@@ -191,10 +151,6 @@
                                             <label>Thunderstorm Days</label>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://maptitude1.tumblr.com/image/134615731756" target="_balnk">ISOKERAUNIC MAP</a>
                                             <input type="number" name="thunderstorm_days" id="thunderstorm_days" min="1" max="200" class="form-control" placeholder="Thunderstrom Days">
                                         </div>
-                                         <div class="col-md-3 mb-3" id="density_div">
-                                            <label>Ground Flash Density</label>
-                                            <input type="number" name="density" id="density" min="1" step="1" class="form-control" placeholder="Ground Flash Density">
-                                        </div>
                                         <div class="col-md-3 mb-3" id="state_div">
                                             <label for="validationCustom02">State</label>
                                             <select class="form-control" id="validationCustom02" size="1"  onchange="makeSubmenu(this.value)">
@@ -305,7 +261,7 @@
                                                 <option id="Unarmoured">Unarmoured</option>
                                             </select>
                                         </div>
-										 <div class="col-md-3 mb-3" id="impulsewithstand">
+										 <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">Impulse withstand</label>
                                             <select class="form-control" id="impulsewithstand">
                                                 <option value="">Impulse Withstand Voltage of Equipment</option>
@@ -315,40 +271,6 @@
                                                 <option id="2.5kV">2.5kV</option>
                                                 <option id="4kV">4kV</option>
                                                 <option id="6kV">6kV</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-3">
-                                            <label for="validationCustom02">Impulse withstand</label>
-                                            <select class="form-control" id="impulsewithstand2">
-                                                <option value="">Impulse Withstand Voltage of Equipment</option>
-
-                                                <option>0.35</option>
-
-                                                <option>0.5</option>
-
-                                                <option>1</option>
-
-                                                <option>2.5</option>
-
-                                                <option>4</option>
-
-                                                <option>6</option>
-
-                                                <option>12</option>
-
-                                                <option>16</option>
-
-                                                <option>20</option>
-
-                                                <option>40</option>
-
-                                                <option>60</option>
-
-                                                <option>75</option>
-
-                                                <option>95</option>
-
-                                                <option>No Equipment</option>
                                             </select>
                                         </div>
 										 <div class="col-md-3 mb-3">
@@ -371,7 +293,7 @@
                                                 <option id="Unshielded">Unshielded</option>
                                             </select>
                                         </div>
-										 <div class="col-md-3 mb-3" id="impulsewithstand1">
+										 <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">Impulse withstand 1 </label>
                                             <select class="form-control" id="impulsewithstand1">
                                                 <option value="">Impulse Withstand Voltage of Equipment</option>
@@ -381,40 +303,6 @@
                                                 <option id="2.5kV">2.5kV</option>
                                                 <option id="4kV">4kV</option>
                                                 <option id="6kV">6kV</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-3">
-                                            <label for="validationCustom02">Impulse withstand 1 </label>
-                                            <select class="form-control" id="impulsewithstand3">
-                                                <option value="">Impulse Withstand Voltage of Equipment</option>
-
-                        
-                                                <option>0.35</option>
-
-                                                <option>0.5</option>
-
-                                                <option>1</option>
-
-                                                <option>2.5</option>
-
-                                                <option>4</option>
-
-                                                <option>6</option>
-
-                                                <option>12</option>
-
-                                                <option>16</option>
-
-                                                <option>20</option>
-
-                                                <option>40</option>
-
-                                                <option>60</option>
-
-                                                <option>75</option>
-
-                                                <option>95</option>
-                                                <option>No Equipment</option>
                                             </select>
                                         </div>
 										 <div class="col-md-3 mb-3">
@@ -430,7 +318,7 @@
                                     <br/><br/><br/>
                                     <!-- Form-3 Fields -->
 									<div class="form-row">
-                                        <div class="col-md-3 mb-3" id="typeoffloor_div">
+                                        <div class="col-md-3 mb-3">
                                             <label for="validationCustom01">Type of floor</label>
                                             <select class="form-control" id="typeoffloor">
                                                 <option value="">Type of floor:</option>
@@ -445,34 +333,7 @@
                                                 <option id="Wood">Wood</option>
                                             </select>
                                         </div>
-                                        <div class="form-row">
-                                        <div class="col-md-3 mb-3" id="typeoffloor1_div">
-                                            <label for="validationCustom01">Type of floor</label>
-                                            <select class="form-control" id="typeoffloor1">
-                                                 <option selected="selected" value="">Type of floor:</option>
-
-                                                <option>Agricultural</option>
-
-                                                <option>Concrete</option>
-
-                                                <option>Marble</option>
-
-                                                <option>Ceramic</option>
-
-                                                <option>Gravel</option>
-
-                                                <option>MoqueƩe</option>
-
-                                                <option>Asphalt - Thickness less than 5 cm</option>
-
-                                                <option>Asphalt - Thickness greater than 5 cm</option>
-
-                                                <option>Linoleum</option>
-
-                                                <option>Wood</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-3" id="riskoffire_div">
+                                        <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">Risk of fire</label>
                                             <select class="form-control" id="riskoffire">
                                                 <option value="">Risk of fire:</option>
@@ -480,35 +341,6 @@
                                                 <option id="High">High</option>
                                                 <option id="Low">Low</option>
                                                 <option id="Ordinary">Ordinary</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-3" id="riskoffire1_div">
-                                            <label for="validationCustom02">Risk of fire</label>
-                                            <select class="form-control" id="riskoffire1">
-                                               <option selected="selected" value="">Risk of fire:</option>
-
-                                                <option>Risk of Explosion</option>
-
-                                                <option>High</option>
-
-                                                <option>Ordinary</option>
-
-                                                <option>Low</option>
-
-                                                
-                                            </select>
-                                        </div>
-                                        <div class="col-md-3 mb-3" id="riskofexplosion_div">
-                                            <label for="validationCustom02">Risk of explosion</label>
-                                            <select class="form-control" id="riskofexplosion">
-                                               <option selected="selected" value="">Risk of explosion:</option>
-
-                                                <option>Zones 0, 20 and solid explosive</option>
-
-                                                <option>Zones 1, 21</option>
-
-                                                <option>Zones 2, 22</option>
-                                                
                                             </select>
                                         </div>
 										 <div class="col-md-3 mb-3">
@@ -534,7 +366,7 @@
                                                 <option id="Where there is wide use of electrical and electronic equipment/ components that are sensitive to the effects of lightning.">Where there is wide use of electrical and electronic equipment/ components that are sensitive to the effects of lightning.</option>
                                             </select>
                                         </div>                                   
-                                        <div class="col-md-3 mb-3" id="typeofbuilding">
+                                        <div class="col-md-3 mb-3">
                                             <label for="validationCustom01">Type of Building</label>
                                             <select class="form-control" id="typeofbuilding">
                                                 <option value="">Type of Structure:</option>
@@ -550,40 +382,6 @@
                                                 <option id="Commercial">Commercial</option>
                                             </select>
                                         </div>
-                                         <div class="col-md-3 mb-3" id="typeofbuilding1">
-                                            <label for="validationCustom01">Type of Building</label>
-                                            <select class="form-control" id="typeofbuilding1">
-                                                <option value="">Type of Structure:</option>
-
-                                                <option>Hospital with ICU / Operating Rooms</option>
-
-                                                <option>Hospital without ICU / Operating Rooms</option>
-
-                                                <option>Prisons</option>
-
-                                                <option>Power Stations</option>
-
-                                                <option>Industrial Structures</option>
-
-                                                <option>Control Rooms</option>
-
-                                                <option>Telecommunication centre</option>
-
-                                                <option>Cultural Heritage</option>
-
-                                                <option>Temples / Churches / Mosque / Religious Places</option>
-
-                                                <option>Commercial Spaces (Offices / Hotels /Super Markets /Public Entertainments)</option>
-
-                                                <option>Schools</option>
-
-                                                <option>Civic Building open to Public</option>
-
-                                                <option>Private Ownership (Apartment House / Farm House)</option>
-
-                                                <option>Risk of explosion</option>
-                                            </select>
-                                        </div>
                                         <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">No of Persons</label>
                                             <input type="number" class="form-control" id="noofpersons" placeholder="No of Persons" value="Dummy" required>
@@ -595,74 +393,7 @@
 										 <div class="col-md-3 mb-3">
                                             <label for="validationCustom02">Functional Days In A Year</label>
                                             <input type="number" class="form-control" id="functionaldaysinayear" placeholder="Functional Days In A Year" value="Dummy" required>
-                                        </div>  
-                                        <div class="col-md-3 mb-3">
-                                            <label for="validationCustom01">Calculation:</label>
-                                            <select class="form-control" id="lps_calc">
-                                                <option selected="selected" value="">Calculation:</option>
-                                                <option>Autocalculated</option>
-                                                <option>Manual</option>
-                                            </select>
-                                        </div>   
-                                        <div class="col-md-3 mb-3" id="lps_int_div">
-                                            <label for="validationCustom01">Internal</label>
-                                            <select class="form-control" id="lps_int">
-                                               <option selected="selected" value="">Internal:</option>
-
-                                                <option>No SPD</option>
-
-                                                <option>Level-4</option>
-
-                                                <option>Level-3</option>
-
-                                                <option>Level-2</option>
-
-                                                <option>Level-1</option>
-                                            </select>
-                                        </div>   
-                                        <div class="col-md-3 mb-3" id="lps_ext_div">
-                                            <label for="validationCustom01">External</label>
-                                            <select class="form-control" id="lps_ext">
-                                                <option selected="selected" value="">External:</option>
-
-                                                <option>No LPS</option>
-
-                                                <option>Level-4</option>
-
-                                                <option>Level-3</option>
-
-                                                <option>Level-2</option>
-
-                                                <option>Level-1</option>
-                                            </select>
-                                        </div>   
-                                        <div class="col-md-3 mb-3">
-                                            <label for="validationCustom01">Thunderstrom Warning System (TWS)</label>
-                                            <select class="form-control" id="tws">
-                                                <option selected="selected" value="">Thunderstrom Warning System (TWS):</option>
-                                                <option>Yes</option>
-                                                <option>No</option>
-                                            </select>
-                                        </div>                   
-                                         <div class="col-md-3 mb-3">
-                                            <label for="validationCustom02">Thunderstorm Count</label>
-                                            <input type="number" class="form-control" id="twscount" placeholder="Thunderstorm Count" value="Dummy" required>
-                                        </div> 
-                                        <div class="col-md-3 mb-3">
-                                            <label for="validationCustom01">Protection Measures</label>
-                                            <select class="form-control" id="protection_measures">
-                                                <option selected="selected" value="">Protection Measures:</option>
-
-                                                <option>No protection measures</option>
-
-                                                <option>Warning notices</option>
-                                                <option>Electrical insulation (e.g. at least 3 mm cross-linked polyethylene)of exposed parts (e.g. down-conductors)</option>
-                                                <option>Effective soil equipotentialization</option>
-                                                <option>Natural LPS</option>
-                                                <option>Access Restrictions</option>
-                                            </select>
-                                        </div> 
-                                                      
+                                        </div>                                   
                                     </div>
                                     <div class="h-divider"></div>
                                     <br/><br/><br/>

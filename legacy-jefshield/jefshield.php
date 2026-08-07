@@ -156,11 +156,6 @@
     $(document).ready(function() {
 
       let formData = {};
-      
-      $("#risk_of_explosion").hide();
-      $("#twscount").hide();
-       $("#lps_int_div").hide();
-          $("#lps_ext_div").hide();
 
       $('input[type="radio"]').click(function() {
 
@@ -168,122 +163,22 @@
 
         if (inputValue === "Report1") {
 
-          $("#nexta3").show();
-          $("#protection_measures").hide();
-          
-           $("#submita1").hide();
-           $("#tws").hide();
+          $("#nexta3").hide();
 
-        //  $("#form4").hide();
+          $("#form4").hide();
 
-       //   $("#form5").hide();
+          $("#form5").hide();
 
-          $('#submita2').show();
-          $('#stateSelect').show();
-          $('#selectCity').show();
-          $('#project_location').hide();
-          $('#density').hide();
-$('#impulse_voltage2').hide();
-$('#impulse_voltage3').hide();
-$('#impulse_voltage1').show();
-$('#impulse_voltage').show();
-$('#type_of_floor1').hide();
-$('#type_of_floor').show();
-$('#hazardlist1').hide();
-$('#hazardlist').show();
-$('#risk_of_fire1').hide();
-$('#risk_of_fire').show();
+          $('#submita1').show();
 
- $("#impulse_voltage2")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#impulse_voltage3")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#risk_of_fire1")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#hazardlist1")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-        $("#project_location")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-      $("#density")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-         $("#type_of_floor1")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_calc")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_int")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_ext")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-      
         } else if (inputValue === "Report2") {
-
-         $('#stateSelect').hide();
-          $('#selectCity').hide();
-           $("#type_of_floor")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-        
-     $("#risk_of_fire")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#hazardlist")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-          $("#impulse_voltage")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#impulse_voltage1")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-        $("#protection_measures").show();
-
-        $("#tws").show();
-$('#impulse_voltage').hide();
-        $('#impulse_voltage1').hide();
-$('#impulse_voltage2').show();
-$('#impulse_voltage3').show();
-$('#type_of_floor').hide();
-$('#risk_of_fire').hide();
-$('#risk_of_fire1').show();
-$('#type_of_floor1').show();
-$('#hazardlist').hide();
-$('#hazardlist1').show();
 
           $("#submita1").hide();
 
           $('#nexta3').show();
 
           $('#submita2').show();
-          $('#stateSelect').hide();
-          $('#selectCity').hide();
-          $('#project_location').show();
-          $('#density').show();
-$("#length_of_powerline")
-  .attr("data-original-title", "What is the length of the power line from transformer to the building? (use 2000m if data not available)")
-  
+
         }
 
       });
@@ -307,62 +202,6 @@ $("#length_of_powerline")
           $("#equipment_needed").prepend($("<option value='metalq' selected='selected'>Metallic roof of seam type? (punchering not allowed)</option>"));
 
           $("#equipment_needed option[value='rccq']").remove();
-
-        }
-
-      });
-
-       $("#risk_of_fire1").change(function() {
-        var rtype = $('#risk_of_fire1').find(':selected').text();
-
-        if (rtype === "Risk of Explosion") {
-
-          $("#risk_of_explosion").show();
-
-        } else  {
-          $("#risk_of_explosion").hide();
-
-        }
-
-      });
-
-       $("#lps_calc").change(function() {
-        var rtype = $('#lps_calc').find(':selected').text();
-
-        if (rtype === "Autocalculated") {
-
-          $("#lps_int_div").hide();
-          $("#lps_ext_div").hide();
-
-            $("#lps_calc")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_int")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-     $("#lps_ext")
-    .removeClass("required")     // remove classes
-    .rules("remove", "required");
-
-        } else  {
-          $("#lps_int_div").show();
-          $("#lps_ext_div").show();
-
-        }
-
-      });
-
-       $("#tws").change(function() {
-        var rtype = $('#tws').find(':selected').text();
-
-        if (rtype === "Yes") {
-
-          $("#twscount").show();
-
-        } else  {
-          $("#twscount").hide();
 
         }
 
@@ -807,9 +646,7 @@ $("#length_of_powerline")
 
       var function_per_day = document.getElementById("function_per_day").value;
 
-      var twscount = document.getElementById("twscount").value;
-
-      if (type_of_floor != "" && risk_of_fire != "" && fire_protection != "" && special_consideration != "" && hazardlist != "" && total_person != "" && function_per_hour != "" && function_per_day != "" twscount != "") {
+      if (type_of_floor != "" && risk_of_fire != "" && fire_protection != "" && special_consideration != "" && hazardlist != "" && total_person != "" && function_per_hour != "" && function_per_day != "") {
 
         document.getElementById("wrapped").submit();
 
@@ -891,40 +728,6 @@ $("#length_of_powerline")
 
     }
 
-
-    function checkMandatory(value) {
-
-      if (value == 1) {
-
-        $("#impulse_voltage2").prop("required", false);
-
-        $("#impulse_voltage3").prop("required", false);
-   $("#risk_of_explosion").prop("required", false);
-
-        $("#protection_measures").prop("required", false);
-
-        $("#tws").prop("required", false);
-        $("#twscount").prop("required", false);
-        
-
-
-      } else {
-
-     $("#impulse_voltage")
-    .removeClass("required error")     // remove classes
-    .rules("remove", "required");
-
-     $("#impulse_voltage1")
-    .removeClass("required error")     // remove classes
-    .rules("remove", "required");
-
-     
-
-
-
-      }
-
-    }
 
 
     function EquipmentNeeded(value) {
@@ -1102,9 +905,9 @@ $("#length_of_powerline")
 
                 <div class="form-group">
 
-                  <label class="container_radio version_2">RISK ASSESSMENT REPORT-IEC 62305-2010
+                  <label class="container_radio version_2">RISK ASSESSEMENT REPORT
 
-                    <input type="radio" class="required" id="report1" name="radio" value="Report1" onchange="checkMandatory('1')">
+                    <input type="radio" class="required" id="report1" name="radio" value="Report1">
 
                     <span class="checkmark"></span>
 
@@ -1114,9 +917,9 @@ $("#length_of_powerline")
 
                 <div class="form-group">
 
-                  <label class="container_radio version_2">RISK ASSESSMENT REPORT-IEC 62305-2024
+                  <label class="container_radio version_2">RISK ASSESSEMENT REPORT & BILL OF MATERIALS
 
-                    <input type="radio" class="required" id="report2" name="radio" value="Report2" onchange="checkMandatory('2')">
+                    <input type="radio" class="required" id="report2" name="radio" value="Report2">
 
                     <span class="checkmark"></span>
 
@@ -1242,13 +1045,8 @@ $("#length_of_powerline")
 
                     </div>
 
-                    <input type="text" name="project_location" class="form-control required" id="project_location" placeholder="Project Location">
-
                   </div>
 
-                  <div class="form-group">
-                  <input type="text" name="density" class="form-control required" id="density" placeholder="Ground Flash Density">
-</div>
                   <div class="form-group">
 
                     <div class="styled-select clearfix">
@@ -1311,7 +1109,7 @@ $("#length_of_powerline")
 
                   <div class="styled-select clearfix">
 
-                    <select class="form-control required" name="location_factor" id="location_factor" data-toggle="tooltip" data-placement="top" title="Select one of the given options pertaining to the building.">
+                    <select class="form-control required" name="location_factor" id="location_factor" data-toggle="tooltip" data-placement="top" title="Select on of the given options pertaining to the building.">
 
                       <option value="">Select Location Factor:</option>
 
@@ -1457,42 +1255,6 @@ $("#length_of_powerline")
 
                     </select>
 
-                    <select name="impulse_voltage2" class="form-control required" id="impulse_voltage2" data-toggle="tooltip" data-placement="top" title="Select from the given options, the impulse withstand voltage of power protective equipment">
-
-                      <option value="">Impulse Withstand Voltage of Equipment</option>
-
-                      <option>0.35</option>
-
-                      <option>0.5</option>
-
-                      <option>1</option>
-
-                      <option>2.5</option>
-
-                      <option>4</option>
-
-                      <option>6</option>
-
-                      <option>12</option>
-
-                      <option>16</option>
-
-                      <option>20</option>
-
-                      <option>40</option>
-
-                      <option>60</option>
-
-                      <option>75</option>
-
-                      <option>95</option>
-
-                      <option>No Equipment</option>
-
-                      
-
-                    </select>
-
                   </div>
 
                 </div>
@@ -1561,40 +1323,6 @@ $("#length_of_powerline")
 
                     </select>
 
-                    <select name="impulse_voltage3" class="form-control required" id="impulse_voltage3" data-toggle="tooltip" data-placement="top" title="Select from the given options, the impulse withstand voltage of communication equipment">
-
-                      <option value="">Impulse Withstand Voltage of Equipment</option>
-
-                     
-<option>0.35</option>
-
-                      <option>0.5</option>
-
-                      <option>1</option>
-
-                      <option>2.5</option>
-
-                      <option>4</option>
-
-                      <option>6</option>
-
-                      <option>12</option>
-
-                      <option>16</option>
-
-                      <option>20</option>
-
-                      <option>40</option>
-
-                      <option>60</option>
-
-                      <option>75</option>
-
-                      <option>95</option>
-                       <option>No Equipment</option>
-
-                    </select>
-
                   </div>
 
                 </div>
@@ -1603,7 +1331,7 @@ $("#length_of_powerline")
 
                   <div class="styled-select clearfix">
 
-                    <select name="shielding_isolation" class="form-control required" id="shielding_isolation" data-toggle="tooltip" data-placement="top" title="If all the earthing systems are interconnected and are at equipotential, Select YES otherwise Select NO.">
+                    <select name="shielding_isolation" class="form-control required" id="shielding_isolation" data-toggle="tooltip" data-placement="top" title="If all the earthing systems are intercinnected and are at equipotential, Select YES otherwise Select NO.">
 
                       <option value="">Select Equipotential bonding?</option>
 
@@ -1677,32 +1405,6 @@ $("#length_of_powerline")
 
                     </select>
 
-                    <select name="type_of_floor1" class="form-control required" id="type_of_floor1" data-toggle="tooltip" data-placement="top" title="Pls select the lower most type of floor eg. last basement or Ground floor level if it is last">
-
-                      <option selected="selected" value="">Type of floor:</option>
-
-                      <option>Agricultural</option>
-
-                      <option>Concrete</option>
-
-                      <option>Marble</option>
-
-                      <option>Ceramic</option>
-
-                      <option>Gravel</option>
-
-                      <option>MoqueƩe</option>
-
-                      <option>Asphalt - Thickness less than 5 cm</option>
-
-                      <option>Asphalt - Thickness greater than 5 cm</option>
-
-                      <option>Linoleum</option>
-
-                      <option>Wood</option>
-
-                    </select>
-
                   </div>
 
                 </div>
@@ -1724,42 +1426,6 @@ $("#length_of_powerline")
                       <option>Ordinary</option>
 
                     </select>
-
-                      <select name="risk_of_fire1" class="form-control required" id="risk_of_fire1" data-toggle="tooltip" data-placement="top" title="Select the Fire Risk pertaining to the building based on its content. If building contains highly flamable material then select High, For medium combustible material - select ordinary or low, for non availability of flamable material - select none">
-
-                      <option selected="selected" value="">Risk of fire:</option>
-
-                      <option>Risk of Explosion</option>
-
-                      <option>High</option>
-
-                      <option>Ordinary</option>
-
-                      <option>Low</option>
-
-                    </select>
-
-                  </div>
-
-                </div>
-
-                <div class="form-group">
-
-                  <div class="styled-select clearfix">
-
-                    <select name="risk_of_explosion" class="form-control required" id="risk_of_explosion" data-toggle="tooltip" data-placement="top" >
-
-                      <option selected="selected" value="">Risk of explosion:</option>
-
-                      <option>Zones 0, 20 and solid explosive</option>
-
-                      <option>Zones 1, 21</option>
-
-                      <option>Zones 2, 22</option>
-
-                    </select>
-
-                     
 
                   </div>
 
@@ -1849,41 +1515,6 @@ $("#length_of_powerline")
 
                     </select>
 
-
-                    <select name="hazardlist1" class="form-control required" id="hazardlist1" data-toggle="tooltip" data-placement="top" title="Hazard due to physical Damage">
-
-                      <option selected="selected" value="">Type of Structure:</option>
-
-                      <option>Hospital with ICU / Operating Rooms</option>
-
-                      <option>Hospital without ICU / Operating Rooms</option>
-
-                      <option>Prisons</option>
-
-                      <option>Power Stations</option>
-
-                      <option>Industrial Structures</option>
-
-                      <option>Control Rooms</option>
-
-                      <option>Telecommunication centre</option>
-
-                      <option>Cultural Heritage</option>
-
-                      <option>Temples / Churches / Mosque / Religious Places</option>
-
-                      <option>Commercial Spaces (Offices / Hotels /Super Markets /Public Entertainments)</option>
-
-                      <option>Schools</option>
-
-                      <option>Civic Building open to Public</option>
-
-                      <option>Private Ownership (Apartment House / Farm House)</option>
-
-                      <option>Risk of explosion</option>
-
-                    </select>
-
                   </div>
 
                 </div>
@@ -1905,118 +1536,6 @@ $("#length_of_powerline")
                   <input type="number" name="function_per_day" class="form-control required" min="1" max="365" maxlength="3" id="function_per_day" placeholder="No of Functional Days / Year" data-toggle="tooltip" data-placement="top" title="What is the no. of operating days/year">
 
                 </div>
-
-
-                <div class="form-group">
-
-                  <div class="styled-select clearfix">
-
-                    <select name="lps_calc" class="form-control required" id="lps_calc" data-toggle="tooltip" data-placement="top" title="">
-
-                      <option selected="selected" value="">Calculation:</option>
-
-                      <option>Autocalculated</option>
-
-                      <option>Manual</option>
-
-                    </select>
-                 </div>
-
-                </div>
-
-                <div class="form-group" id="lps_int_div">
-
-                  <div class="styled-select clearfix">
-
-                    <select name="lps_int" class="form-control required" id="lps_int" data-toggle="tooltip" data-placement="top" >
-
-                      <option selected="selected" value="">Internal:</option>
-
-                      <option>No SPD</option>
-
-                      <option>Level-4</option>
-
-                      <option>Level-3</option>
-
-                      <option>Level-2</option>
-
-                      <option>Level-1</option>
-
-                    </select>
-                  </div>
-
-                </div>
-
-                <div class="form-group" id="lps_ext_div" >
-
-                  <div class="styled-select clearfix">
-
-                    <select name="lps_ext" class="form-control required" id="lps_ext" data-toggle="tooltip" data-placement="top" >
-
-                      <option selected="selected" value="">External:</option>
-
-                      <option>No LPS</option>
-
-                      <option>Level-4</option>
-
-                      <option>Level-3</option>
-
-                      <option>Level-2</option>
-
-                      <option>Level-1</option>
-
-                    </select>
-                  </div>
-
-                </div>
-
-                <div class="form-group">
-
-                  <div class="styled-select clearfix">
-
-
-                    <select name="tws" class="form-control required" id="tws" data-toggle="tooltip" data-placement="top" title="Thunderstorm Warning System">
-
-                      <option selected="selected" value="">Thunderstorm Warning System (TWS):</option>
-
-                      <option>Yes</option>
-
-                      <option>No</option>
-                    </select>
-
-                  </div>
-
-                </div>
-
-                 <div class="form-group">
-
-                  <input type="number" name="twscount" class="form-control required" min="1" max="365" value="1" maxlength="3" id="twscount" placeholder="Thunderstorm Count" data-toggle="tooltip" data-placement="top" title="Thunderstorm Count">
-
-                </div>
-
-                <div class="form-group">
-
-                  <div class="styled-select clearfix">
-
-
-                    <select name="protection_measures" class="form-control required" id="protection_measures" data-toggle="tooltip" data-placement="top" title="Protection Measures">
-
-                      <option selected="selected" value="">Protection Measures:</option>
-
-                      <option>No protection measures</option>
-
-                      <option>Warning notices</option>
-                      <option>Electrical insulation (e.g. at least 3 mm cross-linked polyethylene)of exposed parts (e.g. down-conductors)</option>
-                      <option>Effective soil equipotentialization</option>
-                      <option>Natural LPS</option>
-                      <option>Access Restrictions</option>
-                    </select>
-
-                  </div>
-
-                </div>
-
-                
 
                 <button type="button" name="backward" id="preva3" class="backward" onclick="dynamicContent('2')">Prev</button>
 
@@ -2124,7 +1643,7 @@ $("#length_of_powerline")
 
                 <div class="form-group">
 
-                  <input type="text" class="form-control" name="max_height_terrace" id="max_height_terrace" placeholder="Maximum Height of the Equipment from Terrace Floor " data-toggle="tooltip" data-placement="top" title="What is the max height of equipment from the finished terrace floor level in meters?">
+                  <input type="text" class="form-control" name="max_height_terrace" id="max_height_terrace" placeholder="Maximum Height of the Equipment from Terrace Floor " data-toggle="tooltip" data-placement="top" title="What is the max height of equipment from the finishef terrace floor level in meters?">
 
                 </div>
 
