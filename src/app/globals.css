@@ -19,10 +19,12 @@ body {
   0% {
     transform: scale(0.9);
   }
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
   }
+
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
@@ -36,13 +38,15 @@ body {
 .slider-container {
   overflow: hidden;
   width: 100%;
-  max-width: 81%; /* Adjusts to the exact size of the right-side content */
+  max-width: 81%;
+  /* Adjusts to the exact size of the right-side content */
   position: relative;
 }
 
 .slides-wrapper {
   display: flex;
-  transition: transform 0.5s ease; /* Smooth slide transition */
+  transition: transform 0.5s ease;
+  /* Smooth slide transition */
 }
 
 .slide {
@@ -109,18 +113,26 @@ body {
 .nav-item::after {
   content: "";
   position: absolute;
-  bottom: -2.8rem; /* Set the gap between text and line */
+  bottom: -2.8rem;
+  /* Set the gap between text and line */
   left: 0;
-  width: 100%; /* Full width of the menu item */
-  height: 2px; /* Thickness of the line */
-  background-color: #ff0000; /* Line color */
-  transform: scaleX(0); /* Start hidden */
-  transform-origin: left; /* Animate from left to right */
-  transition: transform 0.3s ease; /* Smooth animation */
+  width: 100%;
+  /* Full width of the menu item */
+  height: 2px;
+  /* Thickness of the line */
+  background-color: #ff0000;
+  /* Line color */
+  transform: scaleX(0);
+  /* Start hidden */
+  transform-origin: left;
+  /* Animate from left to right */
+  transition: transform 0.3s ease;
+  /* Smooth animation */
 }
 
 .nav-item:hover::after {
-  transform: scaleX(1); /* Show the line on hover */
+  transform: scaleX(1);
+  /* Show the line on hover */
 }
 
 .X-axis-card-anm-footer {
@@ -132,6 +144,7 @@ body {
   overflow-x: hidden;
   background-color: #fff;
 }
+
 .table-container-laptop {
   width: 100%;
   overflow-x: hidden;
@@ -164,27 +177,33 @@ th {
   font-size: 14px;
   padding: 4px 10px;
 }
+
 tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
 @media (max-width: 430px) {
   td {
     padding: 2px 8px;
   }
 }
+
 @media (max-width: 767px) {
   .row {
     margin-right: 0px !important;
     margin-left: 0px !important;
   }
 }
+
 @media (min-width: 1024px) {
   th {
     padding: 4px 10px !important;
   }
+
   .table-container-laptop {
     display: block !important;
   }
+
   .table-container-mobile {
     display: none !important;
   }
@@ -195,12 +214,15 @@ tbody tr:nth-child(even) {
     padding: 10px 10px !important;
     width: 75%;
   }
+
   .table-container-mobile {
     display: block !important;
   }
+
   .table-container-laptop {
     display: none !important;
   }
+
   .mobile-head {
     background-color: var(--color-brand) !important;
     color: #fff !important;
@@ -231,6 +253,7 @@ button {
   from {
     width: 0%;
   }
+
   to {
     width: 100%;
   }

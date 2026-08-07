@@ -32,7 +32,7 @@ export async function POST(request) {
             html: `
         <p>Hi JEF</p>
         <p>You have a new message from the contact form. Here are the details:</p>
-        <p><strong>Name:</strong> ${name}<br>
+        <p><strong>Name:</strong> ${name}<br> 
         <strong>Email:</strong> ${email}<br>
         <strong>Phone Number:</strong> ${mobile}</p>
         <p>Call up the client, Its urgent need you attention.</p>
