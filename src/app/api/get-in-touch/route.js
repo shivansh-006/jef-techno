@@ -16,12 +16,12 @@ export async function POST(request) {
         //     },
         // })
 
-        console.log("--- SMTP CONFIG DEBUG ---");
-        console.log("SMTP_HOST:", process.env.SMTP_HOST);
-        console.log("SMTP_PORT:", process.env.SMTP_PORT);
-        console.log("SMTP_SECURE:", process.env.SMTP_SECURE);
-        console.log("EMAIL:", process.env.EMAIL);
-        console.log("--- END DEBUG ---");
+        // console.log("--- SMTP CONFIG DEBUG ---");
+        // console.log("SMTP_HOST:", process.env.SMTP_HOST);
+        // console.log("SMTP_PORT:", process.env.SMTP_PORT);
+        // console.log("SMTP_SECURE:", process.env.SMTP_SECURE); 
+        // console.log("EMAIL:", process.env.EMAIL);
+        // console.log("--- END DEBUG ---");
 
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || "smtp.gmail.com",
