@@ -1,9 +1,10 @@
+
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
 export async function POST(request) {
     try {
-        const { firstname, lastname, email, phone, company, query, marketing } = await request.json()
+        const { name, email, mobile, companyName, message } = await request.json()
 
         // const transporter = nodemailer.createTransport({
         //     host: "smtp.gmail.com",
@@ -15,6 +16,13 @@ export async function POST(request) {
         //     },
         // })
 
+        console.log("--- SMTP CONFIG DEBUG ---");
+        console.log("SMTP_HOST:", process.env.SMTP_HOST);
+        console.log("SMTP_PORT:", process.env.SMTP_PORT);
+        console.log("SMTP_SECURE:", process.env.SMTP_SECURE);
+        console.log("EMAIL:", process.env.EMAIL);
+        console.log("--- END DEBUG ---");
+
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST || "smtp.gmail.com",
             port: parseInt(process.env.SMTP_PORT || "465"),
@@ -25,43 +33,77 @@ export async function POST(request) {
             },
         })
 
-
         const adminMail = {
             from: process.env.EMAIL,
-            to: process.env.EMAIL,
-            subject: 'Hello Jef, you have a Lead to get in touch! Hurry',
+            to: `${process.env.EMAIL}, jeftechno.india@gmail.com`,
+            subject: 'Hello Jef you have a Lead to get in touch !! Hurry',
             html: `
         <p>Hi JEF</p>
-        <p>You have a new message from the contact form. Here are the details:</p>
-        <p><strong>Name:</strong> ${firstname} ${lastname}<br>
-        <strong>Email:</strong> ${email}<br>
-        <strong>Phone Number:</strong> ${phone}<br>
-        <strong>Company Name:</strong> ${company}<br>
-        <strong>Message Details:</strong> ${query}<br>
-        <strong>Marketing Permissions:</strong> ${marketing}</p>
-        <p>Please review this message and respond as soon as possible.</p>
-        <p>Regards,<br>
-        JEF GROUP<br>
-        Sales & Marketing</p>
+        <p>You have a new message from the contact form.</p>
+        <p>Below are the details submitted by the customer:</p>
+        <p><strong>Name:</strong> ${name || 'Not Provided'}<br>
+        <strong>Email:</strong> ${email || 'Not Provided'}<br>
+        <strong>Phone Number:</strong> ${mobile || 'Not Provided'}<br>
+        <strong>Company Name:</strong> ${companyName || 'Not Provided'}<br>
+        <strong>Message / Requirement:</strong> ${message || 'Not Provided'}</p>
+        <p>Please review the inquiry and connect with the customer at the earliest.</p>
+        <p>Best Regards,<br>
+        Website Notification System<br></p>
       `,
         }
+
+        //     const adminMail = {
+        //         from: process.env.EMAIL,
+        //         to: process.env.EMAIL,
+        //         subject: 'Hello Jef you have a Lead to get in touch !! Hurry',
+        //         html: `
+        //     <p>Hi JEF</p>
+        //     <p>You have a new message from the contact form. Here are the details:</p>
+        //     <p><strong>Name:</strong> ${name}<br>
+        //     <strong>Email:</strong> ${email}<br>
+        //     <strong>Phone Number:</strong> ${mobile}</p>
+        //     <p>Call up the client, Its urgent need you attention.</p>
+        //     <p>Regards,<br>
+        //     JEF GROUP<br>
+        //     Sales & Marketing</p>
+        //   `,
+        //     }
+
 
         const autoReply = {
             from: process.env.EMAIL,
             to: email,
             subject: 'JEF UAE IS READY TO GET IN TOUCH SHORTLY !',
             html: `
-        <p>Hi ${firstname},</p>
-        <p>Thank you for contacting us! We’ve received your details and our team will get back to you shortly.</p>
-        <p>We’ll do our best to respond within 1-2 business days. In the meantime, feel free to browse our website for more information.</p>
-        <p>Regards,<br>
-        JEF GROUP<br>
-        Sales & Marketing</p>
+        <p>Dear ${name},</p>
+        <p>Thank you for reaching out to us.</p>
+        <p>We have received your inquiry and our team will review the details and get in touch with you shortly.</p>
+        <p>If your request is urgent, please feel free to contact us directly using the details below:</p>
+        📞 Phone: +91 080 37569000
+        📧 Email: marketing@jeftechno.com
+        <br><p>We appreciate your interest in JEF Techno and look forward to assisting you.</p>
+        <p>Warm Regards,<br>
+        Team JEF Techno<br>
       `,
         }
 
-        await transporter.sendMail(adminMail)
-        await transporter.sendMail(autoReply)
+        //     const autoReply = {
+        //         from: process.env.EMAIL,
+        //         to: email,
+        //         subject: 'JEF UAE IS READY TO GET IN TOUCH SHORTLY !',
+        //         html: `
+        //     <p>Hi ${name},</p>
+        //     <p>We’ll do our best to respond within 1-2 business days. In the meantime, feel free to browse our website for more information.</p>
+        //     <p>Regards,<br>
+        //     JEF GROUP<br>
+        //     Sales & Marketing</p>
+        //   `,
+        //     }
+
+        await Promise.all([
+            transporter.sendMail(adminMail),
+            transporter.sendMail(autoReply)
+        ])
 
         return NextResponse.json({ message: 'Form submission successful!' })
     } catch (error) {

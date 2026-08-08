@@ -75,7 +75,7 @@ const GetInTouchForm = () => {
 
         try {
             const response = await axios.post(
-                "/api/contact-us",
+                "/api/get-in-touch",
                 contactformData,
                 {
                     headers: {
