@@ -22,6 +22,8 @@ const GetInTouchForm = () => {
     const [marketing, setMarketing] = useState("");
     const [showConfirmation, setShowConfirmation] = useState(false);
 
+    const name = `${firstname} ${lastname}`;
+
     const handleCountryChange = (e) => {
         const code = e.target.value;
         setCountryCode(code);
@@ -44,13 +46,11 @@ const GetInTouchForm = () => {
     const handleSubmitForm = async () => {
 
         const contactformData = {
-            firstname,
-            lastname,
+            name,
             email,
-            phone,
-            company,
-            query,
-            marketing,
+            mobile: phone,
+            companyName: company,
+            message: query,
         };
 
         toggleConfirmation();
@@ -72,11 +72,10 @@ const GetInTouchForm = () => {
         setPhone("");
         setCompany("");
         setQuery("");
-        setMarketing("")
 
         try {
             const response = await axios.post(
-                "/api/get-in-touch",
+                "/api/contact-us",
                 contactformData,
                 {
                     headers: {
