@@ -79,8 +79,8 @@ export async function POST(request) {
         <p>Thank you for reaching out to us.</p>
         <p>We have received your inquiry and our team will review the details and get in touch with you shortly.</p>
         <p>If your request is urgent, please feel free to contact us directly using the details below:</p>
-        📞 Phone: +91 080 37569000
-        📧 Email: marketing@jeftechno.com
+        📞 Phone: +91 080 37569000\n
+        📧 Email: marketing@jeftechno.com\n
         <br><p>We appreciate your interest in JEF Techno and look forward to assisting you.</p>
         <p>Warm Regards,<br>
         Team JEF Techno<br>
