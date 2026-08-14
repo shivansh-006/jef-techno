@@ -8,43 +8,43 @@ const faqData = [
     id: 1,
     question: "What defines a good earthing system?",
     answer:
-      "A good earthing system is defined by low impedance, not just low resistance, as impedance determines how effectively fault current flows during real fault conditions.",
+      "Low resistance AND low impedance, corrosion resistance, and stable performance across seasonal soil moisture changes — not just a single low-ohm reading.",
   },
   {
     id: 2,
-    question: "Why is soil important in grounding system performance?",
+    question: "Why does soil matter in grounding performance?",
     answer:
-      "Soil properties like resistivity, moisture, temperature, and composition directly impact how effectively current dissipates into the ground.",
+      "Soil resistivity varies with moisture, temperature, and composition — it directly determines how much electrode area/depth is needed to achieve a safe earth resistance value",
   },
   {
     id: 3,
-    question: "What makes JEF carbon-based backfill superior?",
+    question: "What makes carbon-based backfill superior?",
     answer:
-      "JEF's carbon-based backfill conducts electricity electronically, is moisture-independent, non-corrosive, environmentally stable, and maintains consistent performance over time.",
+      "It's non-corrosive, maintains conductivity in dry soil, and doesn't degrade like salt or charcoal — giving consistent, maintenance-free performance for 15+ years.",
   },
   {
     id: 4,
-    question: "Why is earthing system design from JEF important?",
+    question: "Why does earthing design matter (vs. just installing rods)?",
     answer:
-      "JEF's proper design ensures fault currents are safely dissipated, reduces risks, and guarantees compliance with safety standards.",
+      "Poor design leads to high step/touch voltages and fault current concentration — proper design accounts for soil behavior, fault levels, and safety voltage limits specific to the site.",
   },
   {
     id: 5,
-    question: "What are the disadvantages of salt and charcoal earthing?",
+    question: "What's wrong with salt and charcoal earthing?",
     answer:
-      "Salt and charcoal earthing is moisture-dependent, causes soil contamination through leaching, requires frequent watering, and leads to high corrosion and maintenance costs.",
+      "They corrode electrodes, wash out over monsoons, and need yearly topping-up — resulting in unreliable, rising resistance over time.",
   },
   {
     id: 6,
     question: "What is maintenance-free earthing?",
     answer:
-      "JEF Maintenance-free earthing uses carbon-based backfill with electronic conduction, providing stable, moisture-independent performance for 15+ years without maintenance.",
+      "An earthing system using corrosion-resistant electrodes and stable backfill (like carbon-based compounds) that maintains performance without periodic salt/water refilling.",
   },
   {
     id: 7,
-    question: "Why are copper bonded rods better than GI rods?",
+    question: "Why are copper-bonded rods better than GI rods?",
     answer:
-      "Copper bonded rods offer superior corrosion resistance, longer life, and better conductivity compared to GI rods.",
+      "Copper bonding resists corrosion far better than galvanized iron, giving a longer service life and more stable long-term resistance values.",
   },
 ];
 

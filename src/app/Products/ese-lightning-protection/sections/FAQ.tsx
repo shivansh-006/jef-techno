@@ -6,27 +6,27 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqData = [
   {
     id: 1,
-    question: "Why do solar power plants need specialized lightning protection (ESE)?",
+    question: "Why do solar plants need specialized (ESE) lightning protection?",
     answer:
-      "Solar fields are highly exposed, open-area installations with sensitive components like inverters and SCADA systems. Even indirect strikes can cause significant operational disruptions, fire hazards, and financial losses.",
+      "Open terrain, elevated structures, and sensitive inverter/SCADA electronics make solar plants high-risk; ESE rods provide wider-area coverage suited to spread-out installations.",
   },
   {
     id: 2,
     question: "What are the disadvantages of conventional LPS in solar fields?",
     answer:
-      "Conventional systems often require numerous air terminals that can cause shading on panels, leading to energy losses and potential 'hotspots'. Installation across extensive, uneven terrain is also more labor-intensive compared to ESE systems.",
+      "Conventional rods have limited protection radius, requiring many more units across a large solar field — increasing shading loss and installation cost.",
   },
   {
     id: 3,
     question: "What tests must a lightning arrestor pass for certification?",
     answer:
-      "Under the NF C 17-102 standard, devices undergo a sequence of tests: marking verification, mechanical and dimensional inspection, environmental conditioning (salt mist/sulfur), and high-current impulse testing.",
+      "NF C 17-102 performance validation plus IEC 62561 impulse current withstand testing — confirming both early streamer emission timing and current-carrying capacity.",
   },
   {
     id: 4,
-    question: "What are the risks of using counterfeit lightning protection products?",
+    question: "What are the risks of counterfeit ESE products?",
     answer:
-      "Fake products often claim unrealistic values and lack high-current testing. This can lead to protection gaps, audit failures, insurance complications, and catastrophic equipment damage during actual strikes.",
+      "Uncertified rods often lack real streamer-emission advance time or current withstand capacity — giving a false sense of protection while offering little more than a plain conductor.",
   },
 ];
 

@@ -7,16 +7,16 @@ const faqData = [
   {
     id: 1,
     question:
-      "Do I need surge protection if I already have an external lightning protection system installed?",
+      "Do I need an SPD if I already have external LPS?",
     answer:
-      "Yes — and this requirement is explicit in both IS/IEC 62305 and NBC 2016. The external lightning protection system prevents direct physical damage to the structure. It does not prevent transient overvoltages from being induced onto electrical and data cables by the electromagnetic field of a nearby lightning channel, nor does it manage the surge energy that may be conducted into the building along external service lines or strike it. It also has no effect on the internally generated switching surges that account for a large proportion of surge-related equipment failures in industrial and commercial facilities. SPDs must be installed in addition to any LPS — the UPS provides power continuity during supply interruptions but requires its upstream SPD protection itself.",
+      "Yes — external LPS handles direct strikes only; SPDs protect against transient overvoltages that travel through power/data lines, which external LPS doesn't stop.",
   },
   {
     id: 2,
     question:
-      "What is the difference between Type 1, Type 2, and Type 3 SPDs?",
+      "What's the difference between Type 1, 2, and 3 SPDs?",
     answer:
-      "Each type is designed for a different position in the installation and a different level of residual surge energy. Type 1 devices are installed at the building entry point and handle the highest energy events, including partial direct lightning current. Type 2 devices are installed at sub-distribution boards and handle the lower-energy surges that pass through the Type 1 stage, including routine switching transients. Type 3 devices are installed at the point of use and handle small-amplitude residual surges at equipment level. A comprehensive lightning protection system requires all three types working in coordination — no single type alone provides protection across the full range of threats.",
+      "Type 1 handles direct/partial lightning current at the main incoming supply; Type 2 protects sub-distribution boards from residual surges; Type 3 gives fine protection right at sensitive point-of-use equipment.",
   },
 ];
 const FAQ = () => {

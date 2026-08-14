@@ -8,33 +8,33 @@ const faqData = [
     id: 1,
     question: "Is lightning protection a legal requirement in India?",
     answer:
-      "For certain building types and uses, yes. The National Building Code 2016 (NBC 2016) requires lightning protection for buildings above defined heights and for buildings that house hazardous, explosive, or particularly sensitive contents. Beyond NBC 2016, sector-specific regulations in petroleum, chemicals, power generation, defence, and other industries impose their own independent requirements. For structures outside mandatory categories, the risk assessment under IEC 62305-2 provides a systematic basis for determining whether protection is warranted — and in most industrial and commercial applications, it will be.",
+      "Yes — under NBC 2016 and CEA regulations, lightning protection is mandatory for most industrial, commercial, and high-occupancy structures. Compliance is assessed via a risk assessment as per IS/IEC 62305-2.",
   },
   {
     id: 2,
     question:
-      "Should the lightning protection earthing system be kept separate from the electrical system earth?",
+      "Should lightning protection earthing be kept separate from the electrical earth?",
     answer:
-      "No. IS/IEC 62305 requires the LPS earthing system to be interconnected with all other earthing systems in the structure — including the electrical system protective earth, the IT equipment earth, and any telecommunications earthing. If these systems are kept separate and a lightning strike raises the LPS earth to a high potential, large potential differences develop between the systems, which can cause destructive arcing between equipment connected to different earth references. A single, integrated earthing network shared by all systems is both the standard-compliant approach and the electrically safer one.",
+      "No — IS/IEC 62305 recommends a common integrated earthing system. Separate earths can create dangerous potential differences during a strike; bonding all earths together is the safer, standard-compliant approach.",
   },
   {
     id: 3,
     question:
-      "How often does a lightning protection system need to be inspected?",
+      "How often should an LPS be inspected?",
     answer:
-      "IEC 62305-3 sets out the requirement for periodic inspection and maintenance of installed LPS. The standard specifies that inspection intervals depend on the LPL of the system and the environmental conditions at the site — systems at higher LPLs or in more aggressive environments require more frequent inspection. In addition to scheduled periodic inspections, a visual inspection should be carried out following any significant modification to the protected structure, and a full inspection — including earth resistance measurement — is required following any confirmed lightning strike event. Specific inspection intervals should be taken from the current edition of IEC 62305-3 or confirmed with JEF's engineering team for the particular installation.",
+      "Annually for most facilities; every 6 months for structures with explosive or high-risk zones, and after any major lightning event or structural modification.",
   },
   {
     id: 4,
-    question: "What changed practically with the 2024 edition of IEC 62305?",
+    question: "What changed in IEC 62305:2024?",
     answer:
-      "Several changes in the 2024 revision have direct practical implications. The risk assessment now uses the ground strike-point density (NSG) rather than the previous flash density parameter (NG), which may affect the calculated risk level for some sites. Minimum metal thicknesses are now explicitly stated for air termination components — relevant wherever thin architectural metalwork is proposed as a natural air termination element. SPD dimensioning is based on more precisely specified surge current parameters. The standard now addresses green roofs and projecting facade elements directly. Thunderstorm Warning Systems are formally recognised as a risk reduction measure. Requirements for SPD backup fuse dimensioning and status monitoring are introduced in IEC 62305-4.",
+      "Updated risk assessment parameters, revised component testing requirements, and tighter alignment on SPD coordination — meaning older LPS designs may need re-validation against the new edition.",
   },
   {
     id: 5,
-    question: "What does JEF's 200 kA type test mean for a specifier?",
+    question: "What does JEF's 200kA type test mean for a specifier?",
     answer:
-      "The IEC 62561 series requires external LPS components to be type-tested at up to 100 kA on the 10/350 µs waveform. JEF tests its CLPS components at 200 kA on the same waveform — double the standard requirement. For a specifier, this means that every JEF component has been verified to withstand twice the current magnitude the standard demands, before any safety factor is applied. Type-test certificates are available for review on request.",
+      "It means JEF components are tested at double the IEC 62561 requirement (100kA), giving a built-in safety margin and longer real-world service life under repeated strikes.",
   },
 ];
 
