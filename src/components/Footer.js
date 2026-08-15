@@ -36,42 +36,42 @@ function MainFooter() {
     const itemsAbout = [
         { name: 'Who we are', path: '/about-us' },
 
-        {name:'Careers',path:'/careers'},
-                { name: 'Contact us', path: '/get-in-touch' },
+        { name: 'Careers', path: '/careers' },
+        { name: 'Contact us', path: '/get-in-touch' },
     ];
 
     const itemsLocation = [
         { name: 'India', path: 'https://www.jeftechno.com/' },
         { name: 'UAE', path: 'https://www.jefuae.com/', newTab: true },
-        
+
     ];
 
     const itemsBusiness = [
         { name: 'Products', path: '/' },
-        { name: 'Audit Services', path: '/'},
+        { name: 'Audit Services', path: '/' },
         { name: 'Consulting Services', path: '/' },
     ];
 
     const itemNews = [
         { name: 'All Blogs', path: '/blog' },
-        {name:"Resources",path:"/coming-soon"},
-        {name:'Events',path:"/coming-soon"},
-      
+        { name: "Resources", path: "/coming-soon" },
+        { name: 'Events', path: "/coming-soon" },
+
     ];
     const itemInternalUse = [
-        {name:'Employee Login',path:'https://jef.greythr.com', newTab: true}
+        { name: 'Employee Login', path: 'https://jef.greythr.com', newTab: true }
     ];
     const itemJefShield = [
-        {name:'FAQ',path:'https://www.jeftechno.com/JEF_SHIELD/login.php'  }
+        { name: 'FAQ', path: 'https://www.jeftechno.com/JEF_SHIELD/login.php' }
     ];
 
-  
+
 
     return (
-       <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#2D2E30]">
+        <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-[#2D2E30]">
 
-        {/* FIRST ROW */}
-        {/* <div className="section-container hidden lg:flex flex-row tracking-wider justify-between">
+            {/* FIRST ROW */}
+            {/* <div className="section-container hidden lg:flex flex-row tracking-wider justify-between">
             <Section title="About" items={itemsAbout} />
             <Section title="Locations" items={itemsLocation} />
             <Section title="Our Businesses" items={itemsBusiness} />
@@ -83,32 +83,32 @@ function MainFooter() {
             <Section title="Internal Use" items={itemInternalUse} />
             <Section title="Internal Links" items={itemJefShield} />
         </div> */}
-        {/* SECOND ROW */}
+            {/* SECOND ROW */}
 
 
-        {/* FIRST ROW */}
-        {/* UNIFIED CONTAINER (Handles both horizontal columns and vertical rows) */}
-        <div className="section-container hidden lg:grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-14 tracking-wider">
-            
-        {/* FIRST ROW ITEMS */}
-        <Section title="About" items={itemsAbout} />
-        <Section title="Locations" items={itemsLocation} />
-        <Section title="Our Businesses" items={itemsBusiness} />
-        <Section title="News" items={itemNews} />
+            {/* FIRST ROW */}
+            {/* UNIFIED CONTAINER (Handles both horizontal columns and vertical rows) */}
+            <div className="section-container hidden lg:grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-10 md:gap-y-14 tracking-wider">
 
-        {/* SECOND ROW ITEMS */}
-        <Section title="Internal Use" items={itemInternalUse} />
-        <Section title="Internal Links" items={itemJefShield} />                                 
-            
-        </div>
+                {/* FIRST ROW ITEMS */}
+                <Section title="About" items={itemsAbout} />
+                <Section title="Locations" items={itemsLocation} />
+                <Section title="Our Businesses" items={itemsBusiness} />
+                <Section title="News" items={itemNews} />
 
-        {/* MOBILE FAQ */}
-        <div className="lg:hidden w-full">
-        <FAQComponent />
-        </div>
+                {/* SECOND ROW ITEMS */}
+                <Section title="Internal Use" items={itemInternalUse} />
+                <Section title="Internal Links" items={itemJefShield} />
 
-    <Footer />
-</main>
+            </div>
+
+            {/* MOBILE FAQ */}
+            <div className="lg:hidden w-full">
+                <FAQComponent />
+            </div>
+
+            <Footer />
+        </main>
     );
 }
 
@@ -125,65 +125,65 @@ function Footer() {
                 <div className="flex X-axis-card-anm-footer flex-row items-center h-full space-x-12 lg:space-x-6">
                     <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
                     <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
-                    <a href="https://www.linkedin.com/showcase/jef-engineering-services-middle-east/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
+                    <a href="https://www.linkedin.com/company/jefgroup/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
                     <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
-                    
+
                 </div>
             </div>
             <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900">
-  <div className="section-container flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5">
+                <div className="section-container flex flex-col lg:flex-row items-center lg:items-center justify-between gap-5">
 
-    {/* LEFT */}
-    <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-[10px] sm:text-xs font-light tracking-widest text-center">
-      <Link href="/privacypolicy">Privacy Policy</Link>
-      <Link href="/termsandconditions">· Terms of Use</Link>
-      <Link href="/cookiepolicy">· Cookie Policy</Link>
-      <span> © 2026 JEF</span>
-    </div>
+                    {/* LEFT */}
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 text-[10px] sm:text-xs font-light tracking-widest text-center">
+                        <Link href="/privacypolicy">Privacy Policy</Link>
+                        <Link href="/termsandconditions">· Terms of Use</Link>
+                        <Link href="/cookiepolicy">· Cookie Policy</Link>
+                        <span> © 2026 JEF</span>
+                    </div>
 
-    {/* CENTER */}
-    <div className="flex flex-wrap justify-center items-center gap-2 text-center">
-      <p className="text-white text-xs sm:text-sm">
-        Production company · Obrive
-      </p>
+                    {/* CENTER */}
+                    <div className="flex flex-wrap justify-center items-center gap-2 text-center">
+                        <p className="text-white text-xs sm:text-sm">
+                            Production company · Obrive
+                        </p>
 
-      <a
-        className="ml-[2px]"
-        href="https://obrive.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="../FooterLogo/obrive-footer-logo.png"
-          alt="ObnovLogo"
-          className="h-4 object-contain"
-        />
-      </a>
-    </div>
+                        <a
+                            className="ml-[2px]"
+                            href="https://obrive.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="../FooterLogo/obrive-footer-logo.png"
+                                alt="ObnovLogo"
+                                className="h-4 object-contain"
+                            />
+                        </a>
+                    </div>
 
-    {/* RIGHT */}
-    <div className="w-full lg:w-auto text-center lg:text-right">
-      <p className="text-[10px] sm:text-xs text-gray-400 leading-relaxed">
-        This site is protected by reCaptcha and the Google{" "}
-        <Link
-          href="/privacypolicy"
-          className="text-white transition text-[10px] sm:text-xs"
-        >
-          Privacy Policy
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="/termsandconditions"
-          className="text-white transition text-[10px] sm:text-xs"
-        >
-          Terms of Use
-        </Link>{" "}
-        apply
-      </p>
-    </div>
+                    {/* RIGHT */}
+                    <div className="w-full lg:w-auto text-center lg:text-right">
+                        <p className="text-[10px] sm:text-xs text-gray-400 leading-relaxed">
+                            This site is protected by reCaptcha and the Google{" "}
+                            <Link
+                                href="/privacypolicy"
+                                className="text-white transition text-[10px] sm:text-xs"
+                            >
+                                Privacy Policy
+                            </Link>{" "}
+                            and{" "}
+                            <Link
+                                href="/termsandconditions"
+                                className="text-white transition text-[10px] sm:text-xs"
+                            >
+                                Terms of Use
+                            </Link>{" "}
+                            apply
+                        </p>
+                    </div>
 
-  </div>
-</div>
+                </div>
+            </div>
         </footer>
     );
 }
@@ -203,11 +203,11 @@ function Section({ title, items }) {
                     <li key={index} className="flex flex-col justify-center items-start py-2.5 w-full">
                         <div className="flex items-center">
 
-                           <Link href={item.path} target={item.newTab ? "_blank" : undefined} rel={item.newTab ? "noopener noreferrer" : undefined}>
-                            <div className="self-stretch my-auto transition-colors duration-300 hover:text-brand">
-                                {item.name}
-                            </div>
-                           </Link>
+                            <Link href={item.path} target={item.newTab ? "_blank" : undefined} rel={item.newTab ? "noopener noreferrer" : undefined}>
+                                <div className="self-stretch my-auto transition-colors duration-300 hover:text-brand">
+                                    {item.name}
+                                </div>
+                            </Link>
 
                         </div>
                     </li>
@@ -232,7 +232,7 @@ const FAQComponent = () => {
             question: "ABOUT",
             content: [
                 { label: 'Who we are', path: '/about-us' },
-               
+
                 { label: 'Career', path: '/careers' },
                 { label: 'Contact Us', path: '/contact' }
             ],
@@ -244,7 +244,7 @@ const FAQComponent = () => {
                 { label: 'Our Products', path: '/power-system-studies' },
                 { label: 'Audit Services', path: '/audit-services' },
                 { label: 'Consulting Services', path: '/consulting-services' },
-               
+
 
             ],
             isOpen: false
@@ -258,27 +258,27 @@ const FAQComponent = () => {
             ],
             isOpen: false
         },
-        
+
         {
             question: "News",
             content: [
                 { label: 'All Blogs', path: '/blogs' },
-                 { label: 'Resources', path: '/resources' },
-                  { label: 'Events', path: '/events' },
+                { label: 'Resources', path: '/resources' },
+                { label: 'Events', path: '/events' },
             ],
             isOpen: false
         },
-         {
+        {
             question: "Jef Shield",
             content: [
                 { label: 'Risk Assesment Tool', path: '/coming-soon' },
             ],
             isOpen: false
         },
-         {
+        {
             question: "Internal Use",
             content: [
-                { label:"Employee login", path:"https://jef.greythr.com" , newTab: true}, 
+                { label: "Employee login", path: "https://jef.greythr.com", newTab: true },
             ],
             isOpen: false
         },
@@ -297,15 +297,15 @@ const FAQComponent = () => {
         const contentRef = useRef(null);
         const [height, setHeight] = useState(0);
 
-       useEffect(() => {
-    if (contentRef.current) {
-        if (isOpen) {
-            setHeight(contentRef.current.scrollHeight);
-        } else {
-            setHeight(0);
-        }
-    }
-}, [isOpen]);
+        useEffect(() => {
+            if (contentRef.current) {
+                if (isOpen) {
+                    setHeight(contentRef.current.scrollHeight);
+                } else {
+                    setHeight(0);
+                }
+            }
+        }, [isOpen]);
 
         useEffect(() => {
             // Select all elements with the 'X-axis-anm' class and apply staggered animation
@@ -354,7 +354,7 @@ const FAQComponent = () => {
                 </div>
                 <div
                     ref={contentRef}
-                   className="overflow-hidden transition-[max-height] duration-500 ease-in-out w-full"
+                    className="overflow-hidden transition-[max-height] duration-500 ease-in-out w-full"
                     style={{ maxHeight: `${height}px` }}
                 >
                     <div className="px-5 py-5">
@@ -387,7 +387,7 @@ const FAQComponent = () => {
         <section className="flex overflow-hidden relative flex-col">
             <div className="flex absolute inset-0 z-0 flex-col py-0.5 w-full max-md:max-w-full"></div>
             <div className="flex z-0 flex-col self-center w-[95%] xl:w-[70%] lg:w-[80%]">
-               
+
                 <div className="flex max-md:flex-col justify-between items-start w-full max-md:max-w-full">
                     <div className="flex flex-col pt-5 min-w-[240px] w-full lg:w-[48%] max-md:max-w-full">
                         {faqData.slice(0, 7).map((item, index) => (

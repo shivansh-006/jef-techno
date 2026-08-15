@@ -9,7 +9,7 @@ import { blogData } from '../MainBlogPage';
 const socialLinks = [
   { icon: "/FooterLogo/Link - Facebook.png", href: "https://www.facebook.com/JEFTECHNO/", alt: "Facebook" },
   { icon: "/FooterLogo/Link - Twitter.png", href: "https://x.com/JeftechnoIndia", alt: "Twitter" },
-  { icon: "/FooterLogo/Link - Linkedin.png", href: "https://www.linkedin.com/showcase/jef-engineering-services-middle-east/", alt: "LinkedIn" },
+  { icon: "/FooterLogo/Link - Linkedin.png", href: "https://www.linkedin.com/company/jefgroup/", alt: "LinkedIn" },
   //{ icon: "/FooterLogo/Instagram.png", href: "https://www.instagram.com/", alt: "Instagram" },
   { icon: "/FooterLogo/Link - Youtube.png", href: "https://www.youtube.com/@JEFgroup", alt: "YouTube" }
 ];
@@ -43,13 +43,12 @@ const BlogPostPage = () => {
             Blog
           </span>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10">
-            {[ 'ALL BLOGS', 'RESOURCES', 'EVENTS'].map((item) => (
-              <Link 
-                key={item} 
-                href="/blog" 
-                className={`text-[10px] md:text-xs tracking-[1.5px] uppercase  transition-colors ${
-                  item === 'ALL BLOGS' ? 'text-white' : 'text-white hover:text-white'
-                }`}
+            {['ALL BLOGS', 'RESOURCES', 'EVENTS'].map((item) => (
+              <Link
+                key={item}
+                href="/blog"
+                className={`text-[10px] md:text-xs tracking-[1.5px] uppercase  transition-colors ${item === 'ALL BLOGS' ? 'text-white' : 'text-white hover:text-white'
+                  }`}
               >
                 {item}
               </Link>
@@ -90,15 +89,15 @@ const BlogPostPage = () => {
           </div>
 
           {/* Featured Image */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12 overflow-hidden shadow-2xl"
           >
-            <img 
-              src={post.imageUrl} 
-              alt={post.title} 
+            <img
+              src={post.imageUrl}
+              alt={post.title}
               className="w-full h-auto object-cover"
             />
           </motion.div>
@@ -109,7 +108,7 @@ const BlogPostPage = () => {
           </div>
 
           {/* Share Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -120,17 +119,17 @@ const BlogPostPage = () => {
             </span>
             <div className="flex items-center gap-6">
               {socialLinks.map((social, index) => (
-                <a 
+                <a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-transform hover:scale-110"
                 >
-                  <img 
-                    src={social.icon} 
-                    alt={social.alt} 
-                    className="w-6 h-6 object-contain" 
+                  <img
+                    src={social.icon}
+                    alt={social.alt}
+                    className="w-6 h-6 object-contain"
                   />
                 </a>
               ))}
