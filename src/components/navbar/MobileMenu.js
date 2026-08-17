@@ -6,7 +6,7 @@ import { TranslationContext } from "../../context/TranslationContext";
 
 // Accept onClose prop from parent component
 const MobileMenu = ({ onClose }) => {
-  
+
   const [activeMenu, setActiveMenu] = useState("main");
   const [expandedItems, setExpandedItems] = useState({});
 
@@ -23,13 +23,15 @@ const MobileMenu = ({ onClose }) => {
       { label: "About", key: "about" },
       { label: "Our Business", key: "business" },
       { label: "Blogs", path: "/blog" },
-      { label: "JEF UAE", path: "https://www.jefuae.com/", newTab: true},
+      { label: "JEF UAE", path: "https://www.jefuae.com/", newTab: true },
       { label: "JEF SHIELD", path: "https://www.jeftechno.com/JEF_SHIELD/login.php" },
       { label: "JEF SAFE", path: "https://www.jeftechno.com/" },
     ],
     about: [
       { label: "About Us", path: "/about-us" },
-      { label: "Employee Login", path: "https://www.jeftechno.com/Internal_Use/index.php" },
+      // { label: "Employee Login", path: "https://www.jeftechno.com/Internal_Use/index.php" },
+      // { label: "Employee Login", path: "https://jef.greythr.com", newTab: true },
+      { label: "Employee Login", path: "https://jef.greythr.com" },
     ],
     business: [
       { label: "Products", key: "products" },
@@ -68,18 +70,17 @@ const MobileMenu = ({ onClose }) => {
     <div className="h-full w-full bg-[#2D2E30] text-white relative overflow-hidden">
       {/* MAIN MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300  ${
-          activeMenu === "main" ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300  ${activeMenu === "main" ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         {faqData.main.map((item, index) =>
           item.path ? (
-            <Link 
-            key={index} 
-            href={item.path} 
-            onClick={onClose}
-            target={item.newTab ? "_blank" : undefined}      // 👈 अगर newTab true है तो "_blank" लगेगा
-            rel={item.newTab ? "noopener noreferrer" : undefined}
+            <Link
+              key={index}
+              href={item.path}
+              onClick={onClose}
+              target={item.newTab ? "_blank" : undefined}      // 👈 अगर newTab true है तो "_blank" लगेगा
+              rel={item.newTab ? "noopener noreferrer" : undefined}
             >
               <div className="flex justify-between items-center px-6 py-5 border-b border-gray-700 cursor-pointer">
                 <span className="uppercase text-white-500 text-lg">
@@ -108,9 +109,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* ABOUT MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "about" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "about" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("main")}
@@ -134,9 +134,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* BUSINESS MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "business" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "business" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("main")}
@@ -177,9 +176,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* PRODUCTS MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "products" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "products" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("business")}
@@ -203,9 +201,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* AUDIT MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "audit" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "audit" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("business")}
@@ -229,9 +226,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* CONSULTING MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "consulting" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "consulting" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("business")}
@@ -264,9 +260,8 @@ const MobileMenu = ({ onClose }) => {
                 <img
                   src="/AboutUs/DropDownArr.png"
                   alt="v"
-                  className={`w-3 h-3 object-contain transition-transform duration-300 ${
-                    expandedItems[item.label] ? "rotate-0" : "-rotate-90"
-                  }`}
+                  className={`w-3 h-3 object-contain transition-transform duration-300 ${expandedItems[item.label] ? "rotate-0" : "-rotate-90"
+                    }`}
                 />
               </div>
             ) : item.path ? (
@@ -286,9 +281,8 @@ const MobileMenu = ({ onClose }) => {
                 <img
                   src="/AboutUs/DropDownArr.png"
                   alt="v"
-                  className={`w-3 h-3 object-contain transition-transform duration-300 ${
-                    expandedItems[item.label] ? "rotate-0" : "-rotate-90"
-                  }`}
+                  className={`w-3 h-3 object-contain transition-transform duration-300 ${expandedItems[item.label] ? "rotate-0" : "-rotate-90"
+                    }`}
                 />
               </div>
             )}
@@ -311,9 +305,8 @@ const MobileMenu = ({ onClose }) => {
 
       {/* INDUSTRIES MENU */}
       <div
-        className={`absolute w-full h-full transition-transform duration-300 ${
-          activeMenu === "industries" ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`absolute w-full h-full transition-transform duration-300 ${activeMenu === "industries" ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div
           onClick={() => setActiveMenu("main")}
