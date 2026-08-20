@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 
 export default function DownloadSection() {
+
+  const handleDownload = () => {
+    //1.fet
+  }
+
   return (
     <section className="w-full bg-[#232427] py-16 md:py-24 overflow-hidden">
       <div className="section-container">
@@ -85,7 +90,7 @@ export default function DownloadSection() {
                 mb-2
               "
             >
-              Registration Guide
+              JEF Ecosafe
             </motion.h3>
 
             <motion.p
@@ -102,7 +107,9 @@ export default function DownloadSection() {
               December 11, 2025
             </motion.p>
 
-            <motion.button
+            <motion.a
+              href="/docs/JEF Ecosafe Catalogue.pdf"
+              download
               variants={{
                 hidden: { opacity: 0, y: 15 },
                 visible: { opacity: 1, y: 0 },
@@ -127,7 +134,7 @@ export default function DownloadSection() {
                 size={16}
                 strokeWidth={1.8}
               />
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

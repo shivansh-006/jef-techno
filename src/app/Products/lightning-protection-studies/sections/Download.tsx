@@ -102,7 +102,9 @@ export default function DownloadSection() {
               December 11, 2025
             </motion.p>
 
-            <motion.button
+            <motion.a
+              href="/docs/ESE LPS Nimbus 2200 Catalogue.pdf"
+              download
               variants={{
                 hidden: { opacity: 0, y: 15 },
                 visible: { opacity: 1, y: 0 },
@@ -127,7 +129,7 @@ export default function DownloadSection() {
                 size={16}
                 strokeWidth={1.8}
               />
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>

@@ -34,7 +34,7 @@ const Download = () => {
 
           <div className="flex flex-col gap-4">
             <h3 className="font-montserrat font-normal text-[20px] md:text-[24px] leading-[1.2] uppercase text-white">
-              LIGHTNING PROTECTION SOLUTION GUIDE
+              CLPS Catalogue
             </h3>
 
             <p className="font-montserrat font-light text-[14px] md:text-[16px] leading-[1.5] text-[#D0D0D0]">
@@ -42,7 +42,7 @@ const Download = () => {
             </p>
 
             <a
-              href="/pdfs/lightning-protection-guide.pdf"
+              href="/docs/CLPS Catalogue.pdf"
               download
               className="flex items-center gap-6 group w-fit"
             >
